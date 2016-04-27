@@ -83,7 +83,11 @@ $popup-size: 600px
 .mfp-content
     padding: 0 $wrapperSS-padd
 
+.mfp-bg
+    background: rgba(#121212, 0.2)
+
 .popup
+    display: none
     background: #fff
     border-radius: 5px
     position: relative
@@ -92,6 +96,9 @@ $popup-size: 600px
     max-width: 100%
     margin: 20px auto
     color: #333333
+
+    .mfp-container &
+        display: block
 
     &__title
         font-size: 35px

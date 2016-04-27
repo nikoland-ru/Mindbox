@@ -19,7 +19,6 @@ $(function () {
                     widthsSm = [0.333, 0.666],
                     widthsSs = [0.5, 1];
 
-
                 function setSlidesH(){
                     var fHighest = 0,
                         lHighest = 0;
@@ -62,7 +61,6 @@ $(function () {
 
                     });
                 }
-
 
                 function setSlidesW(){
                     var winWidth = $W.width(),
@@ -192,6 +190,11 @@ $(function () {
 
                         {
                             breakpoint: _GLOB.breakpoints.ls,
+                            settings: {
+                                dots: true,
+                            }
+                        },{
+                            breakpoint: _GLOB.breakpoints.sm,
                             settings: {
                                 dots: true,
                                 swipe: true
