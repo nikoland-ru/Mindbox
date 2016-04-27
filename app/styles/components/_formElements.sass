@@ -1,0 +1,146 @@
+$input_bg: #ddd
+$input_h: 40px
+$input_lh: 20px
+$input_fs: 14px
+$input_placeholder-color: #7c7c7c
+$input_br: 3px
+$input_padd-rl: 17px
+
+
+=input
+    background-color: $input_bg
+    padding-left: $input_padd-rl
+    padding-right: $input_padd-rl
+    font-size: $input_fs
+    color: #000
+    border-radius: $input_br
+
+    &::placeholder
+        color: $input_placeholder-color
+
+    @at-root input#{&}
+        height: $input_h
+        line-height: $input_h
+
+    @at-root textarea#{&}
+        line-height: $input_lh
+        padding-top: ($input_h - $input_lh) /2
+        padding-bottom: ($input_h - $input_lh) /2
+
+.input
+    +input
+
+
+// ----------------------------------------------------------------------
+// Checkboxes and radio
+// ----------------------------------------------------------------------
+
+
+$checkbox-size: 18px
+
+.checkbox-label
+    display: table
+    white-space: nowrap
+    margin: 4px 0
+    line-height: 20px
+
+    .checkbox, &__txt
+        display: inline-block
+        vertical-align: top
+
+    .checkbox
+        margin-top: 3px
+        margin-right: -$checkbox-size
+
+    &__txt
+        font-size: 13px
+        line-height: 20px
+        white-space: normal
+        width: 100%
+        padding-left: $checkbox-size + 12px
+
+    &._disabled
+        .checkbox-label__txt
+            opacity: 0.6
+            cursor: not-allowed
+
+.checkbox
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    INPUT
+        display: none
+
+    &__view
+        display: block
+        width: $checkbox-size
+        height: $checkbox-size
+        background: $cGrey
+        border-radius: 3px
+        transition: $t150
+        position: relative
+        @extend .iconic
+        @extend .iconic--tick
+
+        &:after
+            color: #fff
+            font-size: 11px
+            position: absolute
+            left: 0px
+            top: 0px
+            line-height: $checkbox-size
+            width: $checkbox-size
+            text-align: center
+            transform: scale(0)
+            opacity: 0
+            transition: $t150
+
+        &:hover,
+        &._active,
+        .checkbox-label:hover &,
+        &._active,
+        input:checked +  &
+            background-color: $cPrimary
+
+        &._active,
+        input:checked +  &
+            &:after
+                transform: scale(1)
+                opacity:   1
+
+        input:disabled + &
+            opacity: 0.6
+            cursor: not-allowed
+
+
+// ----------------------------------------------------------------------
+// Ranges ui
+// ----------------------------------------------------------------------
+$noUi-handle-size: 38px
+
+.noUi-handle
+    width: $noUi-handle-size !important
+    height: $noUi-handle-size !important
+    border-radius: 50%
+    background: $cPrimary
+    box-shadow: none
+    top: -($noUi-handle-size/2) !important
+    left: -($noUi-handle-size/2) !important
+    border: 0 !important
+
+    &:after,&:before
+        display: none
+
+.noUi-origin, .noUi-base, .noUi-target
+    height: 3px
+
+.noUi-target
+    border: 0
+    box-shadow: none
+    background: lighten($cGreen, 15%)
+    margin: ($noUi-handle-size/2) 0
+
+.noUi-origin
+    background: #ccc
+
+

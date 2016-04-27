@@ -1,0 +1,232 @@
+@import "sliders"
+@import "popups"
+
+
+.subscribe
+    margin: 15px
+    text-align: center
+
+    &__main
+        display: flex
+        align-items: stretch
+        +corners($offset-h: 0)
+
+        .btn
+            height: $input_h
+            flex-shrink: 0
+
+    &__input
+        flex-grow: 1
+        margin-right: 4px
+
+    &__desc
+        color: #939393
+        font-size: 13px
+        margin-top: 13px
+        padding: 0 10px
+        font-weight: 100
+
+
+.notebook-wr
+    max-width: 967px
+
+.notebook
+    position: relative
+    display: block
+    padding-bottom: 59%
+    background: url('../images/macbook.png') no-repeat center
+    background-size: cover
+    &__inner
+        position: absolute
+        top: 7.5%
+        left: 11.7%
+        right: 11.7%
+        bottom: 11.6%
+        overflow: hidden
+
+    .gall-link
+        width: 100%
+        height: 100%
+        display: block
+        IMG
+            width: 100%
+
+.gall-link
+    position: relative
+    IMG
+        display: block
+
+    &:after
+        @extend .iconic
+        @extend .iconic--plus-round
+        height: 70px
+        width: 70px
+        border-radius: 50%
+        line-height: 50px
+        padding: 10px
+        background: $cPrimary
+        color: #fff
+        font-size: 50px
+        position: absolute
+        top: 50%
+        left: 50%
+        margin: -35px 0 0 -35px
+        transition: $t600
+
+    &:hover
+        &:after
+            transform: rotate(360deg)
+
+
+
+// ----------------------------------------------------------------------
+// Cases
+// ----------------------------------------------------------------------
+
+$cases-grid-gap: 20px
+$cases-grid-gap-md: 15px
+$cases-grid-gap-sm: 8px
+
+.case
+    position: relative
+    display: flex
+    width: 100%
+    transition: $t300
+
+    &__main-link
+        width: 100%
+        padding: 15px
+        background-color: #fff
+        text-align: center
+        display: block
+        //flex-grow: 1
+        //display: flex
+        //flex-direction: column
+        color: #000
+
+    &__img-wr
+        height: 110px
+        line-height: 110px
+        margin-bottom: 7px
+
+        IMG
+            display: inline-block
+            vertical-align: middle
+
+    &__txt-wr
+
+    &__txt
+        font-size: 16px
+
+    .numb
+        display: block
+        margin-bottom: 11px
+        min-height: 20px
+
+    &__comment
+        min-width: 50%
+        background-color: $cDarkL
+        flex-grow: 1
+        flex-shrink: 0
+        color: #fff
+        margin-left: -($cases-grid-gap/2)
+        text-align: left
+        padding: 10px 20px 43px
+        position: relative
+
+        &:before
+            content: ''
+            width: 15px
+            height: 9px
+            position: absolute
+            top: 12px
+            right: 15px
+            background: url("../images/quotes.png") no-repeat center
+
+        &:after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            border: 6px solid #fff
+            border-color: transparent transparent transparent #fff
+
+        +max-screen($screenSM)
+            margin-left: -($cases-grid-gap-md/2)
+
+        +max-screen($screenSS)
+            margin-left: -($cases-grid-gap-sm/2)
+
+    &__comm-title
+        font-size: 16px
+        font-weight: 500
+        margin-bottom: 10px
+        color: $cPrimary
+
+    &__comm-txt
+        font-size: 13px
+        line-height: 18px
+
+    &__comm-link-wr
+        position: absolute
+        left: 0%
+        right: 0
+        text-align: center
+        bottom: 20px
+
+    &:hover
+        box-shadow: 0 0 25px rgba(#999, 0.4)
+
+    &--comment
+        .case
+            &__main-link, &__comment
+                width: 50%
+
+
+
+.cases-grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-left: -($cases-grid-gap/2)
+    margin-right: -($cases-grid-gap/2)
+    +max-screen($screenSM)
+        margin-left: -($cases-grid-gap-md/2)
+        margin-right: -($cases-grid-gap-md/2)
+    +max-screen($screenSS)
+        margin-left: -($cases-grid-gap-sm/2)
+        margin-right: -($cases-grid-gap-sm/2)
+
+    &__col
+        flex-shrink: 0
+        padding: ($cases-grid-gap/2)
+        width: 20%
+        display: flex
+
+        &--double
+            width: 40%
+
+        +max-screen($screenMS)
+            width: 25%
+            &--double
+                width: 50%
+
+        +max-screen($screenSM)
+            width: (100%/3)
+            padding: ($cases-grid-gap-md/2)
+            &--double
+                width: (100%/3)*2
+
+        +max-screen($screenSS)
+            width: 50%
+            padding: ($cases-grid-gap-sm/2)
+            &--double
+                width: 100%
+
+        //+max-screen($screenXS)
+            width: 100%
+
+
+    &__txt
+        font-size: 16px
+        line-height: 20px

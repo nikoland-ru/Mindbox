@@ -1,0 +1,375 @@
+.footer-wr
+    font-size: 13px
+
+
+.footer-stats
+    color: #939393
+    background-color: $cDarkL
+
+    &__stats-ul
+        display: flex
+        padding: 40px 0 15px
+        margin-left: -20px
+        margin-right: -20px
+        justify-content: space-between
+        align-items: flex-start
+
+    &__stat-li
+        margin: 15px 20px
+        white-space: nowrap
+
+        &--traffic
+            color: #baf78d
+        &--mails
+            color: #dff2f1
+            .footer-stats
+                &__stat-main
+                    padding-left: 30px
+                &__stat-img
+                    margin-top: -7px
+
+        &--user
+            color: #f7f38d
+
+    &__stat-main,&__stat-img
+        display: inline-block
+        vertical-align: top
+
+    &__stat-img
+        margin-top: -5px
+
+    &__stat-main
+        white-space: normal
+        padding-left: 20px
+        span
+            display: block
+
+
+    &__stat-numb
+        font-size: 30px
+        font-weight: 500
+        margin-bottom: 5px
+        white-space: nowrap
+
+    &__stat-txt
+        font-size: 12px
+
+
+
+
+    &__bot
+        background: url('../images/footer-graph.png') no-repeat bottom center
+        padding: 30px 0 36px
+        text-align: center
+        border-top: 1px solid #3b3b3b
+
+    &__bot-str
+        display: inline-block
+        vertical-align: middle
+        margin: 2px 9px
+        font-size: 10px
+        line-height: 14px
+        color: #fefefe
+        font-weight: 700
+        span
+            font-weight: normal
+
+    +max-screen($screenSL)
+        &__stats-ul
+            padding: 25px 0 15px
+
+        &__stat-img img
+            width: 35px
+
+        &__stat-li
+            text-align: left
+            //footer-stats__stat-img
+            &--traffic
+                .footer-stats
+                    &__stat-main
+                        padding-left: 11px
+
+            &--mails
+                .footer-stats
+                    &__stat-main
+                        padding-left: 15px
+
+            &--user
+                .footer-stats
+                    &__stat-main
+                        padding-left: 13px
+
+        &--user
+            color: #f7f38d
+
+        &__stat-numb
+            font-size: 25px
+
+        &__bot
+            margin-left: -$wrapperM-padd
+            margin-right: -$wrapperM-padd
+            padding-left: $wrapperM-padd
+            padding-right: $wrapperM-padd
+
+    +max-screen($screenS)
+        &__stats-ul
+            display: block
+            text-align: center
+            margin: 0
+            padding: 45px 0 0px
+
+        &__stat-li
+            display: table
+            margin: 0px auto 36px
+            width: 220px
+            &:last-child
+                margin-bottom: 32px
+
+        &__bot
+            padding-top: 20px
+            padding-bottom: 30px
+
+.footer
+    background-color: $cDark
+    color: #fff
+    &__top
+        padding: 45px 0 18px
+        border-bottom: 1px solid #323232
+        font-weight: 100
+        display: flex
+
+    &__subs-wr
+        padding: 0 35px 0 5px
+        width: 55% //45%
+        min-width: 460px
+
+    &__soc-wr
+        width: 45%
+        flex-grow: 1
+        text-align: center
+
+    &__soc-item
+        display: inline-block
+        vertical-align: middle
+        font-size: 15px
+        color: #939393
+        padding: 10px
+        transition: $t300
+
+
+        & + &
+            margin-left: 25px
+
+        &:hover
+            color: #fff
+            .footer__soc-item-img
+                transform: translateY(-6px)
+
+    .footer__soc-item-img
+        margin-right: 12px
+        display: inline-block
+        vertical-align: middle
+        transition: $t300
+
+    &__soc-item-txt
+        display: inline-block
+        vertical-align: middle
+
+
+    &__main
+        padding: 40px 0 40px
+        display: flex
+        justify-content: space-between
+
+    &__logo-col
+        width: 175px
+        flex-shrink: 0
+
+
+    &__nav-cols
+        white-space: nowrap
+
+    &__nav-col
+        display: inline-block
+        vertical-align: top
+        margin: 0 25px
+
+        &:first-child
+            margin-left: 45px
+
+    &__nav-list
+        li
+            margin-bottom: 10px
+
+        a
+            color: #838383
+            text-decoration: none
+            transition: $t150
+            &:hover
+                color: #fff
+
+    &__copyright
+        margin: 0 15px 0 30px
+        max-width: 260px
+
+    &__copyright-title
+        font-size: 14px
+        margin-bottom: 10px
+
+    &__copyright-txt
+
+        font-size: 12px
+        color: rgba(#999999,0.4)
+        line-height: 20px
+
+    &__dev
+        text-align: right
+        color: #898989
+        font-size: 12px
+        min-width: 115px
+        a
+            color: #fff
+            border-bottom: 1px solid transparent
+            transition: $t150
+            &:hover
+                border-bottom-color: #fff
+
+
+    +max-screen($screenSL)
+        &__top
+            margin-left: -$wrapperS-padd
+            margin-right: -$wrapperS-padd
+            padding-left: $wrapperS-padd
+            padding-right: $wrapperS-padd
+
+        &__subs-wr
+            padding-left: 0
+            padding-right: 10px
+            min-width: 330px
+            width: auto
+
+        .subscribe
+            margin-left: 0
+            &__main
+                &:after, &:before
+                    display: none
+
+            &__desc
+                text-align: left
+                padding: 0
+
+        &__soc-wr
+            margin-right: -10px
+
+        &__soc-item
+            & + &
+                margin-left: 10px
+
+        &__logo-col
+            display: none
+
+        &__nav-col
+            margin: 0 20px
+
+            &:first-child
+                margin-left: 0
+
+        &__main
+            padding: 35px 0 30px
+
+    +max-screen($screenSM)
+
+        &__soc-item
+            padding-left: 5px
+            padding-right: 5px
+
+    +screen(661px,$screenS)
+
+
+        &__nav-col
+            margin: 0 15px
+
+        &__copyright
+            margin: 0 10px 0 20px
+
+
+    +max-screen($screenS)
+
+        &__top
+            display: block
+            padding-top: 1px
+            padding-bottom: 1px
+
+        &__subs-wr
+            padding: 23px 0
+
+        .subscribe
+            padding-left: 0
+            padding-right: 0
+            margin: 0
+            &__desc
+                text-align: center
+
+        &__soc-wr
+            width: auto
+            border-top: 1px solid #323232
+            margin-left: -$wrapperM-padd
+            margin-right: -$wrapperM-padd
+            padding: 7px $wrapperM-padd
+            text-align: center
+
+
+        &__soc-item
+            margin: 0px 35px
+
+    +max-screen($screenSS)
+        &__top
+            padding-right: $wrapperSS-padd
+            padding-left: $wrapperSS-padd
+            margin-left: -$wrapperSS-padd
+            margin-right: -$wrapperSS-padd
+
+        &__soc-wr
+            margin-left: -$wrapperSS-padd
+            margin-right: -$wrapperSS-padd
+            padding: 7px $wrapperSS-padd 15px
+
+        &__soc-item-img
+            height: 60px
+            line-height: 60px
+            margin: 0 auto 1px !important
+            img
+                vertical-align: middle
+
+        &__soc-item-txt
+            display: block
+
+
+    +max-screen(660px)
+        &__main
+            display: block
+            padding: 30px 0 50px
+
+        &__nav-cols
+            display: flex
+            margin-left: -20px
+            margin-right: -20px
+
+        &__nav-col
+            margin: 0 20px 0 !important
+            //max-width: 40%
+
+        &__copyright
+            margin: 20px 0 25px
+            max-width: none
+
+        &__copyright-title
+            margin-bottom: 8px
+
+        &__dev
+            text-align: left
+
+    +max-screen($screenXS)
+        &__soc-item
+            margin: 0 10px
+

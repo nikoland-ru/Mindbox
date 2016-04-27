@@ -1,0 +1,197 @@
+@import svg-fonts/iconfont
+@import icons
+@import buttons
+@import links
+@import typography
+@import formElements
+@import formLayout
+
+// ----------------------------------------------------------------------
+// Small components
+// ----------------------------------------------------------------------
+
+.numb
+    font-size: 20px
+    line-height: 20px
+    font-weight: 500
+    color: $cPrimary
+
+.ico-w-circle
+    position: relative
+    display: inline-block
+    font-size: 50px
+
+    &:after
+        content: ''
+        width: 58px
+        height: 58px
+        position: absolute
+        left: 50%
+        top: 50%
+        border-radius: 50%
+        z-index: 1
+        margin: -29px 0 0 -29px
+
+    .iconic
+        position: relative
+        z-index: 2
+        &--email-like
+            font-size: 55px
+        &--ppl-cards
+            font-size: 45px
+        &--graphs
+            font-size: 45px
+
+    &--green
+        &:after
+            background-color: $cPaleGreen
+    &--yel
+        &:after
+            background-color: $cPaleYel
+    &--yel2
+        &:after
+            background-color: $cPaleYel2
+    &--blueL
+        &:after
+            background-color: $cPaleBlueL
+
+    &--r-b
+        &:after
+            transform: translate3d(28px, 7px, 0)
+
+    &--l-t
+        &:after
+            transform: translate3d(-19px, -12px, 0)
+
+    &--r-t
+        &:after
+            transform: translate3d(17px, -10px, 0)
+
+.video-link
+    text-align: center
+
+    .iconic--play
+        display: block
+        height: auto
+        line-height: normal
+        font-size: 65px
+        color: $cPrimary
+        margin-bottom: 20px
+
+$mouse-link-size: 56px
+.mouse-link
+    display: block
+    width: $mouse-link-size
+    height: $mouse-link-size
+    line-height: $mouse-link-size
+    background: #fff
+    border-radius: 50%
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.16)
+    position: relative
+
+    .iconic
+        display: block
+        color: #000
+        &--mouse
+            font-size: 25px
+            position: absolute
+            top: 12px
+            line-height: normal
+            left: 0
+            right: 0
+
+        &--arr-b
+            font-size: 4px
+            line-height: normal
+            position: absolute
+            top: 43px
+            left: 0
+            right: 0
+
+
+.doc-link
+    display: inline-block
+    margin: 10px auto
+    text-align: left
+    color: inherit
+    white-space: nowrap
+
+    .iconic--pdf
+        font-size: 38px
+
+    &__img
+        display: inline-block
+        vertical-align: top
+        padding-right: 15px
+        width: 45px
+        margin-right: -45px
+        line-height: normal
+
+        & + .doc-link__main
+            padding-left: 45px
+
+    &__main
+        display: inline-block
+        vertical-align: top
+        white-space: normal
+
+    &__name
+        font-weight: 500
+
+    &__info
+        color: #717171
+        text-transform: uppercase
+
+
+.person
+    text-align: center
+
+    &__ava
+        display: table
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin: 10px auto 20px
+        position: relative
+        overflow: hidden
+        IMG
+            display: block
+
+    &__quote
+        font-size: 18px
+        line-height: 20px
+
+
+    &__desc-wr
+        margin: 17px 0 0
+
+
+    &__name
+        font-size: 20px
+        line-height: 20px
+        font-weight: 500
+        color: $cPrimary
+        margin-bottom: 8px
+
+    &__post
+        font-size: 13px
+        color: #939393
+
+.author-desc
+
+    &__name
+        font-size: 20px
+        line-height: 20px
+        font-weight: 500
+        color: $cPrimary
+        margin-bottom: 7px
+
+    &__desc
+        color: #939393
+        font-size: 13px
+
+.svg-obj
+    display: inline-block
+    vertical-align: middle
+    &__hidden
+        display: none

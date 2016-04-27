@@ -1,0 +1,57 @@
+// ----------------------------------------------------------------------
+// Font variables
+// ----------------------------------------------------------------------
+
+$baseFont:  "MuseoSansCyrl", sans-serif;
+
+// ----------------------------------------------------------------------
+// Animation speed
+// ----------------------------------------------------------------------
+$t150: 150ms;
+$t300: 300ms;
+$t600: 600ms;
+
+// ----------------------------------------------------------------------
+// Layout sizes
+// ----------------------------------------------------------------------
+$maxW: 1168px;
+$minW: 320px;
+
+$screenXL: 1800px;
+$screenLL: 1500px;
+$screenLS: 1380px;
+
+$screenM: 1288px;
+$screenMM: 1168px;
+$screenMS: 1020px;
+
+$screenSL: 960px;
+$screenSM: 860px;
+$screenS: 767px;
+$screenSS: 630px;
+$screenXS: 480px;
+
+
+$wrapperM-padd: 30px;
+$wrapperS-padd: 20px;
+$wrapperSS-padd: 15px;
+
+//$screenWrapperBreak: $screenM + ($wrapperM-padd * 2);
+
+// ----------------------------------------------------------------------
+// Colors
+// ----------------------------------------------------------------------
+//baf78d
+$cGreen: #62be1f;
+$cGreen2: #5aab1f;
+$cGrey: #f7f7f7;
+$cGrey2: #f9f9f9;
+$cDarkL: #252525;
+$cDark: #1b1b1b;
+
+$cPaleGreen: #baf78d;
+$cPaleYel: #f7f38d;
+$cPaleYel2: #e7f78d;
+$cPaleBlueL: #dff2f1;
+
+$cPrimary: $cGreen;

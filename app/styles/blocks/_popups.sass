@@ -1,0 +1,165 @@
+$side-popup-padd-rl: 30px
+$side-popup-padd-rl_xs: 12px
+$side-popup-size: 405px
+
+
+.side-popup
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 100%
+    width: 100%
+    max-width: $side-popup-size
+    overflow: auto
+    background: $cDark
+    z-index: 999
+    display: flex
+
+    flex-direction: column
+    color: #fff
+    transition: $t600
+
+
+    &__wr
+        padding-left: $side-popup-padd-rl
+        padding-right: $side-popup-padd-rl
+        flex-shrink: 0
+
+        +max-screen($side-popup-size * 0.9)
+            padding-left: $side-popup-padd-rl_xs
+            padding-right: $side-popup-padd-rl_xs
+
+
+    &__cross
+        font-size: 25px
+        color: $cPrimary
+        position: absolute
+        top: 14px
+        right: 14px
+        cursor: pointer
+
+    &__main
+        flex-grow: 1
+        padding-top: 35px
+        padding-bottom: 30px
+
+        + .side-popup__bottom
+            margin-top: -15px
+
+
+    &__bottom
+        background: #121212
+        position: relative
+        padding-top: 20px
+        padding-bottom: 60px
+
+        &:after
+            content: ''
+            border: 10px solid transparent
+            border-bottom-color: #121212
+            position: absolute
+            bottom: 100%
+            left: 50%
+            margin-left: -10px
+
+
+    .checkbox-label__txt
+        color: #939393
+
+
+    +max-screen($side-popup-size)
+        form .btn
+            display: table
+            margin-left: auto
+            margin-right: auto
+
+
+    &._open
+        transform: translateX(-100%)
+
+
+$popup-size: 600px
+
+.mfp-content
+    padding: 0 $wrapperSS-padd
+
+.popup
+    background: #fff
+    border-radius: 5px
+    position: relative
+    padding: 30px
+    width: $popup-size
+    max-width: 100%
+    margin: 20px auto
+    color: #333333
+
+    &__title
+        font-size: 35px
+        line-height: 35px
+        font-weight: 500
+        margin-bottom: 30px
+
+.popup__closer,.mfp-close
+    font-size: 25px
+    line-height: normal
+    color: $cPrimary !important
+    position: absolute
+    top: 16px !important
+    right: 16px !important
+    padding: 0
+    height: auto
+    width: auto
+    cursor: pointer
+    opacity: 1
+
+
+    &:hover
+        color: darken($cPrimary, 10%) !important
+
+
+
+$comment-ava-size: 120px
+
+.case-popup
+
+    &__main
+        margin-top: 20px
+
+    &__txt
+        font-size: 15px
+        line-height: 30px
+
+    &__comment-wr
+        white-space: nowrap
+        padding-bottom: 15px
+
+        .author-desc
+            margin: 23px 0 10px
+
+    &__comment-img-col,
+    &__comment-txt-col
+        display: inline-block
+        vertical-align: top
+        white-space: normal
+
+    &__comment-txt-col
+        width: 100%
+
+    &__comment-img-col
+        width: $comment-ava-size
+        margin-right:  -$comment-ava-size
+
+        & + .case-popup__comment-txt-col
+            margin-right: -$comment-ava-size
+            padding-left: 30px + $comment-ava-size
+
+
+    &__comment-img
+        width: $comment-ava-size
+        height: $comment-ava-size
+        position: relative
+        overflow: hidden
+        border-radius: 50%
+
+        img
+            width: 100%

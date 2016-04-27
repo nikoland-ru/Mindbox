@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "iconic";
+    src: url('../fonts/iconic.eot');
+    src: url('../fonts/iconic.eot?#iefix') format('eot'),
+    url('../fonts/iconic.woff') format('woff'),
+    url('../fonts/iconic.ttf') format('truetype'),
+    url('../fonts/iconic.svg#iconic') format('svg');
+}
+
+@mixin iconic-styles {
+    font-family: "iconic";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+    color: #000;
+}
+
+.iconic {
+    @include iconic-styles;
+}
+
+@function iconic-char($filename) {
+    $char: "";
+
+    @if $filename == arr-b {
+    $char: "\E001";
+}
+    @if $filename == arr-l {
+    $char: "\E002";
+}
+    @if $filename == arr-r {
+    $char: "\E003";
+}
+    @if $filename == arr-е {
+    $char: "\E004";
+}
+    @if $filename == board {
+    $char: "\E005";
+}
+    @if $filename == cross {
+    $char: "\E006";
+}
+    @if $filename == cross2 {
+    $char: "\E007";
+}
+    @if $filename == cup {
+    $char: "\E008";
+}
+    @if $filename == email-like {
+    $char: "\E009";
+}
+    @if $filename == graphs {
+    $char: "\E00A";
+}
+    @if $filename == mouse {
+    $char: "\E00B";
+}
+    @if $filename == pdf {
+    $char: "\E00C";
+}
+    @if $filename == play {
+    $char: "\E00D";
+}
+    @if $filename == plus-round {
+    $char: "\E00E";
+}
+    @if $filename == ppl-cards {
+    $char: "\E00F";
+}
+    @if $filename == rub {
+    $char: "\E010";
+}
+    @if $filename == site {
+    $char: "\E011";
+}
+    @if $filename == tick {
+    $char: "\E012";
+}
+
+@return $char;
+}
+
+@mixin iconic($filename, $insert: after, $extend: true) {
+&:#{$insert} {
+
+    content: iconic-char($filename);
+}
+}
+
+.iconic--arr-b {
+    @include iconic(arr-b);
+}
+.iconic--arr-l {
+    @include iconic(arr-l);
+}
+.iconic--arr-r {
+    @include iconic(arr-r);
+}
+.iconic--arr-е {
+    @include iconic(arr-е);
+}
+.iconic--board {
+    @include iconic(board);
+}
+.iconic--cross {
+    @include iconic(cross);
+}
+.iconic--cross2 {
+    @include iconic(cross2);
+}
+.iconic--cup {
+    @include iconic(cup);
+}
+.iconic--email-like {
+    @include iconic(email-like);
+}
+.iconic--graphs {
+    @include iconic(graphs);
+}
+.iconic--mouse {
+    @include iconic(mouse);
+}
+.iconic--pdf {
+    @include iconic(pdf);
+}
+.iconic--play {
+    @include iconic(play);
+}
+.iconic--plus-round {
+    @include iconic(plus-round);
+}
+.iconic--ppl-cards {
+    @include iconic(ppl-cards);
+}
+.iconic--rub {
+    @include iconic(rub);
+}
+.iconic--site {
+    @include iconic(site);
+}
+.iconic--tick {
+    @include iconic(tick);
+}

@@ -1,0 +1,88 @@
+@import "_header"
+@import "_footer"
+
+// ----------------------------------------------------------------------
+// Example:
+// .page.page-****
+//    .page-inner
+//        .header
+//        .page-body
+//        .footer
+//     popups, sidemenus, other stuff
+// ----------------------------------------------------------------------
+
+BODY
+    &._side-popup-open
+        overflow: hidden
+
+.page
+    position: relative
+    overflow: hidden
+    min-height: 100%
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+.page-inner
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+
+    &__overlay
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        right: 0
+        top: 0
+        background: rgba(#121212, 0.2)
+        z-index: 100
+        transition: $t150
+        opacity: 0
+        visibility: hidden
+
+        BODY._side-popup-open &
+            opacity: 1
+            visibility: visible
+
+
+.page-body
+    flex-grow: 1
+    padding-top: $header-h
+
+    +max-screen($screenMS)
+        padding-top: $header-h_md
+
+    +max-screen($screenS)
+        padding-top: $header-h_sm
+
+
+
+.wrapper
+    position: relative
+    margin: 0 auto
+    max-width: $maxW
+    min-width: $minW
+    padding: 0 $wrapperM-padd
+
+    +max-screen($screenSL)
+        padding-left: $wrapperS-padd
+        padding-right: $wrapperS-padd
+
+    +max-screen($screenSS)
+        padding-right: $wrapperSS-padd
+        padding-left: $wrapperSS-padd
+
+.wrapper-inner
+    display: block
+    width: auto
+    margin-left: -$wrapperM-padd
+    margin-right: -$wrapperM-padd
+
+    +max-screen($screenSL)
+        margin-left: -$wrapperS-padd
+        margin-right: -$wrapperS-padd
+
+    +max-screen($screenSS)
+        margin-left: -$wrapperSS-padd
+        margin-right: -$wrapperSS-padd

@@ -1,0 +1,51 @@
+//@import fonts
+@import variables
+@import media
+@import helpers
+
+/* mixins */
+
+=corners($size: 22px,$sides: ('bottom','top'), $offset-h: 4px, $offset-v: 0)
+    position: relative
+
+    &:after,&:before
+        position: absolute
+        content: ''
+        display: block
+        border-color: transparent
+        border-style: solid
+        border-width: 1px
+        width: $size
+        height: $size
+
+    &:after
+        right: 100%
+        margin-right: $offset-h
+        @if nth($sides,1) == 'bottom'
+            top: 100%
+            margin-top: $offset-v
+            border-radius: 0 0 0 5px
+            border-color: transparent transparent $cPrimary $cPrimary
+
+        @if nth($sides,1) == 'top'
+            bottom: 100%
+            margin-bottom: $offset-v
+            border-radius: 5px 0 0 0
+            border-color: $cPrimary transparent transparent $cPrimary
+
+    &:before
+        left: 100%
+        margin-left: $offset-h
+        @if nth($sides,2) == 'top'
+            bottom: 100%
+            margin-bottom: $offset-v
+            border-radius: 0 5px 0 0
+            border-color:  $cPrimary $cPrimary transparent transparent
+
+        @if nth($sides,2) == 'bottom'
+            bottom: 100%
+            margin-top: $offset-v
+            border-radius: 0 0 5px 0
+            border-color: $cPrimary transparent transparent $cPrimary
+
+

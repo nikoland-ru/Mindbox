@@ -1,0 +1,191 @@
+.slick-slider
+    margin-bottom: 0
+
+.slick-slide
+    outline: none !important
+
+=slick-dots
+    .slick-dots
+        position: relative
+        bottom: 0
+        left: 0
+        padding: 17px 0px
+
+
+        li
+            width: auto
+            height: auto
+            margin: 5px 10px
+            button
+                width: auto
+                height: auto
+                &:before
+                    display: none
+                &:after
+                    content: ''
+                    width: 7px
+                    height: 7px
+                    border-radius: 50%
+                    background: #bebebe
+                    display: inline-block
+                    transition: $t150
+
+                &:hover
+                    &:after
+                        background: #000
+
+
+$slider-arr-h: 82px
+$slider-arr-w: 90px
+
+.slider-arr
+    position: absolute
+    top: 50%
+    margin-top: -($slider-arr-h/2)
+    cursor: pointer
+
+    &, svg
+        width: $slider-arr-w
+        height: $slider-arr-h
+
+    &--l
+        right: 100%
+        margin-right: 140px
+        +max-screen(1630px)
+            margin-right: 30px
+
+
+    &--r
+        left: 100%
+        margin-left: 140px
+        +max-screen(1630px)
+            margin-left: 30px
+
+
+// ----------------------------------------------------------------------
+// Regular slide
+// ----------------------------------------------------------------------
+
+.reg-slider
+    +slick-dots
+
+    +max-screen($screenLS)
+        .slider-arr
+            display: none !important
+
+// ----------------------------------------------------------------------
+// Examples slide
+// ----------------------------------------------------------------------
+
+.examples-slider
+    .slider-arr
+        top: 10px
+        margin-top: 0
+        +screen($screenM + 1px, $screenLS)
+            display: block !important
+
+    .slick-dots
+        margin: 45px 0
+
+        +max-screen($screenSL)
+            margin: 20px 0
+
+        +max-screen($screenSS)
+            margin: 10px 0
+
+
+
+// ----------------------------------------------------------------------
+// Cases slide
+// ----------------------------------------------------------------------
+
+.cases-slider
+    &__col
+        //width: 20%
+        display: flex !important
+        flex-wrap: wrap
+        align-items: flex-start
+        //align-self: stretch
+
+        .cases-grid__col
+            width: 100%
+
+        &._double
+            width: 40%
+            .cases-grid__col
+                width: 50%
+                align-self: stretch
+                &--double
+                    align-self: auto
+                    width: 100%
+
+// ----------------------------------------------------------------------
+// Prod slide
+// ----------------------------------------------------------------------
+
+.prod-slider
+    &__slide
+        display: flex !important
+
+        .notebook-wr
+            //flex-shrink: 0
+            width: 650px
+            //50%
+            //min-width: 550px
+
+    &__slide-txt
+        width: 50%
+        min-width: 50%
+        flex-grow: 1
+        padding-top: 10px
+        padding-left: 20px
+        text-align: left
+
+        .h2-l
+            line-height: 40px
+            margin-bottom: 25px
+
+        .ul
+            margin-left: 2px
+
+        +max-screen($screenMM)
+            min-width: 54%
+
+        +screen($screenSL + 1px , $screenMS)
+            .h2-l
+                font-size: 25px
+                line-height: 34px
+
+    .slick-dots
+        margin: 12px 0
+        +min-screen($screenLS + 1px)
+            margin-top: 35px
+
+    +max-screen($screenSL)
+
+        &__slide
+            display: block !important
+
+            .notebook-wr
+                width: auto
+                max-width: 700px
+                margin: 0 auto 45px
+
+
+        &__slide-txt
+            width: auto
+            max-width: none
+
+    +max-screen($screenSS)
+        .notebook-wr
+            margin-bottom: 20px
+
+        &__slide-txt
+
+            .h2-l
+                font-size: 18px
+                line-height: 25px
+
+            .ul
+                li
+                    line-height: 24px

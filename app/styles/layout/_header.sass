@@ -1,0 +1,174 @@
+$header-h: 104px
+$header-h_md: 84px
+$header-h_sm: 68px
+
+.header
+    //background: #fff
+    //position: relative
+    z-index: 100
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    transition: background-color $t300
+
+    .wrapper
+        height: $header-h
+        max-width: 1600px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__logo-wr
+        width: 220px
+        flex-shrink: 0
+        padding: 10px 20px 10px 0
+        +max-screen($screenMM)
+            width: 210px
+
+
+    &__logo
+        display: table
+        font-size: 0
+        line-height: 0
+        +max-screen($screenMM)
+            width: 190px
+
+    &__demo-btn
+        +min-screen($screenMS + 1px)
+            position: absolute
+            top: 50%
+            right: $wrapperM-padd
+            transform: translateY(-50%)
+
+    &__nav
+        text-align: center
+        flex-grow: 1
+        padding-right: 220px
+        +max-screen($screenLS)
+            padding-right: 180px
+
+    &__nav-ul
+        white-space: nowrap
+
+    &__nav-li
+        display: inline-block
+        vertical-align: top
+        margin: 0 16px
+        white-space: normal
+        +max-screen($screenMM)
+            margin: 0 12px
+
+
+    &__nav-a
+        display: block
+        font-size: 15px
+        color: #000
+        text-decoration: none
+        transition: $t150
+        +min-screen($screenMS + 1px)
+            line-height: $header-h - 2px
+            border-bottom: 1px solid transparent
+            &:hover
+                color: darken($cPrimary, 2%)
+                border-bottom-color: $cPrimary
+
+    &__nav-a-txt
+        line-height: normal
+
+    //&__right
+        text-align: right
+        padding-left: 20px
+
+    &__menu-btn-gr
+        display: none
+        cursor: pointer
+        position: relative
+        z-index: 10
+        &, svg
+            width: 66px
+            height: 66px
+
+    BODY._scrolled &
+        background: #fff
+
+    +max-screen($screenMS)
+        background: #fff
+        .wrapper
+            height: $header-h_md
+
+        &__nav
+            position: fixed
+            left: 0
+            right: 0
+            top: 0
+            //max-height: 100vh
+            height: 100%
+            overflow: auto
+            z-index: 1
+            background-color: $cDark
+            color: #fff
+            padding: $header-h_md 0 20px
+            transition: $t300
+            transform: scale(1.1)
+            opacity: 0
+            visibility: hidden
+
+
+        &__nav-ul
+            white-space: normal
+            margin: 13px 0
+
+        &__nav-li
+            display: block
+
+        &__nav-a
+            font-size: 30px
+            line-height: 30px
+            color: inherit
+            padding: 12px 20px
+            &:hover
+                color: $cPrimary
+
+        &__demo-btn
+            display: table
+            margin: 30px auto
+
+        &__menu-btn-gr
+            display: block
+
+    +max-screen($screenS)
+        .wrapper
+            height: $header-h_sm
+
+        &__menu-btn-gr
+            &, svg
+                height: 50px
+                width: 50px
+
+        &__nav
+            padding-top: $header-h_sm
+
+        &__nav-ul
+            margin-top: 0
+
+        &__nav-a
+            font-size: 20px
+            line-height: 26px
+            padding-top: 10px
+            padding-bottom: 10px
+
+    +max-screen($screenSS)
+        &__logo-wr
+            width: 165px
+        &__logo
+            width: 145px
+
+
+
++max-screen($screenMS)
+    BODY._mob-menu-open
+        .header__nav
+            transform: scale(1)
+            opacity: 1
+            visibility: visible

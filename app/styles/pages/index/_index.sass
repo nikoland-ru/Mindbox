@@ -1,0 +1,843 @@
+.page-index
+    .header
+        background: #f9f9f9
+
+
+.ind-title-gr
+    margin-bottom: 20px
+
+    .h1-l
+        margin-bottom: 30px
+        +max-screen($screenS)
+            margin-bottom: 8px
+
+
+    &__after
+        font-size: 20px
+        line-height: 26px
+        font-weight: 500
+        +max-screen($screenS)
+            font-size: 16px
+            line-height: 22px
+
+// ----------------------------------------------------------------------
+// Index promo
+// ----------------------------------------------------------------------
+
+//todo
+.i-promo
+    min-height: 737px
+    text-align: center
+    background: url("../images/promo.png") no-repeat bottom center #fafafa
+    padding: 43px 0 200px
+    position: relative
+
+    .wrapper
+        position: static
+
+
+    &__main-wr
+        max-width: 640px
+        margin: 0 auto
+        padding: 0 30px
+
+    &__title-gr
+        +corners($offset-v: -19px, $offset-h: 0px)
+
+        &:before
+            margin: 0 0 -10px 10px
+
+        .h1-l
+            margin-bottom: 25px
+
+    &__title-gr-txt
+        font-size: 12px
+        font-weight: 700
+        color: $cPrimary
+        text-transform: uppercase
+        letter-spacing: 1px
+        padding: 0 80px
+        margin-bottom: 23px
+
+    .mouse-link
+        position: absolute
+        left: 50%
+        margin-left: -$mouse-link-size/2
+        bottom: 18px
+
+
+    +min-screen($screenSM)
+        &__title-gr
+            &:before, &:after
+                display: none
+        .mouse-link
+            display: none
+
+    +min-screen($screenSS + 1px)
+        &__title-gr
+            .h1-l
+                line-height: 50px
+                font-size: 45px
+
+
+
+
+    +max-screen($screenSM)
+        background-image: none
+        padding-top: 60px
+        min-height: 0
+        padding-bottom: 160px
+
+        .mouse-link
+            bottom: 35px
+
+    +max-screen($screenSS)
+        padding-top: 43px
+        padding-bottom: 50px
+
+        &__title-gr
+            &:after
+                margin-top: 11px
+
+        .mouse-link
+            display: none
+
+        .h1-l
+            font-size: 25px
+            line-height: 30px
+
+        &__title-gr-txt
+            padding: 0
+            margin-bottom: 50px
+
+// ----------------------------------------------------------------------
+// examples
+// ----------------------------------------------------------------------
+
+.examples-wr
+    text-align: center
+    padding: 80px 0 1px
+    .wrapper
+        max-width: 1070px
+
+    &__title-gr
+        margin-bottom: 28px
+
+        .h1-l
+            color: $cPrimary
+            margin-bottom: 16px
+            +screen($screenS + 1px,$screenSL)
+                font-size: 45px
+                line-height: 45px
+
+            +max-screen($screenS)
+                margin-bottom: 2px
+
+
+    &__after-title
+        font-size: 30px
+        line-height: 50px
+        font-weight: 500
+        display: table
+        margin: 0px auto 20px
+
+        +corners($offset-h: 20px,$offset-v: -7px)
+
+        +max-screen($screenS)
+            font-size: 16px
+            line-height: 24px
+            &:after,&:before
+                display: none
+
+    +max-screen($screenSL)
+        &__title-gr
+            margin-bottom: 45px
+
+    +max-screen($screenS)
+        padding: 25px 0 17px
+
+        &__title-gr
+            margin-bottom: 10px
+
+        &__after-title
+            margin-bottom: 10px
+
+
+
+.examples
+
+    &__group
+        font-size: 0
+        margin-left: -35px
+        margin-right: -35px
+        //white-space: nowrap
+        display: flex !important
+        justify-content: center
+
+    &__li
+        white-space: normal
+        display: inline-block
+        vertical-align: top
+        font-size: 15px
+        font-weight: 500
+        //max-width: 25%
+        padding: 0 35px
+        margin: 12px 0
+        text-align: left
+        flex-grow: 1
+
+    &__li-ico-wr
+        height: 70px
+        line-height: 70px
+        margin-bottom: 33px
+
+        .iconic, img
+            vertical-align: middle
+
+    &__li-txt-wr
+
+
+    &__li-title
+        font-size: 18px
+        font-weight: 700
+        margin-bottom: 11px
+
+    &__li-txt
+
+    .ico-w-circle--l-t
+        margin-left: 20px
+
+    .ico-w-circle--b
+        margin-left: 32px
+
+    +max-screen($screenMM)
+        &__group
+            margin-left: -20px
+            margin-right: -20px
+
+        &__li
+            padding-right: 20px
+            padding-left: 20px
+
+
+    +max-screen($screenSL)
+        max-width: 670px
+        margin-left: auto
+        margin-right: auto
+
+        .ico-w-circle--b
+            margin-left: 0
+
+        &__group
+            flex-wrap: wrap
+            margin-left: 35px
+            margin-right: 0
+
+        &__li
+            max-width: 50%
+            margin: 25px 0
+            br
+                display: none
+
+        &__li-ico-wr
+
+    +max-screen($screenSS)
+        &__group
+            margin-right: -10px
+            margin-left: -10px
+
+
+        &__li
+            margin: 8px 0
+            padding: 0 10px
+
+
+        &__li-txt
+            font-size: 13px
+            line-height: 20px
+
+        &__li-ico-wr
+            height: 80px
+            line-height: 80px
+            margin-bottom: 20px
+
+
+// ----------------------------------------------------------------------
+// Platforms
+// ----------------------------------------------------------------------
+
+.platforms
+    background: $cDark
+    color: #fff
+    text-align: center
+    padding: 72px 0 90px
+
+    &__title-gr
+        margin-bottom: 28px
+        .h1-l
+            margin-bottom: 7px
+
+    &__after-title
+        font-weight: 500
+        font-size: 30px
+        line-height: 30px
+        +max-screen($screenSL)
+            font-size: 25px
+
+    &__main
+        position: relative
+        margin-left: -150px
+        margin-right: -150px
+
+        .btn
+            display: table
+            margin-left: auto
+            margin-right: auto
+            +min-screen($screenSM + 1px)
+                position: absolute
+                left: 50%
+                top: 75px
+                transform: translateX(-50%)
+
+    &__feature
+        display: inline-block
+        vertical-align: middle
+        width: 310px
+        margin: 20px 10.5%
+
+        .h2-l
+            margin-bottom: 16px
+
+        p
+            font-size: 18px
+            font-weight: 500
+            +max-screen($screenSL)
+                font-size: 16px
+
+    &__f-img
+        height: 170px
+        line-height: 170px
+        margin-bottom: 5px
+        .iconic
+            vertical-align: middle
+            color: #fff
+            font-size: 115px
+
+    +max-screen($screenSL)
+        padding: 45px 0
+        &__title-gr
+            margin-bottom: 12px
+
+    +max-screen($screenSM)
+
+
+        &__main
+            margin-left: -25px
+            margin-right: -25px
+            .btn
+                margin-top: 50px
+
+
+        &__feature
+            width: 270px
+            margin-left: 25px
+            margin-right: 25px
+
+    +max-screen($screenS)
+        padding-bottom: 37px
+
+        &__after-title
+            font-size: 16px
+
+        &__f-img
+            height: auto
+            line-height: normal
+            margin-bottom: 25px
+
+        &__main
+            .btn
+                margin-top: 25px
+
+
+// ----------------------------------------------------------------------
+// Slider-cases-wr
+// ----------------------------------------------------------------------
+
+
+.slider-cases-wr
+    background-color: $cGrey
+    padding: 67px 0 10px
+    text-align: center
+
+    +max-screen($screenS)
+        padding: 22px 0 10px
+
+// ----------------------------------------------------------------------
+// Promo "how it works"
+// ----------------------------------------------------------------------
+
+.promo-how-wr
+    padding: 50px 0 80px
+    text-align: center
+    .ind-title-gr
+        margin-bottom: 28px
+        &__after
+            +min-screen($screenSS + 1px)
+                padding-left: 50px
+                padding-right: 50px
+
+    +max-screen($screenM)
+        padding: 60px 0 15px
+        .ind-title-gr
+            margin-bottom: 53px
+            .h1-l
+                margin-bottom: 25px
+
+    +max-screen($screenSS)
+        padding: 40px 0 5px
+
+        .ind-title-gr
+            margin-bottom: 33px
+            .h1-l
+                margin-bottom: 10px
+
+
+.promo-how
+    +min-screen($screenM + 1px)
+        background: url("../images/how-works-bg.png") no-repeat top center
+        height: 372px
+        position: relative
+
+    &__group
+        line-height: normal
+        +min-screen($screenM + 1px)
+            position: absolute
+            top: 25px
+
+            &--left
+                //left: -110px
+                right: 50%
+                width: 603px
+                padding-right: 200px
+
+                .promo-how__list-gr
+
+
+            &--right
+                //right: -160px
+                left: 50%
+                width: 640px
+                padding-left: 242px
+                +max-screen($screenLS)
+                    width: 600px
+
+                .promo-how__title-gr
+                    display: table
+
+                .promo-how__list-gr + .promo-how__list-gr
+
+
+    &__title-gr
+        margin-bottom: 30px
+
+    &__pre-title
+        font-size: 20px
+        line-height: 20px
+        font-weight: 100
+
+    &__title
+        font-size: 80px
+        font-weight: 100
+        letter-spacing: 7px
+        line-height: normal
+        color: $cPrimary
+        text-transform: uppercase
+
+    &__lists-wr
+        display: flex
+        margin-left: -15px
+        margin-right: -15px
+
+        .ul
+            font-weight: 500
+
+    &__list-gr
+        text-align: left
+        min-width: 41%
+        //flex-shrink: 0
+        padding: 0 15px 15px
+
+    &__list-title
+        font-size: 16px
+        line-height: 20px
+        font-weight: 700
+
+    +max-screen($screenM)
+        display: flex
+        margin-right: -30px
+        margin-left: -30px
+
+        &__group
+            width: 50%
+            min-width: 43%
+            //flex-shrink: 0
+            flex-grow: 1
+            text-align: left
+            padding: 0 30px 20px
+
+        &__title-gr
+            margin-left: -6px
+
+        &__pre-title
+            margin-left: 5px
+
+        &__title
+            font-size: 60px
+            letter-spacing: 6px
+
+    +max-screen($screenMS)
+        &__lists-wr
+            display: block
+        br
+            display: none
+
+        &__group
+            width: auto
+            max-width: 57%
+            //flex-shrink: 0
+            flex-grow: 1
+
+    +max-screen($screenS)
+        margin-right: -15px
+        margin-left: -15px
+
+        &__group
+            max-width: 50%
+            width: 50%
+            padding-left: 15px
+            padding-right: 15px
+
+    +max-screen($screenSS)
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+        &__group
+            padding-right: 0
+            max-width: none
+            width: auto
+
+        &__title-gr
+            margin-bottom: 15px
+
+
+// ----------------------------------------------------------------------
+// Changes
+// ----------------------------------------------------------------------
+
+.changes-wr
+    text-align: center
+    padding: 70px 0 55px
+    background-color: $cGrey
+    position: relative
+
+    .promo-how-wr + &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 50%
+        margin-left: -23px
+        border-width: 25px 23px
+        border-style: solid
+        border-color: #fff transparent transparent transparent
+
+    .ind-title-gr
+        .h1-l
+            margin-bottom: 21px
+            font-weight: 300
+
+    +max-screen($screenSM)
+        padding: 55px 0 45px
+
+    +max-screen($screenSS)
+        padding: 45px 0
+        .ind-title-gr
+            margin-bottom: 15px
+            .h1-l
+                line-height: 35px
+                margin-bottom: 15px
+
+
+.before-after
+
+    &__groups-wr
+
+
+    &__group
+        display: none
+
+        &._active
+            display: block
+
+    &__head-txt
+        font-size: 20px
+        line-height: 26px
+        font-weight: 500
+        margin-bottom: 10px
+
+        +max-screen($screenSM)
+            margin-bottom: 40px
+
+        +max-screen($screenSS)
+            font-size: 16px
+            line-height: 22px
+
+
+    &__visual
+
+    img
+        margin: 10px auto
+        display: block
+
+    &__switcher
+        margin-top: 30px
+        +min-screen($screenSM + 1px)
+            margin-top: -17px
+
+        +max-screen($screenSS)
+            margin-top: 40px
+
+
+// ----------------------------------------------------------------------
+// product
+// ----------------------------------------------------------------------
+
+.product-sl-wr
+    text-align: center
+    padding: 70px 0 65px
+
+    .ind-title-gr
+        margin-bottom: 46px
+
+        .h1-l
+            margin-bottom: 17px
+
+        &__after
+            font-size: 30px
+            line-height: 50px
+            font-weight: 500
+
+    .prod-slider + .btn
+        margin-top: 70px
+
+
+
+    +max-screen($screenSL)
+        padding: 45px 0 25px
+
+        .ind-title-gr
+            margin-bottom: 35px
+
+            .h1-l
+                font-size: 45px
+                line-height: 45px
+                margin-bottom: 24px
+
+            &__after
+                font-size: 25px
+                line-height: 36px
+
+        .prod-slider + .btn
+            display: none
+
+    +max-screen($screenSS)
+        padding: 40px 0 10px
+
+        .ind-title-gr
+            margin-bottom: 30px
+
+            .h1-l
+                font-size: 30px
+                line-height: 34px
+                margin-bottom: 10px
+
+            &__after
+                font-size: 16px
+                line-height: 20px
+
+
+
+
+// ----------------------------------------------------------------------
+// cost
+// ----------------------------------------------------------------------
+
+.pr-cost
+    text-align: center
+
+    .wrapper
+        padding-top: 42px
+        padding-bottom: 75px
+        border-top: 2px dotted #bababa
+        +max-screen($screenSL)
+            padding-bottom: 0
+
+        +max-screen($screenS)
+            padding-top: 35px
+
+    .ind-title-gr
+        .h1-l
+            +min-screen($screenS + 1px)
+                font-size: 45px
+                line-height: 45px
+                margin-bottom: 36px
+
+            +max-screen($screenS)
+                margin-bottom: 20px
+
+        &__after
+            font-size: 16px
+            line-height: 20px
+            max-width: 480px
+
+            margin-left: auto
+            margin-right: auto
+
+    .calc-bl
+        margin-top: 35px
+
+
+.calc-bl
+    background: $cGrey
+    text-align: center
+    padding: 60px $wrapperM-padd 45px
+    max-width: 960px
+    margin-left: auto
+    margin-right: auto
+
+    &__inner
+        max-width: 760px
+        margin: 0 auto
+
+        .btn
+            padding-left: 30px
+            padding-right: 30px
+            font-size: 16px
+
+
+    &__txt-wr
+        margin: 20px 0 30px
+
+        .link
+            font-size: 24px
+            margin-bottom: 10px
+
+        .doc-link
+            margin-top: 35px
+            left: 40px
+            position: relative
+            max-width: 500px
+
+    &__txt
+        font-size: 16px
+        margin: 10px 0
+
+
+    +max-screen($screenSL)
+        margin-left: -$wrapperS-padd
+        margin-right: -$wrapperS-padd
+
+    +max-screen($screenSS)
+        margin-right: -$wrapperSS-padd
+        margin-left: -$wrapperSS-padd
+
+    +max-screen($screenS)
+        padding-top: 45px
+        padding-bottom: 35px
+
+        &__txt-wr
+            margin: 40px 0 35px
+
+        .doc-link
+            left: 0
+            width: 270px
+            padding-left: 20px
+            margin-top: 30px
+
+
+
+.price-calc
+    text-align: center
+
+    &__txt1
+        font-size: 25px
+        line-height: 30px
+        font-weight: 500
+        +max-screen($screenS)
+            font-size: 19px
+            line-height: 24px
+
+
+
+    &__itog-txt
+        font-size: 39px
+        line-height: 45px
+        font-weight: 500
+        +max-screen($screenS)
+            font-size: 26px
+            line-height: 34px
+
+    &__itog-after
+        color: #666666
+        font-size: 14px
+        display: block
+        +max-screen($screenS)
+            font-size: 10px
+            margin-top: -6px
+
+    &__ranges-wr
+        margin: 50px auto 40px
+        position: relative
+        max-width: 440px
+
+        +max-screen($screenS)
+            padding: 0 30px
+            margin: 40px auto 60px
+
+
+
+    &__ranges
+
+
+    &__left-txt,
+    &__right-txt
+        position: absolute
+        top: 50%
+        font-size: 14px
+        line-height: 20px
+        color: #ccc
+        white-space: nowrap
+        padding: 0 30px
+        margin-top: -10px
+
+        +max-screen($screenS)
+            margin-top: 22px
+            top: 100%
+            padding: 0
+
+    &__left-txt
+        right: 100%
+        +max-screen($screenS)
+            right: auto
+            left: 0%
+            margin-left: 30px
+            transform: translateX(-50%)
+
+    &__right-txt
+        left: 100%
+        +max-screen($screenS)
+            right: 0%
+            left: auto
+            margin-right: 30px
+            transform: translateX(50%)

@@ -1,0 +1,64 @@
+.btn
+    display: inline-block
+    box-sizing: border-box
+    vertical-align: middle
+    text-align: center
+    cursor: pointer
+    background: transparent
+    text-decoration: none
+    position: relative
+    user-select: none
+    transition: $t150
+
+    font-size: inherit
+    padding: 0
+
+    
+
+
+    .iconic
+        vertical-align: middle
+        color: inherit
+        margin: 0 5px
+
+    &:hover
+        & > SPAN
+            border-color: transparent
+
+    &--corner
+        +corners
+        margin: 23px
+        &:after,&:before
+            transition: $t300
+        &:hover
+            &:after
+                transform: translate3d(4px, -4px, 0)
+            &:before
+                transform: translate3d(-4px, 4px, 0)
+
+    /* sizes */
+
+
+    /* colors */
+
+    &--default
+        border-radius: 4px
+        font-size: 14px
+        font-weight: 700
+        padding: 12px 18px
+
+        &-green
+            color: #fff
+            background-color:  $cPrimary
+            &:hover
+                background-color: darken( $cPrimary,10%)
+
+            .iconic--arr-r
+                font-size: 10px
+                margin: 0 -5px 0 13px
+
+
+        &.btn--lg
+            //font-size: 16px
+            padding: 15px 20px
+
