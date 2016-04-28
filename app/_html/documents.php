@@ -19,6 +19,39 @@ include 'base/head.php';?>
 
                             <div class="documents__right">
                                 <div class="sidebar">
+                                    <div class="sidebar-mob">
+                                        <form>
+                                            <div class="selector js-selector">
+                                                <span class="selector__option-current js-selector-current">
+                                                     Договор
+                                                </span>
+                                                <ul class="selector__options-list js-selector-options">
+                                                    <li class="selector__option js-selector-option">
+                                                        Договор
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        Приложение
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        Реквизиты 
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        SLA
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        Политика
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        Публичная оферта
+                                                    </li>
+                                                    <li class="selector__option js-selector-option">
+                                                        Стандартная интеграция
+                                                    </li>
+                                                </ul>
+                                                <input type="hidden" value="" name="">
+                                            </div>
+                                        </form>
+                                    </div>
                                     <div class="sidebar-menu">
                                         <div class="sidebar-menu__title">
                                             <h3 class="h3-l">Условия оказания услуг</h3>
@@ -54,39 +87,6 @@ include 'base/head.php';?>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="sidebar-mob">
-                                        <form>
-                                            <div class="selector js-selector">
-                                                <span class="selector__option-current js-selector-current">
-                                                     Договор
-                                                </span>
-                                                <ul class="selector__options-list js-selector-options">
-                                                    <li class="selector__option js-selector-option">
-                                                        Договор
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        Приложение
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        Реквизиты 
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        SLA
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        Политика
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        Публичная оферта
-                                                    </li>
-                                                    <li class="selector__option js-selector-option">
-                                                        Стандартная интеграция
-                                                    </li>
-                                                </ul>
-                                                <input type="hidden" value="" name="">
-                                            </div>
-                                        </form>
-                                    </div>
                                 </div>
                             </div>
 
@@ -96,11 +96,16 @@ include 'base/head.php';?>
                                     <p>Мы считаем важным предоставить вам возможность перед началом сотрудничества ознакомиться с условиями договора, по которому мы оказываем наши услуги.</p>
                                     <p>Опубликованный ниже документ — основа для всех наших договоров с Заказчиками, и наши тарифы рассчитаны на то, что мы будем сотрудничать с вами именно на этих условиях без существенных изменений.</p>
                                     <p class="text-center">
-                                        <span class="file-link">
-                                            <span class="icon iconic iconic--pdf"></span>
-                                            <a href="#!" class="link link--green">СКАЧАТЬ В PDF</a>
-                                            <span class="file-link__size">506 KB</span>
-                                        </span>
+
+                                        <a class="doc-link doc-link--lg" href="#!">
+                                            <span class="doc-link__img">
+                                                <span class="iconic iconic--pdf"></span>
+                                            </span>
+                                            <span class="doc-link__main">
+                                                <span class="doc-link__name link link--green">СКАЧАТЬ В PDF</span>
+                                                <span class="doc-link__info">506 KB </span>
+                                            </span>
+                                        </a>
                                     </p>
                                     <div class="quote">
                                         <p>
