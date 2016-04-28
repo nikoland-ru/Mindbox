@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$pageName = "Главная";
+$pageName = "404";
 include 'base/head.php';?>
 <body>
 

@@ -108,6 +108,8 @@
 
 <script src="../scripts/popups.js"></script>
 
+<script src="../scripts/selectController.js"></script>
+
 <script src="../scripts/sliders.js"></script>
 
 <!-- endinject -->

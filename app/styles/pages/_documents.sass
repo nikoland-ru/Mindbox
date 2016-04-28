@@ -1,0 +1,51 @@
+.documents-wr
+	padding: 40px 0 75px
+
+	+max-screen($screenMS)
+		padding: 30px 0 0
+
+	+max-screen($screenSS)
+		padding: 0
+
+	.wrapper
+		max-width: 1280px
+
+
+.documents
+	@extend .cf
+
+	&__left
+		width: 100%
+		float: left
+
+		+max-screen($screenMS)
+			float: none
+
+	&__inner
+		margin-right: 390px
+		padding: 45px
+		background: #fff
+		border-radius: 5px
+
+		+max-screen($screenMS)
+			margin-right: 0
+			border-radius: 0
+
+		+max-screen($screenSL)
+			padding-left: 35px
+			padding-right: 35px
+
+		+max-screen($screenSS)
+			padding-left: 30px
+			padding-right: 30px
+
+
+	&__right
+		width: 340px
+		float: right
+		margin-left: -340px
+
+		+max-screen($screenMS)
+			margin-left: 0
+			float: none
+			width: 100%

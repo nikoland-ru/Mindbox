@@ -144,3 +144,88 @@ $noUi-handle-size: 38px
     background: #ccc
 
 
+// ----------------------------------------------------------------------
+// Selectors
+// ----------------------------------------------------------------------
+
+.selector
+    position: relative
+    font-size: 12px
+    line-height: 26px
+    min-width: 150px
+    text-align: left
+    &._open
+        z-index: 10
+
+    &__option, &__option-current
+        padding: 6px 30px 6px 15px
+        display: block
+        cursor: pointer
+        transition: $t150
+
+
+    &__option
+        &:first-child
+            border-radius: 4px 4px 0 0
+
+        &:last-child
+            border-radius: 0 0 4px 4px
+
+        &:hover
+            background-color: $cGreen
+            color: #fff
+
+    &__option-current
+        position: relative
+        border-radius: 4px
+        border: 1px solid #d5d5d5
+        box-shadow: inset 1px 1.732px 5px 0px rgba(55, 54, 55, 0.1)
+        background: #fff
+        font-size: 16px
+        color: #333333
+        &:after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 12px
+            width: 17px
+            height: 17px
+            background: url(../images/select-arrow.png) no-repeat 50% 50%
+            transform: translateY(-50%)
+
+            .selector._open &
+                transform: translateY(-50%) rotate(180deg)
+
+    &__options-list
+        display: none
+        border-radius: 4px
+        position: absolute
+        left: 0
+        font-size: 16px
+        top: 100%
+        width: 100%
+        background: #fff
+        padding: 0
+        margin: -1px 0 0
+        border: 1px solid #ddd
+        box-shadow: 3px 3px 5px 0px rgba(55, 54, 55, 0.3)
+
+    &--inline
+        display: inline-block
+        vertical-align: middle
+        margin: 0 5px
+
+    &--filter
+        margin: 4px
+        font-size: 13px
+        .selector
+            &__option-current
+                border-radius: 4px
+
+            &__options-list
+                border-radius: 0 0 4px 4px
+
+        &._open
+            .selector
+                &__option-current
+                    border-radius: 4px 4px 0 0
