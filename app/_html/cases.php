@@ -939,6 +939,7 @@ include 'base/head.php';?>
                                             </span>
                                         <p class="case__txt">
                                             выручка с email-рассылки
+                                            выручка с email-рассылки
                                         </p>
                                     </div>
                                 </a>

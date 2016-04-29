@@ -7,7 +7,7 @@ $(function () {
         $cBtn = $caseSort.find('.js-case-btn'),
         $casesContInner  = $(".js-case-catalog-inner"),
         $cases = $casesCont.find('.js-case-wr'),
-        $visibleCases = $cases,
+        //$visibleCases = $cases,
         $svgMain = $cBtn.find('.js-case-btn__main'),
         $svgMainPaths = $svgMain.find('path'),
         $svgNormal = $cBtn.find('.js-case-btn__normal'),
@@ -15,7 +15,7 @@ $(function () {
         svgFinal = $cBtn.find('.js-case-btn__final'),
         svgFinalPaths = svgFinal.find('path'),
         svgAnimTime = 0.6,
-        catalogAnim = 600,
+        //catalogAnim = 600,
         isotope;
 
     function setClose() {
@@ -62,6 +62,7 @@ $(function () {
             }else{
                 groupingArray[offset] = []
             }
+
             groupingArray[offset].push($thisCase);
 
         });
@@ -71,13 +72,14 @@ $(function () {
             var resultHeight = 0;
 
             $.each(this, function(){
-                var h = $(this).outerHeight();
+                var h = $(this).find('.case').outerHeight();
+
 
                 if( h > resultHeight) resultHeight = h;
             });
 
-            $.each(this, function(){
-                $(this).css('height',resultHeight);
+            $.each(this, function(){console.log(resultHeight)
+                $(this).find('.case').css('min-height',resultHeight);
             });
 
 
@@ -97,6 +99,8 @@ $(function () {
         if( !dataSortType){
             filterValue = '.js-case-wr';
         }
+        $catLink.removeClass('_active');
+        $this.addClass('_active');
 
         /*
         onSort(
@@ -106,9 +110,13 @@ $(function () {
 
         isotope.isotope({'filter': filterValue });
 
-    })
+    });
 
-    isotope.on( 'layoutComplete', function( event, laidOutItems ){
+    isotope.on( 'arrangeComplete', function( event, laidOutItems ){
+        equelHeights();
+    });
 
+    $W.resize(function(){
+        equelHeights();
     })
 });

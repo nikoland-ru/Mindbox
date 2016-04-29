@@ -88,17 +88,56 @@ h1,h2,h3,h4,h5,h6
             top: 5px
             left: 5px
 
+.text-center
+    text-align: center
+
 .typography
 
-    //@extend .h1
-    //@extend .h2
-    //@extend .h3
-    //@extend .h4
-    //@extend .h5
-    //@extend .h6
+    .h1
+        margin-bottom: 40px
 
-    p
+    .h5
+        margin-bottom: 25px
 
-    a
+    P
+        margin-bottom: 25px
+        font: 15px/2 $baseFont
+        color: #333333
 
+        &.small-lh
+            line-height: 1.4
 
+.quote
+    padding: 20px 70px 20px 95px
+    position: relative
+    margin-bottom: 60px
+
+    +max-screen($screenSM)
+        padding: 20px 50px 20px 70px
+
+    +max-screen($screenSS)
+        padding: 20px 20px 20px 40px
+
+    +max-screen($screenXS)
+        padding: 0
+
+    P
+        color: #000
+
+        &:last-child
+            margin-bottom: 0
+
+    &:before
+        content: ""
+        position: absolute
+        left: 40px
+        top: 10px
+        bottom: 10px
+        width: 6px
+        background: #eeeeee
+
+        +max-screen($screenSS)
+            left: 10px
+
+        +max-screen($screenXS)
+            display: none

@@ -1,0 +1,151 @@
+.contacts
+	display: flex
+	flex-flow: row-reverse nowrap
+	align-items: center
+
+	+max-screen($screenMS)
+		display: block
+
+	> DIV
+		width: 50%
+
+		+max-screen($screenMS)
+			width: 100%
+
+	&__map
+		height: 800px
+		position: relative
+		min-height: 600px!important
+
+		+max-screen($screenLS)
+			height: 600px
+
+		+max-screen($screenMS)
+			height: 400px!important
+
+		+max-screen($screenXS)
+			display: none!important
+
+	&__info
+		padding: 0 20px 0 90px
+		position: relative
+
+		+max-screen($screenMM)
+			padding: 40px 45px
+
+		+max-screen($screenSL)
+			padding-left: 35px
+			padding-right: 35px
+
+		+max-screen($screenSS)
+			padding-left: 30px
+			padding-right: 30px
+
+		+max-screen($screenXS)
+			padding-bottom: 0
+
+.contacts-info
+	margin: 40px 0
+	max-width: 540px
+
+	+max-screen($screenXS)
+		margin: 30px 0 0
+
+	&__line
+		@extend .cf
+		margin-bottom: 20px
+
+		+max-screen($screenXS)
+			margin-bottom: 30px
+
+	&__name
+		font-weight: bold
+		font: 700 18px/22px $baseFont
+		float: left
+
+		+max-screen($screenXS)
+			float: none
+
+	&__text
+		font-weight: bold
+		font: 16px/22px $baseFont
+		margin-left: 210px
+
+		+max-screen($screenXS)
+			margin-left: 0
+			margin-top: 5px
+
+.contacts-social
+	margin-left: -5px
+
+.contacts-map
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+
+.contacts-map-btn
+	position: absolute
+	left: 0
+	right: 0
+	text-align: center 
+	top: 50px
+	z-index: 1
+
+	+max-screen($screenMS)
+		top: 20px
+
+	.btn
+		margin: 0 4px 10px
+
+.contacts-map-mob
+	display: none
+	padding: 0 30px
+
+	&__line
+		margin-bottom: 10px
+
+	.link
+		font-size: 15px
+
+	&__hide
+		display: none
+		margin-top: 10px
+		height: 300px
+
+		> ymaps
+			height: 300px!important
+
+	.contacts-info__text
+		margin-top: 10px
+
+	+max-screen($screenXS)
+		display: block
+
+.contacts-more
+	font-size: 18px
+	position: absolute
+	right: 10%
+	top: 0
+	transform: rotate(-90deg)
+	transform-origin: 0 100%
+
+	+max-screen($screenLS)
+		right: -14%
+		top: 15px
+
+	+max-screen($screenMM)
+		top: 50px
+
+	+max-screen($screenMS)
+		top: 150px
+		right: -90px
+
+.ymaps-2-1-39-controls__control
+
+	+max-screen($screenLS)
+		top: 200px!important
+
+	+max-screen($screenMS)
+		top: 175px!important
