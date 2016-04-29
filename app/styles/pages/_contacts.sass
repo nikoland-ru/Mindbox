@@ -15,15 +15,16 @@
 	&__map
 		height: 800px
 		position: relative
+		min-height: 600px!important
 
 		+max-screen($screenLS)
 			height: 600px
 
 		+max-screen($screenMS)
-			height: 400px
+			height: 400px!important
 
 		+max-screen($screenXS)
-			display: none
+			display: none!important
 
 	&__info
 		padding: 0 20px 0 90px
@@ -126,16 +127,18 @@
 	font-size: 18px
 	position: absolute
 	right: 10%
-	bottom: 105%
+	top: 0
 	transform: rotate(-90deg)
 	transform-origin: 0 100%
 
 	+max-screen($screenLS)
 		right: -14%
-		bottom: 80%
+		top: 15px
+
+	+max-screen($screenMM)
+		top: 50px
 
 	+max-screen($screenMS)
-		bottom: auto
 		top: 150px
 		right: -90px
 

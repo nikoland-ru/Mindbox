@@ -277,6 +277,19 @@ $(function () {
 $(function () {
     $('.js-mob-map-btn').click(function(){
         $(this).next('div').slideDown();
+        $('.js-mob-map-btn').not(this).next('div').slideUp();
     });
+});
 
+$(function () {
+    $map = $('.js-page-contacts .contacts__map');
+    if (!$map.length) return;
+
+    var mapHeight = $B.innerHeight() - 104;
+    $map.height(mapHeight);
+
+    $W.resize(function(){
+        mapHeight = $B.innerHeight() - 104;
+        $map.height(mapHeight);
+    });
 });

@@ -5,7 +5,7 @@ $pageName = "Контакты";
 include 'base/head.php';?>
 <body>
 
-<div class="page page-contacts page--gray-bg">
+<div class="page page-contacts js-page-contacts page--gray-bg">
     <div class="page-inner">
         <?php include 'base/header.php';?>
 

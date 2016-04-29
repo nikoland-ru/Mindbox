@@ -4681,6 +4681,7 @@ BODY._side-popup-open .page-inner__overlay {
 .contacts__map {
   height: 800px;
   position: relative;
+  min-height: 600px !important;
 }
 @media screen and (max-width: 1380px) {
   /* line 15, ../styles/pages/_contacts.sass */
@@ -4691,100 +4692,100 @@ BODY._side-popup-open .page-inner__overlay {
 @media screen and (max-width: 1020px) {
   /* line 15, ../styles/pages/_contacts.sass */
   .contacts__map {
-    height: 400px;
+    height: 400px !important;
   }
 }
 @media screen and (max-width: 480px) {
   /* line 15, ../styles/pages/_contacts.sass */
   .contacts__map {
-    display: none;
+    display: none !important;
   }
 }
-/* line 28, ../styles/pages/_contacts.sass */
+/* line 29, ../styles/pages/_contacts.sass */
 .contacts__info {
   padding: 0 20px 0 90px;
   position: relative;
 }
 @media screen and (max-width: 1168px) {
-  /* line 28, ../styles/pages/_contacts.sass */
+  /* line 29, ../styles/pages/_contacts.sass */
   .contacts__info {
     padding: 40px 45px;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 28, ../styles/pages/_contacts.sass */
+  /* line 29, ../styles/pages/_contacts.sass */
   .contacts__info {
     padding-left: 35px;
     padding-right: 35px;
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 28, ../styles/pages/_contacts.sass */
+  /* line 29, ../styles/pages/_contacts.sass */
   .contacts__info {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 28, ../styles/pages/_contacts.sass */
+  /* line 29, ../styles/pages/_contacts.sass */
   .contacts__info {
     padding-bottom: 0;
   }
 }
 
-/* line 46, ../styles/pages/_contacts.sass */
+/* line 47, ../styles/pages/_contacts.sass */
 .contacts-info {
   margin: 40px 0;
   max-width: 540px;
 }
 @media screen and (max-width: 480px) {
-  /* line 46, ../styles/pages/_contacts.sass */
+  /* line 47, ../styles/pages/_contacts.sass */
   .contacts-info {
     margin: 30px 0 0;
   }
 }
-/* line 53, ../styles/pages/_contacts.sass */
+/* line 54, ../styles/pages/_contacts.sass */
 .contacts-info__line {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
-  /* line 53, ../styles/pages/_contacts.sass */
+  /* line 54, ../styles/pages/_contacts.sass */
   .contacts-info__line {
     margin-bottom: 30px;
   }
 }
-/* line 60, ../styles/pages/_contacts.sass */
+/* line 61, ../styles/pages/_contacts.sass */
 .contacts-info__name {
   font-weight: bold;
   font: 700 18px/22px "MuseoSansCyrl", sans-serif;
   float: left;
 }
 @media screen and (max-width: 480px) {
-  /* line 60, ../styles/pages/_contacts.sass */
+  /* line 61, ../styles/pages/_contacts.sass */
   .contacts-info__name {
     float: none;
   }
 }
-/* line 68, ../styles/pages/_contacts.sass */
+/* line 69, ../styles/pages/_contacts.sass */
 .contacts-info__text {
   font-weight: bold;
   font: 16px/22px "MuseoSansCyrl", sans-serif;
   margin-left: 210px;
 }
 @media screen and (max-width: 480px) {
-  /* line 68, ../styles/pages/_contacts.sass */
+  /* line 69, ../styles/pages/_contacts.sass */
   .contacts-info__text {
     margin-left: 0;
     margin-top: 5px;
   }
 }
 
-/* line 77, ../styles/pages/_contacts.sass */
+/* line 78, ../styles/pages/_contacts.sass */
 .contacts-social {
   margin-left: -5px;
 }
 
-/* line 80, ../styles/pages/_contacts.sass */
+/* line 81, ../styles/pages/_contacts.sass */
 .contacts-map {
   position: absolute;
   left: 0;
@@ -4793,7 +4794,7 @@ BODY._side-popup-open .page-inner__overlay {
   bottom: 0;
 }
 
-/* line 87, ../styles/pages/_contacts.sass */
+/* line 88, ../styles/pages/_contacts.sass */
 .contacts-map-btn {
   position: absolute;
   left: 0;
@@ -4803,85 +4804,90 @@ BODY._side-popup-open .page-inner__overlay {
   z-index: 1;
 }
 @media screen and (max-width: 1020px) {
-  /* line 87, ../styles/pages/_contacts.sass */
+  /* line 88, ../styles/pages/_contacts.sass */
   .contacts-map-btn {
     top: 20px;
   }
 }
-/* line 98, ../styles/pages/_contacts.sass */
+/* line 99, ../styles/pages/_contacts.sass */
 .contacts-map-btn .btn {
   margin: 0 4px 10px;
 }
 
-/* line 101, ../styles/pages/_contacts.sass */
+/* line 102, ../styles/pages/_contacts.sass */
 .contacts-map-mob {
   display: none;
   padding: 0 30px;
 }
-/* line 105, ../styles/pages/_contacts.sass */
+/* line 106, ../styles/pages/_contacts.sass */
 .contacts-map-mob__line {
   margin-bottom: 10px;
 }
-/* line 108, ../styles/pages/_contacts.sass */
+/* line 109, ../styles/pages/_contacts.sass */
 .contacts-map-mob .link {
   font-size: 15px;
 }
-/* line 111, ../styles/pages/_contacts.sass */
+/* line 112, ../styles/pages/_contacts.sass */
 .contacts-map-mob__hide {
   display: none;
   margin-top: 10px;
   height: 300px;
 }
-/* line 116, ../styles/pages/_contacts.sass */
+/* line 117, ../styles/pages/_contacts.sass */
 .contacts-map-mob__hide > ymaps {
   height: 300px !important;
 }
-/* line 119, ../styles/pages/_contacts.sass */
+/* line 120, ../styles/pages/_contacts.sass */
 .contacts-map-mob .contacts-info__text {
   margin-top: 10px;
 }
 @media screen and (max-width: 480px) {
-  /* line 101, ../styles/pages/_contacts.sass */
+  /* line 102, ../styles/pages/_contacts.sass */
   .contacts-map-mob {
     display: block;
   }
 }
 
-/* line 125, ../styles/pages/_contacts.sass */
+/* line 126, ../styles/pages/_contacts.sass */
 .contacts-more {
   font-size: 18px;
   position: absolute;
   right: 10%;
-  bottom: 105%;
+  top: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
 }
 @media screen and (max-width: 1380px) {
-  /* line 125, ../styles/pages/_contacts.sass */
+  /* line 126, ../styles/pages/_contacts.sass */
   .contacts-more {
     right: -14%;
-    bottom: 80%;
+    top: 15px;
+  }
+}
+@media screen and (max-width: 1168px) {
+  /* line 126, ../styles/pages/_contacts.sass */
+  .contacts-more {
+    top: 50px;
   }
 }
 @media screen and (max-width: 1020px) {
-  /* line 125, ../styles/pages/_contacts.sass */
+  /* line 126, ../styles/pages/_contacts.sass */
   .contacts-more {
-    bottom: auto;
     top: 150px;
     right: -90px;
   }
 }
 
 @media screen and (max-width: 1380px) {
-  /* line 142, ../styles/pages/_contacts.sass */
+  /* line 145, ../styles/pages/_contacts.sass */
   .ymaps-2-1-39-controls__control {
     top: 200px !important;
   }
 }
 @media screen and (max-width: 1020px) {
-  /* line 142, ../styles/pages/_contacts.sass */
+  /* line 145, ../styles/pages/_contacts.sass */
   .ymaps-2-1-39-controls__control {
     top: 175px !important;
   }
