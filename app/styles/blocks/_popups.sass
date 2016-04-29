@@ -65,6 +65,7 @@ $side-popup-size: 405px
 
     .checkbox-label__txt
         color: #939393
+        font-size: 13px
 
 
     +max-screen($side-popup-size)
@@ -108,20 +109,42 @@ $popup-size: 600px
 
 .popup__closer,.mfp-close
     font-size: 25px
+    width: 25px !important
+    height: 25px !important
     line-height: normal
     color: $cPrimary !important
     position: absolute
     top: 16px !important
     right: 16px !important
-    padding: 0
-    height: auto
-    width: auto
+    padding: 0 !important
     cursor: pointer
     opacity: 1
 
-
     &:hover
         color: darken($cPrimary, 10%) !important
+
+    .mfp-iframe-holder &
+        top: 0 !important
+        right: auto !important
+        //bottom: 100% !important
+        left: 100% !important
+        margin: 0 0 16px 16px
+        //color: $cDark !important
+        +max-screen($screenS)
+            margin: 0 0 16px
+            top: auto !important
+            bottom: 100% !important
+            left: auto !important
+            right: 0 !important
+
+
+.mfp-iframe-holder
+    &.mfp-container
+        padding-left: 60px
+        padding-right: 60px
+        +max-screen($screenS)
+            padding-left: 10px
+            padding-right: 10px
 
 
 

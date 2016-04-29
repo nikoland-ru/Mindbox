@@ -6,7 +6,7 @@ $(function () {
     function onScroll(){
         var scroll = $W.scrollTop();
 
-        if(scroll > 200){
+        if(scroll > 10){
             $B.addClass('_scrolled');
         }else{
             $B.removeClass('_scrolled');

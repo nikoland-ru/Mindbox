@@ -1,6 +1,36 @@
 @import "sliders"
 @import "popups"
 
+$col-gap_base: 30px
+.cols
+    margin-right: -$col-gap_base
+    margin-left: -$col-gap_base
+    display: flex
+    flex-wrap: wrap
+
+    .col
+        flex-shrink: 0
+        flex-grow: 0
+        padding: 0 $col-gap_base
+
+        &--50
+            width: 50%
+
+        &--25
+            width: 25%
+
+        &--33
+            width: 33%
+
+        &--66
+            width: 66%
+
+    &--s
+        +max-screen($screenS)
+
+            .col
+                width: 100%
+
 
 .subscribe
     margin: 15px
@@ -76,6 +106,39 @@
     &:hover
         &:after
             transform: rotate(360deg)
+
+
+// ----------------------------------------------------------------------
+// Page-head
+// ----------------------------------------------------------------------
+
+.page-head
+    padding: 40px 25px
+    text-align: center
+
+    &__title
+        max-width: 700px
+        display: table
+        margin: 25px auto
+        +corners()
+
+    +max-screen($screenS)
+        padding: 30px 25px
+
+        &__title
+            &:after
+                margin-top: -8px
+
+            &:before
+                margin-bottom: -8px
+
+    +max-screen($screenXS)
+        padding: 20px 0
+
+        &__title
+
+            &:after, &:before
+                display: none
 
 
 

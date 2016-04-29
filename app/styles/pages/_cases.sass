@@ -1,0 +1,150 @@
+.page-cases
+    background: $pageBg
+
+
+.cases-sort
+    background: $cDark
+    color: #fff
+    font-size: 16px
+    position: relative
+    z-index: 1
+
+    &__nav
+        max-width: $screenM
+        display: flex
+        min-height: 90px
+        justify-content: center
+        align-content: stretch
+        background: $cDark
+
+
+
+    &__link
+        margin: 0 10px
+        padding: 10px 0
+        position: relative
+
+        .link
+            color: inherit
+
+        &._active
+            color: $cPrimary
+
+            .link
+                border-bottom-color: transparent
+
+            +min-screen($screenSL + 1px)
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    margin-left: -8px
+                    border: 8px solid transparent
+                    border-top-color: $pageBg
+
+        &:hover
+            color: $cPrimary
+            .link
+                border-bottom-color: transparent
+
+    &__btn
+        padding: 13px 0
+        display: none
+        white-space: nowrap
+        cursor: pointer
+        transition: $t300
+        &:hover
+            color: $cPrimary
+
+        .svg-obj,
+        &-txt
+            display: inline-block
+            vertical-align: middle
+            white-space: normal
+
+        .svg-obj
+            margin-right: -40px
+            &, svg
+                width: 40px
+                height: 40px
+
+    &__btn-txt
+        width: 100%
+        font-size: 20px
+        padding-left: 40px + 20px
+
+    +max-screen($screenMM)
+        font-size: 14px
+        .wrapper
+            min-height: 76px
+
+        &__link
+            margin: 0 7px
+
+    +max-screen($screenSL)
+
+        .wrapper
+            min-height: 0
+
+        &__btn
+            display: block
+
+        &__nav
+            //display: block
+            flex-wrap: wrap
+            justify-content: flex-start
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            padding: 15px $wrapperS-padd
+            transition: $t300
+            opacity: 0
+            visibility: hidden
+            transform: translateY(-5px)
+
+
+        &__link
+            font-size: 16px
+            width: 25%
+            text-align: left
+            margin: 0
+            padding: 10px 20px 10px 0
+
+        &._mob-sorting-open
+            .cases-sort__nav
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
+
+    +max-screen($screenSM)
+
+        &__link
+            width: (100%/3)
+
+    +max-screen($screenSS)
+        &__nav
+            padding-right: $wrapperSS-padd
+            padding-left: $wrapperSS-padd
+
+        &__link
+            width: 50%
+
+
+    +max-screen($screenXS)
+        &__link
+            font-size: 14px
+
+
+.cases-catalog
+    margin: 30px 0 85px
+    box-sizing: content-box
+    position: relative
+    overflow: hidden
+
+    .cases-grid__col
+        //transition: $t600
+        //&._fade
+            opacity: 1
+            visibility: hidden

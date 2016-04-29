@@ -55,32 +55,38 @@
     @if $filename == email-like {
     $char: "\E009";
 }
-    @if $filename == graphs {
+    @if $filename == fb-round {
     $char: "\E00A";
 }
-    @if $filename == mouse {
+    @if $filename == graphs {
     $char: "\E00B";
 }
-    @if $filename == pdf {
+    @if $filename == habr {
     $char: "\E00C";
 }
-    @if $filename == play {
+    @if $filename == mouse {
     $char: "\E00D";
 }
-    @if $filename == plus-round {
+    @if $filename == pdf {
     $char: "\E00E";
 }
-    @if $filename == ppl-cards {
+    @if $filename == play {
     $char: "\E00F";
 }
-    @if $filename == rub {
+    @if $filename == plus-round {
     $char: "\E010";
 }
-    @if $filename == site {
+    @if $filename == ppl-cards {
     $char: "\E011";
 }
-    @if $filename == tick {
+    @if $filename == rub {
     $char: "\E012";
+}
+    @if $filename == site {
+    $char: "\E013";
+}
+    @if $filename == tick {
+    $char: "\E014";
 }
 
 @return $char;
@@ -120,8 +126,14 @@
 .iconic--email-like {
     @include iconic(email-like);
 }
+.iconic--fb-round {
+    @include iconic(fb-round);
+}
 .iconic--graphs {
     @include iconic(graphs);
+}
+.iconic--habr {
+    @include iconic(habr);
 }
 .iconic--mouse {
     @include iconic(mouse);

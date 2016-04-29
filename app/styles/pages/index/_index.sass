@@ -1,6 +1,6 @@
 .page-index
     .header
-        background: #f9f9f9
+        background: transparent
 
 
 .ind-title-gr
@@ -20,24 +20,37 @@
             font-size: 16px
             line-height: 22px
 
+
 // ----------------------------------------------------------------------
 // Index promo
 // ----------------------------------------------------------------------
 
-//todo
 .i-promo
-    min-height: 737px
+    min-height: 805px
     text-align: center
-    background: url("../images/promo.png") no-repeat bottom center #fafafa
-    padding: 43px 0 200px
+    background: url("../images/promo-pattern.jpg") top center //#fafafa
     position: relative
+    padding-top: $header-h
+    margin-top: -$header-h
+    margin-bottom: 40px
+
+    +max-screen($screenMS)
+        padding-top: $header-h_md
+        margin-top: -$header-h_md
+
+    +max-screen($screenS)
+        padding-top: $header-h_sm
+        margin-top: -$header-h_sm
 
     .wrapper
-        position: static
+        padding-top: 43px
+        padding-bottom: 200px
+        //position: relative
+        z-index: 2
 
 
     &__main-wr
-        max-width: 640px
+        max-width: 590px
         margin: 0 auto
         padding: 0 30px
 
@@ -66,6 +79,45 @@
         bottom: 18px
 
 
+    &__bg-img
+        position: absolute
+        z-index: 1
+        opacity: 0
+        transition: 0.7s 0.2s
+
+        &--center
+            left: 50%
+            bottom: -35px
+            margin-left: -150px
+            transform: translateY(10%)
+
+        &--left
+            right: 50%
+            bottom: 10px
+            margin-right: 258px
+            transform: translateX( -10%)
+
+        &--right
+            left: 50%
+            bottom: 27px
+            margin-left: 264px
+            transform: translateX(10%)
+
+    &._animate
+        .i-promo
+            &__bg-img
+                opacity: 1
+
+                &--center
+                    transform: translateX(0%)
+
+                &--left
+                    transform: translateX(0%)
+
+                &--right
+                    transform: translateX(0%)
+
+
     +min-screen($screenSM)
         &__title-gr
             &:before, &:after
@@ -83,17 +135,21 @@
 
 
     +max-screen($screenSM)
-        background-image: none
-        padding-top: 60px
         min-height: 0
-        padding-bottom: 160px
+        .wrapper
+            padding-top: 60px
+            padding-bottom: 160px
 
         .mouse-link
             bottom: 35px
 
+        &__bg-img
+            display: none
+
     +max-screen($screenSS)
-        padding-top: 43px
-        padding-bottom: 50px
+        .wrapper
+            padding-top: 43px
+            padding-bottom: 50px
 
         &__title-gr
             &:after
@@ -161,7 +217,6 @@
 
         &__after-title
             margin-bottom: 10px
-
 
 
 .examples
@@ -363,7 +418,6 @@
 // Slider-cases-wr
 // ----------------------------------------------------------------------
 
-
 .slider-cases-wr
     background-color: $cGrey
     padding: 67px 0 10px
@@ -371,6 +425,7 @@
 
     +max-screen($screenS)
         padding: 22px 0 10px
+
 
 // ----------------------------------------------------------------------
 // Promo "how it works"
@@ -667,8 +722,6 @@
                 line-height: 20px
 
 
-
-
 // ----------------------------------------------------------------------
 // cost
 // ----------------------------------------------------------------------
@@ -726,22 +779,7 @@
             font-size: 16px
 
 
-    &__txt-wr
-        margin: 20px 0 30px
 
-        .link
-            font-size: 24px
-            margin-bottom: 10px
-
-        .doc-link
-            margin-top: 35px
-            left: 40px
-            position: relative
-            max-width: 500px
-
-    &__txt
-        font-size: 16px
-        margin: 10px 0
 
 
     +max-screen($screenSL)
@@ -755,16 +793,6 @@
     +max-screen($screenS)
         padding-top: 45px
         padding-bottom: 35px
-
-        &__txt-wr
-            margin: 40px 0 35px
-
-        .doc-link
-            left: 0
-            width: 270px
-            padding-left: 20px
-            margin-top: 30px
-
 
 
 .price-calc
@@ -780,35 +808,25 @@
 
 
 
+    &__itog-txt-wr
+        margin-bottom: 20px
+
     &__itog-txt
         font-size: 39px
         line-height: 45px
         font-weight: 500
-        +max-screen($screenS)
-            font-size: 26px
-            line-height: 34px
 
     &__itog-after
         color: #666666
         font-size: 14px
         display: block
-        +max-screen($screenS)
-            font-size: 10px
-            margin-top: -6px
 
     &__ranges-wr
         margin: 50px auto 40px
         position: relative
         max-width: 440px
 
-        +max-screen($screenS)
-            padding: 0 30px
-            margin: 40px auto 60px
-
-
-
     &__ranges
-
 
     &__left-txt,
     &__right-txt
@@ -821,23 +839,106 @@
         padding: 0 30px
         margin-top: -10px
 
-        +max-screen($screenS)
+
+    &__left-txt
+        right: 100%
+
+    &__right-txt
+        left: 100%
+
+    &__main-state
+        .link
+            font-size: 24px
+            margin-bottom: 10px
+
+    &__txt-wr
+        margin: 5px 0 30px
+
+        .doc-link
+            margin-top: 35px
+            left: 40px
+            position: relative
+            max-width: 500px
+
+    &__txt
+        font-size: 16px
+        margin: 10px 0
+
+    &__options
+        display: none
+        text-align: left
+        padding: 30px 0 20px
+
+        .checkbox__view
+            background: #fff
+
+        .checkbox-label
+            margin: 10px 0
+
+        .h6-wide
+            margin-bottom: 20px
+
+    &__options-group
+        margin-bottom: 20px
+
+    &__second-state
+        display: none
+
+
+
+
+    &._custom-pricing
+        .price-calc
+            &__main-state
+                display: none
+
+            &__second-state
+                display: block
+
+    +max-screen($screenS)
+
+        &__txt-wr
+            margin: 40px 0 35px
+
+        .doc-link
+            left: 0
+            width: 270px
+            padding-left: 20px
+            margin-top: 30px
+
+        &__left-txt,
+        &__right-txt
             margin-top: 22px
             top: 100%
             padding: 0
 
-    &__left-txt
-        right: 100%
-        +max-screen($screenS)
+        &__right-txt
+            right: 0
+            left: auto
+            margin-right: 30px
+            transform: translateX(50%)
+
+        &__left-txt
             right: auto
             left: 0%
             margin-left: 30px
             transform: translateX(-50%)
 
-    &__right-txt
-        left: 100%
-        +max-screen($screenS)
-            right: 0%
-            left: auto
-            margin-right: 30px
-            transform: translateX(50%)
+        &__ranges-wr
+            padding: 0 30px
+            margin: 40px auto 60px
+
+
+        &__itog-txt-wr
+            margin-bottom: 41px
+
+        &__txt-wr
+            margin-top: 10px
+
+        &__itog-txt
+            font-size: 26px
+            line-height: 34px
+
+        &__itog-after
+            font-size: 10px
+            margin-top: -6px

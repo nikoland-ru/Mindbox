@@ -162,14 +162,26 @@
 
         &:hover
             color: #fff
-            .footer__soc-item-img
-                transform: translateY(-6px)
 
-    .footer__soc-item-img
+
+    &__soc-item-img
         margin-right: 12px
         display: inline-block
         vertical-align: middle
-        transition: $t300
+        //transition: $t300
+
+        .iconic
+            color: inherit
+            font-size: 40px
+            display: inline-block
+            vertical-align: middle
+            line-height: normal
+
+
+            &--habr
+                font-size: 52px
+
+
 
     &__soc-item-txt
         display: inline-block

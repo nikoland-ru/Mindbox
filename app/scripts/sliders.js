@@ -3,8 +3,8 @@ $(function () {
     var $referenceRight = $('.js-slider-arr--r')[0].outerHTML,
         $referenceLeft = $('.js-slider-arr--l')[0].outerHTML;
 
-    _GLOB.slickPrevArrHtml = $referenceRight;
-    _GLOB.slickNextArrHtml = $referenceLeft;
+    _GLOB.slickPrevArrHtml = $referenceLeft;
+    _GLOB.slickNextArrHtml = $referenceRight;
 });
 
 
@@ -16,7 +16,7 @@ $(function () {
                     $slides = $slider.find('.cases-slider__col'),
                     widthsLg = [0.2,0.4],
                     widthsMd = [0.25, 0.5],
-                    widthsSm = [0.333, 0.666],
+                    widthsSm = [0.5,1],//[0.333, 0.666],
                     widthsSs = [0.5, 1];
 
                 function setSlidesH(){
@@ -103,7 +103,7 @@ $(function () {
                 $slider.slick({
                     variableWidth: true,
                     //centerMode: true,
-                    //slidesToShow: 5,
+                    slidesToShow: 5,
                     slidesToScroll: 2,
                     arrows: true,
                     dots: true,
@@ -120,7 +120,7 @@ $(function () {
                         {
                             breakpoint: _GLOB.breakpoints.sm,
                             settings: {
-                                slidesToShow: 3,
+                                slidesToShow: 2,
                                 swipe: true
                             }
                         },{

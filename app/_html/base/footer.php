@@ -28,7 +28,7 @@
 
                     <a href="#!" target="_blank" class="footer__soc-item">
                         <div class="footer__soc-item-img">
-                            <img src="../images/habr.png" alt="" draggable="false">
+                            <span class="iconic iconic--habr"></span>
                         </div>
                         <span class="footer__soc-item-txt">
                             Блог на хабре
@@ -36,7 +36,7 @@
                     </a>
                     <a href="#!" target="_blank" class="footer__soc-item" draggable="false">
                         <div class="footer__soc-item-img">
-                            <img src="../images/facebook.png" alt="" draggable="false">
+                            <span class="iconic iconic--fb-round"></span>
                         </div>
                         <span class="footer__soc-item-txt">
                             Мы в Facebook
@@ -87,11 +87,7 @@
                                     История
                                 </a>
                             </li>
-                            <li>
-                                <a href="#!">
-                                    Люди
-                                </a>
-                            </li>
+
                             <li>
                                 <a href="#!">
                                     Документы

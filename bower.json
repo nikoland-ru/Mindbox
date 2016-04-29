@@ -12,13 +12,13 @@
     "bower_components"
   ],
   "dependencies": {
-    "jquery": "~1.11.3",
     "modernizr": "~2.8.3",
     "normalize.css": "~3.0.3",
     "slick-carousel": "~1.5.9",
     "jquery-touchswipe": "~1.6.15",
     "nouislider": "^8.5.1",
     "photoswipe": "^4.1.1",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "jquery": "^2.2.3"
   }
 }

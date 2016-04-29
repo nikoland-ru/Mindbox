@@ -3,7 +3,7 @@ $header-h_md: 84px
 $header-h_sm: 68px
 
 .header
-    //background: #fff
+    background: #fff
     //position: relative
     z-index: 100
     position: fixed
@@ -65,7 +65,8 @@ $header-h_sm: 68px
         font-size: 15px
         color: #000
         text-decoration: none
-        transition: $t150
+        transition: $t300
+
         +min-screen($screenMS + 1px)
             line-height: $header-h - 2px
             border-bottom: 1px solid transparent
@@ -91,6 +92,7 @@ $header-h_sm: 68px
 
     BODY._scrolled &
         background: #fff
+        box-shadow: 0 0 8px rgba(#000,0.5)
 
     +max-screen($screenMS)
         background: #fff

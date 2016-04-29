@@ -1,24 +1,26 @@
 var $W = $(window),
     $D = $(document),
     $H = $('html'),
-    $B = $('body'),
-    _GLOB = {
-        breakpoints: {
-            'xl': 1800,
-            'll': 1500,
-            'ls': 1380,
-            'm': 1288,
-            'mm': 1168,
-            'ms': 1020,
-            'sl': 960,
-            'sm': 860,
-            's': 767,
-            'ss': 630,
-            'xs': 480
-        }
-    };
-	
-	
+    $B = $('body');
+
+
+if(!_GLOB){
+    var _GLOB = {};
+}
+
+_GLOB.breakpoints = {
+    'xl': 1800,
+    'll': 1500,
+    'ls': 1380,
+    'm': 1288,
+    'mm': 1168,
+    'ms': 1020,
+    'sl': 960,
+    'sm': 860,
+    's': 767,
+    'ss': 630,
+    'xs': 480
+};
 	
 	
 
@@ -126,8 +128,6 @@ $(function () {
     // Scroll trigger
     $('.js-scroll-trigger').scrollTrigger();
 
-    // custom scrollbar
-    //$('.js-scrollblock').perfectScrollbar();
 
 });
 
@@ -136,33 +136,5 @@ $(function () {
     if (!$tabs.length) return;
 
     $tabs.tabs({});
-});
-
-// todo
-$(function () {
-    var $baCont = $('.js-before-after');
-    if (!$baCont.length) return;
-
-    var $btn = $baCont.find('.js-before-after_btn'),
-        $group = $baCont.find('.js-before-after_tab');
-
-
-    function switchTab(){
-        var dataState = $baCont.data('state'),
-            newState = dataState == 1 ? 2 : 1,
-            msg = newState == 1 ? 'Навести порядок' : 'Вернуть беспорядок';
-
-        $group.removeClass('_active').eq(newState - 1).addClass('_active');
-
-        $btn.text(msg);
-
-        $baCont.data('state', newState)
-    }
-
-    $btn.bind('click',function(){
-        switchTab();
-    })
-
-
 });
 

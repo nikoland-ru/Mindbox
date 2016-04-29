@@ -11,7 +11,7 @@ include 'base/head.php';?>
 
         <div class="page-body">
 
-            <section class="i-promo">
+            <section class="i-promo js-index-promo">
                 <div class="wrapper">
                     <div class="i-promo__main-wr">
                         <div class="i-promo__title-gr">
@@ -25,7 +25,7 @@ include 'base/head.php';?>
                             </p>
                         </div>
 
-                        <a href="#!" class="video-link">
+                        <a href="http://player.vimeo.com/video/122020511?api=1&amp;autoplay=1" class="video-link js-video-popup">
                             <!--<span class="iconic iconic--play"></span>-->
                             <span class="link link--black link--dotted">
                                 Обо всем за 4 минуты
@@ -37,6 +37,13 @@ include 'base/head.php';?>
                         </a>
                     </div>
                 </div>
+
+                <img src="../images/promo-bg-center.png" draggable="false" alt=""
+                     class="i-promo__bg-img i-promo__bg-img--center">
+                <img src="../images/promo-bg-left.png" draggable="false" alt=""
+                     class="i-promo__bg-img i-promo__bg-img--left">
+                <img src="../images/promo-bg-right.png" draggable="false" alt=""
+                     class="i-promo__bg-img i-promo__bg-img--right">
             </section>
 
 
@@ -366,6 +373,84 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
+                        <div class="cases-slider__col _double js-cases-sl__col">
+
+                            <div class="cases-grid__col  cases-grid__col--double js-cases-sl__col">
+                                <div class="case case--comment">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo4.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                                <span class="numb">
+                                                    +1400%
+                                                </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                    <div class="case__comment">
+                                        <p class="case__comm-title">
+                                            Отзыв
+                                        </p>
+                                        <p class="case__comm-txt">
+                                            Рост выручки, прибыльности и лояльности покупателей. Понятная достоверная
+                                            отчетность, новые маркетинговые идеи. Спасибо!
+                                            отчетность, новые маркетинговые идеи. Спасибо!
+                                            отчетность, новые маркетинговые идеи. Спасибо!
+                                            отчетность, новые маркетинговые идеи. Спасибо!
+                                        </p>
+
+                                        <div class="case__comm-link-wr">
+                                            <a href="#!" class="link link--white js-popup-btn" data-mfp-src="#case-comment1">
+                                                Читать весь отзыв
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo8.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +1400%
+                                            </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo9.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +1400%
+                                            </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
                         <div class="cases-slider__col js-cases-sl__slide">
                             <div class="cases-grid__col js-cases-sl__col" data-mfp-src="#case-name5">
                                 <div class="case">
@@ -397,6 +482,82 @@ include 'base/head.php';?>
                                             </span>
                                             <p class="case__txt">
                                                 выручка с email-рассылки
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cases-slider__col js-cases-sl__slide">
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case">
+                                    <a href="#!"  class="case__main-link js-popup-btn" data-mfp-src="#case-name1" >
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo1.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                                <span class="numb">
+                                                    +1400%
+                                                </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2" >
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo5.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                                <span class="numb">
+                                                    +1400% and two words
+                                                </span>
+                                            <p class="case__txt">
+                                                выручка с email-рассылки
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cases-slider__col js-cases-sl__slide">
+                            <div class="cases-grid__col js-cases-sl__col ">
+                                <div class="case">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo2.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                        <span class="numb">
+                                            +190%
+                                        </span>
+                                            <p class="case__txt">
+                                                выручка с SMS-рассылки
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name4">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo6.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                                <span class="numb">
+                                                    +1400 123%
+                                                </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
                                             </p>
                                         </div>
                                     </a>
@@ -480,7 +641,7 @@ include 'base/head.php';?>
                         </div>
 
                         <div class="cases-slider__col js-cases-sl__slide">
-                            <div class="cases-grid__col js-cases-sl__col" data-mfp-src="#case-name4">
+                            <div class="cases-grid__col js-cases-sl__col" data-mfp-src="#case-name5">
                                 <div class="case">
                                     <a href="#!" class="case__main-link js-popup-btn">
                                         <div class="case__img-wr">
@@ -500,7 +661,7 @@ include 'base/head.php';?>
 
                             <div class="cases-grid__col js-cases-sl__col">
                                 <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name5">
+                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name6">
                                         <div class="case__img-wr">
                                             <img src="../images/userfiles/logo7.png" alt="">
                                         </div>
@@ -835,8 +996,9 @@ include 'base/head.php';?>
                         <div class="calc-bl__inner">
 
                             <div class="price-calc js-priceCalc"
-                                data-step="100" data-min-value="10000" data-max-value="5000000">
-                                <p class="price-calc__txt1">
+                                data-step="100" data-min-value="100000" data-max-value="5000000">
+
+                                <p class="price-calc__txt1 js-priceCalc_top-node">
                                     до 100 000 покупателей
                                 </p>
 
@@ -852,42 +1014,205 @@ include 'base/head.php';?>
                                     </div>
                                 </div>
 
-                                <div class="price-calc__itog-txt-wr">
-                                    <p class="price-calc__itog-txt">
-                                        <span class="price-calc__itog js-priceCalc_itog">
-                                            71 232
-                                        </span>
-                                        в месяц
-                                    </p>
-                                    <span class="price-calc__itog-after">
-                                        без НДС
-                                    </span>
-                                </div>
-                            </div>
+                                <div class="price-calc__main-state">
 
-                            <div class="calc-bl__txt-wr">
-
-                                <a href="#!" class="link link--green link--dotted">
-                                    Опции и скидки
-                                </a>
-
-                                <p class="calc-bl__txt">
-                                    Бесплатно поможем с аналитикой и маркетингом в обмен на публичный кейс.
-                                </p>
-
-                                <a href="#!" class="doc-link">
-                                    <span class="doc-link__img">
-                                        <span class="iconic iconic--pdf"></span>
-                                    </span>
-                                    <span class="doc-link__main">
-                                        <p class="doc-link__name">Полный список услуг, включенных в цену подписки</p>
-                                        <p class="doc-link__info">
-                                            .pdf, 506 KB
+                                    <div class="price-calc__itog-txt-wr">
+                                        <p class="price-calc__itog-txt">
+                                            <span class="price-calc__itog js-priceCalc_itog">
+                                                71 232
+                                            </span>
+                                            в месяц
                                         </p>
-                                    </span>
-                                </a>
+                                        <span class="price-calc__itog-after">
+                                            без НДС
+                                        </span>
+                                    </div>
+
+                                    <div class="price-calc__options-wr">
+
+                                        <a href="#!" class="link link--green link--dotted js-priceCalc__options-toggle">
+                                            Опции и скидки
+                                        </a>
+
+                                        <div class="price-calc__options js-priceCalc__options">
+
+                                            <div class="cols cols--s">
+                                                <div class="col col--50  ">
+                                                    <div class="price-calc__options-group">
+                                                        <h4 class="h6-wide">
+                                                            Дополнительные каналы
+                                                        </h4>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                SMS рассылки (наш шлюз или интеграция по протоколу Mindbox)
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Мобильное приложение и push сообщения
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Ретаргетинг в триггерных цепочках и операциях
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Персонализация сайта в реальном времени
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Интеграция с колл-центром (в т.ч. операторы поддержки и обратной связи)
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Программа лояльности (процессинг, баллы или скидки, акции, collect & get)
+                                                            </span>
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col col--50  ">
+                                                    <div class="price-calc__options-group">
+                                                        <h4 class="h6-wide">
+                                                            Для крупного бизнеса и FMCG
+                                                        </h4>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Мультибрэндовый проект
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Сбор данных через offline приложение для персонала или импорт бумажных анкет
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Система авторизации и аутентификации (многоканальный Single-Sign-On)
+                                                            </span>
+                                                        </label>
+
+                                                    </div>
+
+                                                    <div class="price-calc__options-group">
+                                                        <h4 class="h6-wide">
+                                                            Скидки
+                                                        </h4>
+
+                                                        <label class="checkbox-label">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="checkbox__view"></span>
+                                                            </span>
+
+                                                            <span class="checkbox-label__txt">
+                                                                Неразрывный контракт на год со штрафом в размере скидки: -15%
+                                                            </span>
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="price-calc__second-state">
+                                    <div class="price-calc__itog-txt-wr">
+                                        <p class="price-calc__itog-txt">
+                                            Свяжитесь с нами!
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="price-calc__txt-wr">
+
+                                    <!--
+                                    <p class="price-calc__txt">
+                                        Бесплатно поможем с аналитикой и маркетингом в обмен на публичный кейс.
+                                    </p>-->
+
+                                    <a href="#!" class="doc-link">
+                                        <span class="doc-link__img">
+                                            <span class="iconic iconic--pdf"></span>
+                                        </span>
+                                        <span class="doc-link__main">
+                                            <p class="doc-link__name">Полный список услуг, включенных в цену подписки</p>
+                                            <p class="doc-link__info">
+                                                .pdf, 506 KB
+                                            </p>
+                                        </span>
+                                    </a>
+
+                                </div>
+
+
+
+
 
                             </div>
+
+
 
                             <a href="#!" class="btn btn--default btn--default-green btn--corner btn--lg">
                                 Связаться с нами
