@@ -1,0 +1,299 @@
+.about-promo
+	height: 660px
+	display: flex
+	flex: column nowrap
+	align-items: center
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	text-align: center
+	position: relative
+
+	+max-screen($screenMS)
+		height: 500px
+
+	+max-screen($screenXS)
+		height: 300px
+
+	&__inner
+		margin: 0 auto
+		max-width: 980px
+		width: 100%
+		position: relative
+		padding: 50px 0
+		z-index: 2
+
+		&:before,
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 1px
+			opacity: 0.3
+			background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,0) 100%)
+			background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,0) 100%)
+			background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,0) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 )
+			+max-screen($screenXS)
+				display: none
+
+		&:after
+			top: auto
+			bottom: 0
+
+	&__text1
+		font: 100 30px/1 $baseFont
+		color: #fff
+		text-transform: uppercase
+
+	&__text2
+		font: 100 80px/1.1 $baseFont
+		color: #fff
+		padding: 5px 0 25px 0
+		display: inline-block
+		position: relative
+		+corners($offset-v: -19px, $offset-h: 24px)
+
+		&:after,
+		&:before
+			border-width: 2px
+
+		+max-screen($screenSM)
+			font-size: 60px
+			line-height: 1.2
+
+		+max-screen($screenSS)
+			font-size: 40px
+			font-weight: 300
+			line-height: 1.2
+			padding: 15px 0 25px 0
+			margin: 10px 0
+			+corners($offset-v: -29px, $offset-h: 16px)
+
+		+max-screen($screenXS)
+			margin: 25px 0
+			font-size: 30px
+			+corners($offset-v: -32px, $offset-h: 0px)
+
+	&__text3
+		font: 300 20px/1 $baseFont
+		color: #fff
+
+
+	&__video
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		overflow: hidden
+
+		+max-screen($screenS)
+			display: none
+
+		&:after
+			content: ""
+			background-color: rgba(#424242, 0.9)
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			z-index: 1
+
+		.bg-video
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translateX(-50%) translateY(-50%)
+			min-height: 100%
+			min-width: 100%
+
+.about-company
+	padding: 55px 0
+
+	+max-screen($screenSS)
+		padding: 30px 0
+
+	.h1-l
+		display: inline-block
+		position: relative
+		margin-bottom: 40px
+		+corners($offset-v: -5px, $offset-h: 19px)
+
+		+max-screen($screenXS)
+			+corners($offset-v: -8px, $offset-h: 0px)
+
+	&__line
+		@extend .cf
+		margin-bottom: 10px
+
+	&__img
+		float: left
+		width: 300px
+		padding: 0 25px
+		text-align: center
+		min-height: 1px
+
+		+max-screen($screenSM)
+			width: 200px
+			padding: 0
+
+		+max-screen($screenSS)
+			width: 100%
+			float: none
+
+	&__img-name
+		text-transform: uppercase
+		font: 900 15px/1.3 $baseFont
+		letter-spacing: 2px
+		margin-top: 10px
+
+	&__img-status
+		font: 15px/1.3 $baseFont
+		margin-top: 10px
+
+	&__text
+		margin-left: 330px
+
+		+max-screen($screenSM)
+			margin-left: 230px
+
+		+max-screen($screenSS)
+			margin-left: 0
+			margin-top: 30px
+
+		&--title
+			+max-screen($screenSS)
+				text-align: center
+
+		P
+			margin-bottom: 25px
+			font: 700 16px/1.3 $baseFont
+			color: #333333
+
+		&--light
+			P
+				font-weight: 300
+
+.about-career
+	padding: 55px 0
+	text-align: center
+
+	+max-screen($screenMS)
+		padding: 45px 0
+
+	+max-screen($screenXS)
+		padding: 25px 0
+
+	.ico-w-circle
+		margin-bottom: 25px
+
+	.h2-l
+		margin-bottom: 35px
+
+	&__text
+		max-width: 980px
+
+		P
+			font: 500 14px/1.5 $baseFont
+			margin-bottom: 20px
+
+	&__vacancy
+		margin-top: 60px
+
+.about-vacancy
+	display: flex
+	flex-flow: row wrap
+	text-align: left
+	margin: 0 -8px
+
+	+max-screen($screenXS)
+		margin: 0
+
+	&__item
+		display: block
+		width: 25%
+		color: #333333
+		padding: 0 8px 16px
+
+		+max-screen($screenMS)
+			width: 33.3333%
+
+		+max-screen($screenS)
+			width: 50%
+
+		+max-screen($screenXS)
+			width: 100%
+			padding: 0 0 16px
+
+	&__inner
+		padding: 30px 20px
+		position: relative
+		background-color: #f9f9f9
+		min-height: 260px
+
+		+max-screen($screenXS)
+			min-height: 0
+
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			border-color: transparent
+			border-style: solid
+			border-width: 1px
+			width: 22px
+			height: 22px
+			right: 22px
+			bottom: 22px
+			border-radius: 0 0 5px 0 
+			border-color: transparent $cPrimary $cPrimary transparent 
+			transition: all $t300 ease
+
+		&:hover
+			&:after
+				right: 10px
+				bottom: 10px
+
+		P
+			margin-bottom: 10px
+
+.about-hh
+	padding: 65px 0
+	background-color: #292727
+	text-align: center
+
+	+max-screen($screenMS)
+		padding: 45px 0
+
+	+max-screen($screenXS)
+		padding: 25px 0
+
+	.h1-l
+		color: $cGreen2
+		margin-bottom: 10px
+
+		+max-screen($screenXS)
+			font-size: 26px
+			font-weight: 400
+			line-height: 1.2
+
+	.h2-wide
+		font-weight: 500
+		color: #fff
+
+		+max-screen($screenS)
+			font-size: 24px
+
+		+max-screen($screenXS)
+			font-size: 20px
+
+	&__logo
+		margin: 40px 0 25px
+
+		IMG
+			margin-right: -20px

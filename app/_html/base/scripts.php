@@ -257,6 +257,8 @@
 <!-- build:js ../scripts/app.js -->
 <!-- inject:js -->
 
+<script src="../scripts/about.js"></script>
+
 <script src="../scripts/cases.js"></script>
 
 <script src="../scripts/forms.js"></script>
