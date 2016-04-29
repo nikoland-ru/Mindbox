@@ -208,3 +208,37 @@ $mouse-link-size: 56px
     vertical-align: middle
     &__hidden
         display: none
+
+.soc-line
+
+    +max-screen($screenXS)
+        display: none
+
+    &__item
+        display: inline-block
+        vertical-align: middle
+        font-size: 15px
+        color: #939393
+        padding: 10px
+        transition: $t300
+
+
+        & + &
+            margin-left: 20px
+
+        &:hover
+            color: #fff
+            .footer__soc-item-img
+                transform: translateY(-6px)
+
+    &__item-img
+        margin-right: 12px
+        display: inline-block
+        vertical-align: middle
+        transition: $t300
+
+    &__item-txt
+        display: inline-block
+        vertical-align: middle
+        color: $cGreen
+        margin-top: -3px

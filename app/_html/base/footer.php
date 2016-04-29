@@ -28,7 +28,7 @@
 
                     <a href="#!" target="_blank" class="footer__soc-item">
                         <div class="footer__soc-item-img">
-                            <img src="../images/habr.png" alt="" draggable="false">
+                            <img src="../images/habr-w.png" alt="" draggable="false">
                         </div>
                         <span class="footer__soc-item-txt">
                             Блог на хабре
@@ -36,7 +36,7 @@
                     </a>
                     <a href="#!" target="_blank" class="footer__soc-item" draggable="false">
                         <div class="footer__soc-item-img">
-                            <img src="../images/facebook.png" alt="" draggable="false">
+                            <img src="../images/facebook-w.png" alt="" draggable="false">
                         </div>
                         <span class="footer__soc-item-txt">
                             Мы в Facebook

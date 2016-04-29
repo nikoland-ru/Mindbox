@@ -75,7 +75,7 @@
     </div>
 </div>
 
-
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <!-- build:js ../scripts/lib.js -->
 <!-- bower:js -->
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
@@ -105,6 +105,8 @@
 <script src="../scripts/lightbox.js"></script>
 
 <script src="../scripts/main.js"></script>
+
+<script src="../scripts/mapsController.js"></script>
 
 <script src="../scripts/popups.js"></script>
 

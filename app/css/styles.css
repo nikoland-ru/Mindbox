@@ -35,16 +35,17 @@
   font-style: normal;
 }
 /* line 4, ../styles/helpers/_helpers.sass */
-.cf:before, .sidebar:before, .documents:before,
+.cf:before, .sidebar:before, .documents:before, .contacts-info__line:before,
 .cf:after,
 .sidebar:after,
-.documents:after {
+.documents:after,
+.contacts-info__line:after {
   content: " ";
   display: table;
 }
 
 /* line 9, ../styles/helpers/_helpers.sass */
-.cf:after, .sidebar:after, .documents:after {
+.cf:after, .sidebar:after, .documents:after, .contacts-info__line:after {
   clear: both;
 }
 
@@ -528,7 +529,23 @@ a {
   font-size: 10px;
   margin: 0 -5px 0 13px;
 }
-/* line 61, ../styles/components/_buttons.sass */
+/* line 60, ../styles/components/_buttons.sass */
+.btn--default-white {
+  background-color: #fff;
+  color: #000;
+  font: 400 15px/1 "MuseoSansCyrl", sans-serif;
+}
+/* line 64, ../styles/components/_buttons.sass */
+.btn--default-white:hover {
+  background-color: #62be1f;
+  color: #fff;
+}
+/* line 68, ../styles/components/_buttons.sass */
+.btn--default-white._active {
+  background-color: #62be1f;
+  color: #fff;
+}
+/* line 73, ../styles/components/_buttons.sass */
 .btn--default.btn--lg {
   padding: 15px 20px;
 }
@@ -563,7 +580,11 @@ a {
   color: #000;
   border-bottom-color: rgba(0, 0, 0, 0.3);
 }
-/* line 29, ../styles/components/_links.sass */
+/* line 27, ../styles/components/_links.sass */
+.link--black-green {
+  border-bottom-color: rgba(90, 171, 31, 0.7);
+}
+/* line 32, ../styles/components/_links.sass */
 .link--dotted {
   border-bottom-style: dotted;
 }
@@ -1529,6 +1550,51 @@ input:disabled + .checkbox__view {
   display: none;
 }
 
+@media screen and (max-width: 480px) {
+  /* line 212, ../styles/components/__components.sass */
+  .soc-line {
+    display: none;
+  }
+}
+/* line 217, ../styles/components/__components.sass */
+.soc-line__item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #939393;
+  padding: 10px;
+  -webkit-transition: 300ms;
+          transition: 300ms;
+}
+/* line 226, ../styles/components/__components.sass */
+.soc-line__item + .soc-line__item {
+  margin-left: 20px;
+}
+/* line 229, ../styles/components/__components.sass */
+.soc-line__item:hover {
+  color: #fff;
+}
+/* line 231, ../styles/components/__components.sass */
+.soc-line__item:hover .footer__soc-item-img {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+/* line 234, ../styles/components/__components.sass */
+.soc-line__item-img {
+  margin-right: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: 300ms;
+          transition: 300ms;
+}
+/* line 240, ../styles/components/__components.sass */
+.soc-line__item-txt {
+  display: inline-block;
+  vertical-align: middle;
+  color: #62be1f;
+  margin-top: -3px;
+}
+
 /* line 5, ../styles/layout/_header.sass */
 .header {
   z-index: 100;
@@ -1992,7 +2058,7 @@ BODY._scrolled .header {
           transform: translateY(-6px);
 }
 /* line 168, ../styles/layout/_footer.sass */
-.footer .footer__soc-item-img {
+.footer__soc-item-img {
   margin-right: 12px;
   display: inline-block;
   vertical-align: middle;
@@ -4578,5 +4644,245 @@ BODY._side-popup-open .page-inner__overlay {
     margin-left: 0;
     float: none;
     width: 100%;
+  }
+}
+
+/* line 1, ../styles/pages/_contacts.sass */
+.contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row-reverse nowrap;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1020px) {
+  /* line 1, ../styles/pages/_contacts.sass */
+  .contacts {
+    display: block;
+  }
+}
+/* line 9, ../styles/pages/_contacts.sass */
+.contacts > DIV {
+  width: 50%;
+}
+@media screen and (max-width: 1020px) {
+  /* line 9, ../styles/pages/_contacts.sass */
+  .contacts > DIV {
+    width: 100%;
+  }
+}
+/* line 15, ../styles/pages/_contacts.sass */
+.contacts__map {
+  height: 800px;
+  position: relative;
+}
+@media screen and (max-width: 1380px) {
+  /* line 15, ../styles/pages/_contacts.sass */
+  .contacts__map {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  /* line 15, ../styles/pages/_contacts.sass */
+  .contacts__map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 15, ../styles/pages/_contacts.sass */
+  .contacts__map {
+    display: none;
+  }
+}
+/* line 28, ../styles/pages/_contacts.sass */
+.contacts__info {
+  padding: 0 20px 0 90px;
+  position: relative;
+}
+@media screen and (max-width: 1168px) {
+  /* line 28, ../styles/pages/_contacts.sass */
+  .contacts__info {
+    padding: 40px 45px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 28, ../styles/pages/_contacts.sass */
+  .contacts__info {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media screen and (max-width: 630px) {
+  /* line 28, ../styles/pages/_contacts.sass */
+  .contacts__info {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 28, ../styles/pages/_contacts.sass */
+  .contacts__info {
+    padding-bottom: 0;
+  }
+}
+
+/* line 46, ../styles/pages/_contacts.sass */
+.contacts-info {
+  margin: 40px 0;
+  max-width: 540px;
+}
+@media screen and (max-width: 480px) {
+  /* line 46, ../styles/pages/_contacts.sass */
+  .contacts-info {
+    margin: 30px 0 0;
+  }
+}
+/* line 53, ../styles/pages/_contacts.sass */
+.contacts-info__line {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  /* line 53, ../styles/pages/_contacts.sass */
+  .contacts-info__line {
+    margin-bottom: 30px;
+  }
+}
+/* line 60, ../styles/pages/_contacts.sass */
+.contacts-info__name {
+  font-weight: bold;
+  font: 700 18px/22px "MuseoSansCyrl", sans-serif;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  /* line 60, ../styles/pages/_contacts.sass */
+  .contacts-info__name {
+    float: none;
+  }
+}
+/* line 68, ../styles/pages/_contacts.sass */
+.contacts-info__text {
+  font-weight: bold;
+  font: 16px/22px "MuseoSansCyrl", sans-serif;
+  margin-left: 210px;
+}
+@media screen and (max-width: 480px) {
+  /* line 68, ../styles/pages/_contacts.sass */
+  .contacts-info__text {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+/* line 77, ../styles/pages/_contacts.sass */
+.contacts-social {
+  margin-left: -5px;
+}
+
+/* line 80, ../styles/pages/_contacts.sass */
+.contacts-map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 87, ../styles/pages/_contacts.sass */
+.contacts-map-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50px;
+  z-index: 1;
+}
+@media screen and (max-width: 1020px) {
+  /* line 87, ../styles/pages/_contacts.sass */
+  .contacts-map-btn {
+    top: 20px;
+  }
+}
+/* line 98, ../styles/pages/_contacts.sass */
+.contacts-map-btn .btn {
+  margin: 0 4px 10px;
+}
+
+/* line 101, ../styles/pages/_contacts.sass */
+.contacts-map-mob {
+  display: none;
+  padding: 0 30px;
+}
+/* line 105, ../styles/pages/_contacts.sass */
+.contacts-map-mob__line {
+  margin-bottom: 10px;
+}
+/* line 108, ../styles/pages/_contacts.sass */
+.contacts-map-mob .link {
+  font-size: 15px;
+}
+/* line 111, ../styles/pages/_contacts.sass */
+.contacts-map-mob__hide {
+  display: none;
+  margin-top: 10px;
+  height: 300px;
+}
+/* line 116, ../styles/pages/_contacts.sass */
+.contacts-map-mob__hide > ymaps {
+  height: 300px !important;
+}
+/* line 119, ../styles/pages/_contacts.sass */
+.contacts-map-mob .contacts-info__text {
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  /* line 101, ../styles/pages/_contacts.sass */
+  .contacts-map-mob {
+    display: block;
+  }
+}
+
+/* line 125, ../styles/pages/_contacts.sass */
+.contacts-more {
+  font-size: 18px;
+  position: absolute;
+  right: 10%;
+  bottom: 105%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+@media screen and (max-width: 1380px) {
+  /* line 125, ../styles/pages/_contacts.sass */
+  .contacts-more {
+    right: -14%;
+    bottom: 80%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  /* line 125, ../styles/pages/_contacts.sass */
+  .contacts-more {
+    bottom: auto;
+    top: 150px;
+    right: -90px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  /* line 142, ../styles/pages/_contacts.sass */
+  .ymaps-2-1-39-controls__control {
+    top: 200px !important;
+  }
+}
+@media screen and (max-width: 1020px) {
+  /* line 142, ../styles/pages/_contacts.sass */
+  .ymaps-2-1-39-controls__control {
+    top: 175px !important;
   }
 }
