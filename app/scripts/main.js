@@ -120,6 +120,14 @@ function toggleClass(selector, className, callback) {
     };
 })(jQuery);
 
+(function ($) {
+
+    $.fn.getWidthInPercent = function () {
+        var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
+        return Math.round(100*width)+'%';
+    };
+
+})(jQuery);
 
 /* -- Применение общих плагинов и функций --- */
 

@@ -7,7 +7,7 @@ $(function () {
         $cBtn = $caseSort.find('.js-case-btn'),
         $casesContInner  = $(".js-case-catalog-inner"),
         $cases = $casesCont.find('.js-case-wr'),
-        //$visibleCases = $cases,
+        $currentCases , //= $cases,
         $svgMain = $cBtn.find('.js-case-btn__main'),
         $svgMainPaths = $svgMain.find('path'),
         $svgNormal = $cBtn.find('.js-case-btn__normal'),
@@ -45,49 +45,115 @@ $(function () {
         itemSelector: '.js-case-wr',
         columnWidth: '.js-case-wr',
         percentPosition: true,
-        layoutMode: 'fitRows',
-        stagger: 20
+        layoutMode: 'packery',
+        stagger: 20,
+        //initLayout: false
     });
 
+
+/* Дохлый номер с выравниванием колонок по высоте.
+    function currentCases(laidOutItems){
+        $currentCases = [];
+
+        $.each(laidOutItems, function(i){
+            $currentCases.push(
+                $( this.element)
+            );
+        });
+    }
+
     function equelHeights(){
-        var groupingArray = {};
+        var groupingArray = {},
+            groupI = 0,
+            currentPoints = 0,
+            realWidth, //'20%' , //laidOutItems.not('._double').eq(0).getWidthInPercent(), //$cases.not('._double').eq(0).getWidthInPercent(),
+            casePointsLimit;
 
-        $cases.each(function(){
-            var $thisCase = $(this),
-                //thHeight = $thisCase.height(),
-                offset = $thisCase.offset().top.toFixed(0);
+        $.each($currentCases, function(){
+            var $thisCase = $(this).not('._double');
 
-            if( offset in groupingArray){
-
-            }else{
-                groupingArray[offset] = []
+            if($thisCase.length ){
+               realWidth = $thisCase.getWidthInPercent();
             }
-
-            groupingArray[offset].push($thisCase);
-
         });
 
 
+        //currentPoints - перечисляя предметы прибавляем 1/2 поинта,
+        // на разных разрешениях сбрасывается до 0 в зависимости от ширины колонки.
+
+        if(realWidth == '20%'){
+            casePointsLimit = 5;
+        } else if(realWidth == '25%'){
+            casePointsLimit = 4;
+        }if(realWidth == '33%'){
+            casePointsLimit = 3;
+        }if(realWidth == '50%'){
+            casePointsLimit = 2;
+        }
+
+        console.log('casePointsLimit   '+casePointsLimit)
+        console.log($currentCases)
+
+        // создание групп-строк
+        //$cases.filter(':visible')
+        $.each($currentCases,function(){
+            var $thisCase = $(this),
+                casePoint = 1;
+
+            if( $thisCase.hasClass('_double')){
+                casePoint = 2;
+            }
+
+            currentPoints += casePoint;
+
+
+            if( groupI in groupingArray){
+
+            }else{
+                groupingArray[groupI] = []
+            }
+
+            groupingArray[groupI].push($thisCase);
+
+            if( currentPoints >= casePointsLimit){
+                currentPoints = 0;
+                groupI += 1;
+            }
+
+        });
+
+        //console.log(groupingArray)
+        // Выставление высоты
         $.each(groupingArray, function(){
             var resultHeight = 0;
 
             $.each(this, function(){
                 var h = $(this).find('.case').outerHeight();
 
-
                 if( h > resultHeight) resultHeight = h;
             });
 
-            $.each(this, function(){console.log(resultHeight)
+            $.each(this, function(){
                 $(this).find('.case').css('min-height',resultHeight);
             });
+            console.log($(this).length)
+        });
 
-
-
-        })
     }
 
-    equelHeights();
+*/
+
+    function setHeight(){
+        var maxH = 0;
+
+        $.each($cases.filter(':visible'),function(){
+            var thisH = $(this).outerHeight();
+            if(maxH < thisH){
+                maxH = thisH;
+            }
+        });
+        $cases.css('min-height', maxH);
+    }
 
     $catLink.bind('click', function () {
         var $this = $(this),
@@ -108,15 +174,25 @@ $(function () {
             $targetCases
         );*/
 
+        //$cases.css('min-height', '')
+
         isotope.isotope({'filter': filterValue });
 
     });
 
+
     isotope.on( 'arrangeComplete', function( event, laidOutItems ){
-        equelHeights();
+        //currentCases(laidOutItems);
+        //equelHeights();
+        setHeight();
     });
 
+    setHeight();
+
+    isotope.isotope('arrange');
+
     $W.resize(function(){
-        equelHeights();
+        //equelHeights();
+        setHeight();
     })
 });

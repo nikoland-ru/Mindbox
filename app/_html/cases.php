@@ -309,7 +309,7 @@ include 'base/head.php';?>
                 <div class="wrapper">
                     <div class="cases-grid js-case-catalog-inner">
 
-                        <div class="cases-grid__col  cases-grid__col--double js-case-wr" data-sort-type="prod">
+                        <div class="cases-grid__col  cases-grid__col--double _double js-case-wr" data-sort-type="prod">
                             <div class="case case--comment">
                                 <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
                                     <div class="case__img-wr">
@@ -638,7 +638,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="cases-grid__col  cases-grid__col--double js-case-wr" data-sort-type="prod">
+                        <div class="cases-grid__col  cases-grid__col--double _double js-case-wr" data-sort-type="sport">
                             <div class="case case--comment">
                                 <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
                                     <div class="case__img-wr">
@@ -837,7 +837,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="cases-grid__col  cases-grid__col--double js-case-wr" data-sort-type="prod">
+                        <div class="cases-grid__col  cases-grid__col--double _double js-case-wr" data-sort-type="prod">
                             <div class="case case--comment">
                                 <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
                                     <div class="case__img-wr">

@@ -249,6 +249,8 @@
 <script src="../scripts/plugins/MorphSVGPlugin.min.js"></script>
 
 <script src="../scripts/plugins/isotope.js"></script>
+
+<script src="../scripts/plugins/packery-mode.pkgd.js"></script>
 <!-- todo
 <script src="../scripts/plugins/DrawSVGPlugin.js"></script>-->
 
