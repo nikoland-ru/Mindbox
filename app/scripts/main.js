@@ -4,7 +4,7 @@ var $W = $(window),
     $B = $('body');
 
 
-if(!_GLOB){
+if (!_GLOB) {
     var _GLOB = {};
 }
 
@@ -21,8 +21,7 @@ _GLOB.breakpoints = {
     'ss': 630,
     'xs': 480
 };
-	
-	
+
 
 /* -- Общие плагины и функции -- */
 
@@ -121,18 +120,32 @@ function toggleClass(selector, className, callback) {
 })(jQuery);
 
 (function ($) {
-
     $.fn.getWidthInPercent = function () {
-        var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
-        return Math.round(100*width)+'%';
+        var $this = $(this),
+            width = parseFloat($this.css('width')) / parseFloat($this.parent().css('width'));
+        return Math.round(100 * width) + '%';
     };
+})(jQuery);
 
+(function ($) {
+    $.fn.priceFormat = function (value) {
+        var result = '';
+
+        for (var i = value.length - 1; i >= 0; i--) {
+
+            result = value[i] + result;
+            if ( (value.length - i) % 3 == 0) {
+                result = ' ' + result;
+            }
+        }
+
+        return $.trim(result);
+    };
 })(jQuery);
 
 /* -- Применение общих плагинов и функций --- */
 
 $(function () {
-
     // Scroll trigger
     $('.js-scroll-trigger').scrollTrigger();
 
@@ -146,3 +159,27 @@ $(function () {
     $tabs.tabs({});
 });
 
+
+//todo delete
+/*
+ $(function () {
+ var baseVals = [71500,197666],
+ array = [
+ [78649,217433],
+ [82224,227316],
+ [85799,237199],
+ [107249,296499],
+ [92949,256966],
+ [60774,168016]
+ ];
+
+ $.each(array, function(){
+ var minPercent = (this[0] / (baseVals[0] / 100)) - 100,
+ maxPercent = (this[1] / (baseVals[1] / 100)) - 100;
+
+ console.log('min:  '+minPercent)
+ console.log('max:  '+maxPercent)
+
+ })
+
+ });*/

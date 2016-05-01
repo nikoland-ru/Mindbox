@@ -779,8 +779,10 @@
             font-size: 16px
 
 
-
-
+    .price-calc
+        &__left-txt,
+        &__right-txt
+            color: #ccc
 
     +max-screen($screenSL)
         margin-left: -$wrapperS-padd
@@ -805,8 +807,6 @@
         +max-screen($screenS)
             font-size: 19px
             line-height: 24px
-
-
 
     &__itog-txt-wr
         margin-bottom: 20px
@@ -834,7 +834,7 @@
         top: 50%
         font-size: 14px
         line-height: 20px
-        color: #ccc
+        color: #565656 //#ccc
         white-space: nowrap
         padding: 0 30px
         margin-top: -10px
@@ -864,28 +864,9 @@
         font-size: 16px
         margin: 10px 0
 
-    &__options
-        display: none
-        text-align: left
-        padding: 30px 0 20px
-
-        .checkbox__view
-            background: #fff
-
-        .checkbox-label
-            margin: 10px 0
-
-        .h6-wide
-            margin-bottom: 20px
-
-    &__options-group
-        margin-bottom: 20px
 
     &__second-state
         display: none
-
-
-
 
     &._custom-pricing
         .price-calc
@@ -894,6 +875,7 @@
 
             &__second-state
                 display: block
+
 
     +max-screen($screenS)
 
@@ -942,3 +924,23 @@
         &__itog-after
             font-size: 10px
             margin-top: -6px
+
+
+.calc-options
+    display: none
+    text-align: left
+    padding: 30px 0 20px
+
+    .checkbox__view
+        background: #fff
+
+    .checkbox-label
+        margin: 10px 0
+
+    .h6-wide
+        margin-bottom: 20px
+
+
+    &__group
+        margin-bottom: 20px
+

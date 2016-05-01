@@ -85,81 +85,81 @@
             value: 99999,
             options: {
                 usersString: 'до 100 000 покупателей',
-                price: '71 499'
+                price: '71499'
             }
         },
         {
             value: 100000,
             options: {
                 usersString: '100 000 покупателей',
-                price: '71 499'
+                price: 71499
             }
         },
         {
             value: 150000,
             options: {
                 usersString: '150 000 покупателей',
-                price: '79 852'
+                price: 79852
             }
         },{
             value: 200000,
             options: {
                 usersString: '200 000 покупателей',
-                price: '88 035'
+                price: 88035
             }
         },{
             value: 250000,
             options: {
                 usersString: '250 000 покупателей',
-                price: '96 110'
+                price: 96110
             }
         },{
             value: 300000,
             options: {
                 usersString: '300 000 покупателей',
-                price: '104 111'
+                price: 104111
             }
         },{
             value: 350000,
             options: {
                 usersString: '350 000 покупателей',
-                price: '112 055'
+                price: 112055
             }
         },{
             value: 450000,
             options: {
                 usersString: '450 000 покупателей',
-                price: '127 821'
+                price: 127821
             }
         },{
             value: 500000,
             options: {
                 usersString: '500 000 покупателей',
-                price: '135 659'
+                price: 135659
             }
         },{
             value: 600000,
             options: {
                 usersString: '600 000 покупателей',
-                price: '151 245'
+                price: 151245
             }
         },{
             value: 700000,
             options: {
                 usersString: '700 000 покупателей',
-                price: '166 766'
+                price: 166766
             }
         },{
             value: 800000,
             options: {
                 usersString: '800 000 покупателей',
-                price: '182 236'
+                price: 182236
             }
         },{
             value: 900000,
             options: {
                 usersString: '900 000 покупателей',
-                price: '197 666'
+                price: 197666
             }
         },{
             value: 1000000,
