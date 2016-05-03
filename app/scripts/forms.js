@@ -6,7 +6,7 @@ $(function () {
         $.fn.priceCalc = function (settings) {
             $(this).each(function(){
                 var $this = $(this),
-                    $itogNode = $this.find('.js-priceCalc_itog'),
+                    $itogNode = $('.js-priceCalc_itog'),
                     $topNode = $this.find('.js-priceCalc_top-node'),
                     $ranges = $this.find('.js-priceCalc_ranges'),
                     $inputUsers = $this.find('.js-priceCalc_input-users'),
@@ -16,18 +16,20 @@ $(function () {
                     $options = $this.find('.js-priceCalc__options'),
 
                     //dataStep = $this.data('step') || 50,
-                    dataMin = $this.data('min-value') - 1,
-                    dataMax = $this.data('max-value') - 1,
+                    dataMin = $this.data('min-value') ,
+                    dataMax = $this.data('max-value') ,
                     injects = _GLOB.priceRangeSettings,
                     currentInjects ,
                     noUiSliderObj,
                     rangesOption = {
                         'min': dataMin,
-                        '1%': [dataMin, 50000],
-                        '20%': [500000, 100000],
-                        '40%': [1000000, 200000],
-                        '60%': [2000000, 400000],
-                        '80%': [4000000, 500000],
+                        '0%': [dataMin, 1],
+                        '3%': [dataMin + 1, 50000],
+                        '40%': [500000, 50000],
+                        '55%': [1000000, 100000],
+                        '70%': [2000000, 200000],
+                        '94%': [4000000, 250000],
+                        '100%': [4000000, 500000],
                         'max': dataMax,
                     };
 
@@ -37,8 +39,8 @@ $(function () {
                 }
 
                 function setCurrentInjects(value){
-                    for(var i = 0; i <= injects.length; i++){
-                        if(value < injects[i].value ){
+                    for(var i = 0; i <= injects.length - 1 ; i++){
+                        if(value <= injects[i].value ){
                             currentInjects = injects[i].options;
                             return;
                         }

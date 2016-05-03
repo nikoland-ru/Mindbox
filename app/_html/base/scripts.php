@@ -126,6 +126,12 @@
                 price: 112055
             }
         },{
+            value: 400000,
+            options: {
+                usersString: '400 000 покупателей',
+                price: 119955
+            }
+        },{
             value: 450000,
             options: {
                 usersString: '450 000 покупателей',
@@ -215,7 +221,7 @@
         },{
             value: 4000000,
             options: {
-                usersString: '4 00 000 покупателей',
+                usersString: '4 000 000 покупателей',
             }
         },{
             value: 4500000,

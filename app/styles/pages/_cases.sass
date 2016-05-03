@@ -9,6 +9,14 @@
     position: relative
     z-index: 1
 
+    &__desktop
+        display: block
+
+    &__mobile
+        display: none
+        padding: 18px 0
+
+
     &__nav
         max-width: $screenM
         display: flex
@@ -48,7 +56,7 @@
             .link
                 border-bottom-color: transparent
 
-    &__btn
+    //&__btn
         padding: 13px 0
         display: none
         white-space: nowrap
@@ -69,7 +77,7 @@
                 width: 40px
                 height: 40px
 
-    &__btn-txt
+    //&__btn-txt
         width: 100%
         font-size: 20px
         padding-left: 40px + 20px
@@ -82,7 +90,18 @@
         &__link
             margin: 0 7px
 
+
+
+
     +max-screen($screenSL)
+        &__desktop
+            display: none
+
+        &__mobile
+            display: block
+
+
+    //+max-screen($screenSL)
 
         .wrapper
             min-height: 0
@@ -118,12 +137,12 @@
                 visibility: visible
                 transform: translateY(0)
 
-    +max-screen($screenSM)
+    //+max-screen($screenSM)
 
         &__link
             width: (100%/3)
 
-    +max-screen($screenSS)
+    //+max-screen($screenSS)
         &__nav
             padding-right: $wrapperSS-padd
             padding-left: $wrapperSS-padd
@@ -132,7 +151,7 @@
             width: 50%
 
 
-    +max-screen($screenXS)
+    //+max-screen($screenXS)
         &__link
             font-size: 14px
 
@@ -140,8 +159,6 @@
 .cases-catalog
     margin: 30px 0 85px
     box-sizing: content-box
-    position: relative
-    overflow: hidden
 
     .cases-grid__col
         //transition: $t600

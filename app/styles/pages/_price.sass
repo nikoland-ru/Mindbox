@@ -1,0 +1,230 @@
+.page-price
+    .page-body
+        background-color: #f7f7f7
+
+
+$price-aside-w: 330px
+$price-aside-w-md: 290px
+.price-cols
+    padding-bottom: 50px
+    @extend .cf
+
+    .wrapper
+        max-width: $screenM
+        display: flex
+
+
+    &__main-col
+        padding-right: 15px
+        //padding-right: $price-aside-w + 15px
+        //width: 100%
+        margin-bottom: 30px
+        flex-grow: 1
+
+
+    &__aside-col
+        flex-shrink: 0
+        //float: right
+        width: $price-aside-w
+        margin-bottom: 30px
+
+
+    +screen($screenMS + 1px,$screenMM)
+        //&__main-col
+            padding-right: $price-aside-w-md + 15px
+
+        &__aside-col
+            width: $price-aside-w-md
+
+    +max-screen($screenMS)
+        .wrapper
+            display: block
+
+        &__main-col
+            padding-right: 0
+
+        &__aside-col
+            float: none
+            width: auto
+
+    +max-screen($screenSL)
+        &, .price-calc__options-wr
+            margin-left: -$wrapperS-padd
+            margin-right: -$wrapperS-padd
+
+        &__main-col,
+        &__aside-col,
+        .price-calc-aside
+            padding-left: 0
+            padding-right: 0
+
+        .price-calc-aside__inner, .price-calc-main, .price-calc__options-wr
+            padding-left: $wrapperS-padd
+            padding-right: $wrapperS-padd
+
+    +max-screen($screenSS)
+        padding-bottom: 30px
+
+        &, .price-calc__options-wr
+            margin-left: -$wrapperSS-padd
+            margin-right: -$wrapperSS-padd
+
+        .price-calc-aside__inner, .price-calc-main, .price-calc__options-wr
+            padding-left: $wrapperSS-padd
+            padding-right: $wrapperSS-padd
+
+        &__main-col,
+        &__aside-col,
+            margin-bottom: 15px
+
+
+
+.price-calc-main
+    background-color: #fff
+    padding: 30px 25px
+
+    .ico-w-circle
+        margin: 23px auto
+
+        .iconic
+            font-size: 60px
+
+    +max-screen($screenSL)
+
+        .ico-w-circle
+            margin: 10px 0 25px
+
+            .iconic
+                font-size: 50px
+
+            &:after
+                width: 46px
+                height: 46px
+                transform: translate3d(22px, -10px, 0)
+
+
+.price-calc-aside
+    background-color: #fff
+    padding: 0 20px 20px
+
+    &__inner
+        padding: 25px 17px
+
+        & + &
+            background: url('../images/fake-dot-border.png') repeat-x left top
+
+        &--price
+            padding-top: 40px
+            padding-bottom: 30px
+
+
+        &:last-child
+            padding-bottom: 0
+
+        +max-screen($screenSL)
+            .doc-link
+                margin: 0
+
+        +max-screen($screenXS)
+            &--price
+                padding-bottom: 20px
+
+
+
+.p-calc-itog-outside
+    text-align: center
+
+    &__title
+        font-size: 30px
+        line-height: 40px
+
+    &__price
+        font-size: 60px
+        line-height: 60px
+        font-weight: 100
+        margin: 7px 0
+        white-space: nowrap
+
+        .iconic--rub
+            font-size: 43px
+
+    &__after-price
+        font-size: 24px
+        line-height: 30px
+        text-transform: uppercase
+        letter-spacing: 2px
+
+    &__small
+        font-size: 12px
+        line-height: normal
+        color: #acacac
+        text-transform: uppercase
+
+    .btn
+        margin-top: 37px
+
+
+    +screen($screenMS + 1px,$screenMM)
+        &__price
+            font-size: 50px
+            line-height: 50px
+
+            .iconic--rub
+                font-size: 35px
+
+        &__title
+            font-size: 26px
+            line-height: 32px
+
+        .btn
+            padding-left: 15px
+            padding-right: 15px
+            margin-left: auto
+            margin-right: auto
+
+    +max-screen($screenSL)
+        .price-calc
+            &__itog-txt-wr
+                margin-bottom: 20px
+
+            &__itog-txt
+                font-size: 39px
+                line-height: 45px
+
+
+    +max-screen($screenXS)
+        &__price
+            font-size: 46px
+            line-height: 46px
+
+            .iconic--rub
+                font-size: 32px
+
+        &__title
+            font-size: 26px
+            line-height: 32px
+
+        &__after-price
+            font-size: 20px
+            line-height: 26px
+
+        .price-calc__itog-txt
+            font-size: 30px
+            line-height: 38px
+
+
+        .btn
+            padding-left: 15px
+            padding-right: 15px
+            margin: 20px auto 10px
+
+            &:after,&:before
+                display: none
+
+
+
+
+
+
+
+

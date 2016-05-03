@@ -1,7 +1,7 @@
 <form class="price-calc js-priceCalc"
-      data-min-value="100000" data-max-value="5000000">
+      data-min-value="99999" data-max-value="5000000">
 
-    <p class="price-calc__txt1 js-priceCalc_top-node">
+    <p class="price-calc__top-txt js-priceCalc_top-node">
         до 100 000 покупателей
     </p>
 
@@ -25,7 +25,7 @@
                 <span class="price-calc__itog js-priceCalc_itog">
                     71 232
                 </span>
-                <span class="iconic iconic--rub"></span>
+                <span class="iconic iconic--rub-b"></span>
                 в месяц
             </p>
             <span class="price-calc__itog-after">

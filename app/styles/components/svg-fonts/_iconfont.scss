@@ -79,14 +79,20 @@
     @if $filename == ppl-cards {
     $char: "\E011";
 }
-    @if $filename == rub {
+    @if $filename == ppl {
     $char: "\E012";
 }
-    @if $filename == site {
+    @if $filename == rub-b {
     $char: "\E013";
 }
-    @if $filename == tick {
+    @if $filename == rub {
     $char: "\E014";
+}
+    @if $filename == site {
+    $char: "\E015";
+}
+    @if $filename == tick {
+    $char: "\E016";
 }
 
 @return $char;
@@ -149,6 +155,12 @@
 }
 .iconic--ppl-cards {
     @include iconic(ppl-cards);
+}
+.iconic--ppl {
+    @include iconic(ppl);
+}
+.iconic--rub-b {
+    @include iconic(rub-b);
 }
 .iconic--rub {
     @include iconic(rub);

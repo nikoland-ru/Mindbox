@@ -4,8 +4,8 @@
 //         zoom: 15
 //     },
 //     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//         hintContent: 'Maindbox',
-//         balloonContent: 'Maindbox'
+//         hintContent: 'Mindbox',
+//         balloonContent: 'Mindbox'
 //     }, {
 //         iconLayout: 'default#image',
 //         iconImageHref: '../images/marker.png',
@@ -42,7 +42,7 @@ $(function () {
         });
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Maindbox'
+            hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
             iconImageHref: '../images/marker.png',
@@ -74,7 +74,7 @@ $(function () {
             strokeWidth: 5
         });
 
-        routDin = new ymaps.GeoObject({
+        var routDin = new ymaps.GeoObject({
             // Описываем геометрию геообъекта.
             geometry: {
                 type: "LineString",
@@ -139,7 +139,7 @@ $(function () {
         });
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Maindbox'
+            hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
             iconImageHref: '../images/marker.png',
@@ -176,7 +176,7 @@ $(function () {
         });
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Maindbox'
+            hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
             iconImageHref: '../images/marker.png',
@@ -236,7 +236,7 @@ $(function () {
         });
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Maindbox'
+            hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
             iconImageHref: '../images/marker.png',
@@ -258,7 +258,7 @@ $(function () {
             },
             // Описываем свойства геообъекта.
             properties:{
-                hintContent: "Пешком от м. Белорусская"
+                hintContent: "Пешком от м. Динамо"
             }
         }, {
             strokeColor: "#62be1f",

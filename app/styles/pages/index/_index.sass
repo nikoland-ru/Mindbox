@@ -796,11 +796,11 @@
         padding-top: 45px
         padding-bottom: 35px
 
-
+// todo
 .price-calc
     text-align: center
 
-    &__txt1
+    &__top-txt
         font-size: 25px
         line-height: 30px
         font-weight: 500
@@ -815,6 +815,9 @@
         font-size: 39px
         line-height: 45px
         font-weight: 500
+        .iconic--rub,
+        .iconic--rub-b
+            font-size: 29px
 
     &__itog-after
         color: #666666
@@ -861,9 +864,15 @@
             max-width: 500px
 
     &__txt
-        font-size: 16px
+        font-size: 14px
+        //font-size: 16px
         margin: 10px 0
+        //margin: 10px 0
 
+
+    &__options-wr
+        .h2-l
+            margin: 8px 0 25px
 
     &__second-state
         display: none
@@ -910,7 +919,6 @@
             padding: 0 30px
             margin: 40px auto 60px
 
-
         &__itog-txt-wr
             margin-bottom: 41px
 
@@ -924,6 +932,62 @@
         &__itog-after
             font-size: 10px
             margin-top: -6px
+
+
+    &--main
+
+        .price-calc
+            &__options-wr
+                background: url("../images/fake-dot-border.png") repeat-x top left
+                padding-left: 20px
+                padding-right: 20px
+
+            &__top-txt
+                font-size: 30px
+                line-height: normal
+                font-weight: 100
+
+            &__ranges-wr
+                margin-bottom: 34px
+                margin-top: 34px
+
+            &__txt
+                padding: 0 60px
+                margin: 45px 0
+
+
+        .calc-options
+            display: block !important
+
+
+        +screen($screenMS + 1px, 1100px)
+            .price-calc__ranges-wr
+                max-width: none
+                margin-left: 100px
+                margin-right: 100px
+
+        +max-screen($screenSL)
+
+            .price-calc
+                &__options-wr
+                    .h2-l
+                        font-size: 30px
+
+                &__ranges-wr
+
+                    & + .price-calc__txt
+                        margin-top: 60px
+
+                &__txt
+                    margin-bottom: 20px
+                    padding-right: 0
+                    padding-left: 0
+
+        +max-screen($screenXS)
+            .price-calc__top-txt
+                font-size: 22px
+                line-height: 28px
+
 
 
 .calc-options
@@ -943,4 +1007,6 @@
 
     &__group
         margin-bottom: 20px
+
+
 
