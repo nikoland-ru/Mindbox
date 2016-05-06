@@ -1,10 +1,22 @@
 
 $(function () {
-    var $referenceRight = $('.js-slider-arr--r')[0].outerHTML,
-        $referenceLeft = $('.js-slider-arr--l')[0].outerHTML;
+    var $referenceArrRight = '<div class="slider-arr slider-arr--r svg-obj js-slider-arr js-slider-arr--r">' +
+        '<span class="iconic iconic--slider-arr-l"></span>' +
+        '<svg class="svg-obj__main js-slider-arr__main" viewBox="0 0 110 110" preserveAspectRatio="none" >' +
+        '<circle  class="slider-arr__circle1" stroke-width="4" cx="54" cy="54" r="52"  stroke="#e3e3e2" fill="none" ></circle>' +
+        '<circle  class="slider-arr__circle2" stroke-width="4" cx="54" cy="54" r="52"  stroke="#e3e3e2" fill="none" ></circle>' +
+        '<circle class="slider-arr__dot" cx="2.5" cy="55" r="2.5"></circle> </svg></div>',
 
-    _GLOB.slickPrevArrHtml = $referenceLeft;
-    _GLOB.slickNextArrHtml = $referenceRight;
+        $referenceArrLeft = '<div class="slider-arr slider-arr--l svg-obj js-slider-arr js-slider-arr--l">' +
+            '<span class="iconic iconic--slider-arr-r"></span>' +
+            '<svg class="svg-obj__main js-slider-arr__main" viewBox="0 0 110 110" preserveAspectRatio="none" >' +
+            '<circle class="slider-arr__circle1" stroke-width="4" cx="54" cy="54" r="52"  stroke="#e3e3e2" fill="none" ></circle>' +
+            '<circle class="slider-arr__circle2" stroke-width="4" cx="54" cy="54" r="52"  stroke="#e3e3e2" fill="none" ></circle>' +
+            '<circle class="slider-arr__dot" cx="105" cy="55" r="2.5"></circle></svg></div>';
+
+
+    _GLOB.slickPrevArrHtml = $referenceArrLeft;
+    _GLOB.slickNextArrHtml = $referenceArrRight;
 });
 
 
@@ -101,7 +113,7 @@ $(function () {
                 });
 
                 $slider.slick({
-                    variableWidth: true,
+                    //variableWidth: true,
                     //centerMode: true,
                     slidesToShow: 5,
                     slidesToScroll: 2,
@@ -174,6 +186,39 @@ $(function () {
 $(function () {
 
     (function ($) {
+        $.fn.planWeekSlider = function (settings) {
+            $(this).each(function(){
+                var $slider = $(this);
+
+                $slider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    dots: true,
+                    swipe: false,
+                    nextArrow: _GLOB.slickNextArrHtml,
+                    prevArrow: _GLOB.slickPrevArrHtml,
+                    responsive: [
+                        {
+                            breakpoint: _GLOB.breakpoints.sm,
+                            settings: {
+                                dots: true,
+                                swipe: true
+                            }
+                        },
+
+                    ]
+                })
+
+            })
+        }
+    })(jQuery);
+});
+
+
+$(function () {
+
+    (function ($) {
         $.fn.regularSlider = function (settings) {
             $(this).each(function(){
                 var $slider = $(this);
@@ -232,6 +277,20 @@ $(function () {
 });
 
 $(function () {
+    var $commSl = $('.js-comm-slider');
+    if (!$commSl.length) return;
+
+    $commSl.regularSlider();
+});
+
+$(function () {
+    var $pWeekSl = $('.js-plan-week-sl');
+    if (!$pWeekSl.length) return;
+
+    $pWeekSl.planWeekSlider();
+});
+
+$(function () {
     var animTime = 0.3;
     function changeState(jqObj,status){
 
@@ -241,6 +300,8 @@ $(function () {
 
         // TODO
 
+        var circleSize = $mainSvgCircle.width();
+        $mainSvgCircle.css('stroke-dashoffset',circleSize)//.animate({'',},animTime);
 
         if(status == 'toHover'){
             var $finalSvg = jqObj.find(".js-slider-arr__final"),
@@ -269,8 +330,8 @@ $(function () {
     }
 
     $D.on('mouseenter','.js-slider-arr', function(){
-        changeState( $(this), 'toHover');
+        //changeState( $(this), 'toHover');
     }).on('mouseleave','.js-slider-arr', function(){
-        changeState( $(this), 'toNormal');
+        //changeState( $(this), 'toNormal');
     })
 });

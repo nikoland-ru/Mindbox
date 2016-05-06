@@ -25,6 +25,13 @@ h1,h2,h3,h4,h5,h6
     +max-screen($screenS)
         font-size: 30px
 
+    &--corner
+        display: table
+        +corners($offset-h: 14px)
+        &:before
+            margin-bottom: -6px
+
+
 .h2-l
     font-size: 30px
     line-height: 30px

@@ -16,6 +16,11 @@
     font-weight: 500
     color: $cPrimary
 
+    &--lg
+        font-size: 30px
+        line-height: 40px
+        font-weight: 700
+
 .ico-w-circle
     position: relative
     display: inline-block
@@ -46,6 +51,13 @@
     &--green
         &:after
             background-color: $cPaleGreen
+    &--green2
+        &:after
+            background-color: #ccff96
+    &--green3
+        &:after
+            background-color: #baf78d
+
     &--yel
         &:after
             background-color: $cPaleYel
@@ -56,10 +68,14 @@
         &:after
             background-color: $cPaleBlueL
 
+
+
     &--r-b
         &:after
             transform: translate3d(28px, 9px, 0)
-
+    &--l-b
+        &:after
+            transform: translate3d(-10px, 10px, 0)
     &--l-t
         &:after
             transform: translate3d(-19px, -14px, 0)
@@ -67,6 +83,78 @@
     &--r-t
         &:after
             transform: translate3d(18px, -14px, 0)
+
+    &--aft-md
+        &:after
+            width: 48px
+            height: 48px
+            margin: -24px 0  0 -24px
+
+    &--rupor
+        &:after
+            transform: translate3d(-18px, 0, 0)
+
+    &--broom-lg
+        &:after
+            transform: translate3d(4px, -16px, 0)
+
+    //&--molecula-lg
+        &:after
+
+
+    &--lg
+        .iconic
+            font-size: 95px
+
+        &:after
+            width: 66px
+            height: 66px
+            margin: -33px 0  0 -33px
+
+        .iconic
+            &--bulb
+                font-size: 100px
+            &--broom
+                font-size: 100px
+            &--molecula
+                font-size: 66px
+            &--smile-boy
+                font-size: 90px
+
+
+.letter-hl-str
+    position: relative
+    z-index: 1
+    padding-left: 15px
+    padding-right: 15px
+
+    &__lt
+        position: relative
+        z-index: -1
+        &:after
+            content: ''
+            width: 46px
+            height: 46px
+            position: absolute
+            top: 50%
+            left: 50%
+            border-radius: 50%
+            margin: -23px 0 0 -23px
+            background-color: $cPaleGreen
+            z-index: -1
+
+        &--yel
+            &:after
+                background-color: #ecf78d
+
+        &--orng
+            &:after
+                background-color: $cPaleOrng
+
+        &--pink
+            &:after
+                background-color: $cPalePink
+
 
 .video-link
     text-align: center
@@ -243,3 +331,24 @@ $mouse-link-size: 56px
         vertical-align: middle
         color: $cGreen
         margin-top: -3px
+
+
+.markered
+    display: inline-block
+    vertical-align: top
+    font-size: 30px
+    line-height: 36px
+    font-weight: 500
+    background: url("../images/marker.png") no-repeat top center
+    background-size: 100% 100%
+    padding: 2px 30px 2px 20px
+
+    +max-screen($screenS)
+        font-size: 20px
+        line-height: 34px
+
+    +max-screen($screenXS)
+        font-size: 16px
+        line-height: 22px
+        padding-top: 5px
+        padding-bottom: 5px

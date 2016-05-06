@@ -43,56 +43,80 @@
     @if $filename == board {
     $char: "\E005";
 }
-    @if $filename == cross {
+    @if $filename == broom {
     $char: "\E006";
 }
-    @if $filename == cross2 {
+    @if $filename == bulb {
     $char: "\E007";
 }
-    @if $filename == cup {
+    @if $filename == card-stats {
     $char: "\E008";
 }
-    @if $filename == email-like {
+    @if $filename == cross {
     $char: "\E009";
 }
-    @if $filename == fb-round {
+    @if $filename == cross2 {
     $char: "\E00A";
 }
-    @if $filename == graphs {
+    @if $filename == cup {
     $char: "\E00B";
 }
-    @if $filename == habr {
+    @if $filename == email-like {
     $char: "\E00C";
 }
-    @if $filename == mouse {
+    @if $filename == fb-round {
     $char: "\E00D";
 }
-    @if $filename == pdf {
+    @if $filename == graphs {
     $char: "\E00E";
 }
-    @if $filename == play {
+    @if $filename == habr {
     $char: "\E00F";
 }
-    @if $filename == plus-round {
+    @if $filename == molecula {
     $char: "\E010";
 }
-    @if $filename == ppl-cards {
+    @if $filename == mouse {
     $char: "\E011";
 }
-    @if $filename == ppl {
+    @if $filename == pdf {
     $char: "\E012";
 }
-    @if $filename == rub-b {
+    @if $filename == play {
     $char: "\E013";
 }
-    @if $filename == rub {
+    @if $filename == plus-round {
     $char: "\E014";
 }
-    @if $filename == site {
+    @if $filename == ppl-cards {
     $char: "\E015";
 }
-    @if $filename == tick {
+    @if $filename == ppl {
     $char: "\E016";
+}
+    @if $filename == rub-b {
+    $char: "\E017";
+}
+    @if $filename == rub {
+    $char: "\E018";
+}
+    @if $filename == rupor {
+    $char: "\E019";
+}
+    @if $filename == site {
+    $char: "\E01A";
+}
+    @if $filename == slider-arr-l {
+    $char: "\E01B";
+}
+    @if $filename == slider-arr-r {
+    $char: "\E01C";
+}
+    @if $filename == smile-boy {
+    $char: "\E01D";
+}
+    @if $filename == tick {
+    $char: "\E01E";
 }
 
 @return $char;
@@ -120,6 +144,15 @@
 .iconic--board {
     @include iconic(board);
 }
+.iconic--broom {
+    @include iconic(broom);
+}
+.iconic--bulb {
+    @include iconic(bulb);
+}
+.iconic--card-stats {
+    @include iconic(card-stats);
+}
 .iconic--cross {
     @include iconic(cross);
 }
@@ -140,6 +173,9 @@
 }
 .iconic--habr {
     @include iconic(habr);
+}
+.iconic--molecula {
+    @include iconic(molecula);
 }
 .iconic--mouse {
     @include iconic(mouse);
@@ -165,8 +201,20 @@
 .iconic--rub {
     @include iconic(rub);
 }
+.iconic--rupor {
+    @include iconic(rupor);
+}
 .iconic--site {
     @include iconic(site);
+}
+.iconic--slider-arr-l {
+    @include iconic(slider-arr-l);
+}
+.iconic--slider-arr-r {
+    @include iconic(slider-arr-r);
+}
+.iconic--smile-boy {
+    @include iconic(smile-boy);
 }
 .iconic--tick {
     @include iconic(tick);

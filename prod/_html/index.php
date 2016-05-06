@@ -299,48 +299,28 @@ include 'base/head.php';?>
 
                         <div class="cases-slider__col js-cases-sl__slide">
                             <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!"  class="case__main-link js-popup-btn" data-mfp-src="#case-name1" >
+                                <div class="case case--no-hover">
+                                    <div class="case__main-link" >
                                         <div class="case__img-wr">
                                             <img src="../images/userfiles/logo1.png" alt="">
                                         </div>
                                         <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400%
-                                                </span>
+                                        <span class="numb">
+                                            +1400%
+                                        </span>
                                             <p class="case__txt">
                                                 конверсия offline — online
                                             </p>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2" >
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
                                         <div class="case__img-wr">
                                             <img src="../images/userfiles/logo5.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400% and two words
-                                                </span>
-                                            <p class="case__txt">
-                                                выручка с email-рассылки
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases-slider__col js-cases-sl__slide">
-                            <div class="cases-grid__col js-cases-sl__col ">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo2.png" alt="">
                                         </div>
                                         <div class="case__txt-wr">
                                         <span class="numb">
@@ -350,189 +330,238 @@ include 'base/head.php';?>
                                                 выручка с SMS-рассылки
                                             </p>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name4">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo6.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400 123%
-                                                </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases-slider__col _double js-cases-sl__col">
-
-                            <div class="cases-grid__col  cases-grid__col--double js-cases-sl__col">
-                                <div class="case case--comment">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo4.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400%
-                                                </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-
-                                    <div class="case__comment">
-                                        <p class="case__comm-title">
-                                            Отзыв
-                                        </p>
-                                        <p class="case__comm-txt">
-                                            Рост выручки, прибыльности и лояльности покупателей. Понятная достоверная
-                                            отчетность, новые маркетинговые идеи. Спасибо!
-                                            отчетность, новые маркетинговые идеи. Спасибо!
-                                            отчетность, новые маркетинговые идеи. Спасибо!
-                                            отчетность, новые маркетинговые идеи. Спасибо!
-                                        </p>
-
-                                        <div class="case__comm-link-wr">
-                                            <a href="#!" class="link link--white js-popup-btn" data-mfp-src="#case-comment1">
-                                                Читать весь отзыв
-                                            </a>
-                                        </div>
-
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo8.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-                                                +1400%
-                                            </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo9.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-                                                +1400%
-                                            </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="cases-slider__col js-cases-sl__slide">
-                            <div class="cases-grid__col js-cases-sl__col" data-mfp-src="#case-name5">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo3.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-                                                +1400%
-                                            </span>
-                                            <p class="case__txt">
-                                                выручка с email-рассылки
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name6">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo7.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-
-                                            </span>
-                                            <p class="case__txt">
-                                                выручка с email-рассылки
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases-slider__col js-cases-sl__slide">
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!"  class="case__main-link js-popup-btn" data-mfp-src="#case-name1" >
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo1.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400%
-                                                </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2" >
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo5.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400% and two words
-                                                </span>
-                                            <p class="case__txt">
-                                                выручка с email-рассылки
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
                         <div class="cases-slider__col js-cases-sl__slide">
                             <div class="cases-grid__col js-cases-sl__col ">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
                                         <div class="case__img-wr">
                                             <img src="../images/userfiles/logo2.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +109%
+                                            </span>
+                                            <p class="case__txt">
+                                                выручка с email-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo4.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +150%
+                                            </span>
+                                            <p class="case__txt">
+                                                выручка с email-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cases-slider__col   js-cases-sl__slide">
+
+                            <div class="cases-grid__col  js-cases-sl__col">
+                                <div class="case case--comment js-popup-btn" data-mfp-src="#case-comment1">
+                                    <div class="case__main-link" >
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo5.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +123%
+                                            </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Читать отзыв
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo6.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +190%
+                                            </span>
+                                            <p class="case__txt">
+                                                выручка с SMS-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="cases-slider__col js-cases-sl__slide">
+                            <div class="cases-grid__col js-cases-sl__col" >
+                                <div class="case case--no-hover">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo3.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                        <span class="numb">
+                                            +155%
+                                        </span>
+                                            <p class="case__txt">
+                                                выручка с email-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo7.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                        <span class="numb">
+                                            +120%
+                                        </span>
+                                            <p class="case__txt">
+                                                выручка с SMS-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="cases-slider__col js-cases-sl__slide">
+                            <div class="cases-grid__col js-cases-sl__col ">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo2.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                        <span class="numb">
+                                            +1190%
+                                        </span>
+                                            <p class="case__txt">
+                                                выручка с SMS-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo4.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +190%
+                                            </span>
+                                            <p class="case__txt">
+                                                выручка с SMS-рассылки
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cases-slider__col   js-cases-sl__slide">
+
+                            <div class="cases-grid__col  js-cases-sl__col">
+                                <div class="case case--comment js-popup-btn" data-mfp-src="#case-comment1">
+                                    <div class="case__main-link" >
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo5.png" alt="">
+                                        </div>
+                                        <div class="case__txt-wr">
+                                            <span class="numb">
+                                                +123%
+                                            </span>
+                                            <p class="case__txt">
+                                                конверсия offline — online
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Читать отзыв
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cases-grid__col js-cases-sl__col">
+                                <div class="case case--no-hover">
+                                    <div class="case__main-link">
+                                        <div class="case__img-wr">
+                                            <img src="../images/userfiles/logo6.png" alt="">
                                         </div>
                                         <div class="case__txt-wr">
                                         <span class="numb">
@@ -542,138 +571,51 @@ include 'base/head.php';?>
                                                 выручка с SMS-рассылки
                                             </p>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name4">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo6.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400 123%
-                                                </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases-slider__col _double js-cases-sl__col">
-
-                            <div class="cases-grid__col  cases-grid__col--double js-cases-sl__col">
-                                <div class="case case--comment">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name1">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo4.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                                <span class="numb">
-                                                    +1400%
-                                                </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-
-                                    <div class="case__comment">
-                                        <p class="case__comm-title">
-                                            Отзыв
-                                        </p>
-                                        <p class="case__comm-txt">
-                                            Рост выручки, прибыльности и лояльности покупателей. Понятная достоверная
-                                            отчетность, новые маркетинговые идеи. Спасибо!
-                                        </p>
-
-                                        <div class="case__comm-link-wr">
-                                            <a href="#!" class="link link--white js-popup-btn" data-mfp-src="#case-comment1">
-                                                Читать весь отзыв
-                                            </a>
-                                        </div>
-
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name2">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo8.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-                                                +1400%
-                                            </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name3">
-                                        <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo9.png" alt="">
-                                        </div>
-                                        <div class="case__txt-wr">
-                                            <span class="numb">
-                                                +1400%
-                                            </span>
-                                            <p class="case__txt">
-                                                конверсия offline — online
-                                            </p>
-                                        </div>
-                                    </a>
                                 </div>
                             </div>
 
                         </div>
 
                         <div class="cases-slider__col js-cases-sl__slide">
-                            <div class="cases-grid__col js-cases-sl__col" data-mfp-src="#case-name5">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn">
+                            <div class="cases-grid__col js-cases-sl__col" >
+                                <a class="case " href="https://www.yandex.ru/" target="_blank">
+                                    <div class="case__main-link">
                                         <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo3.png" alt="">
+                                            <img src="../images/userfiles/logo1.png" alt="">
                                         </div>
                                         <div class="case__txt-wr">
                                             <span class="numb">
-                                                +1400%
+                                                +133%
                                             </span>
                                             <p class="case__txt">
                                                 выручка с email-рассылки
                                             </p>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <span class="link link--green">
+                                            Смотреть кейс
+                                        </span>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="cases-grid__col js-cases-sl__col">
-                                <div class="case">
-                                    <a href="#!" class="case__main-link js-popup-btn" data-mfp-src="#case-name6">
+                                <div class="case case--no-hover">
+                                    <div class="case__main-link">
                                         <div class="case__img-wr">
-                                            <img src="../images/userfiles/logo7.png" alt="">
+                                            <img src="../images/userfiles/logo8.png" alt="">
                                         </div>
                                         <div class="case__txt-wr">
-                                            <span class="numb">
-
-                                            </span>
+                                        <span class="numb">
+                                            +190%
+                                        </span>
                                             <p class="case__txt">
-                                                выручка с email-рассылки
+                                                выручка с SMS-рассылки
                                             </p>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -859,7 +801,6 @@ include 'base/head.php';?>
                                         <a href="../images/userfiles/gall-photo1.jpg" class="gall-link js-gall" data-gall-gr="prod-slider">
                                             <img src="../images/userfiles/gall-photo1.jpg" alt="">
                                         </a>
-                                    </a>
                                     </div>
                                 </div>
                             </div>

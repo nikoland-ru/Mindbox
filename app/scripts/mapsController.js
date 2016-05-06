@@ -8,7 +8,7 @@
 //         balloonContent: 'Mindbox'
 //     }, {
 //         iconLayout: 'default#image',
-//         iconImageHref: '../images/marker.png',
+//         iconImageHref: '../images/placemark.png',
 //         iconImageSize: [64, 62],
 //         iconImageOffset: [-23, -62]
 //     });
@@ -45,7 +45,7 @@ $(function () {
             hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../images/marker.png',
+            iconImageHref: '../images/placemark.png',
             iconImageSize: [64, 62],
             iconImageOffset: [-23, -62]
         });
@@ -142,7 +142,7 @@ $(function () {
             hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../images/marker.png',
+            iconImageHref: '../images/placemark.png',
             iconImageSize: [64, 62],
             iconImageOffset: [-23, -62]
         });
@@ -179,7 +179,7 @@ $(function () {
             hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../images/marker.png',
+            iconImageHref: '../images/placemark.png',
             iconImageSize: [64, 62],
             iconImageOffset: [-23, -62]
         });
@@ -239,7 +239,7 @@ $(function () {
             hintContent: 'Mindbox'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../images/marker.png',
+            iconImageHref: '../images/placemark.png',
             iconImageSize: [64, 62],
             iconImageOffset: [-23, -62]
         });

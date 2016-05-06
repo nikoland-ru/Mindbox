@@ -1,0 +1,246 @@
+.page-how
+
+
+.meeting
+    padding: 70px 0
+    text-align: center
+
+    .wrapper
+        max-width: 855px
+
+    .h2-l
+        margin-bottom: 25px
+
+    &__subtitle
+        font-size: 18px
+        line-height: 25px
+        font-weight: 700
+        margin-bottom: 33px
+
+    +max-screen($screenS)
+        padding: 40px 0 30px
+
+        .h2-l
+            margin-bottom: 20px
+
+        &__subtitle
+            font-size: 15px
+            line-height: 24px
+            margin-bottom: 20px
+            br
+                display: none
+
+
+.itogs
+    padding: 56px 0 35px
+    background-color: #292728
+    color: #fff
+    text-align: center
+
+    .h2-wide
+        text-transform: uppercase
+        margin-bottom: 15px
+        letter-spacing: 4px
+
+    &__subtitle
+        font-size: 20px
+        line-height: 30px
+        font-weight: 700
+        margin-bottom: 10px
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        max-width: 1000px
+        margin: 10px auto
+
+    &__li
+        width: 25%
+        flex-grow: 1
+        flex-shrink: 0
+        padding: 0 20px
+        margin: 20px 0
+
+        .numb
+            display: block
+
+
+    &__li-img-wr
+        height: 165px
+        line-height: 165px
+        margin-bottom: 20px
+
+        IMG
+            display: inline-block
+            vertical-align: middle
+
+    &__li-txt-wr
+
+    &__li-desc
+        margin-top: 3px
+        font-size: 16px
+        color: #f7f7f7
+
+    +max-screen($screenS)
+
+        &__subtitle
+            font-size: 17px
+            line-height: 25px
+
+        &__list
+            max-width: 550px
+
+        &__li
+            width: 50%
+
+
+    +max-screen(430px)
+        padding-bottom: 20px
+
+        &__subtitle
+            margin-bottom: 45px
+
+        &__list
+            display: block
+
+        &__li
+            width: auto
+            margin-bottom: 40px
+
+        &__li-img-wr
+            height: auto
+            line-height: normal
+            margin-bottom: 15px
+
+
+
+
+.plan-gr
+
+.plan-week
+    background-color: $cGrey
+    text-align: center
+    padding: 65px 0 1px
+    position: relative
+    overflow: hidden
+    .h3-l
+        line-height: 30px
+        margin-bottom: 32px
+
+    .h2-l
+        margin-bottom: 45px
+
+    &__desc
+        font-size: 15px
+        margin: 10px auto
+        max-width: 500px
+
+    .plan-week-sl
+        margin: 0 auto -20px
+
+        .demo-img
+            transition: $t300
+            &:hover
+                transform: translateY(-15px)
+
+    +max-screen($screenSS)
+        padding-top: 45px
+        .h3-l
+            margin-bottom: 25px
+            font-size: 20px
+            line-height: 26px
+
+        .h2-l
+            font-size: 22px
+            margin-bottom: 25px
+
+    +max-screen($screenXS)
+        .h2-l
+            font-size: 20px
+            line-height: 26px
+            margin-bottom: 25px
+
+
+.plan-result
+    padding: 45px 0 25px
+
+    &__inner
+        margin-left: auto
+        margin-right: auto
+        max-width: $plan-sl-width
+        display: flex
+        color: #333
+
+    &__txt-col
+        flex-grow: 1
+
+        .h2-l
+            margin-bottom: 10px
+
+    &__company-col
+        flex-shrink: 0
+        width: 300px
+        margin-left: 35px
+
+    &__company
+        display: flex
+
+        //align-items: center
+        //min-height: 150px
+
+    //&__comp-logo-wr
+        position: absolute
+        top: 50%
+        max-width:
+
+    &__comp-logo-wr
+        flex-shrink: 0
+        width: 145px
+        height: 122px
+        line-height: 122px
+        text-align: center
+        padding: 0 15px 0 5px
+        IMG
+            display: inline-block
+            vertical-align: middle
+
+    &__comp-txt
+        margin-top: 40px
+        font-size: 16px
+
+    &__comp-name
+        font-size: 20px
+        line-height: 20px
+        font-weight: 500
+        margin-bottom: 5px
+
+
+    +max-screen($screenSM)
+        padding: 30px 0
+
+        &__inner
+            flex-wrap: wrap
+
+        &__txt-col
+            width: 100%
+            order: 2
+
+        &__company-col
+            width: 100%
+            order: 1
+            margin-left: 0
+            margin-bottom: 25px
+
+        &__company
+            align-items: center
+
+        &__comp-logo-wr
+            width: auto
+            max-width: 200px
+            min-width: 100px
+            padding: 0 20px 0 0
+            line-height: normal
+            height: auto
+
+        &__comp-txt
+            margin: 0

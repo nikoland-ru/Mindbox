@@ -60,7 +60,9 @@ include 'base/head.php';?>
                             </a>
                         </div>
                     </div>
-                    <div class="contacts-more"><a class="link link--black-green" href="#!">Написать нам</a></div>
+                    <div class="contacts-more js-side-popup-btn" data-popup-name="demo">
+                        <span class="link link--black-green">Написать нам</span>
+                    </div>
                 </div>
                 <div class="contacts__map">
                     <div class="contacts-map js-contacts-map" id="js-contacts-map">

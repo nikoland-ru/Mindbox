@@ -24,6 +24,16 @@ $side-popup-size: 405px
         padding-left: $side-popup-padd-rl
         padding-right: $side-popup-padd-rl
         flex-shrink: 0
+        position: relative
+        overflow: hidden
+
+        > *
+            transform: translateX(40%)
+            transition: $t600 0.3s
+
+            BODY._side-popup-open &
+                transform: translateX(0%)
+
 
         +max-screen($side-popup-size * 0.9)
             padding-left: $side-popup-padd-rl_xs
@@ -106,13 +116,68 @@ $popup-size: 600px
         line-height: 35px
         font-weight: 500
         margin-bottom: 30px
+        margin-right: 25px
 
-.popup__closer,.mfp-close
-    font-size: 25px
-    width: 25px !important
-    height: 25px !important
-    line-height: normal
-    color: $cPrimary !important
+    +max-screen($screenXS)
+        padding: 25px 20px 15px
+        &__title
+            font-size: 28px
+
+
+
+.popup-cross
+
+    &, svg
+        width: 30px !important
+        height: 30px !important
+
+    // Почему то клик по свг не закрывает magnific popup, оверлей через :after исправляет проблему
+    &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        background: transparent
+
+
+    polyline
+        fill: $cPrimary
+        transition: $t300
+        stroke-dasharray: 14px
+
+    &:hover
+        fill: darken($cPrimary, 10%)
+
+        polyline
+            &:nth-child(1)
+                transform: translate3d(5px,-5px,0)
+
+            &:nth-child(2)
+                transform: translate3d(-5px,5px,0)
+
+            &:nth-child(3)
+                transform: translate3d(-5px,-5px,0)
+
+            &:nth-child(4)
+                transform: translate3d(5px,5px,0)
+
+    &:active
+        polyline
+            &:nth-child(1)
+                transform: translate3d(20px,-20px,0)
+
+            &:nth-child(2)
+                transform: translate3d(-20px,20px,0)
+
+            &:nth-child(3)
+                transform: translate3d(-20px,-20px,0)
+
+            &:nth-child(4)
+                transform: translate3d(20px,20px,0)
+
+.popup__closer, .mfp-close
     position: absolute
     top: 16px !important
     right: 16px !important
@@ -123,19 +188,7 @@ $popup-size: 600px
     &:hover
         color: darken($cPrimary, 10%) !important
 
-    .mfp-iframe-holder &
-        top: 0 !important
-        right: auto !important
-        //bottom: 100% !important
-        left: 100% !important
-        margin: 0 0 16px 16px
-        //color: $cDark !important
-        +max-screen($screenS)
-            margin: 0 0 16px
-            top: auto !important
-            bottom: 100% !important
-            left: auto !important
-            right: 0 !important
+
 
 
 .mfp-iframe-holder
@@ -143,8 +196,29 @@ $popup-size: 600px
         padding-left: 60px
         padding-right: 60px
         +max-screen($screenS)
-            padding-left: 10px
-            padding-right: 10px
+            padding-left: 8px
+            padding-right: 8px
+
+    .mfp-content
+        padding: 25px 55px
+        background: rgba($cDarkL,0.9)
+
+    .mfp-iframe-scaler
+        position: relative
+        overflow: visible
+
+    .popup__closer, .mfp-close
+        top: 0 !important
+        right: auto !important
+        left: 100% !important
+        margin: 0 0 13px 13px
+
+        +max-screen($screenS)
+            margin: 0 0 16px
+            top: auto !important
+            bottom: 100% !important
+            left: auto !important
+            right: 0 !important
 
 
 
@@ -193,3 +267,22 @@ $comment-ava-size: 120px
 
         img
             width: 100%
+
+    +max-screen($screenXS + 40px)
+
+        &__comment-wr
+            white-space: normal
+
+        &__comment-img
+            margin: 0 auto
+
+        &__comment-img-col
+            width: 100%
+            margin: 0 auto 20px
+            & + .case-popup__comment-txt-col
+                margin-right: 0
+                padding-left: 0
+
+        &__txt
+            font-size: 14px
+            line-height: 24px

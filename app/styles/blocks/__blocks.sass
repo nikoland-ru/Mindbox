@@ -2,6 +2,38 @@
 @import "popups"
 
 
+.title-iconic
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 35px
+
+    .ico-w-circle
+        margin-bottom: 25px
+        .iconic
+            &--card-stats
+                font-size: 55px
+
+    .h2-l
+        line-height: 40px
+
+    +max-screen($screenSS)
+        margin-bottom: 25px
+
+        .h2-l
+            font-size: 20px
+            line-height: 25px
+
+        //.ico-w-circle
+            //.iconic
+            font-size: 42px
+
+            &:after
+                width: 50px
+                height: 50px
+                margin: -25px 0 0 -25px
+
+
 .subscribe
     margin: 15px
     text-align: center
@@ -73,9 +105,105 @@
         margin: -35px 0 0 -35px
         transition: $t600
 
+        +max-screen($screenXS)
+            height: 50px
+            width: 50px
+            line-height: 34px
+            font-size: 34px
+            padding: 8px
+            margin: -25px 0 0 -25px
+
     &:hover
         &:after
             transform: rotate(360deg)
+
+
+.demo-img
+    display: table
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    box-shadow: 0 20px 45px rgba(#000,0.5)
+    border-radius: 4px
+
+    IMG
+        display: block
+
+    .gall-link
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+    &--sm
+        .gall-link
+            display: none
+            +max-screen($screenSM)
+                display: block
+
+
+
+.demo-info
+    //display: flex
+    //align-items: center
+    @extend .wrapper-inner
+    position: relative
+
+    +min-screen($screenSL)
+        background-color: #f8f6ea
+        margin-right: 0 !important
+
+    &__desc
+        //flex-shrink: 0
+        //flex-grow: 1
+        width: 48%
+        //background-color: #f8f6ea
+        padding: 35px 50px
+        font-weight: 500
+
+        ul
+            li
+                &:before
+                    content: "\2013"
+                    margin-right: 4px
+                    color: #84837d
+
+    &__desc-title
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 10px
+
+    &__visual
+        +min-screen($screenSL)
+            width: 52%
+            //flex-shrink: 0
+            //flex-grow: 1
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+
+            .demo-img
+                margin-left: -15px
+
+    +max-screen($screenSL)
+        background-color: transparent
+
+        &__desc
+            background-color: #f8f6ea
+            width: auto
+            padding: 20px $wrapperS-padd 30px
+            margin-bottom: 35px
+
+        &__visual
+            padding: 10px $wrapperS-padd
+
+    +max-screen($screenSS)
+
+        &__desc, &__visual
+            padding-right: $wrapperSS-padd
+            padding-left: $wrapperSS-padd
 
 
 // ----------------------------------------------------------------------
@@ -125,6 +253,8 @@ $cases-grid-gap-sm: 8px
     display: flex
     width: 100%
     transition: all $t300, height 0.1s
+    cursor: pointer
+    flex-direction: column
 
     &__main-link
         width: 100%
@@ -136,6 +266,7 @@ $cases-grid-gap-sm: 8px
         //display: flex
         //flex-direction: column
         color: #000
+        flex-grow: 1
 
     &__img-wr
         height: 110px
@@ -156,64 +287,55 @@ $cases-grid-gap-sm: 8px
         margin-bottom: 11px
         min-height: 20px
 
-    &__comment
-        min-width: 50%
-        background-color: $cDarkL
-        flex-grow: 1
+    &__bottom
+        background-color: #fff
+        align-content: flex-end
         flex-shrink: 0
         color: #fff
-        margin-left: -($cases-grid-gap/2)
-        text-align: left
-        padding: 10px 20px 43px
-        position: relative
-
-        &:before
-            content: ''
-            width: 15px
-            height: 9px
-            position: absolute
-            top: 12px
-            right: 15px
-            background: url("../images/quotes.png") no-repeat center
-
-        &:after
-            content: ''
-            position: absolute
-            top: 50%
-            left: 0
-            border: 6px solid #fff
-            border-color: transparent transparent transparent #fff
-
-        +max-screen($screenSM)
-            margin-left: -($cases-grid-gap-md/2)
-
-        +max-screen($screenSS)
-            margin-left: -($cases-grid-gap-sm/2)
-
-    &__comm-title
-        font-size: 16px
-        font-weight: 500
-        margin-bottom: 10px
-        color: $cPrimary
-
-    &__comm-txt
-        font-size: 13px
-        line-height: 18px
-
-    &__comm-link-wr
-        position: absolute
-        left: 0%
-        right: 0
         text-align: center
-        bottom: 20px
+        padding: 17px 25px
+        position: relative
+        cursor: pointer
+        transition: $t300
+        margin-top: -12px
+
+        .link
+            transition: $t300
 
     &:hover
         box-shadow: 0 0 25px rgba(#999, 0.4)
 
+        .case__bottom
+            background-color: $cGreen2
+
+            .link
+                color: #fff
+                border-bottom-color: rgba(#fff,0.3)
+
+    &--no-hover
+        cursor: default
+        &:hover
+            box-shadow: none
+
+
     &--comment
-        .case
-            &__main-link, &__comment
-                width: 50%
+
+        .case__bottom
+            &:before
+                content: ''
+                width: 15px
+                height: 9px
+                position: absolute
+                top: 10px
+                right: 10px
+                background: url("../images/quotes.png") no-repeat center
+
+        &:hover
+            .case__bottom
+                background-color: $cDarkL
+                .link
+                    color: #fff
+                    border-bottom-color: rgba(#fff,0.3)
 
 
 
@@ -343,3 +465,84 @@ $cases-grid-gap-sm: 8px
 
     +max-screen($screenSS)
         display: block
+
+
+// ----------------------------------------------------------------------
+// we-answer
+// ----------------------------------------------------------------------
+
+.we-answer
+    background-color: $cGrey
+    text-align: center
+    position: relative
+    overflow: hidden
+
+    .wrapper
+        padding-top: 75px
+        padding-bottom: 95px
+
+    &__main
+        max-width: 580px
+        margin-right: auto
+        margin-left: auto
+
+    .h3-l
+        margin-bottom: 40px
+
+    .btn
+        padding-left: 30px
+        padding-right: 30px
+
+    &__bg-img
+        position: absolute
+        top: 20px
+        right: 50%
+        margin-right: 225px
+
+    +max-screen($screenMS + 90px)
+
+        &__main
+            margin-left: 330px
+
+        &__bg-img
+            margin-right: 0
+            left: 0
+            right: auto
+
+    +max-screen($screenSM)
+        .wrapper
+            padding-top: 55px
+            padding-bottom: 70px
+
+        &__main
+            margin-left: 25%
+
+        &__bg-img
+            left: auto
+            right: 67%
+            //margin-right: -30px
+            //max-width: 25%
+            max-width: 37%
+
+    +max-screen($screenS)
+        .wrapper
+            padding-top: 40px
+            padding-bottom: 30px
+
+        &__bg-img
+            display: none
+
+        &__main
+            margin-left: auto
+            margin-right: auto
+
+        .h3-l
+            margin-bottom: 20px
+
+    +max-screen($screenXS)
+        .h3-l
+            margin-bottom: 10px
+
+        .btn
+            &:after,&:before
+                display: none

@@ -1,4 +1,4 @@
-$header-h: 104px
+$header-h: 84px //104px
 $header-h_md: 84px
 $header-h_sm: 68px
 
@@ -10,7 +10,7 @@ $header-h_sm: 68px
     top: 0
     left: 0
     right: 0
-    transition: background-color $t300
+    transition: background-color $t300, box-shadow $t300
 
     .wrapper
         height: $header-h
@@ -40,6 +40,7 @@ $header-h_sm: 68px
             width: 170px
 
     &__demo-btn
+        white-space: nowrap
         +min-screen($screenMS + 1px)
             position: absolute
             top: 50%
@@ -116,7 +117,7 @@ $header-h_sm: 68px
             background-color: $cDark
             color: #fff
             padding: $header-h_md 0 20px
-            transition: $t300
+            transition: opacity $t300, visiblity $t300
             transform: scale(1.1)
             opacity: 0
             visibility: hidden
@@ -143,6 +144,8 @@ $header-h_sm: 68px
 
         &__menu-btn-gr
             display: block
+            -webkit-tap-highlight-color: transparent
+
 
     +max-screen($screenS)
         .wrapper
@@ -179,3 +182,5 @@ $header-h_sm: 68px
             transform: scale(1)
             opacity: 1
             visibility: visible
+
+

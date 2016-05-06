@@ -143,6 +143,19 @@ function toggleClass(selector, className, callback) {
     };
 })(jQuery);
 
+$.scrollbarWidth = function() {
+    var parent, child, width;
+
+    if(width===undefined) {
+        parent = $('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');
+        child=parent.children();
+        width=child.innerWidth()-child.height(99).innerWidth();
+        parent.remove();
+    }
+
+    return width;
+};
+
 /* -- Применение общих плагинов и функций --- */
 
 $(function () {
@@ -158,28 +171,3 @@ $(function () {
 
     $tabs.tabs({});
 });
-
-
-//todo delete
-/*
- $(function () {
- var baseVals = [71500,197666],
- array = [
- [78649,217433],
- [82224,227316],
- [85799,237199],
- [107249,296499],
- [92949,256966],
- [60774,168016]
- ];
-
- $.each(array, function(){
- var minPercent = (this[0] / (baseVals[0] / 100)) - 100,
- maxPercent = (this[1] / (baseVals[1] / 100)) - 100;
-
- console.log('min:  '+minPercent)
- console.log('max:  '+maxPercent)
-
- })
-
- });*/

@@ -1,0 +1,531 @@
+.page-product
+
+
+.promo-txt
+
+    .wrapper
+        padding-top: 55px
+        padding-bottom: 40px
+        +max-screen($screenSL)
+            padding-top: 30px
+            padding-bottom: 30px
+
+    &__main-col
+        position: relative
+        margin-left: 50%
+        padding-bottom: 25px
+
+        .markered
+            margin: 27px 0 15px -20px
+            +screen($screenMS + 1px , $screenMM)
+                font-size: 26px
+
+            +screen($screenXS + 1px , $screenMS)
+                font-size: 20px
+                line-height: 34px
+
+        .cols
+            margin-left: -15px
+            margin-right: -15px
+
+            .col
+                padding-left: 15px
+                padding-right: 15px
+
+            li
+                margin-bottom: 20px
+
+    .h1-l
+        display: table
+        margin: 20px 0 40px
+
+    &__subtitle
+        line-height: 40px
+        font-weight: 500
+        margin-bottom: 45px
+
+
+    &__bg-img
+        position: absolute
+        bottom: 0
+        right: 50%
+        margin-right: 55px
+        max-width: 60%
+        //+max-screen($screenMS)
+            max-width: 40%
+            right: 58%
+
+    &--how
+        background-color: $cGrey
+        +min-screen($screenSL + 1px)
+            .promo-txt
+                &__main-col
+                    margin-left: 45%
+
+                &__bg-img
+                    max-width: 55%
+                    right: 55%
+
+    &--prod
+
+        .promo-txt
+
+            &__bg-img
+                bottom: auto
+                top: 50%
+                margin-right: 74px
+                transform: translateY(-50%)
+
+        +min-screen($screenSL + 1px)
+
+
+            .h1-l
+                margin-bottom: 45px
+
+            .promo-txt
+                &__main-col
+                    min-height: 580px
+
+                &__subtitle
+                    margin-bottom: 25px
+
+                &__main-txt
+                    .h2-l
+                        margin-bottom: 27px
+                        line-height: 40px
+
+        +max-screen($screenMM)
+            .promo-txt
+                &__bg-img
+                    max-width: 45%
+                    margin-right: 50px
+
+
+    +max-screen($screenSL)
+        &__bg-img
+            display: none
+
+        &__main-col
+            margin-left: 0
+            padding-bottom: 0px
+
+        .h1-l
+            margin: 20px auto 45px
+
+        &__subtitle
+            margin-bottom: 25px
+            text-align: center
+
+        .markered
+            margin-left: 0
+
+    +max-screen($screenS)
+        .h1-l--corner
+            &:after
+                margin-top: -8px
+                margin-right: 3px
+
+            &:before
+                margin-bottom: -10px
+                margin-left: 7px
+
+    +max-screen($screenSS)
+        .h2-l
+            font-size: 20px
+            line-height: 30px
+
+
+
+.prod-customize
+    background: $pageBg
+    position: relative
+    overflow: hidden
+
+    .wrapper
+        padding-top: 50px
+        padding-bottom: 0
+
+    .cols
+        margin-bottom: 50px
+        +max-screen($screenS)
+            margin-bottom: 35px
+            .ul
+                margin: 0
+
+    .demo-img
+        max-width: 80%
+        +min-screen($screenSM + 1px)
+            margin-bottom: -25px
+
+        +max-screen($screenSS)
+            max-width: 96%
+
+.prod-reports
+    padding: 52px 0 125px
+
+    .cols
+        margin-bottom: 95px
+
+    +max-screen($screenSL)
+        padding-bottom: 70px
+
+        .cols
+            margin-bottom: 40px
+
+
+
+.comms-wr
+    background: #2B2B2B
+    padding: 72px 0 130px
+    text-align: center
+    color: #fff
+
+    .h1-l
+        color: $cGreen2
+        margin-bottom: 70px
+
+    +max-screen($screenLS)
+        padding-bottom: 55px
+
+        .slick-dots
+            margin-top: 45px
+
+    +max-screen($screenSL)
+        padding-top: 50px
+        padding-bottom: 30px
+        .h1-l
+            margin-bottom: 40px
+            font-size: 35px
+            line-height: 40px
+
+        .slick-dots
+            margin-top: 25px
+
+    +max-screen($screenSS)
+        padding-bottom: 20px
+        .slick-dots
+            margin-top: 20px
+
+
+$comm-img-w: 273px
+$comm-img-w-md: 210px
+$comm-img-h-md: 191px
+
+.comment
+    text-align: left
+    white-space: nowrap
+    font-size: 0
+
+    &__main,&__img-col
+        display: inline-block
+        vertical-align: top
+        white-space: normal
+        font-size: 14px
+
+    &__main
+
+
+    &__speech
+        font-size: 25px
+        line-height: 30px
+        margin-bottom: 30px
+
+        p
+            margin-bottom: 20px
+
+    &__author
+        color: $cPaleGreen
+
+    &__img-col
+        margin-top: 15px
+        margin-right: -$comm-img-w
+        & + .comment__main
+            width: 100%
+            //margin-left: -$comm-img-w
+            padding-left: $comm-img-w + 47px
+
+    &__img
+        position: relative
+        overflow: hidden
+        width: $comm-img-w
+        height: 248px
+
+
+        IMG
+            margin: 3px 0 3px 3px
+            max-width: $comm-img-w - 36px
+            //max-height: 100%
+            border-radius: 50%
+            display: block
+
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: url('../images/comment-mask.png') no-repeat center
+            background-size: cover
+
+    +max-screen($screenSL)
+        &__img-col
+            margin-right: -$comm-img-w-md
+            & + .comment__main
+                padding-left: $comm-img-w-md + 25px
+
+        &__img
+            position: relative
+            overflow: hidden
+            width: $comm-img-w-md
+            height: $comm-img-h-md
+
+            IMG
+                max-width: $comm-img-w-md - 25px
+
+        &__speech
+            font-size: 20px
+            line-height: 26px
+            margin-bottom: 20px
+
+            p
+                margin-bottom: 14px
+
+    +max-screen($screenSS)
+
+        white-space: normal
+
+        &__main,&__img-col
+            display: block
+            width: 100%
+
+        &__img-col
+            margin-right: 0 !important
+            margin-bottom: 30px
+
+
+        &__img
+            margin-left: auto
+            margin-right: auto
+            left: 12px
+
+        &__main
+            padding-left: 0 !important
+
+    +max-screen($screenXS)
+        &__speech
+            font-size: 15px
+            line-height: 20px
+
+
+.prod-progs
+    background-color: $cGrey
+    position: relative
+    overflow: hidden
+
+    .wrapper
+        padding-top: 55px
+        padding-bottom: 1px
+
+    .title-iconic
+        max-width: 640px
+
+    &__main
+        display: flex
+
+    &__main-visual
+        flex-grow: 1
+        flex-shrink: 1
+        align-self: flex-end
+        padding-right: 40px
+
+        .demo-img
+            margin-bottom: -20px
+            transition: $t300
+            &:hover
+                transform: translateY(-15px)
+
+        +min-screen($screenM + 1px)
+            .demo-img
+                margin-left: -50px
+
+        +min-screen($screenLS + 1px)
+            .demo-img
+                margin-left: -125px
+
+        +max-screen($screenLS)
+            padding-right: 25px
+            .demo-img
+                margin-left: -15px
+
+
+    &__main-txt
+        width: 510px
+        flex-shrink: 0
+        margin-bottom: 35px
+
+    +max-screen($screenMS)
+        &__main
+            flex-wrap: wrap
+
+        &__main-txt
+            width: auto
+            order: 1
+            flex-shrink: 1
+
+        &__main-visual
+            order: 2
+            padding-right: 0
+            width: auto
+
+            .demo-img
+                margin-left: auto
+                margin-right: auto
+                max-width: 600px
+
+    +max-screen($screenS)
+        &__main-visual
+            .demo-img
+                max-width: 94%
+
+
+
+.features-wr
+    padding: 80px 0 25px
+    +max-screen($screenSM)
+        padding: 35px 0 25px
+
+.features
+    display: flex
+    flex-wrap: wrap
+    margin-right: -35px
+    margin-left: -35px
+    position: relative
+    z-index: 1
+
+    &:after
+        content: ''
+        width: 2px
+        position: absolute
+        top: 0
+        bottom: 25px
+        right: 50%
+        margin-right: -1px
+        background: url("../images/fake-dot-border-v.png") repeat-y top left
+        z-index: 1
+
+    // kinda overlay
+    &:before
+        content: ''
+        background-color: #fff
+        position: absolute
+        left: 0
+        right: 0
+        height: 3px
+        bottom: 0
+        z-index: 2
+
+
+    &__col
+        width: 50%
+        flex-shrink: 0
+        padding: 0 35px 0
+        position: relative
+
+        .feature
+            margin-bottom: 70px
+
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            height: 2px
+            background: url("../images/fake-dot-border.png") repeat-x
+            background-position: -2px top
+            display: block
+
+            +max-screen($screenSL)
+                left: 0 !important
+                right: 0 !important
+
+        &:nth-child(2n+1)
+            &:after
+                left: 35px
+                background-position: top right
+
+        &:nth-child(2n)
+            &:after
+                right: 35px
+
+        &:nth-child(1n + 3)
+            .feature__ico
+                margin-top: 23px
+
+
+    +max-screen($screenSL)
+        margin-left: -$wrapperS-padd
+        margin-right: -$wrapperS-padd
+
+        &__col
+            padding-left: $wrapperS-padd
+            padding-right: $wrapperS-padd + 15px
+
+            &:nth-child(2n)
+                padding-left: $wrapperS-padd + 15px
+
+            .feature
+                padding: 0
+                margin-bottom: 40px
+                .h2-l
+                    br
+                        display: none
+
+    +max-screen($screenSM)
+        display: block
+
+        &:after
+            display: none
+
+        &__col
+            width: auto
+            padding-bottom: 1px
+            padding-left: $wrapperS-padd !important
+            padding-right: $wrapperS-padd !important
+
+        .feature__ico
+            margin-top: 25px !important
+            height: auto
+            line-height: normal
+
+
+    +max-screen($screenSS)
+        margin-left: -$wrapperSS-padd
+        margin-right: -$wrapperSS-padd
+
+        &__col
+            padding-right: $wrapperSS-padd !important
+            padding-left: $wrapperSS-padd !important
+
+
+
+.feature
+    padding: 0 20px
+
+    &__ico
+        height: 140px
+        line-height: 140px
+        margin-bottom: 15px
+
+        .ico-w-circle
+            vertical-align: middle
+            line-height: normal
+
+    .h2-l
+        margin-bottom: 28px
+
+        +max-screen($screenSS)
+            font-size: 20px
+            line-height: 26px
+            margin-bottom: 20px

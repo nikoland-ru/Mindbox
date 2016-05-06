@@ -11,7 +11,6 @@
         left: 0
         padding: 17px 0px
 
-
         li
             width: auto
             height: auto
@@ -30,36 +29,130 @@
                     display: inline-block
                     transition: $t150
 
-                &:hover
-                    &:after
-                        background: #000
+            &:hover,&.slick-active
+                button:after
+                    background: #000
 
 
-$slider-arr-h: 82px
-$slider-arr-w: 90px
+$slider-arr-size: 90px
 
 .slider-arr
     position: absolute
     top: 50%
-    margin-top: -($slider-arr-h/2)
+    margin-top: -($slider-arr-size/2)
     cursor: pointer
+    width: $slider-arr-size
+    height: $slider-arr-size
+    line-height: $slider-arr-size
 
-    &, svg
-        width: $slider-arr-w
-        height: $slider-arr-h
+
+    svg
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+    .iconic
+        font-size: 44px
+        color: #000
+        transition: $t300
+
+
+    &__circle1, &__circle2
+        transition: $t300
+        stroke: #e3e3e2
+
+    &__dot
+        opacity: 0
+        fill: #000
+
+
+    &:hover
+        .slider-arr
+            &__circle1, &__circle2
+                stroke: #000
+
+            &__dot
+                transition-delay: 0.2s
+                opacity: 1
 
     &--l
         right: 100%
         margin-right: 140px
+
+        .slider-arr
+
+            &__circle1
+                stroke-dasharray: 325
+                stroke-dashoffset: 180
+
+            &__circle2
+                stroke-dasharray: 325
+                stroke-dashoffset: -180
+
+        &:hover
+
+            .iconic
+                margin-left: -25px
+
+            .slider-arr
+
+                &__circle1
+                    stroke-dashoffset: 325
+
+                &__circle2
+                    stroke-dashoffset: -325
+
         +max-screen(1630px)
             margin-right: 30px
-
 
     &--r
         left: 100%
         margin-left: 140px
+
+        .slider-arr
+
+            &__circle1
+                stroke-dasharray: 150px 185px //325
+                stroke-dashoffset: -160
+
+            &__circle2
+                stroke-dasharray: 150px 185px //325
+                stroke-dashoffset: -350
+
+        &:hover
+            .iconic
+                margin-left: 25px
+
+            .slider-arr
+
+                &__circle1
+                    stroke-dasharray: 0px 185px
+                    //stroke-dashoffset: 324
+
+                &__circle2
+                    stroke-dasharray: 0px 185px
+                    //stroke-dashoffset: -324
+
         +max-screen(1630px)
             margin-left: 30px
+
+.slider-wh-arr
+    .slider-arr
+        .iconic
+            color: #fff
+
+        &__dot
+            fill: #fff
+
+        &__circle1, &__circle2
+            stroke: #403f3f
+
+        &:hover
+            .slider-arr
+                &__circle1, &__circle2
+                    stroke: #fff
 
 
 // ----------------------------------------------------------------------
@@ -190,3 +283,49 @@ $slider-arr-w: 90px
             .ul
                 li
                     line-height: 24px
+
+// ----------------------------------------------------------------------
+// Plan week slide
+// ----------------------------------------------------------------------
+
+$plan-sl-width: 800px
+
+.plan-week-sl
+    +slick-dots
+
+    &__slider
+        padding-top: 40px
+
+    &__slide
+        padding: 20px 30px 0
+
+    &__slide-inner
+        max-width: $plan-sl-width
+        margin-right: auto
+        margin-left: auto
+
+
+    .slick-dots
+        position: absolute
+        top: 10px
+        bottom: auto
+        padding: 0
+
+    .slider-arr
+        margin-top: -28px
+
+    +screen($screenMS + 1px, 1420px)
+        padding-left: 150px
+        padding-right: 150px
+
+    +max-screen($screenMS)
+        .slider-arr
+            display: none
+
+    +max-screen($screenSM)
+        .slider-arr
+            display: none !important
+
+    +max-screen($screenXS)
+        margin-right: -$wrapperSS-padd - 10px !important
+        margin-left: -$wrapperSS-padd - 10px!important

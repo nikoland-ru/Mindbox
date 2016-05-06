@@ -63,18 +63,3 @@ $(function () {
 
 });
 
-$(function(){
-    var $vPopup = $('.js-video-popup');
-    if(!$vPopup.length) return;
-
-    $vPopup.magnificPopup({
-        //disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        closeMarkup: '<span class="mfp-close iconic iconic--cross2 popup__closer js-popup_closer"></span>'
-    });
-
-});
