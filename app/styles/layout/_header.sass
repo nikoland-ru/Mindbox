@@ -1,10 +1,9 @@
-$header-h: 84px //104px
+$header-h: 84px
 $header-h_md: 84px
 $header-h_sm: 68px
 
 .header
     background: #fff
-    //position: relative
     z-index: 100
     position: fixed
     top: 0
@@ -23,8 +22,7 @@ $header-h_sm: 68px
         width: 220px
         flex-shrink: 0
         max-height: 100%
-        //padding: 10px 20px 10px 0
-        padding: 0px 20px 0px 0
+        padding: 0 20px 0 0
         +max-screen($screenMM)
             width: 210px
 
@@ -56,14 +54,19 @@ $header-h_sm: 68px
 
     &__nav-ul
         white-space: nowrap
+        +min-screen($screenMS + 1px)
+            display: flex
+            justify-content: space-around
+            max-width: 1000px
+            margin-left: auto
+            margin-right: auto
 
     &__nav-li
         display: inline-block
         vertical-align: top
-        margin: 0 16px
+        //margin: 0 16px
         white-space: normal
-        +max-screen($screenMM)
-            margin: 0 12px
+        margin: 0 9px
 
 
     &__nav-a
@@ -126,6 +129,7 @@ $header-h_sm: 68px
         &__nav-ul
             white-space: normal
             margin: 13px 0
+
 
         &__nav-li
             display: block

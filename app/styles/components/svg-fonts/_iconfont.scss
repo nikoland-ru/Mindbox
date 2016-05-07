@@ -103,20 +103,23 @@
     @if $filename == rupor {
     $char: "\E019";
 }
-    @if $filename == site {
+    @if $filename == sandglass {
     $char: "\E01A";
 }
-    @if $filename == slider-arr-l {
+    @if $filename == site {
     $char: "\E01B";
 }
-    @if $filename == slider-arr-r {
+    @if $filename == slider-arr-l {
     $char: "\E01C";
 }
-    @if $filename == smile-boy {
+    @if $filename == slider-arr-r {
     $char: "\E01D";
 }
-    @if $filename == tick {
+    @if $filename == smile-boy {
     $char: "\E01E";
+}
+    @if $filename == tick {
+    $char: "\E01F";
 }
 
 @return $char;
@@ -203,6 +206,9 @@
 }
 .iconic--rupor {
     @include iconic(rupor);
+}
+.iconic--sandglass {
+    @include iconic(sandglass);
 }
 .iconic--site {
     @include iconic(site);

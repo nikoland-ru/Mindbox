@@ -85,7 +85,16 @@ $(function(){
         removalDelay: 160,
         preloader: false,
         fixedContentPos: false,
-        closeMarkup: _GLOB.closerReference
+        closeMarkup: _GLOB.closerReference,
+        callbacks: {
+            open: function(){
+                $('.mfp-bg').css('background','rgba(1, 2, 0, 1)')
+            },
+            close: function(){
+                $('.mfp-bg').css('background','')
+
+            }
+        }
     });
 
 });

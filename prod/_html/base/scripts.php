@@ -1,7 +1,3 @@
-<div class="hidden-i">
-
-</div>
-
 <script>
     if(!_GLOB){
         var _GLOB = {};

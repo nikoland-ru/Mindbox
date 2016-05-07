@@ -60,7 +60,7 @@ include 'base/head.php';?>
                             </a>
                         </div>
                     </div>
-                    <div class="contacts-more js-side-popup-btn" data-popup-name="demo">
+                    <div class="contacts-more js-side-popup-btn" data-popup-name="call">
                         <span class="link link--black-green">Написать нам</span>
                     </div>
                 </div>

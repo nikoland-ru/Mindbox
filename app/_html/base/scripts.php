@@ -1,7 +1,3 @@
-<div class="hidden-i">
-
-</div>
-
 <script>
     if(!_GLOB){
         var _GLOB = {};
@@ -184,8 +180,7 @@
 <script src="../scripts/plugins/isotope.js"></script>
 
 <script src="../scripts/plugins/packery-mode.pkgd.js"></script>
-<!-- todo
-<script src="../scripts/plugins/DrawSVGPlugin.js"></script>-->
+<script src="../scripts/plugins/jquery.sparkline.js"></script>
 
 <!-- endbuild -->
 

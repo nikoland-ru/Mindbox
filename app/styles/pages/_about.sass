@@ -231,10 +231,13 @@
 			padding: 0 0 16px
 
 	&__inner
+		display: block
+		color: inherit
 		padding: 30px 20px
 		position: relative
 		background-color: #f9f9f9
 		min-height: 260px
+		transition: $t300
 
 		+max-screen($screenXS)
 			min-height: 0
@@ -255,12 +258,58 @@
 			transition: all $t300 ease
 
 		&:hover
+			box-shadow: 0 0 25px rgba(#999, 0.4)
 			&:after
 				right: 10px
 				bottom: 10px
 
 		P
 			margin-bottom: 10px
+
+
+.comp-history-wr
+	text-align: center
+	padding: 57px 0 50px
+	transition: 0.7s 0.1s
+	background: url('../images/history-bg.jpg') repeat-x left center #f9f9f9
+
+	+max-screen($screenSM)
+		padding-bottom: 25px
+
+	+max-screen($screenSS)
+		padding-bottom: 10px
+
+		.title-iconic
+			margin-bottom: 45px
+			transition: 0.5s
+
+			.h2-l
+				font-size: 26px
+				line-height: 30px
+
+			.iconic
+				font-size: 46px
+
+.year-txt
+	text-align: left
+
+	&__title
+		font-size: 60px
+		line-height: 60px
+		font-weight: 700
+		display: block
+		margin-bottom: 30px
+
+
+	&__txt
+
+	+max-screen($screenSS)
+		&__title
+			font-size: 45px
+			line-height: 45px
+			margin-bottom: 20px
+
+
 
 .about-hh
 	padding: 65px 0

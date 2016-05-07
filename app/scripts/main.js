@@ -128,13 +128,15 @@ function toggleClass(selector, className, callback) {
 })(jQuery);
 
 (function ($) {
-    $.fn.priceFormat = function (value) {
-        var result = '';
+    $.fn.priceFormat = function (pValue) {
+        var value = String(pValue),
+            result = '';
+
 
         for (var i = value.length - 1; i >= 0; i--) {
 
             result = value[i] + result;
-            if ( (value.length - i) % 3 == 0) {
+            if ((value.length - i) % 3 == 0) {
                 result = ' ' + result;
             }
         }
@@ -143,25 +145,104 @@ function toggleClass(selector, className, callback) {
     };
 })(jQuery);
 
-$.scrollbarWidth = function() {
+$.scrollbarWidth = function () {
     var parent, child, width;
 
-    if(width===undefined) {
+    if (width === undefined) {
         parent = $('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');
-        child=parent.children();
-        width=child.innerWidth()-child.height(99).innerWidth();
+        child = parent.children();
+        width = child.innerWidth() - child.height(99).innerWidth();
         parent.remove();
     }
 
     return width;
 };
 
+(function ($) {
+    $.fn.elemInView = function (pPercent) {
+        var $this = $(this),
+            multiplier = pPercent || 0.75,
+            scroll = $W.scrollTop(),
+            winH = $W.height(),
+            viewport = winH * multiplier,
+            vpTopLimit = scroll + (winH / 2) - (viewport / 2),
+            vpBotLimit = scroll + (winH / 2) + (viewport / 2),
+
+            offsetTopElem = $this.offset().top,
+            limitElem = offsetTopElem + $this.outerHeight(),
+            forReturn = false,
+            topCondition1 = vpTopLimit <= offsetTopElem,
+            topCondition2 = vpBotLimit >= offsetTopElem,
+            botCondition1 = vpTopLimit <= limitElem,
+            botCondition2 = vpBotLimit >= limitElem;
+
+        if ((topCondition1 &&  topCondition2) || ( botCondition1 && botCondition2) ) { // Элемент частично накрыл вьюпорт
+            forReturn = true;
+        }
+
+        if(vpTopLimit >= offsetTopElem && vpBotLimit <= limitElem){ // Элемент полностью входит в вьюпорт
+            forReturn = true;
+        }
+
+        return forReturn;
+    };
+})(jQuery);
+
+$.fn.numberIncrementation = function (pDuration,pInterval,formatFunc,afterCallback) {
+    $(this).each(function(){
+      var $this = $(this),
+          dataFinalNumb = $this.data('final-numb'),
+          currentNumb = +$this.text(),
+          duration = pDuration || 2000,
+          interval = pInterval || 40,
+          steps = Math.ceil(duration / interval),
+          increaseAmount = dataFinalNumb / steps,
+          intervalId;
+
+        if($this.data('counted')){
+            return;
+        }
+
+        if(!currentNumb){
+            currentNumb = 0;
+            $this.text(currentNumb);
+        }
+
+        intervalId = setInterval(function(){
+            var valueToSet;
+            currentNumb += increaseAmount;
+
+            if(currentNumb > dataFinalNumb){
+                currentNumb = dataFinalNumb;
+                clearInterval(intervalId);
+                $this.data('counted','true');
+                if(afterCallback){
+                    afterCallback();
+                }
+            }
+
+            valueToSet = Math.ceil(currentNumb);
+
+            if(formatFunc){
+                valueToSet = formatFunc(currentNumb);
+            }
+
+            $this.text(
+                valueToSet
+            );
+
+        },interval);
+
+    })
+};
+
 /* -- Применение общих плагинов и функций --- */
 
 $(function () {
-    // Scroll trigger
-    $('.js-scroll-trigger').scrollTrigger();
+    var $scrollTrigger = $('.js-scroll-trigger');
+    if (!$scrollTrigger.length) return;
 
+    $scrollTrigger.scrollTrigger({});
 
 });
 
@@ -171,3 +252,60 @@ $(function () {
 
     $tabs.tabs({});
 });
+
+$(function () {
+    var $numbsToCont = $('.js-count-it'),
+        duration = 1600;
+
+    if(!$numbsToCont.length) return;
+
+    $numbsToCont.each(function(){
+        var $parent = $(this).parents('.js-count-it-wr');
+        if(!$parent.length) return;
+        $parent.css('min-width', $parent.width() + 20);
+    });
+
+    $W.scroll(function () {
+        if($numbsToCont.elemInView() ){
+            $numbsToCont.numberIncrementation(duration,null, function(numb){
+                return $().priceFormat(numb);
+            },function(){
+                $numbsToCont.parents('.js-count-it-wr').css('min-width','');
+            });
+        }
+    })
+});
+
+
+$(function () {
+    $(function(){
+        var $footerStats = $('.js-stats');
+        if(!$footerStats.length) return;
+
+        var dataUrl = $footerStats.data('url'),
+            $latencyNode = $footerStats.find('.js-stats_latency-node'),
+            $uptimeNode = $footerStats.find('.js-stats_uptime-node'),
+            $canvas = $footerStats.find('.js-stats_canvas');
+
+        $.ajax({
+            type: 'GET',
+            url: dataUrl,
+            success: function(data) {
+                var parsedData = JSON.parse(data);
+                $latencyNode.text(parsedData.Latency);
+                $uptimeNode.text(parsedData.Uptime);
+                $canvas.sparkline(parsedData.Values, {
+                    type: 'bar',
+                    height: 22,
+                    barWidth: 4,
+                    zeroAxis: false,
+                    barSpacing: 2,
+                    barColor: '#1FCD00'
+
+                });
+            }
+        });
+
+    });
+});
+

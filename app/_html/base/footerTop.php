@@ -1,4 +1,5 @@
 <div class="footer-stats">
+
     <div class="wrapper">
 
         <div class="footer-stats__stats-ul">
@@ -8,8 +9,8 @@
                     <img src="../images/footer-mail.png" alt="">
                 </div>
                 <div class="footer-stats__stat-main">
-                    <span class="footer-stats__stat-numb">
-                        55 000 Гб
+                    <span class="footer-stats__stat-numb js-count-it-wr">
+                        <span class="js-count-it" data-final-numb="55000">55 000</span> Гб
                     </span>
                     <span class="footer-stats__stat-txt">
                         исходящий трафик
@@ -22,8 +23,8 @@
                     <img src="../images/footer-chain.png" alt="">
                 </div>
                 <div class="footer-stats__stat-main">
-                    <span class="footer-stats__stat-numb">
-                        241 000 000
+                    <span class="footer-stats__stat-numb js-count-it-wr">
+                        <span class="js-count-it" data-final-numb="241000">241 000 </span> 000
                     </span>
                     <span class="footer-stats__stat-txt">
                         писем отправлено
@@ -36,8 +37,8 @@
                     <img src="../images/footer-profile.png" alt="">
                 </div>
                 <div class="footer-stats__stat-main">
-                    <span class="footer-stats__stat-numb">
-                        15 000 000
+                    <span class="footer-stats__stat-numb js-count-it-wr">
+                        <span class="js-count-it" data-final-numb="15000">15 000</span> 000
                     </span>
                     <span class="footer-stats__stat-txt">
                         пользователей в БД проектов
@@ -46,15 +47,17 @@
             </div>
         </div>
 
-        <div class="footer-stats__bot">
+        <div class="footer-stats__bot js-stats" data-url="queries/stats.php">
             <p class="footer-stats__bot-str">
                 СРЕДНЕЕ ВРЕМЯ ОБРАБОТКИ ЗАПРОСА:
-                <span>218 MS</span>
+                <span class="js-stats_latency-node">218 MS</span>
             </p>
             <p class="footer-stats__bot-str">
                 UPTIME ЗА ПОСЛЕДНИЕ 30 ДНЕЙ:
-                <span>99.990%</span>
+                <span class="js-stats_uptime-node">99.990%</span>
             </p>
+            <div  class="footer-stats__canvas-wr js-stats_canvas">
+            </div>
         </div>
     </div>
 </div>
