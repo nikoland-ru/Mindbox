@@ -1,4 +1,4 @@
-<section class="we-answer">
+<section class="we-answer js-anim-elem">
     <div class="wrapper">
         <div class="we-answer__main">
             <p class="h3-l">

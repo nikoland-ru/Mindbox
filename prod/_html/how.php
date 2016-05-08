@@ -11,7 +11,7 @@ include 'base/head.php';?>
 
         <div class="page-body">
 
-            <section class="promo-txt promo-txt--how">
+            <section class="promo-txt promo-txt--how js-anim-elem">
                 <div class="wrapper">
 
                     <div class="promo-txt__main-col">
@@ -71,7 +71,7 @@ include 'base/head.php';?>
                 </div>
             </section>
 
-            <section class="meeting">
+            <section class="meeting js-anim-elem">
                 <div class="wrapper">
                     <h3 class="h2-l">
                         Первым делом организуем встречу
@@ -90,7 +90,7 @@ include 'base/head.php';?>
 
             <div class="plan-gr">
 
-                <div class="plan-week">
+                <div class="plan-week js-anim-elem">
                     <div class="wrapper">
                         <h4 class="h3-l letter-hl-str">
                             <span class="letter-hl-str__lt">В</span> первую неделю после встречи
@@ -105,7 +105,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="wrapper plan-week-sl">
+                    <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
@@ -141,7 +141,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col">
+                            <div class="plan-result__txt-col js-anim-elem">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -154,7 +154,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col">
+                            <div class="plan-result__company-col js-anim-elem">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo10.png" alt="">
@@ -177,7 +177,7 @@ include 'base/head.php';?>
 
             <div class="plan-gr">
 
-                <div class="plan-week">
+                <div class="plan-week js-anim-elem">
                     <div class="wrapper">
                         <h4 class="h3-l letter-hl-str">
                             <span class="letter-hl-str__lt letter-hl-str__lt--yel">На</span> второй неделе
@@ -191,7 +191,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="wrapper plan-week-sl">
+                    <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
@@ -227,7 +227,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col">
+                            <div class="plan-result__txt-col js-anim-elem">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -240,7 +240,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col">
+                            <div class="plan-result__company-col js-anim-elem">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo11.png" alt="">
@@ -264,7 +264,7 @@ include 'base/head.php';?>
 
             <div class="plan-gr">
 
-                <div class="plan-week">
+                <div class="plan-week js-anim-elem">
                     <div class="wrapper">
                         <h4 class="h3-l letter-hl-str">
                             <span class="letter-hl-str__lt letter-hl-str__lt--orng">За</span> третью неделю
@@ -278,7 +278,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="wrapper plan-week-sl">
+                    <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
@@ -314,7 +314,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col">
+                            <div class="plan-result__txt-col js-anim-elem">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -327,7 +327,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col">
+                            <div class="plan-result__company-col js-anim-elem">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo12.png" alt="">
@@ -351,7 +351,7 @@ include 'base/head.php';?>
 
             <div class="plan-gr">
 
-                <div class="plan-week">
+                <div class="plan-week js-anim-elem">
                     <div class="wrapper">
                         <h4 class="h3-l letter-hl-str">
                             <span class="letter-hl-str__lt letter-hl-str__lt--pink">В</span> конце месяца после встречи
@@ -366,7 +366,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="wrapper plan-week-sl">
+                    <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
@@ -402,7 +402,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col">
+                            <div class="plan-result__txt-col js-anim-elem">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -416,7 +416,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col">
+                            <div class="plan-result__company-col js-anim-elem">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo13.png" alt="">
@@ -441,14 +441,14 @@ include 'base/head.php';?>
 
             <section class="itogs">
                     <div class="wrapper">
-                        <h3 class="h2-wide">
+                        <h3 class="h2-wide fadeInUp js-anim-elem">
                             Итог
                         </h3>
-                        <p class="itogs__subtitle">
+                        <p class="itogs__subtitle  fadeInUp js-anim-elem">
                             Рост бизнеса и маркетинговых показателей
                         </p>
 
-                        <div class="itogs__list">
+                        <div class="itogs__list js-anim-elem">
                             <div class="itogs__li">
                                 <div class="itogs__li-img-wr">
                                     <img src="../images/itog1.jpg" alt="">

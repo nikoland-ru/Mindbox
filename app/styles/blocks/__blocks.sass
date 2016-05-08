@@ -488,16 +488,36 @@ $cases-grid-gap-sm: 8px
 
     .h3-l
         margin-bottom: 40px
+        animation-duration: 1s
+        opacity: 0
+        animation-fill-mode: both
+        animation-delay: 0.5s
 
     .btn
         padding-left: 30px
         padding-right: 30px
+        animation-duration: 1s
+        animation-delay: 0.8s
+        opacity: 0
+        animation-fill-mode: both
 
     &__bg-img
         position: absolute
         top: 20px
         right: 50%
         margin-right: 225px
+        opacity: 0
+        animation-duration: 1s
+        animation-fill-mode: both
+
+    &._anim-fired
+        .we-answer
+            &__bg-img
+                animation-name: fadeInUp
+
+        .h3-l,.btn
+            animation-name: fadeInRightBig
+
 
     +max-screen($screenMS + 90px)
 
@@ -538,6 +558,10 @@ $cases-grid-gap-sm: 8px
 
         .h3-l
             margin-bottom: 20px
+
+        &._anim-fired
+            .h3-l,.btn
+                animation-name: fadeInUp
 
     +max-screen($screenXS)
         .h3-l

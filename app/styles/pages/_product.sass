@@ -38,12 +38,19 @@
     .h1-l
         display: table
         margin: 20px 0 40px
+        opacity: 1
 
     &__subtitle
         line-height: 40px
         font-weight: 500
         margin-bottom: 45px
+        transition-delay: 0.33s
 
+    &__main-txt
+        transition-delay: 0.66s
+
+    .markered
+        transition-delay: 1s
 
     &__bg-img
         position: absolute
@@ -54,6 +61,23 @@
         //+max-screen($screenMS)
             max-width: 40%
             right: 58%
+
+    .h1-l,
+    .promo-txt__subtitle,
+    .promo-txt__main-txt,
+    .promo-txt__main-col .markered
+        opacity: 0
+        transition-duration: 1.4s
+        transform: translateY(35px)
+
+    &._anim-fired
+        .h1-l,
+        .promo-txt__subtitle,
+        .promo-txt__main-txt,
+        .promo-txt__main-col .markered
+            opacity: 1
+            transform: translateY(0px)
+
 
     &--how
         background-color: $cGrey
@@ -372,11 +396,15 @@ $comm-img-h-md: 191px
             width: auto
             order: 1
             flex-shrink: 1
+            &._anim-fired
+                animation-name: fadeIn !important
 
         &__main-visual
             order: 2
             padding-right: 0
             width: auto
+            &._anim-fired
+                animation-name: fadeInUp !important
 
             .demo-img
                 margin-left: auto
@@ -401,6 +429,7 @@ $comm-img-h-md: 191px
     margin-right: -35px
     margin-left: -35px
     position: relative
+    overflow: hidden
     z-index: 1
 
     &:after
@@ -434,6 +463,13 @@ $comm-img-h-md: 191px
 
         .feature
             margin-bottom: 70px
+            opacity: 0
+            animation-fill-mode: both
+            animation-duration: 1s
+
+        &._anim-fired
+            .feature
+                animation-name: fadeInLeft
 
         &:after
             content: ''
@@ -458,6 +494,10 @@ $comm-img-h-md: 191px
         &:nth-child(2n)
             &:after
                 right: 35px
+
+            &._anim-fired
+                .feature
+                    animation-name: fadeInRight
 
         &:nth-child(1n + 3)
             .feature__ico
@@ -493,11 +533,21 @@ $comm-img-h-md: 191px
             padding-bottom: 1px
             padding-left: $wrapperS-padd !important
             padding-right: $wrapperS-padd !important
+            position: relative
+            overflow: hidden
 
-        .feature__ico
-            margin-top: 25px !important
-            height: auto
-            line-height: normal
+            &._anim-fired
+                .feature
+                    animation-name: fadeInUp !important
+
+
+        .feature
+            opacity: 1
+
+            &__ico
+                margin-top: 25px !important
+                height: auto
+                line-height: normal
 
 
     +max-screen($screenSS)

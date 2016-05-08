@@ -348,11 +348,29 @@
             display: table
             margin-left: auto
             margin-right: auto
+
+            //opacity: 0
+            //transform: scale(0.5)
+            //._animEnd
+                opacity: 1
+                transform: scale(1)
+
+            animation-name: fadeInUp
+            animation-delay:  0.4s
+            transition: all $t300, visibility 0s 0.4s
+
             +min-screen($screenSM + 1px)
                 position: absolute
                 left: 50%
                 top: 75px
-                transform: translateX(-50%)
+                width: 208px
+                margin-left: -104px
+                animation-name: zoomInDown
+
+                //transform: translateX(-50%)
+                //._animEnd
+                    opacity: 1
+                    transform: scale(1) translateX(-50%)
 
     &__feature
         display: inline-block
@@ -458,6 +476,8 @@
 
 
 .promo-how
+    animation-delay: 1s
+
     +min-screen($screenM + 1px)
         background: url("../images/how-works-bg.png") no-repeat top center
         height: 372px

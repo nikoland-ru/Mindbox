@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="../../bower_components/photoswipe/dist/photoswipe.css" />
     <link rel="stylesheet" href="../../bower_components/photoswipe/dist/default-skin/default-skin.css" />
     <link rel="stylesheet" href="../../bower_components/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="../../bower_components/animate.css/animate.css" />
     <!-- endbower-->
     <!-- endbuild -->
 

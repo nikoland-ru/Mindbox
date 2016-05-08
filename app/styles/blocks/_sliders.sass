@@ -156,6 +156,26 @@ $slider-arr-size: 90px
                     stroke: #fff
 
 
+=slider-anim-mixin
+    .slider-arr, .slick-dots
+        animation-delay: 2s
+        opacity: 0
+        transition: 0.45s
+
+        .slider-arr--l
+            transform: translateX(-40px)
+
+        .slider-arr--r
+            transform: translateX(40px)
+
+    &._animEnd
+
+        .slider-arr, .slick-dots
+            opacity: 1
+
+        .slider-arr
+            transform: translateX(0)
+
 // ----------------------------------------------------------------------
 // Regular slider
 // ----------------------------------------------------------------------
@@ -167,11 +187,20 @@ $slider-arr-size: 90px
         .slider-arr
             display: none !important
 
+
+    &--anim
+        +slider-anim-mixin
+
 // ----------------------------------------------------------------------
 // Examples slider
 // ----------------------------------------------------------------------
 
 .examples-slider
+
+    max-height: 300px
+    &.slick-initialized
+        max-height: none
+
     .slider-arr
         top: 10px
         margin-top: 0
@@ -194,6 +223,10 @@ $slider-arr-size: 90px
 // ----------------------------------------------------------------------
 
 .cases-slider
+    max-height: 300px
+    &.slick-initialized
+        max-height: none
+
     &__col
         //width: 20%
         display: flex !important
@@ -218,6 +251,8 @@ $slider-arr-size: 90px
 // ----------------------------------------------------------------------
 
 .prod-slider
+    animation-name: zoomInScale
+
     &__slide
         display: flex !important
 
@@ -257,7 +292,7 @@ $slider-arr-size: 90px
             margin-bottom: -40px
 
     +max-screen($screenSL)
-
+        animation-name: fadeInUp
         &__slide
             display: block !important
 
@@ -292,6 +327,7 @@ $slider-arr-size: 90px
 $plan-sl-width: 800px
 
 .plan-week-sl
+    animation-fill-mode: both
     +slick-dots
 
     &__slider
@@ -314,6 +350,11 @@ $plan-sl-width: 800px
 
     .slider-arr
         margin-top: -28px
+
+    +slider-anim-mixin
+
+    &._anim-fired
+        animation-name: slideInUp
 
     +screen($screenMS + 1px, 1420px)
         padding-left: 150px

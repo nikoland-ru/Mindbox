@@ -189,6 +189,8 @@
 
 <script src="../scripts/about.js"></script>
 
+<script src="../scripts/animation.js"></script>
+
 <script src="../scripts/cases.js"></script>
 
 <script src="../scripts/forms.js"></script>

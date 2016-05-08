@@ -127,6 +127,8 @@ function toggleClass(selector, className, callback) {
     };
 })(jQuery);
 
+
+// Numb formating. 12345678 => 12 345 678
 (function ($) {
     $.fn.priceFormat = function (pValue) {
         var value = String(pValue),
@@ -176,65 +178,17 @@ $.scrollbarWidth = function () {
             botCondition1 = vpTopLimit <= limitElem,
             botCondition2 = vpBotLimit >= limitElem;
 
-        if ((topCondition1 &&  topCondition2) || ( botCondition1 && botCondition2) ) { // Элемент частично накрыл вьюпорт
+        if ((topCondition1 && topCondition2) || ( botCondition1 && botCondition2)) { // Элемент частично накрыл вьюпорт
             forReturn = true;
         }
 
-        if(vpTopLimit >= offsetTopElem && vpBotLimit <= limitElem){ // Элемент полностью входит в вьюпорт
+        if (vpTopLimit >= offsetTopElem && vpBotLimit <= limitElem) { // Элемент полностью входит в вьюпорт
             forReturn = true;
         }
 
         return forReturn;
     };
 })(jQuery);
-
-$.fn.numberIncrementation = function (pDuration,pInterval,formatFunc,afterCallback) {
-    $(this).each(function(){
-      var $this = $(this),
-          dataFinalNumb = $this.data('final-numb'),
-          currentNumb = +$this.text(),
-          duration = pDuration || 2000,
-          interval = pInterval || 40,
-          steps = Math.ceil(duration / interval),
-          increaseAmount = dataFinalNumb / steps,
-          intervalId;
-
-        if($this.data('counted')){
-            return;
-        }
-
-        if(!currentNumb){
-            currentNumb = 0;
-            $this.text(currentNumb);
-        }
-
-        intervalId = setInterval(function(){
-            var valueToSet;
-            currentNumb += increaseAmount;
-
-            if(currentNumb > dataFinalNumb){
-                currentNumb = dataFinalNumb;
-                clearInterval(intervalId);
-                $this.data('counted','true');
-                if(afterCallback){
-                    afterCallback();
-                }
-            }
-
-            valueToSet = Math.ceil(currentNumb);
-
-            if(formatFunc){
-                valueToSet = formatFunc(currentNumb);
-            }
-
-            $this.text(
-                valueToSet
-            );
-
-        },interval);
-
-    })
-};
 
 /* -- Применение общих плагинов и функций --- */
 
@@ -254,33 +208,9 @@ $(function () {
 });
 
 $(function () {
-    var $numbsToCont = $('.js-count-it'),
-        duration = 1600;
-
-    if(!$numbsToCont.length) return;
-
-    $numbsToCont.each(function(){
-        var $parent = $(this).parents('.js-count-it-wr');
-        if(!$parent.length) return;
-        $parent.css('min-width', $parent.width() + 20);
-    });
-
-    $W.scroll(function () {
-        if($numbsToCont.elemInView() ){
-            $numbsToCont.numberIncrementation(duration,null, function(numb){
-                return $().priceFormat(numb);
-            },function(){
-                $numbsToCont.parents('.js-count-it-wr').css('min-width','');
-            });
-        }
-    })
-});
-
-
-$(function () {
-    $(function(){
+    $(function () {
         var $footerStats = $('.js-stats');
-        if(!$footerStats.length) return;
+        if (!$footerStats.length) return;
 
         var dataUrl = $footerStats.data('url'),
             $latencyNode = $footerStats.find('.js-stats_latency-node'),
@@ -290,7 +220,7 @@ $(function () {
         $.ajax({
             type: 'GET',
             url: dataUrl,
-            success: function(data) {
+            success: function (data) {
                 var parsedData = JSON.parse(data);
                 $latencyNode.text(parsedData.Latency);
                 $uptimeNode.text(parsedData.Uptime);

@@ -11,7 +11,7 @@ include 'base/head.php';?>
 
         <div class="page-body">
 
-            <section class="promo-txt promo-txt--prod">
+            <section class="promo-txt promo-txt--prod js-anim-elem">
                 <div class="wrapper">
 
 
@@ -60,7 +60,7 @@ include 'base/head.php';?>
 
             <section class="prod-customize">
                 <div class="wrapper">
-                    <div class="title-iconic">
+                    <div class="title-iconic fadeInUp js-anim-elem">
                         <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--r-b">
                             <span class="iconic iconic--ppl"></span>
                         </div>
@@ -70,7 +70,7 @@ include 'base/head.php';?>
                         </h2>
                     </div>
 
-                    <div class="cols cols--s">
+                    <div class="cols cols--s fadeInUp js-anim-elem">
                         <div class="col col--50">
                             <ul class="ul">
                                 <li>
@@ -107,7 +107,7 @@ include 'base/head.php';?>
                         </div>
                     </div>
 
-                    <div class="demo-img demo-img--sm">
+                    <div class="demo-img demo-img--sm fadeInUp js-anim-elem">
                         <img src="../images/userfiles/demo-customize.jpg" alt="">
                         <a href="../images/userfiles/demo-customize.jpg"
                            class="gall-link js-gall"></a>
@@ -118,7 +118,7 @@ include 'base/head.php';?>
 
             <section class="prod-reports">
                 <div class="wrapper">
-                    <div class="title-iconic">
+                    <div class="title-iconic fadeInUp js-anim-elem">
                         <div class="ico-w-circle ico-w-circle--green ico-w-circle--l-b ico-w-circle--aft-md">
                             <span class="iconic iconic--card-stats"></span>
                         </div>
@@ -128,7 +128,7 @@ include 'base/head.php';?>
                         </h2>
                     </div>
 
-                    <div class="cols cols--s">
+                    <div class="cols cols--s fadeInUp js-anim-elem">
                         <div class="col col--50">
                             <ul class="ul">
                                 <li>
@@ -161,7 +161,7 @@ include 'base/head.php';?>
                     </div>
 
 
-                    <div class="demo-info">
+                    <div class="demo-info fadeInUp js-anim-elem">
                         <div class="demo-info__desc">
                             <h6 class="demo-info__desc-title">
                                 Например, отчет «Доходность по каналам регистрации потребителя»
@@ -195,7 +195,7 @@ include 'base/head.php';?>
             <section class="prod-progs">
                 <div class="wrapper">
 
-                    <div class="title-iconic">
+                    <div class="title-iconic fadeIn js-anim-elem">
                         <div class="ico-w-circle ico-w-circle--yel ico-w-circle--rupor ico-w-circle--aft-md">
                             <span class="iconic iconic--rupor"></span>
                         </div>
@@ -207,7 +207,7 @@ include 'base/head.php';?>
                     </div>
 
                     <div class="prod-progs__main">
-                        <div class="prod-progs__main-visual">
+                        <div class="prod-progs__main-visual fadeInLeft js-anim-elem">
                             <div class="demo-img">
                                 <img src="../images/userfiles/demo-progs.jpg" alt="">
                                 <a href="../images/userfiles/demo-progs.jpg"
@@ -215,7 +215,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="prod-progs__main-txt">
+                        <div class="prod-progs__main-txt fadeInRight js-anim-elem">
                             <ul class="ul">
                                 <li>
                                     Задайте единые правила для покупок в интернет и традиционных магазинах
@@ -254,8 +254,8 @@ include 'base/head.php';?>
                 <div class="wrapper">
                     <div class="features">
 
-                        <div class="features__col">
-                            <div class="feature">
+                        <div class="features__col js-anim-elem">
+                            <div class="feature " >
                                 <div class="feature__ico">
                                     <div class="ico-w-circle ico-w-circle--lg ico-w-circle--yel ico-w-circle--r-t ">
                                         <span class="iconic iconic--bulb"></span>
@@ -289,7 +289,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="features__col">
+                        <div class="features__col js-anim-elem">
                             <div class="feature">
                                 <div class="feature__ico">
                                     <div class="ico-w-circle ico-w-circle--lg ico-w-circle--green3 ico-w-circle--broom-lg">
@@ -326,7 +326,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="features__col">
+                        <div class="features__col js-anim-elem">
                             <div class="feature">
                                 <div class="feature__ico">
                                     <div class="ico-w-circle ico-w-circle--lg ico-w-circle--blueL ico-w-circle--molecula-lg ">
@@ -369,7 +369,7 @@ include 'base/head.php';?>
                             </div>
                         </div>
 
-                        <div class="features__col">
+                        <div class="features__col js-anim-elem">
                             <div class="feature">
                                 <div class="feature__ico">
                                     <div class="ico-w-circle ico-w-circle--lg ico-w-circle--green2 ico-w-circle--r-t ">

@@ -16,6 +16,30 @@
         line-height: 25px
         font-weight: 700
         margin-bottom: 33px
+        animation-delay: 0.3s
+
+    .btn
+        animation-delay: 0.6s
+
+    .h2-l,
+    &__subtitle,
+    .btn
+        opacity: 0
+        animation-fill-mode: both
+        animation-duration: 1s
+
+    &._anim-fired
+        .h2-l,
+        .meeting__subtitle,
+        .btn
+            animation-name: fadeInUp
+
+    &._animEnd
+        .h2-l,
+        .meeting__subtitle,
+        .btn
+            //opacity: 1
+
 
     +max-screen($screenS)
         padding: 40px 0 30px
@@ -47,6 +71,8 @@
         line-height: 30px
         font-weight: 700
         margin-bottom: 10px
+        animation-delay: 0.3s
+
 
     &__list
         display: flex
@@ -54,16 +80,32 @@
         max-width: 1000px
         margin: 10px auto
 
+        &._anim-fired
+            .itogs__li
+                animation-name: fadeInUp
+
     &__li
         width: 25%
         flex-grow: 1
         flex-shrink: 0
         padding: 0 20px
         margin: 20px 0
+        animation-duration: 1s
+        animation-fill-mode: both
+        opacity: 0
+        animation-delay: 0.5s
+
+        &:nth-child(2)
+            animation-delay: 0.7s
+        &:nth-child(3)
+            animation-delay: 0.9s
+        &:nth-child(4)
+            animation-delay: 1.1s
+        &:nth-child(5)
+            animation-delay: 1.3s
 
         .numb
             display: block
-
 
     &__li-img-wr
         height: 165px
@@ -123,17 +165,20 @@
     padding: 65px 0 1px
     position: relative
     overflow: hidden
+
     .h3-l
         line-height: 30px
         margin-bottom: 32px
 
     .h2-l
         margin-bottom: 45px
+        animation-delay: 0.2s
 
     &__desc
         font-size: 15px
         margin: 10px auto
         max-width: 500px
+        animation-delay: 0.4s
 
     .plan-week-sl
         margin: 0 auto -20px
@@ -142,6 +187,20 @@
             transition: $t300
             &:hover
                 transform: translateY(-15px)
+
+    .h3-l,
+    .h2-l,
+    &__desc
+        opacity: 0
+        animation-duration: 1s
+        animation-fill-mode: both
+
+    &._anim-fired
+        .h3-l,
+        .h2-l,
+        .plan-week__desc
+            animation-name: fadeInUp
+
 
     +max-screen($screenSS)
         padding-top: 45px
@@ -171,8 +230,15 @@
         display: flex
         color: #333
 
+    &__txt-col,
+    &__company-col
+        animation-duration: 1s
+        animation-fill-mode: both
+        opacity: 0
+
     &__txt-col
         flex-grow: 1
+        animation-name: fadeInLeftBig
 
         .h2-l
             margin-bottom: 10px
@@ -181,6 +247,7 @@
         flex-shrink: 0
         width: 300px
         margin-left: 35px
+        animation-name: fadeInRightBig
 
     &__company
         display: flex
@@ -224,12 +291,15 @@
         &__txt-col
             width: 100%
             order: 2
+            animation-name: fadeInUp
+            animation-delay: 0.4s
 
         &__company-col
             width: 100%
             order: 1
             margin-left: 0
             margin-bottom: 25px
+            animation-name: fadeInUp
 
         &__company
             align-items: center
