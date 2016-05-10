@@ -25,7 +25,7 @@
     &__subtitle,
     .btn
         opacity: 0
-        animation-fill-mode: both
+        animation-fill-mode: forwards
         animation-duration: 1s
 
     &._anim-fired
@@ -91,7 +91,7 @@
         padding: 0 20px
         margin: 20px 0
         animation-duration: 1s
-        animation-fill-mode: both
+        animation-fill-mode: forwards
         opacity: 0
         animation-delay: 0.5s
 
@@ -193,7 +193,7 @@
     &__desc
         opacity: 0
         animation-duration: 1s
-        animation-fill-mode: both
+        animation-fill-mode: forwards
 
     &._anim-fired
         .h3-l,
@@ -233,7 +233,7 @@
     &__txt-col,
     &__company-col
         animation-duration: 1s
-        animation-fill-mode: both
+        animation-fill-mode: forwards
         opacity: 0
 
     &__txt-col
@@ -291,7 +291,9 @@
         &__txt-col
             width: 100%
             order: 2
-            animation-name: fadeInUp
+            opacity: 1
+            visibility: visible !important
+            animation-name: none //fadeInUp
             animation-delay: 0.4s
 
         &__company-col
@@ -299,7 +301,9 @@
             order: 1
             margin-left: 0
             margin-bottom: 25px
-            animation-name: fadeInUp
+            opacity: 1
+            visibility: visible !important
+            animation-name: none //fadeInUp
 
         &__company
             align-items: center

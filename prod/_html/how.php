@@ -141,7 +141,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col js-anim-elem">
+                            <div class="plan-result__txt-col">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -154,7 +154,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col js-anim-elem">
+                            <div class="plan-result__company-col">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo10.png" alt="">
@@ -227,7 +227,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col js-anim-elem">
+                            <div class="plan-result__txt-col">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -240,7 +240,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col js-anim-elem">
+                            <div class="plan-result__company-col">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo11.png" alt="">
@@ -314,7 +314,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col js-anim-elem">
+                            <div class="plan-result__txt-col">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -327,7 +327,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col js-anim-elem">
+                            <div class="plan-result__company-col">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo12.png" alt="">
@@ -402,7 +402,7 @@ include 'base/head.php';?>
                 <div class="plan-result">
                     <div class="wrapper">
                         <div class="plan-result__inner">
-                            <div class="plan-result__txt-col js-anim-elem">
+                            <div class="plan-result__txt-col">
                                 <p class="h2-l">
                                     Результат
                                 </p>
@@ -416,7 +416,7 @@ include 'base/head.php';?>
                                 </div>
                             </div>
 
-                            <div class="plan-result__company-col js-anim-elem">
+                            <div class="plan-result__company-col">
                                 <div class="plan-result__company">
                                     <div class="plan-result__comp-logo-wr">
                                         <img src="../images/userfiles/logo13.png" alt="">

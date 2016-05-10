@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css'),
-    jsFiles = 0;
+    replace = require('gulp-replace');
+    //jsFiles = 0;
 	
 $.cleanCSS = cleanCSS;   
 
@@ -25,10 +26,10 @@ gulp.task('optimize', ['inject'], function () {
     var assets = $.useref.assets({searchPath: ['app', 'app/scripts', 'app/css']}); // ({searchPath: ['.tmp', 'app', '.']});
 
     log('Optimize the javascript, css, html');
-    
+
     return gulp.src(config.allhtml)
         .pipe(assets)
-        .pipe($.if('*.js', $.uglify()))
+        .pipe($.if('*.js', $.uglify() ))
         .pipe($.if('*.css', $.cleanCSS()))
         .pipe(assets.restore())
         .pipe($.useref())
@@ -199,20 +200,7 @@ gulp.task('data', function() {
         );
 });
 
-// gulp.task('clean-dist', function(done) {
-//     clean(config.dist + '**/*', done);
-// });
 
-// gulp.task('js:counter', function() {
-//     fs.readdir('./app/scripts/', function(err, files) {
-//         if(err) throw err;
-
-//         if(jsFiles !== files.length) {
-//             jsFiles = files.length;
-//         }
-//         console.log(jsFiles);
-//     });
-// });
 
 gulp.task('php', function() {
     log('Start php server');
@@ -220,6 +208,17 @@ gulp.task('php', function() {
     var options = config.getPHPServerOptions();
 
     $.connectPhp.server(options);
+});
+
+gulp.task('replace',['optimize'], function() {
+    log('Replace task '+ config.dist + 'scripts/app.js');
+
+    return gulp.src([
+        config.dist + 'scripts/*.js'
+    ])
+    .pipe(replace('../images/','/wp-content/themes/mindbox/images/'))
+    .pipe(gulp.dest(config.dist + 'scripts'));
+
 });
 
 gulp.task('serve', ['php', 'inject', 'styles', 'fonts'], function() {
@@ -250,8 +249,8 @@ gulp.task('serve:build', ['php'], function() {
     });
 }).help = 'to preview the production build';
 
-gulp.task('build', ['optimize', 'images', 'fonts', 'extras'], function() {
-    log('Gzipp all files in ' + $.util.colors.yellow('./') + ' folder');
+gulp.task('build', ['optimize', 'images', 'fonts', 'extras', 'replace'], function() {
+    log('Gzipp all files in ' + $.util.colors.yellow('./prod') + ' folder');
 
     return gulp.src([
         config.dist + '_html/**/*',
@@ -259,14 +258,12 @@ gulp.task('build', ['optimize', 'images', 'fonts', 'extras'], function() {
         config.dist + 'images/**/*',
         config.dist + 'scripts/**/*',
         config.dist + 'styles/**/*',
-        ]).pipe($.size({title: 'build', gzip: true}));
+        ])
+        .pipe($.if('*.js', replace('functi','!!!!!') ))
+        .pipe($.size({title: 'build', gzip: true}))
 }).help = 'to build your webapp for production';
 
-// gulp.task('dist', ['clean-dist'], function() {
-//     gulp.start('build');
-// });
 
-/////////////////////
 
 function clean(path, done) {
     log('Cleaning: ' + $.util.colors.blue(path));

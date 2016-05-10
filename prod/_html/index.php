@@ -46,10 +46,10 @@ include 'base/head.php';?>
                      class="i-promo__bg-img i-promo__bg-img--right">
             </section>
 
-            <section id="examples" class="examples-wr">
+            <section id="examples" class="examples-wr js-anim-elem">
                 <div class="wrapper">
 
-                    <div class="examples-wr__title-gr fadeInDown js-anim-elem">
+                    <div class="examples-wr__title-gr">
                         <h3 class="h1-l">
                             Например,
                         </h3>
@@ -58,7 +58,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="examples-slider reg-slider reg-slider--anim examples js-examples-sl zoomInScale js-anim-elem">
+                    <div class="examples-slider reg-slider reg-slider--anim examples js-examples-sl">
                         <div>
                             <div class="examples__group">
                                 <div class="examples__li">
@@ -244,7 +244,7 @@ include 'base/head.php';?>
 
                     <div class="platforms__main">
 
-                        <div class="platforms__feature fadeInLeft js-anim-elem">
+                        <div class="platforms__feature fadeInUp js-anim-elem">
                             <div class="platforms__f-img">
                                 <span class="iconic iconic--board"></span>
                             </div>
@@ -257,7 +257,7 @@ include 'base/head.php';?>
                             </p>
                         </div>
 
-                        <div class="platforms__feature fadeInRight js-anim-elem">
+                        <div class="platforms__feature fadeInUp js-anim-elem">
                             <div class="platforms__f-img">
                                 <span class="iconic iconic--cup"></span>
                             </div>
@@ -282,7 +282,7 @@ include 'base/head.php';?>
             <section class="slider-cases-wr">
                 <div class="wrapper">
 
-                    <div class="ind-title-gr fadeInDown js-anim-elem">
+                    <div class="ind-title-gr fadeInUp js-anim-elem">
                         <h2 class="h1-l">
                             <a href="#!" class="link link--green">
                                 Кейсы
@@ -293,7 +293,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="cases-grid cases-slider reg-slider reg-slider--anim js-cases-sl zoomInScale js-anim-elem">
+                    <div class="cases-grid cases-slider reg-slider reg-slider--anim js-cases-sl js-anim-elem">
 
                         <div class="cases-slider__col js-cases-sl__slide">
                             <div class="cases-grid__col js-cases-sl__col">
@@ -626,7 +626,7 @@ include 'base/head.php';?>
             <section class="promo-how-wr">
                 <div class="wrapper">
 
-                    <div class="ind-title-gr fadeInDown js-anim-elem">
+                    <div class="ind-title-gr fadeInUp js-anim-elem">
                         <h2 class="h1-l">
                             <a href="#!" class="link link--green">
                                 Как мы работаем
@@ -638,7 +638,7 @@ include 'base/head.php';?>
                     </div>
 
                     <div class="promo-how fadeIn js-anim-elem">
-                        <div class="promo-how__group promo-how__group--left fadeInLeft js-anim-elem">
+                        <div class="promo-how__group promo-how__group--left fadeInUp js-anim-elem">
 
                             <div class="promo-how__title-gr">
                                 <p class="promo-how__pre-title">
@@ -686,7 +686,7 @@ include 'base/head.php';?>
 
                         </div>
 
-                        <div class="promo-how__group promo-how__group--right fadeInRight js-anim-elem">
+                        <div class="promo-how__group promo-how__group--right fadeInUp js-anim-elem">
 
                             <div class="promo-how__title-gr">
                                 <p class="promo-how__pre-title">
@@ -740,45 +740,12 @@ include 'base/head.php';?>
                 </div>
             </section>
 
-            <section class="changes-wr">
+            <?php include "components/before-after.php";?>
+
+
+            <section class="product-sl-wr js-anim-elem">
                 <div class="wrapper">
                     <div class="ind-title-gr">
-                        <h2 class="h1-l">
-                            Что поменяется после внедрения?
-                        </h2>
-                    </div>
-
-                    <div class="before-after js-before-after" data-state="1">
-                        <div class="before-after__groups-wr">
-                            <div class="before-after__group before-after__group--before _active js-before-after_tab">
-                                <p class="before-after__head-txt">
-                                    Часто бывает вот так —
-                                </p>
-                                <img src="../images/before-bg.png" alt="">
-                            </div>
-
-                            <div class="before-after__group before-after__group--after js-before-after_tab">
-                                <p class="before-after__head-txt">
-                                    Часто бывает вот так —
-                                </p>
-                                <img src="../images/after-bg.png" alt="">
-                            </div>
-                        </div>
-
-                        <button type="button" class="btn btn--default btn--lg btn--default-green btn--corner
-                        before-after__switcher js-before-after_btn">
-                            Навести порядок
-                        </button>
-
-                    </div>
-
-
-                </div>
-            </section>
-
-            <section class="product-sl-wr">
-                <div class="wrapper">
-                    <div class="ind-title-gr fadeInDown js-anim-elem">
                         <h2 class="h1-l">
                             <a href="#!" class="link link--green">
                                 Продукт
@@ -789,7 +756,7 @@ include 'base/head.php';?>
                         </p>
                     </div>
 
-                    <div class="prod-slider reg-slider reg-slider--anim js-prod-slider js-anim-elem">
+                    <div class="prod-slider reg-slider reg-slider--anim js-prod-slider">
 
                         <div class="prod-slider__slide">
 
@@ -915,7 +882,7 @@ include 'base/head.php';?>
 
             <section class="pr-cost">
                 <div class="wrapper">
-                    <div class="ind-title-gr fadeIn js-anim-elem">
+                    <div class="ind-title-gr fadeInUp js-anim-elem">
                         <h2 class="h1-l">
                             <a href="#!" class="link link--green">
                                 Сколько стоит

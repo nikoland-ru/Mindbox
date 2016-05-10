@@ -480,17 +480,19 @@ $cases-grid-gap-sm: 8px
     .wrapper
         padding-top: 75px
         padding-bottom: 95px
+        max-width: 900px
+        padding-left: 310px
 
     &__main
-        max-width: 580px
-        margin-right: auto
-        margin-left: auto
+        //max-width: 580px
+        //margin-right: auto
+        //margin-left: auto
 
     .h3-l
         margin-bottom: 40px
         animation-duration: 1s
-        opacity: 0
-        animation-fill-mode: both
+        //opacity: 0
+        animation-fill-mode: forwards
         animation-delay: 0.5s
 
     .btn
@@ -498,17 +500,18 @@ $cases-grid-gap-sm: 8px
         padding-right: 30px
         animation-duration: 1s
         animation-delay: 0.8s
-        opacity: 0
-        animation-fill-mode: both
+        //opacity: 0
+        animation-fill-mode: forwards
 
     &__bg-img
         position: absolute
         top: 20px
-        right: 50%
-        margin-right: 225px
-        opacity: 0
+        left: 0
+        //right: 0
+        //margin-right: 225px
+        //opacity: 0
         animation-duration: 1s
-        animation-fill-mode: both
+        animation-fill-mode: forwards
 
     &._anim-fired
         .we-answer
@@ -521,10 +524,10 @@ $cases-grid-gap-sm: 8px
 
     +max-screen($screenMS + 90px)
 
-        &__main
+        //&__main
             margin-left: 330px
 
-        &__bg-img
+        //&__bg-img
             margin-right: 0
             left: 0
             right: auto
@@ -533,13 +536,14 @@ $cases-grid-gap-sm: 8px
         .wrapper
             padding-top: 55px
             padding-bottom: 70px
+            padding-left: 260px
 
-        &__main
+        //&__main
             margin-left: 25%
 
         &__bg-img
-            left: auto
-            right: 67%
+            //left: auto
+            //right: 67%
             //margin-right: -30px
             //max-width: 25%
             max-width: 37%
@@ -548,20 +552,25 @@ $cases-grid-gap-sm: 8px
         .wrapper
             padding-top: 40px
             padding-bottom: 30px
+            padding-left: $wrapperSS-padd
 
         &__bg-img
             display: none
 
-        &__main
+        //&__main
             margin-left: auto
             margin-right: auto
 
         .h3-l
             margin-bottom: 20px
 
+        .h3-l,.btn
+            opacity: 1
+            visibility: visible !important
+
         &._anim-fired
             .h3-l,.btn
-                animation-name: fadeInUp
+                animation-name: none //fadeInUp
 
     +max-screen($screenXS)
         .h3-l

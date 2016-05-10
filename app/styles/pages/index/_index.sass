@@ -1,3 +1,5 @@
+@import "changes"
+
 .page-index
     .header
         background: transparent
@@ -178,6 +180,9 @@
 
     &__title-gr
         margin-bottom: 28px
+        opacity: 0
+        animation-fill-mode: forwards
+        animation-duration: 1s
 
         .h1-l
             color: $cPrimary
@@ -204,6 +209,32 @@
             line-height: 24px
             &:after,&:before
                 display: none
+
+
+
+    .examples__li
+        opacity: 0
+        animation-duration: 1s
+        animation-fill-mode: forwards
+        animation-delay: 1s
+        &:nth-child(2)
+            animation-delay: 1.33s
+        &:nth-child(3)
+            animation-delay: 1.66s
+        &:nth-child(4)
+            animation-delay: 2s
+
+    .slider-arr, .slick-dots
+        transition-delay: 2s
+
+    &._anim-fired
+        +slider-anim-end-mixin
+        .examples-wr__title-gr
+            animation-name: fadeInUp
+
+        .examples__li
+            animation-name: fadeInUp
+
 
     +max-screen($screenSL)
         &__title-gr
@@ -349,15 +380,9 @@
             margin-left: auto
             margin-right: auto
 
-            //opacity: 0
-            //transform: scale(0.5)
-            //._animEnd
-                opacity: 1
-                transform: scale(1)
-
             animation-name: fadeInUp
-            animation-delay:  0.4s
-            transition: all $t300, visibility 0s 0.4s
+            animation-delay:  0.9s
+            opacity: 0
 
             +min-screen($screenSM + 1px)
                 position: absolute
@@ -365,7 +390,7 @@
                 top: 75px
                 width: 208px
                 margin-left: -104px
-                animation-name: zoomInDown
+                //animation-name: zoomInDown
 
                 //transform: translateX(-50%)
                 //._animEnd
@@ -444,6 +469,45 @@
     +max-screen($screenS)
         padding: 22px 0 10px
 
+    .cases-slider
+        animation-delay: 1s
+
+        .slick-slide
+            opacity: 0
+            animation-duration: 2s
+            animation-fill-mode: forwards
+
+        [data-slick-index="1"]
+            animation-delay: 0.33s
+
+        [data-slick-index="2"]
+            animation-delay: 0.66s
+
+        [data-slick-index="3"]
+            animation-delay: 0.33s
+
+        [data-slick-index="4"]
+            animation-delay: 0s
+
+        &._anim-fired
+            .slick-slide
+                animation-name: fadeInUp
+
+    +max-screen($screenMS)
+        .cases-slider
+
+            [data-slick-index="2"]
+                animation-delay: 0.33s
+
+            [data-slick-index="3"]
+                animation-delay: 0s
+
+    +max-screen($screenSM)
+
+        .slick-slide
+            animation-delay: 0s !important
+
+
 
 // ----------------------------------------------------------------------
 // Promo "how it works"
@@ -485,6 +549,7 @@
 
     &__group
         line-height: normal
+        animation-delay: 1s
         +min-screen($screenM + 1px)
             position: absolute
             top: 25px
@@ -606,83 +671,6 @@
             margin-bottom: 15px
 
 
-// ----------------------------------------------------------------------
-// Changes
-// ----------------------------------------------------------------------
-
-.changes-wr
-    text-align: center
-    padding: 70px 0 55px
-    background-color: $cGrey
-    position: relative
-
-    .promo-how-wr + &:after
-        content: ''
-        display: block
-        position: absolute
-        top: 0
-        left: 50%
-        margin-left: -23px
-        border-width: 25px 23px
-        border-style: solid
-        border-color: #fff transparent transparent transparent
-
-    .ind-title-gr
-        .h1-l
-            margin-bottom: 21px
-            font-weight: 300
-
-    +max-screen($screenSM)
-        padding: 55px 0 45px
-
-    +max-screen($screenSS)
-        padding: 45px 0
-        .ind-title-gr
-            margin-bottom: 15px
-            .h1-l
-                line-height: 35px
-                margin-bottom: 15px
-
-
-.before-after
-
-    &__groups-wr
-
-
-    &__group
-        display: none
-
-        &._active
-            display: block
-
-    &__head-txt
-        font-size: 20px
-        line-height: 26px
-        font-weight: 500
-        margin-bottom: 10px
-
-        +max-screen($screenSM)
-            margin-bottom: 40px
-
-        +max-screen($screenSS)
-            font-size: 16px
-            line-height: 22px
-
-
-    &__visual
-
-    img
-        margin: 10px auto
-        display: block
-
-    &__switcher
-        margin-top: 30px
-        +min-screen($screenSM + 1px)
-            margin-top: -17px
-
-        +max-screen($screenSS)
-            margin-top: 40px
-
 
 // ----------------------------------------------------------------------
 // product
@@ -703,10 +691,25 @@
             line-height: 50px
             font-weight: 500
 
-    .prod-slider + .btn
-        margin-top: 70px
+    .prod-slider
+        animation-delay: 0.5s
+        & + .btn
+            margin-top: 70px
+            animation-delay: 0.8s
+
+    .ind-title-gr,
+    .prod-slider + .btn,
+    .prod-slider
+        opacity: 0
+        animation-duration: 1.4s
+        animation-fill-mode: forwards
 
 
+    &._anim-fired
+        .ind-title-gr,
+        .prod-slider + .btn,
+        .prod-slider
+            animation-name: fadeInUpPX
 
     +max-screen($screenSL)
         padding: 45px 0 25px
@@ -748,6 +751,8 @@
 
 .pr-cost
     text-align: center
+    position: relative
+    overflow: hidden
 
     .wrapper
         padding-top: 42px
@@ -782,6 +787,7 @@
 
 
 .calc-bl
+
     background: $cGrey
     text-align: center
     padding: 60px $wrapperM-padd 45px

@@ -79,7 +79,7 @@ $header-h_sm: 68px
         +min-screen($screenMS + 1px)
             line-height: $header-h - 2px
             border-bottom: 1px solid transparent
-            &:hover
+            &:hover, &._current
                 color: darken($cPrimary, 2%)
                 border-bottom-color: #abd48d //$cPrimary
 
@@ -139,7 +139,7 @@ $header-h_sm: 68px
             line-height: 30px
             color: inherit
             padding: 12px 20px
-            &:hover
+            &:hover, &._current
                 color: $cPrimary
 
         &__demo-btn

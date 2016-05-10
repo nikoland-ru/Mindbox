@@ -10,7 +10,7 @@
         <nav class="header__nav">
             <ul class="header__nav-ul">
                 <li class="header__nav-li">
-                    <a href="#!" class="header__nav-a">
+                    <a href="#!" class="header__nav-a _current">
                         <span class="header__nav-a-txt">
                             Кейсы
                         </span>

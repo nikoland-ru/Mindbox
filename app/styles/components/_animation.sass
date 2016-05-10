@@ -1,5 +1,5 @@
-._animEnd
-    animation-fill-mode: both
+._animEnd,._anim-fired
+    animation-fill-mode: forwards
 
 
 .fadeIn,
@@ -9,7 +9,7 @@
 .fadeInUp
     opacity: 0
 
-    &._animEnd
+    //&._animEnd
         opacity: 1
 
 .zoomInScale
@@ -25,3 +25,13 @@
         opacity: 1
         transform: scale(1,1,1)
 
+
+@keyframes fadeInUpPX
+    from
+        opacity: 0
+        transform: translate3d(0, 60px, 0)
+
+
+    to
+        opacity: 1
+        transform: none

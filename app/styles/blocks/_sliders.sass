@@ -156,6 +156,17 @@ $slider-arr-size: 90px
                     stroke: #fff
 
 
+=slider-anim-end-mixin($delay: 1.5s)
+    //&._animEnd,
+    &._anim-fired
+
+        .slider-arr, .slick-dots
+            opacity: 1
+            transition-delay: $delay //1.5s
+
+        .slider-arr
+            transform: translateX(0)
+
 =slider-anim-mixin
     .slider-arr, .slick-dots
         animation-delay: 2s
@@ -168,13 +179,7 @@ $slider-arr-size: 90px
         .slider-arr--r
             transform: translateX(40px)
 
-    &._animEnd
-
-        .slider-arr, .slick-dots
-            opacity: 1
-
-        .slider-arr
-            transform: translateX(0)
+    +slider-anim-end-mixin
 
 // ----------------------------------------------------------------------
 // Regular slider
@@ -251,7 +256,7 @@ $slider-arr-size: 90px
 // ----------------------------------------------------------------------
 
 .prod-slider
-    animation-name: zoomInScale
+    //animation-name: zoomInScale
 
     &__slide
         display: flex !important
@@ -324,10 +329,10 @@ $slider-arr-size: 90px
 // Plan week slider
 // ----------------------------------------------------------------------
 
-$plan-sl-width: 800px
+$plan-sl-width: 810px
 
 .plan-week-sl
-    animation-fill-mode: both
+    animation-fill-mode: forwards
     +slick-dots
 
     &__slider

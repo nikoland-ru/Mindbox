@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------
+// Changes
+// ----------------------------------------------------------------------
+
+.changes-wr
+    text-align: center
+    padding: 70px 0 55px
+    background-color: $cGrey
+    position: relative
+
+    .promo-how-wr + &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 50%
+        margin-left: -23px
+        border-width: 25px 23px
+        border-style: solid
+        border-color: #fff transparent transparent transparent
+
+    .ind-title-gr
+        .h1-l
+            margin-bottom: 21px
+            font-weight: 300
+
+    +max-screen($screenSM)
+        padding: 55px 0 45px
+
+    +max-screen($screenSS)
+        padding: 45px 0
+        .ind-title-gr
+            margin-bottom: 15px
+            .h1-l
+                line-height: 35px
+                margin-bottom: 15px
+
+
+.before-after
+
+    &__groups-wr
+
+
+    &__group
+        display: none
+
+        &._active
+            display: block
+
+    &__head-txt
+        font-size: 20px
+        line-height: 26px
+        font-weight: 500
+        margin-bottom: 10px
+
+        +max-screen($screenSM)
+            margin-bottom: 40px
+
+        +max-screen($screenSS)
+            font-size: 16px
+            line-height: 22px
+
+
+    &__visual
+
+    img
+        margin: 10px auto
+        display: block
+
+    &__switcher
+        margin-top: 30px
+        +min-screen($screenSM + 1px)
+            margin-top: -17px
+
+        +max-screen($screenSS)
+            margin-top: 40px
+
+
+
+.change-before-wr
+    padding-top: 50%
+
+//.changes-wr
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
