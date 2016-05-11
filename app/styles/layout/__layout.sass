@@ -129,3 +129,13 @@ $col-gap_base: 30px
 
             .col
                 width: 100%
+
+.fake-anchor
+    position: absolute
+    top: -$header-h
+    left: 0
+    //display: none
+    +max-screen($screenMS)
+        top: -$header-h_md
+    +max-screen($screenS)
+        top: -$header-h_sm

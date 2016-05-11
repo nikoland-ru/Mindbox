@@ -841,7 +841,6 @@ include 'base/head.php';?>
                                         <a href="../images/userfiles/gall-photo1.jpg" class="gall-link js-gall" data-gall-gr="prod-slider">
                                             <img src="../images/userfiles/gall-photo1.jpg" alt="">
                                         </a>
-                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -881,6 +880,7 @@ include 'base/head.php';?>
             </section>
 
             <section class="pr-cost">
+                <div class="fake-anchor" id="price"></div>
                 <div class="wrapper">
                     <div class="ind-title-gr fadeInUp js-anim-elem">
                         <h2 class="h1-l">

@@ -1,24 +1,3 @@
-// ymaps.ready(function () {
-//     var myMap = new ymaps.Map('mapContacts', {
-//         center: [55.784597, 37.570815],
-//         zoom: 15
-//     },
-//     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//         hintContent: 'Mindbox',
-//         balloonContent: 'Mindbox'
-//     }, {
-//         iconLayout: 'default#image',
-//         iconImageHref: '../images/placemark.png',
-//         iconImageSize: [64, 62],
-//         iconImageOffset: [-23, -62]
-//     });
-
-//     // myMap.controls.add('zoomControl', {float 'none', position {top 215, right 20}});
-//     myMap.behaviors.disable('scrollZoom');
-
-//     myMap.geoObjects.add(myPlacemark);
-// });
-
 $(function () {
 
     var mapId = 'js-contacts-map';

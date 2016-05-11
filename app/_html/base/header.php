@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="header__nav-li">
-                    <a href="#!" class="header__nav-a">
+                    <a href="#price" class="header__nav-a">
                         <span class="header__nav-a-txt">
                             Сколько стоит
                         </span>

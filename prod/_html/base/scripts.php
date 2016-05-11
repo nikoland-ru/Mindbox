@@ -156,6 +156,59 @@
             options: {
                 usersString: '5 000 000 покупателей',
             }
+        },{
+            value: 5500000,
+            options: {
+                usersString: '5 500 000 покупателей',
+            }
+        }
+        ,{
+            value: 6000000,
+            options: {
+                usersString: '6 000 000 покупателей',
+            }
+        }
+        ,{
+            value: 6500000,
+            options: {
+                usersString: '6 500 000 покупателей',
+            }
+        }
+        ,{
+            value: 7000000,
+            options: {
+                usersString: '7 000 000 покупателей',
+            }
+        },{
+            value: 7500000,
+            options: {
+                usersString: '7 500 000 покупателей',
+            }
+        },{
+            value: 8000000,
+            options: {
+                usersString: '8 000 000 покупателей',
+            }
+        },{
+            value: 8500000,
+            options: {
+                usersString: '8 500 000 покупателей',
+            }
+        },{
+            value: 9000000,
+            options: {
+                usersString: '9 000 000 покупателей',
+            }
+        },{
+            value: 9500000,
+            options: {
+                usersString: '9 500 000 покупателей',
+            }
+        },{
+            value: 10000000,
+            options: {
+                usersString: '10 000 000 покупателей',
+            }
         }
     ];
 </script>

@@ -1,5 +1,5 @@
 <form class="price-calc js-priceCalc"
-      data-min-value="99999" data-max-value="5000000">
+      data-min-value="99999" data-max-value="10000000">
 
     <p class="price-calc__top-txt js-priceCalc_top-node">
         до 100 000 покупателей
@@ -10,7 +10,7 @@
             100 000
         </span>
         <span class="price-calc__right-txt">
-            5 000 000
+            10 000 000
         </span>
         <div class="price-calc__ranges js-priceCalc_ranges">
             <input type="hidden" class="js-priceCalc_input-users">

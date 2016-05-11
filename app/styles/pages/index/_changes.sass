@@ -35,11 +35,9 @@
                 line-height: 35px
                 margin-bottom: 15px
 
-
 .before-after
 
     &__groups-wr
-
 
     &__group
         display: none
@@ -60,12 +58,14 @@
             font-size: 16px
             line-height: 22px
 
-
     &__visual
 
-    img
-        margin: 10px auto
-        display: block
+    .ba-scheme-wr
+        &--after
+            margin: 15px auto 50px
+
+        &--before
+            margin: 10px auto
 
     &__switcher
         margin-top: 30px
@@ -75,13 +75,340 @@
         +max-screen($screenSS)
             margin-top: 40px
 
+    .gall-link
+        display: none
+        &:after
+            //left: 30px
+            //top: 17%
+            height: 44px
+            width: 44px
+            line-height: 32px
+            font-size: 32px
+            padding: 6px
+            margin: -22px 0 0 -22px
+
+    +max-screen($screenSS)
+
+        .ba-scheme-wr
+            display: none
+
+        .gall-link
+            display: block
+
+    +max-screen($screenXS)
+        margin-left: -$wrapperSS-padd + 5px
+        margin-right: -$wrapperSS-padd + 5px
 
 
-.change-before-wr
-    padding-top: 50%
 
-//.changes-wr
+.ba-scheme-wr
+    width: 100%
+    //background: #ccc // todo
+    position: relative
+    margin-left: auto
+    margin-right: auto
+
+    &--after
+        max-width: 1024px
+
+        .ba-scheme-wr__inner-wr
+            padding-bottom: 41%
+            position: relative
+
+    &--before
+        max-width: 957px
+
+        .ba-scheme-wr__inner-wr
+            padding-bottom: 46.2%
+            position: relative
+
+.before-scheme, .after-scheme
+    //background: #96cc8d // todo
     position: absolute
     left: 0
     right: 0
+    top: 0
     bottom: 0
+    z-index: 1
+
+
+$af-scheme-time1: 1s // появилось лого
+$af-scheme-delay1: $af-scheme-time1 * 0.7
+$af-scheme-time2: 0.7s // отодвинулись стрелочки
+$af-scheme-delay2: ($af-scheme-time2 * 0.6)
+$af-scheme-time3: 1.3s // круг под IT частью
+$af-scheme-time4: 1s // люди
+$af-scheme-delay4: ($af-scheme-delay1 + $af-scheme-delay2 + ($af-scheme-time3 * 0.8)  )
+$af-scheme-time5: 0.6s // заголовки
+$af-scheme-time6: 1.3s // компоненты
+
+.after-scheme
+
+    &__logo
+        position: absolute
+        left: 35.2%
+        top: 33.2%
+        width: 30.3%
+        z-index: 1
+
+    &__arr-left, &__arr-right
+        position: absolute
+        top: 44.28%
+        width: 6.75%
+        z-index: 1
+
+    &__arr-left
+        left: 26%
+
+    &__arr-right
+        right: 25.45%
+
+    &__market-img
+        position: absolute
+        right: 16.1%
+        top: 5.2%
+        width: 14.26%
+
+    &__market-txt, &__it-txt
+        font-size: 30px
+        line-height: 40px
+        font-weight: 700
+        position: absolute
+        //top: 42.4%
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 1
+        +max-screen($screenSL)
+            font-size: 24px
+
+    &__market-txt
+        left: 84.8%
+        text-align: left
+        margin-top: -2%
+        +max-screen($screenSM)
+            font-size: 19px
+
+    &__it-txt
+        left: 14.2%
+        top: 41.2%
+        text-align: left
+        margin-top: 2%
+        +max-screen($screenSM)
+            margin-left: -6px
+
+    &__it-img
+        position: absolute
+        top: 8.7%
+        left: 15.5%
+        width: 17.5%
+        z-index: 1
+
+    &__it-circle
+        position: absolute
+        left: 0.4%
+        right: 59.9%
+        top: 2.9%
+        bottom: 0%
+        border-radius: 50%
+        background-color: #fff
+        z-index: 0
+
+
+    &__components
+        position: absolute
+        left: 6%
+        top: 0.1%
+        width: 64.5%
+        z-index: 10
+
+    /* animation */
+
+    &__logo,
+    &__arr-left,
+    &__arr-right,
+    &__market-img,
+    &__market-txt,
+    &__it-txt,
+    &__it-img,
+    &__it-circle,
+    &__components
+        opacity: 0
+
+    &__it-circle
+        transform: scale(0.4)
+
+    &__logo
+        transform: scale(1.4)
+
+    &__arr-left
+        transform: translateX(50%)
+
+    &__arr-right
+        transform: translateX(-50%)
+
+    &__market-img
+        transform: translateX(40px)
+
+    &__it-img
+        transform: translateX(-40px)
+
+    //&__components
+        transform: scale(1.1)
+
+    &._anim-fired
+
+        .after-scheme
+            &__logo,
+            &__arr-left,
+            &__arr-right,
+            &__market-img,
+            &__market-txt,
+            &__it-txt,
+            &__it-img,
+            &__it-circle,
+            &__components
+                opacity: 1
+
+            &__logo
+                transform: scale(1)
+                transition-duration: $af-scheme-time1
+
+            &__arr-left,
+            &__arr-right
+                transition-duration: $af-scheme-time2
+                transition-delay: $af-scheme-delay1
+                transform: translateX(0%)
+
+            &__it-circle
+                transition-duration: $af-scheme-time3
+                transition-delay: $af-scheme-delay1 + $af-scheme-delay2
+                transform: scale(1)
+
+            &__market-img, &__it-img
+                transition-duration: $af-scheme-time4
+                transition-delay: ($af-scheme-delay1 + $af-scheme-delay2 + ($af-scheme-time3 * 0.3) )
+                transform: translateX(0)
+
+            &__market-txt, &__it-txt
+                transition-duration: $af-scheme-time5
+                transition-delay: $af-scheme-delay4
+
+
+            &__components
+                transition-duration: $af-scheme-time6
+                transition-delay: $af-scheme-delay4 + $af-scheme-time5 - 0.3
+                transform: scale(1)
+
+
+.before-scheme
+
+    &__components
+        position: absolute
+        top: 0
+        left: 0.6%
+        right: 0
+        bottom: 0
+        z-index: 10
+
+    &__it-circle
+        position: absolute
+        left: 0%
+        right: 57.4%
+        top: 7%
+        bottom: 0.5%
+        border-radius: 50%
+        background-color: #fff
+        z-index: 0
+
+    &__market-img
+        position: absolute
+        top: 11.1%
+        left: 43.2%
+        z-index: 1
+        width: 19.9%
+
+    &__it-img
+        position: absolute
+        top: 9.8%
+        left: 20.2%
+        z-index: 1
+        width: 14.5%
+
+    &__market-txt, &__it-txt
+        font-size: 30px
+        line-height: 40px
+        font-weight: 700
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 2
+        +max-screen($screenSM)
+            font-size: 24px
+
+
+    &__market-txt
+        left: 60.2%
+        //top: 42.4%
+        text-align: left
+        margin-top: -4px
+
+    &__it-txt
+        left: 16.45%
+        //top: 43.4%
+        text-align: left
+        margin-top: -9px
+
+    /* animation */
+
+    &__market-img,
+    &__market-txt,
+    &__it-txt,
+    &__it-img,
+    &__it-circle,
+    &__components
+        opacity: 0
+
+    &__it-circle
+        transform: scale(0.7)
+
+    &__market-img
+        transform: translateX(40px)
+
+    &__it-img
+        transform: translateX(-40px)
+
+    //&__components
+        transform: scale(1.1)
+
+    &._anim-fired
+
+        .before-scheme
+            &__market-img,
+            &__market-txt,
+            &__it-txt,
+            &__it-img,
+            &__it-circle,
+            &__components
+                opacity: 1
+
+            &__market-img,
+            &__it-img
+                transition-duration: 1s
+                transform: translateX(0px)
+
+            &__market-txt,
+            &__it-txt
+                transition-duration: 0.7s
+                transition-delay: 0.7s
+
+            &__it-circle
+                transform: scale(1)
+                transition-duration: 1.4s
+                transition-delay: 0
+
+            &__components
+                transition-duration: 1s
+                transition-delay: 1.2s
+
+
+

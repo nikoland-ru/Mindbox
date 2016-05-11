@@ -112,8 +112,7 @@ $(function () {
                 });
 
                 $slider.slick({
-                    //variableWidth: true,
-                    //centerMode: true,
+                    adaptiveHeight: true,
                     slidesToShow: 5,
                     slidesToScroll: 2,
                     arrows: true,

@@ -149,8 +149,8 @@ include 'base/head.php';?>
                                             +1400%
                                         </span>
                                         <p class="case__txt">
-                                            конверсия offline — online
-                                        </p>
+                                            Обеспечили запуск кампаний в e-commerce за несколько часов
+                                            Переносим программу лояльности на нашу платформу и строим omnichannel</p>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +261,8 @@ include 'base/head.php';?>
                                             +1400%
                                         </span>
                                         <p class="case__txt">
-                                            выручка с email-рассылки
+                                            Обеспечили запуск кампаний в e-commerce за несколько часов
+                                            Переносим программу лояльности на нашу платформу и строим omnichannel
                                         </p>
                                     </div>
                                 </div>

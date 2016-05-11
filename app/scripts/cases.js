@@ -39,19 +39,19 @@ $(function () {
             $caseSort.addClass('_mob-sorting-open');
             setClose();
         }
-    })
+    });
 
     isotope = $casesContInner.isotope({
         itemSelector: '.js-case-wr',
         columnWidth: '.js-case-wr',
         percentPosition: true,
-        layoutMode: 'packery',
+        layoutMode: 'fitRows',//'packery',
         stagger: 20,
         //initLayout: false
     });
 
 
-/* Дохлый номер с выравниванием колонок по высоте.
+
     function currentCases(laidOutItems){
         $currentCases = [];
 
@@ -70,7 +70,7 @@ $(function () {
             casePointsLimit;
 
         $.each($currentCases, function(){
-            var $thisCase = $(this).not('._double');
+            var $thisCase = $(this); //.not('._double');
 
             if($thisCase.length ){
                realWidth = $thisCase.getWidthInPercent();
@@ -92,7 +92,7 @@ $(function () {
         }
 
         console.log('casePointsLimit   '+casePointsLimit)
-        console.log($currentCases)
+        //console.log($currentCases)
 
         // создание групп-строк
         //$cases.filter(':visible')
@@ -100,9 +100,9 @@ $(function () {
             var $thisCase = $(this),
                 casePoint = 1;
 
-            if( $thisCase.hasClass('_double')){
+            /*if( $thisCase.hasClass('_double')){
                 casePoint = 2;
-            }
+            }*/
 
             currentPoints += casePoint;
 
@@ -136,12 +136,12 @@ $(function () {
             $.each(this, function(){
                 $(this).find('.case').css('min-height',resultHeight);
             });
-            console.log($(this).length)
+           // console.log($(this).length)
         });
 
     }
 
-*/
+
 
     function setHeight(){
         var maxH = 0;
@@ -182,17 +182,20 @@ $(function () {
 
 
     isotope.on( 'arrangeComplete', function( event, laidOutItems ){
-        //currentCases(laidOutItems);
-        //equelHeights();
-        setHeight();
+        currentCases(laidOutItems);
+        equelHeights();
+        //setHeight();
     });
 
-    setHeight();
+
+    currentCases($cases);
+    equelHeights();
+    //setHeight();
 
     isotope.isotope('arrange');
 
     $W.resize(function(){
-        //equelHeights();
-        setHeight();
+        equelHeights();
+        //setHeight();
     })
 });
