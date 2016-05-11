@@ -1,6 +1,4 @@
 
-
-
 $(function () {
     (function ($) {
         $.fn.priceCalc = function (settings) {
@@ -41,7 +39,7 @@ $(function () {
                 function setCurrentInjects(value){
                     for(var i = 0; i <= injects.length - 1 ; i++){
                         if(value <= injects[i].value ){
-                            currentInjects = injects[i].options;
+                            currentInjects = injects[i];
                             return;
                         }
                     }
@@ -49,7 +47,7 @@ $(function () {
 
                 // Функция должна подсчитать цену, включая информацию с чекбокосов
                 function countPrice(){
-                    var originalPrice = Number(currentInjects.price),
+                    var originalPrice = Number(currentInjects.options.price),
                         finalPrice = originalPrice,
                         percentsMods = [],
                         finalPercentMod = 0;
@@ -98,7 +96,7 @@ $(function () {
                 function setValues(){
                     var countedPrice;
 
-                    if(currentInjects.price){
+                    if(currentInjects.options.price){
                         countedPrice = countPrice();
                         $this.removeClass('_custom-pricing');
 
@@ -112,13 +110,12 @@ $(function () {
 
                     // Значение инпута пользователей
                     $inputUsers.val(currentInjects.value);
-
                     // Значение инпута цены (с учётом процентов)
                     $inputPrice.val(countedPrice);
 
 
                     $topNode.text(
-                        currentInjects.usersString
+                        currentInjects.options.usersString
                     )
                 }
 
@@ -157,6 +154,27 @@ $(function () {
     })(jQuery);
 });
 
+// запрет на ввод определенных символов
+(function ($) {
+    $.fn.onlyListedKeys = function (regexp) {
+        $(this).each(function () {
+            var $this = $(this),
+                oldValue = $this.val();
+
+            $this.bind('change input', function () {
+                var newValue = $this.val();
+
+                if (!regexp.test(newValue)) {
+                    $this.val(oldValue);
+                } else {
+                    oldValue = newValue;
+                }
+
+            });
+        });
+    }
+})(jQuery);
+
 
 $(function () {
     var $priceCalc = $('.js-priceCalc');
@@ -165,3 +183,9 @@ $(function () {
 
 });
 
+$(function () {
+    var $onlyDigits = $('.js-only-digits');
+    if (!$onlyDigits.length) return;
+    $onlyDigits.onlyListedKeys(/^([0-9](\.)?(-)?(,)?){0,}$/);
+
+});

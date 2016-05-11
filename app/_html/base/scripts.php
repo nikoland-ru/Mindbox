@@ -224,6 +224,7 @@
 <script src="../../bower_components/photoswipe/dist/photoswipe.js"></script>
 <script src="../../bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
 <script src="../../bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script src="../../bower_components/jquery-validation/dist/jquery.validate.js"></script>
 <!-- endbower -->
 
 
@@ -245,6 +246,8 @@
 <script src="../scripts/animation.js"></script>
 
 <script src="../scripts/cases.js"></script>
+
+<script src="../scripts/formValidation.js"></script>
 
 <script src="../scripts/forms.js"></script>
 

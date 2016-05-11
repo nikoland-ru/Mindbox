@@ -20,6 +20,7 @@
     "photoswipe": "^4.1.1",
     "magnific-popup": "^1.1.0",
     "jquery": "^2.2.3",
-    "animate.css": "^3.5.1"
+    "animate.css": "^3.5.1",
+    "jquery-validation": "^1.15.0"
   }
 }
