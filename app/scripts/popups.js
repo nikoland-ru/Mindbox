@@ -17,31 +17,76 @@ $(function () {
         $closers = $('.js-side-popup_closer'),
         $offsetElems = $('.page-inner,.js-header');
 
-    function closePopup(pPopup){
+    function closePopup(pPopup) {
         pPopup.removeClass('_open');
         $B.removeClass('_side-popup-open');
-        $offsetElems.css('margin-right','');
-        $('.header__nav').css('margin-right','');
+        $offsetElems.css('margin-right', '');
+        $('.header__nav').css('margin-right', '');
+    }
+
+    function setInjectHtml(pCont) {
+        var html = '',
+            inpValue = '',
+            pplTxt = $('.js-priceCalc_top-node').text(),
+            costTxt = $('.js-priceCalc_input-counter-price').val(),
+            $options = $('.js-priceCalc_chkb:checked');
+
+
+        if (pplTxt) {
+            html += '<p class="side-popup__inject-option"><b>Кол-во покупателей: </b>' + pplTxt + '</p>';
+        }
+
+        if (costTxt) {
+            html += '<p class="side-popup__inject-option"><b>Цена: </b>' + $().priceFormat(costTxt) + ' Р</p>';
+        }
+
+        if (costTxt && $options.length) {
+            html += '<h6 class="h4">Опции</h6>';
+            $.each($options.parents('.checkbox-label').find('.checkbox-label__txt'), function () {
+                var optionVal = $(this).text();
+                html += '<p class="side-popup__inject-option">' + optionVal + '</p>';
+            })
+        }
+
+        pCont.html(html);
+        pCont.append($('.js-priceCalc input').clone() );
     }
 
     $spBtn.bind('click', function (e) {
-        var dataPopupName = $(this).data('popup-name'),
-            $target = $popups.filter('[data-popup-name="' + dataPopupName + '"]');
+        var $thisBtn = $(this),
+            dataPopupName = $thisBtn.data('popup-name'),
+            dataInject = $thisBtn.data('calc-inject'),
+            $target = $popups.filter('[data-popup-name="' + dataPopupName + '"]'),
+            $injectWr = $target.find(".js-side-popup__inject-wr"),
+            $injectInner = $target.find(".js-side-popup__inject");
+        //$injectInput = $target.find(".js-side-popup__inject-input");
+
+
+        if (dataInject) {
+            $injectWr.addClass('_active');
+            $injectInner.html('');
+            setInjectHtml($injectInner);
+        } else {
+            $injectWr.removeClass('_active');
+            $injectInner.html('');
+        }
 
         $target.addClass('_open');
         $B.addClass('_side-popup-open');
         $offsetElems.css('margin-right', $.scrollbarWidth());
-        if( $W.width() <= _GLOB.breakpoints.ms){
+
+        if ($W.width() <= _GLOB.breakpoints.ms) {
             $('.header__nav').css('margin-right', $.scrollbarWidth());
         }
+
 
         e.stopPropagation();
         $W.bind('click', function (e) {
             var $event = $(e.target);
             if (!$event.closest($target).length) {
                 closePopup($target);
+                $W.unbind('click');
             }
-            $W.unbind('click');
         })
     });
 
@@ -62,21 +107,21 @@ $(function () {
         //removalDelay: 300,
         type: $btn.data('type') || 'inline',
         closeMarkup: _GLOB.closerReference,
-            //'<span class="mfp-close iconic iconic--cross2 popup__closer js-popup_closer"></span>',
+        //'<span class="mfp-close iconic iconic--cross2 popup__closer js-popup_closer"></span>',
         callbacks: {
-            open: function() {
+            open: function () {
                 $offsetElems.css('margin-right', $.scrollbarWidth());
             },
-            close: function() {
+            close: function () {
                 $offsetElems.css('margin-right', '');
             }
         }
     });
 });
 
-$(function(){
+$(function () {
     var $vPopup = $('.js-video-popup');
-    if(!$vPopup.length) return;
+    if (!$vPopup.length) return;
 
     $vPopup.magnificPopup({
         //disableOn: 700,
@@ -87,11 +132,11 @@ $(function(){
         fixedContentPos: false,
         closeMarkup: _GLOB.closerReference,
         callbacks: {
-            open: function(){
-                $('.mfp-bg').css('background','rgba(1, 2, 0, 1)')
+            open: function () {
+                $('.mfp-bg').css('background', 'rgba(1, 2, 0, 1)')
             },
-            close: function(){
-                $('.mfp-bg').css('background','')
+            close: function () {
+                $('.mfp-bg').css('background', '')
 
             }
         }

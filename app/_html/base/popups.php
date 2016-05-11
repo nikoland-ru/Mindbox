@@ -4,7 +4,7 @@
 <div class="side-popup js-side-popup" data-popup-name="demo">
 
     <div class="side-popup__wr  side-popup__main">
-        <form>
+        <form class="js-form" action="queries/testForm.php">
             <h4 class="h3-l">
                 Запрос на подключение
             </h4>
@@ -13,7 +13,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="text" class="input" placeholder="Ваше имя">
+                            <input type="text" class="input" placeholder="Ваше имя"  name="name1" required>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="email" class="input" placeholder="E-mail">
+                            <input type="email" class="input" placeholder="E-mail"  name="name2" required>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="tel" class="input" placeholder="Телефон">
+                            <input type="tel" class="input" placeholder="Телефон" name="name3" required>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <textarea class="input" rows="5" placeholder="Краткая постановка задачи"></textarea>
+                            <textarea class="input" rows="5" placeholder="Краткая постановка задачи" minlength="3"></textarea>
                         </div>
 
                         <label class="checkbox-label">
@@ -62,6 +62,15 @@
                 </div>
             </div> <!-- form-row -->
 
+            <div class="side-popup__calc-inject-wr js-side-popup__inject-wr">
+                <h5 class="h3-l">
+                    Параметры:
+                </h5>
+                <div class="side-popup__calc-inject js-side-popup__inject">
+
+                </div>
+
+            </div>
 
             <div class="form-row form-row--submit">
 
@@ -75,6 +84,10 @@
                     </div>
                 </div>
             </div> <!-- form-row--inline -->
+
+            <div class="form-all-msg js-form__all-msg">
+
+            </div>
 
         </form>
 
@@ -120,7 +133,7 @@
 <div class="side-popup js-side-popup" data-popup-name="call">
 
     <div class="side-popup__wr  side-popup__main">
-        <form>
+        <form class="js-form" action="queries/testForm.php">
             <h4 class="h3-l">
                 Обратная связь
             </h4>
@@ -129,7 +142,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="text" class="input" placeholder="Ваше имя">
+                            <input type="text" class="input" placeholder="Ваше имя" name="name1" required>
                         </div>
                     </div>
                 </div>
@@ -139,7 +152,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="email" class="input" placeholder="E-mail">
+                            <input type="email" class="input" placeholder="E-mail"  name="name1" required>
                         </div>
                     </div>
                 </div>
@@ -149,7 +162,7 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="tel" class="input" placeholder="Телефон">
+                            <input type="tel" class="input" placeholder="Телефон"  name="name1" required>
                         </div>
                     </div>
                 </div>
@@ -167,6 +180,7 @@
             </div> <!-- form-row -->
 
 
+
             <div class="form-row form-row--submit">
 
                 <div class="form-row__content-col">
@@ -179,6 +193,10 @@
                     </div>
                 </div>
             </div> <!-- form-row--inline -->
+
+            <div class="form-all-msg js-form__all-msg">
+
+            </div>
 
         </form>
 

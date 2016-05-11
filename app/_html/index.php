@@ -901,10 +901,11 @@ include 'base/head.php';?>
 
                            <?php include 'components/price-calc-index.php';?>
 
-
-                            <a href="#!" class="btn btn--default btn--default-green btn--corner btn--lg">
+                            <button type="button"
+                               class="btn btn--default btn--default-green btn--corner btn--lg js-side-popup-btn"
+                               data-popup-name="demo" data-calc-inject="true">
                                 Связаться с нами
-                            </a>
+                            </button>
 
                         </div>
                     </div>

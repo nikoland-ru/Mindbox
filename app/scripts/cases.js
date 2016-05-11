@@ -15,6 +15,7 @@ $(function () {
         svgFinal = $cBtn.find('.js-case-btn__final'),
         svgFinalPaths = svgFinal.find('path'),
         svgAnimTime = 0.6,
+        winHref = window.location.hash,
         //catalogAnim = 600,
         isotope;
 
@@ -91,9 +92,6 @@ $(function () {
             casePointsLimit = 2;
         }
 
-        console.log('casePointsLimit   '+casePointsLimit)
-        //console.log($currentCases)
-
         // создание групп-строк
         //$cases.filter(':visible')
         $.each($currentCases,function(){
@@ -142,7 +140,7 @@ $(function () {
     }
 
 
-
+/*
     function setHeight(){
         var maxH = 0;
 
@@ -153,31 +151,26 @@ $(function () {
             }
         });
         $cases.css('min-height', maxH);
+    }*/
+
+    function setFilter(sortType){
+        var $targetCases = $cases.filter('[data-sort-type="' + sortType + '"]'),
+            filterValue = '[data-sort-type="' + sortType + '"]',
+            $targetLink = $catLink.filter('[data-sort-type="'+sortType+'"]');
+
+        if( !sortType){
+            filterValue = '.js-case-wr';
+        }
+
+        $catLink.removeClass('_active');
+        $targetLink.addClass('_active');
+        isotope.isotope({'filter': filterValue });
     }
 
     $catLink.bind('click', function () {
         var $this = $(this),
-            dataSortType = $this.data('sort-type'),
-            $targetCases = $cases.filter('[data-sort-type="' + dataSortType + '"]'),
-            $excludeCases = $cases.not($targetCases),
-            filterValue = '[data-sort-type="' + dataSortType + '"]';
-
-        if( !dataSortType){
-            filterValue = '.js-case-wr';
-        }
-        $catLink.removeClass('_active');
-        $this.addClass('_active');
-
-        /*
-        onSort(
-            $excludeCases,
-            $targetCases
-        );*/
-
-        //$cases.css('min-height', '')
-
-        isotope.isotope({'filter': filterValue });
-
+            dataSortType = $this.data('sort-type');
+            setFilter(dataSortType);
     });
 
 
@@ -190,12 +183,18 @@ $(function () {
 
     currentCases($cases);
     equelHeights();
-    //setHeight();
 
     isotope.isotope('arrange');
 
     $W.resize(function(){
         equelHeights();
         //setHeight();
-    })
+    });
+
+    if(winHref){
+        winHref = winHref.replace('#','');
+        if( $cases.filter('[data-sort-type="' + winHref + '"]').length ){
+            setFilter(winHref);
+        }
+    }
 });
