@@ -227,13 +227,14 @@
 <script src="../../bower_components/jquery-validation/dist/jquery.validate.js"></script>
 <!-- endbower -->
 
-
 <script src="../scripts/plugins/TweenMax.min.js"></script>
+
 <script src="../scripts/plugins/MorphSVGPlugin.min.js"></script>
 
 <script src="../scripts/plugins/isotope.js"></script>
 
 <script src="../scripts/plugins/packery-mode.pkgd.js"></script>
+
 <script src="../scripts/plugins/jquery.sparkline.js"></script>
 
 <!-- endbuild -->
@@ -269,3 +270,5 @@
 
 <!-- endinject -->
 <!-- endbuild -->
+
+

@@ -54,9 +54,16 @@
     <!-- endinject-->
     <!-- endbuild -->
 
+    <!-- build:css ../styles/blog.css -->
+
+    <link rel="stylesheet" href="../css/blog.css">
+
+    <!-- endbuild -->
+
     <!-- build:js ../scripts/vendor/modernizr.js -->
 
     <script src="../../bower_components/modernizr/modernizr.js"></script>
     
     <!-- endbuild -->
 </head>
+

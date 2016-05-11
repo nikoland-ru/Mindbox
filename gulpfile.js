@@ -57,6 +57,27 @@ gulp.task('styles', ['clean-styles'], function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('blogStyles', ['clean-styles', 'styles'], function() {
+    log('Compiling Sass --> CSS. For blog');
+
+    var compassOptions = config.getCompassOptions();
+
+    return gulp
+        .src(config.blogSass)
+        .pipe($.plumber({
+            errorHandler: function (error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
+        .pipe($.compass(compassOptions))
+        .pipe($.autoprefixer({
+            browsers: ['last 2 version', '> 5%']
+        }))
+        .pipe(gulp.dest(config.css))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('clean-styles', function(done) {
     var files = './app/css/**/*.css';
     clean(files, done);
@@ -79,7 +100,7 @@ gulp.task('wiredep', function() {
         .pipe(gulp.dest(config.injectOutput));
 });
 
-gulp.task('inject', ['styles', 'wiredep'], function() {
+gulp.task('inject', ['styles', 'blogStyles', 'wiredep'], function() {
     log('Wire up the app css into our html and call wiredep');
 
     return gulp
@@ -91,7 +112,18 @@ gulp.task('inject', ['styles', 'wiredep'], function() {
         }))
         .pipe(gulp.dest(config.injectOutput));
 });
+gulp.task('injectBlog', ['styles', 'wiredep'], function() {
+    log('Wire up the app css into our html and call wiredep (Blog)');
 
+    return gulp
+        .src(config.injectInput)
+        .pipe($.inject(gulp.src('./app/css/blog.css', {read: false}), {
+            ignorePath: '../',
+            addRootSlash: false,
+            relative: true
+        }))
+        .pipe(gulp.dest(config.injectOutput));
+});
 // gulp.task('start', ['inject'], function() {
 //     log('Concat HTML files after all injections');
 
@@ -249,7 +281,7 @@ gulp.task('serve:build', ['php'], function() {
     });
 }).help = 'to preview the production build';
 
-gulp.task('build', ['optimize', 'images', 'fonts', 'extras', 'replace'], function() {
+gulp.task('build', ['injectBlog', 'optimize', 'images', 'fonts', 'extras', 'replace'], function() {
     log('Gzipp all files in ' + $.util.colors.yellow('./prod') + ' folder');
 
     return gulp.src([

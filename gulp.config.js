@@ -15,6 +15,10 @@ module.exports = function() {
             './app/_html/base/head.php', 
             './app/_html/base/scripts.php'
         ],
+        injectBlogInput: [
+            //'./app/_html/base/head.php',
+            './app/_html/base/scriptsBlog.php'
+        ],
         injectOutput: app + '_html/base',
         allsass: [
             app + 'styles/**/*.sass',
@@ -23,6 +27,7 @@ module.exports = function() {
         allhtml: app + '_html/**/*.php',
         css: app + 'css',
         sass: app + 'styles/styles.sass',
+        blogSass: app + 'styles/blog.sass',
         js: [
             app + 'scripts/**/*.js',
             '!' + app + 'scripts/plugins/*.js',
