@@ -15,18 +15,25 @@ $(function () {
 
     var $popups = $('.js-side-popup'),
         $closers = $('.js-side-popup_closer'),
-        $offsetElems = $('.page-inner,.js-header');
+        $offsetElems = $('.page-inner,.js-header'),
+        $pageInner = $('.page-inner');
 
     function closePopup(pPopup) {
         pPopup.removeClass('_open');
-        $B.removeClass('_side-popup-open');
+        $B.removeClass('_side-popup-open _side-popup-moved-page');
         $offsetElems.css('margin-right', '');
         $('.header__nav').css('margin-right', '');
+        $pageInner.css({
+            'transform': ''
+        });
+        $pageInner.one('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd',function(){
+            $B.removeClass('_page-inner-moved');
+            console.log('done')
+        })
     }
 
     function setInjectHtml(pCont) {
         var html = '',
-            inpValue = '',
             pplTxt = $('.js-priceCalc_top-node').text(),
             costTxt = $('.js-priceCalc_input-counter-price').val(),
             $options = $('.js-priceCalc_chkb:checked');
@@ -49,38 +56,49 @@ $(function () {
         }
 
         pCont.html(html);
-        pCont.append($('.js-priceCalc input').clone() );
+        pCont.append($('.js-priceCalc input').clone());
     }
 
     $spBtn.bind('click', function (e) {
         var $thisBtn = $(this),
             dataPopupName = $thisBtn.data('popup-name'),
             dataInject = $thisBtn.data('calc-inject'),
+            dataPageMove = $thisBtn.data('page-move'),
             $target = $popups.filter('[data-popup-name="' + dataPopupName + '"]'),
             $injectWr = $target.find(".js-side-popup__inject-wr"),
             $injectInner = $target.find(".js-side-popup__inject");
-        //$injectInput = $target.find(".js-side-popup__inject-input");
 
+        if( $target.hasClass('_open')){
+            closePopup();
+            return;
+        }
 
+        $injectInner.html('');
         if (dataInject) {
             $injectWr.addClass('_active');
-            $injectInner.html('');
             setInjectHtml($injectInner);
         } else {
             $injectWr.removeClass('_active');
-            $injectInner.html('');
         }
 
         $target.addClass('_open');
-        $B.addClass('_side-popup-open');
-        $offsetElems.css('margin-right', $.scrollbarWidth());
 
-        if ($W.width() <= _GLOB.breakpoints.ms) {
-            $('.header__nav').css('margin-right', $.scrollbarWidth());
+        if (!dataPageMove) {
+            $B.addClass('_side-popup-open');
+            $offsetElems.css('margin-right', $.scrollbarWidth());
+
+            if ($W.width() <= _GLOB.breakpoints.ms) {
+                $('.header__nav').css('margin-right', $.scrollbarWidth());
+            }
+        } else {
+            $pageInner.css({
+                'transform': 'translate3d(-' + $target.width() + 'px,0,0)'
+            });
+            $B.addClass('_side-popup-open _side-popup-moved-page _page-inner-moved');
         }
 
-
         e.stopPropagation();
+
         $W.bind('click', function (e) {
             var $event = $(e.target);
             if (!$event.closest($target).length) {

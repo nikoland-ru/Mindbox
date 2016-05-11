@@ -1,6 +1,7 @@
 $side-popup-padd-rl: 30px
 $side-popup-padd-rl_xs: 12px
 $side-popup-size: 405px
+$side-popup-size-half: 700px
 
 
 .side-popup
@@ -100,6 +101,13 @@ $side-popup-size: 405px
             margin-right: 4px
 
 
+    &--half
+        width: 50% //$side-popup-size-half //40%
+        max-width: 100%
+        min-width: $side-popup-size
+        +max-screen($screenXS)
+            width: 100%
+            min-width: 0
 
 
 
@@ -260,6 +268,10 @@ $comment-ava-size: 120px
     &__txt
         font-size: 15px
         line-height: 30px
+        h5
+            font-style: italic
+            color: $cPrimary
+            margin: 20px 0
 
     &__comment-wr
         white-space: nowrap

@@ -15,6 +15,22 @@ BODY
     &._side-popup-open
         overflow: hidden
 
+    &._side-popup-moved-page
+        +min-screen($screenMS)
+            .contacts__map
+                transform: translateX(-20%) scale(.7)
+
+    &._page-inner-moved
+        .page-inner
+            transition: transform $t600
+
+        .page-inner__overlay
+            display: none
+
+        +min-screen($screenMS)
+            .header
+                opacity: 0
+
 .page
     position: relative
     overflow: hidden

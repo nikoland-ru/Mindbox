@@ -130,7 +130,7 @@
 </div>
 
 
-<div class="side-popup js-side-popup" data-popup-name="call">
+<div class="side-popup side-popup--half js-side-popup" data-popup-name="call">
 
     <div class="side-popup__wr  side-popup__main">
         <form class="js-form" action="queries/testForm.php">
