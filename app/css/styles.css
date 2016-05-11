@@ -902,51 +902,97 @@ h1, h2, h3, h4, h5, h6 {
 /* line 106, ../styles/components/_typography.sass */
 .typography .h5 {
   margin-bottom: 25px;
+  font-weight: 700;
 }
-/* line 109, ../styles/components/_typography.sass */
+/* line 110, ../styles/components/_typography.sass */
+.typography .h6 {
+  font-weight: 700;
+  color: #000;
+}
+/* line 114, ../styles/components/_typography.sass */
+.typography OL {
+  counter-reset: li;
+}
+/* line 118, ../styles/components/_typography.sass */
+.typography OL OL LI:first-child {
+  margin-top: 25px;
+}
+/* line 121, ../styles/components/_typography.sass */
+.typography OL LI {
+  position: relative;
+  padding-left: 50px;
+}
+/* line 125, ../styles/components/_typography.sass */
+.typography OL LI.text-bold {
+  font-weight: 700;
+  color: #000;
+}
+/* line 130, ../styles/components/_typography.sass */
+.typography OL LI:not(.no-increment):before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: li;
+  content: counters(li,".") ". ";
+}
+/* line 137, ../styles/components/_typography.sass */
+.typography OL LI LI {
+  margin-bottom: 25px;
+  font: 15px/2 "MuseoSansCyrl", sans-serif;
+  color: #333333;
+}
+/* line 142, ../styles/components/_typography.sass */
+.typography OL LI > OL > LI {
+  margin-left: -50px;
+}
+/* line 145, ../styles/components/_typography.sass */
+.typography OL LI > OL > LI > OL > LI {
+  margin-left: 0;
+}
+/* line 148, ../styles/components/_typography.sass */
 .typography P {
   margin-bottom: 25px;
   font: 15px/2 "MuseoSansCyrl", sans-serif;
   color: #333333;
 }
-/* line 114, ../styles/components/_typography.sass */
+/* line 153, ../styles/components/_typography.sass */
 .typography P.small-lh {
   line-height: 1.4;
 }
 
-/* line 117, ../styles/components/_typography.sass */
+/* line 156, ../styles/components/_typography.sass */
 .quote {
   padding: 20px 70px 20px 95px;
   position: relative;
   margin-bottom: 60px;
 }
 @media screen and (max-width: 860px) {
-  /* line 117, ../styles/components/_typography.sass */
+  /* line 156, ../styles/components/_typography.sass */
   .quote {
     padding: 20px 50px 20px 70px;
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 117, ../styles/components/_typography.sass */
+  /* line 156, ../styles/components/_typography.sass */
   .quote {
     padding: 20px 20px 20px 40px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 117, ../styles/components/_typography.sass */
+  /* line 156, ../styles/components/_typography.sass */
   .quote {
     padding: 0;
   }
 }
-/* line 131, ../styles/components/_typography.sass */
+/* line 170, ../styles/components/_typography.sass */
 .quote P {
   color: #000;
 }
-/* line 134, ../styles/components/_typography.sass */
+/* line 173, ../styles/components/_typography.sass */
 .quote P:last-child {
   margin-bottom: 0;
 }
-/* line 137, ../styles/components/_typography.sass */
+/* line 176, ../styles/components/_typography.sass */
 .quote:before {
   content: "";
   position: absolute;
@@ -957,13 +1003,13 @@ h1, h2, h3, h4, h5, h6 {
   background: #eeeeee;
 }
 @media screen and (max-width: 630px) {
-  /* line 137, ../styles/components/_typography.sass */
+  /* line 176, ../styles/components/_typography.sass */
   .quote:before {
     left: 10px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 137, ../styles/components/_typography.sass */
+  /* line 176, ../styles/components/_typography.sass */
   .quote:before {
     display: none;
   }

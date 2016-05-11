@@ -105,6 +105,45 @@ h1,h2,h3,h4,h5,h6
 
     .h5
         margin-bottom: 25px
+        font-weight: 700
+
+    .h6
+        font-weight: 700
+        color: #000
+
+    OL
+        counter-reset: li
+
+        OL
+            LI:first-child
+                margin-top: 25px
+
+        LI
+            position: relative
+            padding-left: 50px
+
+            &.text-bold
+                font-weight: 700
+                color: #000
+
+            &:not(.no-increment)
+                &:before
+                    position: absolute
+                    left: 0
+                    top: 0
+                    counter-increment: li
+                    content: counters(li,".") ". "
+
+            LI
+                margin-bottom: 25px
+                font: 15px/2 $baseFont
+                color: #333333
+
+            > OL > LI
+                margin-left: -50px
+
+            > OL > LI > OL > LI
+                margin-left: 0
 
     P
         margin-bottom: 25px
