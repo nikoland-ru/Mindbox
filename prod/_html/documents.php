@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$pageName = "Документы";
+$pageName = "Документы - договор";
 include 'base/head.php';?>
 <body>
 
@@ -103,7 +103,7 @@ include 'base/head.php';?>
                                             </span>
                                             <span class="doc-link__main">
                                                 <span class="doc-link__name link link--green">СКАЧАТЬ В PDF</span>
-                                                <span class="doc-link__info">506 KB </span>
+                                                <span class="doc-link__info">746 KB </span>
                                             </span>
                                         </a>
                                     </p>
