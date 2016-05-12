@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$pageName = "Документы - политика";
+$pageName = "Документы - соглашение";
 include 'base/head.php';?>
 <body>
 
@@ -93,18 +93,6 @@ include 'base/head.php';?>
                             <div class="documents__left">
                                 <div class="documents__inner typography">
                                     <h1 class="h1">Соглашение об уровне сервиса </h1>
-                                    <p class="text-center">
-
-                                        <a class="doc-link doc-link--lg" href="#!">
-                                            <span class="doc-link__img">
-                                                <span class="iconic iconic--pdf"></span>
-                                            </span>
-                                            <span class="doc-link__main">
-                                                <span class="doc-link__name link link--green">СКАЧАТЬ В PDF</span>
-                                                <span class="doc-link__info">300 KB </span>
-                                            </span>
-                                        </a>
-                                    </p>
 
                                     <ol class="start2">
                                         <li class="h5">
