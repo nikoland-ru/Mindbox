@@ -922,21 +922,29 @@ h1, h2, h3, h4, h5, h6 {
 .typography OL {
   counter-reset: li;
 }
-/* line 131, ../styles/components/_typography.sass */
+/* line 130, ../styles/components/_typography.sass */
+.typography OL.start2 {
+  counter-reset: li 1;
+}
+/* line 134, ../styles/components/_typography.sass */
 .typography OL OL LI:first-child {
   margin-top: 25px;
 }
-/* line 134, ../styles/components/_typography.sass */
+/* line 137, ../styles/components/_typography.sass */
 .typography OL LI {
   position: relative;
   padding-left: 50px;
 }
-/* line 138, ../styles/components/_typography.sass */
+/* line 141, ../styles/components/_typography.sass */
+.typography OL LI .table-default-wr {
+  margin-bottom: 0;
+}
+/* line 144, ../styles/components/_typography.sass */
 .typography OL LI.text-bold {
   font-weight: 700;
   color: #000;
 }
-/* line 143, ../styles/components/_typography.sass */
+/* line 149, ../styles/components/_typography.sass */
 .typography OL LI:not(.no-increment):before {
   position: absolute;
   left: 0;
@@ -944,64 +952,64 @@ h1, h2, h3, h4, h5, h6 {
   counter-increment: li;
   content: counters(li,".") ". ";
 }
-/* line 150, ../styles/components/_typography.sass */
+/* line 156, ../styles/components/_typography.sass */
 .typography OL LI LI {
   margin-bottom: 25px;
   font: 15px/2 "MuseoSansCyrl", sans-serif;
   color: #333333;
 }
-/* line 155, ../styles/components/_typography.sass */
+/* line 161, ../styles/components/_typography.sass */
 .typography OL LI > OL > LI {
   margin-left: -50px;
 }
-/* line 158, ../styles/components/_typography.sass */
+/* line 164, ../styles/components/_typography.sass */
 .typography OL LI > OL > LI > OL > LI {
   margin-left: 0;
 }
-/* line 161, ../styles/components/_typography.sass */
+/* line 167, ../styles/components/_typography.sass */
 .typography P {
   margin-bottom: 25px;
   font: 15px/2 "MuseoSansCyrl", sans-serif;
   color: #333333;
 }
-/* line 166, ../styles/components/_typography.sass */
+/* line 172, ../styles/components/_typography.sass */
 .typography P.small-lh {
   line-height: 1.4;
 }
 
-/* line 169, ../styles/components/_typography.sass */
+/* line 175, ../styles/components/_typography.sass */
 .quote {
   padding: 20px 70px 20px 95px;
   position: relative;
   margin-bottom: 60px;
 }
 @media screen and (max-width: 860px) {
-  /* line 169, ../styles/components/_typography.sass */
+  /* line 175, ../styles/components/_typography.sass */
   .quote {
     padding: 20px 50px 20px 70px;
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 169, ../styles/components/_typography.sass */
+  /* line 175, ../styles/components/_typography.sass */
   .quote {
     padding: 20px 20px 20px 40px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 169, ../styles/components/_typography.sass */
+  /* line 175, ../styles/components/_typography.sass */
   .quote {
     padding: 0;
   }
 }
-/* line 183, ../styles/components/_typography.sass */
+/* line 189, ../styles/components/_typography.sass */
 .quote P {
   color: #000;
 }
-/* line 186, ../styles/components/_typography.sass */
+/* line 192, ../styles/components/_typography.sass */
 .quote P:last-child {
   margin-bottom: 0;
 }
-/* line 189, ../styles/components/_typography.sass */
+/* line 195, ../styles/components/_typography.sass */
 .quote:before {
   content: "";
   position: absolute;
@@ -1012,55 +1020,55 @@ h1, h2, h3, h4, h5, h6 {
   background: #eeeeee;
 }
 @media screen and (max-width: 630px) {
-  /* line 189, ../styles/components/_typography.sass */
+  /* line 195, ../styles/components/_typography.sass */
   .quote:before {
     left: 10px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 189, ../styles/components/_typography.sass */
+  /* line 195, ../styles/components/_typography.sass */
   .quote:before {
     display: none;
   }
 }
 
-/* line 207, ../styles/components/_typography.sass */
+/* line 213, ../styles/components/_typography.sass */
 .list-circle-green LI {
-  padding-left: 20px;
+  padding-left: 20px !important;
   position: relative;
 }
-/* line 211, ../styles/components/_typography.sass */
+/* line 217, ../styles/components/_typography.sass */
 .list-circle-green LI:before {
   content: "";
   position: absolute;
   left: 0;
   top: 12px;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #62be1f;
 }
 
-/* line 221, ../styles/components/_typography.sass */
+/* line 227, ../styles/components/_typography.sass */
 .table-default-wr {
   margin-bottom: 40px;
   overflow-x: auto;
 }
 
-/* line 225, ../styles/components/_typography.sass */
+/* line 231, ../styles/components/_typography.sass */
 .table-default {
   text-align: left;
 }
-/* line 228, ../styles/components/_typography.sass */
+/* line 234, ../styles/components/_typography.sass */
 .table-default--fix {
   min-width: 500px;
 }
-/* line 233, ../styles/components/_typography.sass */
+/* line 239, ../styles/components/_typography.sass */
 .table-default TR:last-child TH,
 .table-default TR:last-child TD {
   border-bottom: 0;
 }
-/* line 237, ../styles/components/_typography.sass */
+/* line 243, ../styles/components/_typography.sass */
 .table-default TR TH,
 .table-default TR TD {
   border-bottom: 1px solid #eaeaea;
@@ -1068,7 +1076,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   vertical-align: top;
 }
-/* line 244, ../styles/components/_typography.sass */
+/* line 250, ../styles/components/_typography.sass */
 .table-default TR TH:first-child,
 .table-default TR TD:first-child {
   padding-left: 0;

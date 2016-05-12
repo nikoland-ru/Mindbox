@@ -127,6 +127,9 @@ h1,h2,h3,h4,h5,h6
     OL
         counter-reset: li
 
+        &.start2
+            counter-reset: li 1
+
         OL
             LI:first-child
                 margin-top: 25px
@@ -134,6 +137,9 @@ h1,h2,h3,h4,h5,h6
         LI
             position: relative
             padding-left: 50px
+
+            .table-default-wr
+                margin-bottom: 0
 
             &.text-bold
                 font-weight: 700
@@ -205,7 +211,7 @@ h1,h2,h3,h4,h5,h6
 .list-circle-green
 
     LI
-        padding-left: 20px
+        padding-left: 20px!important
         position: relative
 
         &:before
@@ -213,8 +219,8 @@ h1,h2,h3,h4,h5,h6
             position: absolute
             left: 0
             top: 12px
-            width: 9px
-            height: 9px
+            width: 8px
+            height: 8px
             border-radius: 50%
             background-color: $cPrimary
 
