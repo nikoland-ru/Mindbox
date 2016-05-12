@@ -168,7 +168,7 @@ $slider-arr-size: 90px
             transition-delay: $delay //1.5s
 
         .slider-arr
-            transform: translateX(0)
+            transform: translateX(0) //translateY(-50%)
 
 =slider-anim-mixin
     .slider-arr, .slick-dots
@@ -210,7 +210,7 @@ $slider-arr-size: 90px
         max-height: none
 
     .slider-arr
-        top: 10px
+        //top: 10px
         margin-top: 0
         +screen($screenM + 1px, $screenLS)
             display: block !important

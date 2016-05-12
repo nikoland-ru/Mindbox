@@ -28,98 +28,116 @@
 @function iconic-char($filename) {
     $char: "";
 
-    @if $filename == arr-b {
+    @if $filename == abc {
     $char: "\E001";
 }
-    @if $filename == arr-l {
+    @if $filename == arr-b {
     $char: "\E002";
 }
-    @if $filename == arr-r {
+    @if $filename == arr-l {
     $char: "\E003";
 }
-    @if $filename == arr-е {
+    @if $filename == arr-r {
     $char: "\E004";
 }
-    @if $filename == board {
+    @if $filename == arr-е {
     $char: "\E005";
 }
-    @if $filename == broom {
+    @if $filename == board {
     $char: "\E006";
 }
-    @if $filename == bulb {
+    @if $filename == broom {
     $char: "\E007";
 }
-    @if $filename == card-stats {
+    @if $filename == bulb {
     $char: "\E008";
 }
-    @if $filename == cross {
+    @if $filename == card-stats {
     $char: "\E009";
 }
-    @if $filename == cross2 {
+    @if $filename == cross {
     $char: "\E00A";
 }
-    @if $filename == cup {
+    @if $filename == cross2 {
     $char: "\E00B";
 }
-    @if $filename == email-like {
+    @if $filename == cup {
     $char: "\E00C";
 }
-    @if $filename == fb-round {
+    @if $filename == email-like {
     $char: "\E00D";
 }
-    @if $filename == graphs {
+    @if $filename == fb-round {
     $char: "\E00E";
 }
-    @if $filename == habr {
+    @if $filename == funnel {
     $char: "\E00F";
 }
-    @if $filename == molecula {
+    @if $filename == geolocation {
     $char: "\E010";
 }
-    @if $filename == mouse {
+    @if $filename == graphs {
     $char: "\E011";
 }
-    @if $filename == pdf {
+    @if $filename == habr {
     $char: "\E012";
 }
-    @if $filename == play {
+    @if $filename == like-ico {
     $char: "\E013";
 }
-    @if $filename == plus-round {
+    @if $filename == marker {
     $char: "\E014";
 }
-    @if $filename == ppl-cards {
+    @if $filename == molecula {
     $char: "\E015";
 }
-    @if $filename == ppl {
+    @if $filename == mouse {
     $char: "\E016";
 }
-    @if $filename == rub-b {
+    @if $filename == pdf {
     $char: "\E017";
 }
-    @if $filename == rub {
+    @if $filename == play {
     $char: "\E018";
 }
-    @if $filename == rupor {
+    @if $filename == plus-round {
     $char: "\E019";
 }
-    @if $filename == sandglass {
+    @if $filename == ppl-cards {
     $char: "\E01A";
 }
-    @if $filename == site {
+    @if $filename == ppl {
     $char: "\E01B";
 }
-    @if $filename == slider-arr-l {
+    @if $filename == rub-b {
     $char: "\E01C";
 }
-    @if $filename == slider-arr-r {
+    @if $filename == rub {
     $char: "\E01D";
 }
-    @if $filename == smile-boy {
+    @if $filename == rupor {
     $char: "\E01E";
 }
-    @if $filename == tick {
+    @if $filename == sandglass {
     $char: "\E01F";
+}
+    @if $filename == scripts {
+    $char: "\E020";
+}
+    @if $filename == site {
+    $char: "\E021";
+}
+    @if $filename == slider-arr-l {
+    $char: "\E022";
+}
+    @if $filename == slider-arr-r {
+    $char: "\E023";
+}
+    @if $filename == smile-boy {
+    $char: "\E024";
+}
+    @if $filename == tick {
+    $char: "\E025";
 }
 
 @return $char;
@@ -132,6 +150,9 @@
 }
 }
 
+.iconic--abc {
+    @include iconic(abc);
+}
 .iconic--arr-b {
     @include iconic(arr-b);
 }
@@ -171,11 +192,23 @@
 .iconic--fb-round {
     @include iconic(fb-round);
 }
+.iconic--funnel {
+    @include iconic(funnel);
+}
+.iconic--geolocation {
+    @include iconic(geolocation);
+}
 .iconic--graphs {
     @include iconic(graphs);
 }
 .iconic--habr {
     @include iconic(habr);
+}
+.iconic--like-ico {
+    @include iconic(like-ico);
+}
+.iconic--marker {
+    @include iconic(marker);
 }
 .iconic--molecula {
     @include iconic(molecula);
@@ -209,6 +242,9 @@
 }
 .iconic--sandglass {
     @include iconic(sandglass);
+}
+.iconic--scripts {
+    @include iconic(scripts);
 }
 .iconic--site {
     @include iconic(site);

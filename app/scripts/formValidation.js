@@ -44,30 +44,46 @@ jQuery.validator.addClassRules('js_field_digits', {
                 $formAllMsg = $form.find('.js-form__all-msg'),
                 formAction = $form.attr('action'),
                 dataValidCase = $form.data('validation-case'),
-                options = {
-                    errorClass: "input-error",
-                    validClass: "input-success",
-                    focusCleanup: false,
-                    focusInvalid: false,
-                    errorElement: 'span',
-                    ignore: '.ignore',
-                    submitHandler: function(){
-                        $.ajax({
-                            type: 'POST',
-                            url: formAction,
-                            data: $form.serialize(),
-                            success: function (data) {
-                                var parsedData = JSON.parse(data),
-                                    dataError = parsedData.error;
+                options;
 
-                                if(dataError){
-                                    $formAllMsg.html(parsedData.message);
-                                }
+            //todo progress
+
+            options = {
+                errorClass: "input-error",
+                validClass: "input-success",
+                focusCleanup: false,
+                focusInvalid: false,
+                errorElement: 'span',
+                ignore: '.ignore',
+                submitHandler: function(){
+
+
+                    $.ajax({
+                        type: 'POST',
+                        url: formAction,
+                        data: $form.serialize(),
+                        success: function (data) {
+                            var parsedData = JSON.parse(data),
+                                dataError = parsedData.error,
+                                dataMsg = parsedData.message;
+
+                            if(dataMsg){
+                                $formAllMsg.html(dataMsg);
+                            }else{
+                                $formAllMsg.html('');
                             }
-                        })
 
-                    }
-                };
+                            if(dataError){
+                                $formAllMsg.addClass('_error');
+                            }else{
+                                $formAllMsg.removeClass('_error');
+                                $form[0].reset();
+                            }
+                        }
+                    })
+
+                }
+            };
 
 
             $form.validate(options);

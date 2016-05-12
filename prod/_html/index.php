@@ -49,17 +49,18 @@ include 'base/head.php';?>
             <section id="examples" class="examples-wr js-anim-elem">
                 <div class="wrapper">
 
-                    <div class="examples-wr__title-gr">
-                        <h3 class="h1-l">
-                            Например,
-                        </h3>
-                        <p class="examples-wr__after-title">
-                            Персонализируйте и сегментируйте
-                        </p>
-                    </div>
-
                     <div class="examples-slider reg-slider reg-slider--anim examples js-examples-sl">
                         <div>
+
+                            <div class="examples-wr__title-gr">
+                                <h3 class="h1-l">
+                                    Например,
+                                </h3>
+                                <p class="examples-wr__after-title">
+                                    Персонализируйте и сегментируйте
+                                </p>
+                            </div>
+
                             <div class="examples__group">
                                 <div class="examples__li">
 
@@ -102,8 +103,8 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr">
-                                        <div class="ico-w-circle ico-w-circle--yel ico-w-circle--b">
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull2">
+                                        <div class="ico-w-circle ico-w-circle--yel ico-w-circle--b ">
                                             <span class="iconic iconic--ppl-cards"></span>
                                         </div>
                                     </div>
@@ -143,23 +144,32 @@ include 'base/head.php';?>
                         </div>
 
                         <div>
+
+                            <div class="examples-wr__title-gr">
+                                <h3 class="h1-l">
+                                    Например,
+                                </h3>
+                                <p class="examples-wr__after-title">
+                                    Интугрируйте все инструменты
+                                </p>
+                            </div>
+
                             <div class="examples__group">
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr">
-                                        <div class="ico-w-circle ico-w-circle--green ico-w-circle--r-b">
-                                            <span class="iconic iconic--email-like"></span>
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull2">
+                                        <div class="ico-w-circle ico-w-circle--orng2 ico-w-circle--like ">
+                                            <span class="iconic iconic--like-ico"></span>
                                         </div>
                                     </div>
 
                                     <div class="examples__li-txt-wr">
 
                                         <p class="examples__li-title">
-                                            Рассылки
+                                            Товарные <br>рекомендации
                                         </p>
                                         <p class="examples__li-txt">
-                                            e-mail, sms и push,<br>
-                                            ручные, триггерные и <br>транзакционные
+                                            из рекомендательных<br> платформ
                                         </p>
                                     </div>
                                 </div>
@@ -167,57 +177,107 @@ include 'base/head.php';?>
                                 <div class="examples__li">
 
                                     <div class="examples__li-ico-wr">
-                                        <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--l-t">
-                                            <span class="iconic iconic--site"></span>
+                                        <div class="ico-w-circle ico-w-circle--green4 ico-w-circle--b">
+                                            <span class="iconic iconic--marker"></span>
                                         </div>
                                     </div>
 
                                     <div class="examples__li-txt-wr">
 
                                         <p class="examples__li-title">
-                                            Свой сайт
+                                            Данные по цене <br>товара у конкурентов
                                         </p>
                                         <p class="examples__li-txt">
-                                            поп-апы, рекомендации,<br> баннеры, товарную <br>выдачу и контент
+                                            из сравнительных<br> сервисов
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr">
-                                        <div class="ico-w-circle ico-w-circle--yel ico-w-circle--b">
-                                            <span class="iconic iconic--ppl-cards"></span>
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull3">
+                                        <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--r">
+                                            <span class="iconic iconic--geolocation"></span>
                                         </div>
                                     </div>
 
                                     <div class="examples__li-txt-wr">
 
                                         <p class="examples__li-title">
-                                            Программу лояльности
+                                            Источник звонка
                                         </p>
                                         <p class="examples__li-txt">
-                                            процессинг скидок и <br>баллов, акции и промокоды
+                                            из коллтрекинговых <br>систем
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <div class="examples-wr__title-gr">
+                                <h3 class="h1-l">
+                                    Например,
+                                </h3>
+                                <p class="examples-wr__after-title">
+                                    Оценивайте эффект
+                                </p>
+                            </div>
+
+                            <div class="examples__group">
+
+                                <div class="examples__li">
+
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull">
+                                        <div class="ico-w-circle ico-w-circle--green ico-w-circle--b2">
+                                            <span class="iconic iconic--funnel"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="examples__li-txt-wr">
+
+                                        <p class="examples__li-title">
+                                            Воронка продаж
+                                        </p>
+                                        <p class="examples__li-txt">
+                                            по каналам и отдельным<br> кампаниям, когорты
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr">
-                                        <div class="ico-w-circle ico-w-circle--blueL ico-w-circle--r-t">
-                                            <span class="iconic iconic--graphs"></span>
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull3">
+                                        <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--abc">
+                                            <span class="iconic iconic--abc"></span>
                                         </div>
                                     </div>
 
                                     <div class="examples__li-txt-wr">
 
                                         <p class="examples__li-title">
-                                            Другие каналы:
+                                            А/Б тесты
                                         </p>
                                         <p class="examples__li-txt">
-                                            колл-центр, мобильные <br>
-                                            приложения, offline точки, чеки
+                                            и контрольные группы <br>на конверсию до<br> выручки
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="examples__li">
+
+                                    <div class="examples__li-ico-wr  examples__li-ico-wr--pull4">
+                                        <div class="ico-w-circle ico-w-circle--yel ico-w-circle--scripts">
+                                            <span class="iconic iconic--scripts"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="examples__li-txt-wr">
+
+                                        <p class="examples__li-title">
+                                            Программируемая <br>аттрибуция
                                         </p>
                                     </div>
                                 </div>

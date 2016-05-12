@@ -1,11 +1,218 @@
 @import lib/__lib
 @import fonts
 @import helpers/__helpers
-@import __base
+//@import __base
 
 
 @import components/__components
 
 
-@import layout/__layout
+@import layout/_header
+@import layout/_footer
 @import blocks/_popups
+
+*
+    outline: none
+
+BUTTON
+    border: 0
+
+BODY
+    padding-top: $header-h
+
+    +max-screen($screenMS)
+        padding-top: $header-h_md
+
+    +max-screen($screenS)
+        padding-top: $header-h_sm
+
+
+    &._side-popup-open
+        overflow: hidden
+
+    &._side-popup-moved-page
+        +min-screen($screenMS)
+            .contacts__map
+                transform: translateX(-20%) scale(.7)
+
+    &._page-inner-moved
+        .page-inner
+            transition: transform $t600
+
+        .page-inner__overlay
+            display: none
+
+        +min-screen($screenMS)
+            .header
+                opacity: 0
+
+.fake-anchor
+    position: absolute
+    top: -$header-h
+    left: 0
+    //display: none
+    +max-screen($screenMS)
+        top: -$header-h_md
+    +max-screen($screenS)
+        top: -$header-h_sm
+
+
+
+// ----------------------------------------------------------------------
+// general
+// ----------------------------------------------------------------------
+
+.header
+    z-index: 999
+
+.footer
+    li
+        display: block
+
+    &__copyright-title
+        margin-top: 0
+
+.pagination
+    margin: 35px 0 0 !important
+
+
+.page-container
+    padding-top: 50px !important
+    padding-bottom: 60px !important //35px
+
+    .page-sidebar
+        padding-left: 0
+
+//body.home.page-layout-standard, body.single.post-basic-layout
+
+
+.body.single .page-container, body.page .page-container
+    //padding-top: 130px !important
+
+
+// ----------------------------------------------------------------------
+// post
+// ----------------------------------------------------------------------
+
+.page-contents.post-list-standard .post
+    margin-bottom: 40px
+
+    .post-info
+        padding: 3% 6.5% 2.5%
+        margin-top: 0 !important
+
+    .post-meta
+        margin-top: 30px
+
+    .post-contents
+        margin-bottom: 30px
+
+    .post-title
+        margin-top: 0 !important
+
+    .post-date
+        margin-top: 10px //52px
+
+    &.post-format-standard-full-image
+        padding-top: 32%
+        background-color: #000
+
+        .post-background
+            height: 55%
+            opacity: 1 !important
+
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                background-color: rgba(0,0,0,0.75)
+
+
+.page-contents.post-list-standard .format-standard.has-post-thumbnail .post-info
+    //margin-top: -4%
+
+.page-contents.post-list-standard .post.post-format-standard-full-image
+    padding-top: 0%
+
+    .post-info
+        padding: 5% 6.5%
+
+    .post-info
+        margin-top: 0
+
+    .post-background
+        height: 100%
+
+
+.post-date
+    hr
+        margin: 30px 0 0
+        & + *
+            margin-top: 30px
+
+    .post-date-category
+        top: 37%
+        width: 8px !important
+        right: -20% !important
+
+.post-header-image
+    height: 400px
+    position: relative
+    overflow: hidden
+    margin-bottom: 15px
+
+    IMG
+        position: absolute
+
+        left: 0
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)
+
+
+.post-contents, .postcontents
+    p,ul,ol
+        color: #333
+        margin: 20px 0
+
+
+.post-body
+    padding: 40px 40px
+    margin-bottom: 40px
+
+    .post-title
+        margin-top: 0 //25px
+
+    .post-info
+        padding-bottom: 30px
+        &:after
+            margin-top: 40px
+
+    +max-screen($screenXS)
+        padding-left: $wrapperSS-padd
+        padding-right: $wrapperSS-padd
+
+.post-footer
+    .post-share
+        margin: 15px 0 0
+
+.comments-nocomments
+    +max-screen($screenXS)
+        padding-left: $wrapperSS-padd
+        padding-right: $wrapperSS-padd
+
+// ----------------------------------------------------------------------
+// widget
+// ----------------------------------------------------------------------
+
+.widget.relatedposts,
+.widget.randomposts
+    article
+        padding-bottom: 30px
+
+        &:after
+            //margin-top:  25px
+            display: none

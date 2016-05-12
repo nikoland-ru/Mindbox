@@ -15,7 +15,7 @@ $(function () {
 
     var $popups = $('.js-side-popup'),
         $closers = $('.js-side-popup_closer'),
-        $offsetElems = $('.page-inner,.js-header'),
+        $offsetElems = $('.page-inner,.js-header, .page-container, header.cover'),
         $pageInner = $('.page-inner');
 
     function closePopup(pPopup) {
@@ -28,7 +28,6 @@ $(function () {
         });
         $pageInner.one('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd',function(){
             $B.removeClass('_page-inner-moved');
-            console.log('done')
         })
     }
 

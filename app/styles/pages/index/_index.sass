@@ -270,7 +270,9 @@
         padding: 0 35px
         margin: 12px 0
         text-align: left
-        flex-grow: 1
+        flex-grow: 0
+        max-width: 27%
+        min-width: 20%
 
     &__li-ico-wr
         height: 70px
@@ -279,6 +281,18 @@
 
         .iconic, img
             vertical-align: middle
+
+        &--pull
+            margin-left: 20px
+
+        &--pull2
+            margin-left: 32px
+
+        &--pull3
+            margin-left: 26px
+
+        &--pull4
+            margin-left: 12px
 
     &__li-txt-wr
 
@@ -290,11 +304,7 @@
 
     &__li-txt
 
-    .ico-w-circle--l-t
-        margin-left: 20px
 
-    .ico-w-circle--b
-        margin-left: 32px
 
     +max-screen($screenMM)
         &__group
@@ -318,6 +328,7 @@
             flex-wrap: wrap
             margin-left: 35px
             margin-right: 0
+            justify-content: flex-start
 
         &__li
             max-width: 50%
