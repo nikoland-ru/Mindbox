@@ -40,6 +40,13 @@ h1,h2,h3,h4,h5,h6
     +max-screen($screenSL)
         font-size: 25px
 
+.h2
+    font-size: 30px
+    line-height: 30px
+    font-weight: normal
+    margin-bottom: 20px
+    +max-screen($screenSL)
+        font-size: 25px
 
 
 .h2-wide
@@ -57,6 +64,12 @@ h1,h2,h3,h4,h5,h6
 .h4
     font-size: 20px
     line-height: 20px
+    margin-bottom: 15px
+
+.h4-l
+    font-size: 20px
+    line-height: 20px
+    font-weight: normal
     margin-bottom: 15px
 
 .h5
@@ -120,6 +133,9 @@ h1,h2,h3,h4,h5,h6
     OL
         counter-reset: li
 
+        &.start2
+            counter-reset: li 1
+
         OL
             LI:first-child
                 margin-top: 25px
@@ -127,6 +143,9 @@ h1,h2,h3,h4,h5,h6
         LI
             position: relative
             padding-left: 50px
+
+            .table-default-wr
+                margin-bottom: 0
 
             &.text-bold
                 font-weight: 700
@@ -158,6 +177,9 @@ h1,h2,h3,h4,h5,h6
 
         &.small-lh
             line-height: 1.4
+
+        &.text-mrgb15
+            margin-bottom: 15px
 
 .quote
     padding: 20px 70px 20px 95px
@@ -193,3 +215,67 @@ h1,h2,h3,h4,h5,h6
 
         +max-screen($screenXS)
             display: none
+
+
+.list-circle-green
+
+    LI
+        padding-left: 20px!important
+        position: relative
+
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 12px
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background-color: $cPrimary
+
+.table-default-wr
+    margin-bottom: 40px
+    overflow-x: auto
+
+.table-default
+    text-align: left
+
+    &--fix
+        min-width: 500px
+
+    TR
+        &:last-child
+            TH,
+            TD
+                border-bottom: 0
+
+        TH,
+        TD
+            border-bottom: 1px solid #eaeaea
+            padding: 14px 10px
+            font-size: 16px
+            vertical-align: top
+
+            &:first-child
+                padding-left: 0
+
+.requisite-list
+    margin: 30px 0
+
+    &__row
+        font-size: 18px
+        margin: 15px 0
+        &:after
+            content: ""
+            display: table
+            clear: both
+
+    &__dt
+        float: left
+        width: 100px
+
+    &__dd
+        margin-left: 120px
+
+ADDRESS
+    font-style: normal
