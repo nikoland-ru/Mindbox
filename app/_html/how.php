@@ -99,37 +99,64 @@ include 'base/head.php';?>
                             Наведем порядок с ручными рассылками и базами контактов
                         </p>
 
-                        <p class="plan-week__desc">
-                            Загрузим, почистим и объединим контакты из всех баз данных: из интернет-магазина, оффлайн БД
-                            и других инструментов.
-                        </p>
                     </div>
 
                     <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Загрузим, почистим и объединим контакты из всех баз данных: из интернет-магазина, оффлайн БД
+                                        и других инструментов.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/demo-customize1.jpg" alt="">
+                                        <a href="../images/userfiles/demo-customize1.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Настроим сбор новых контактов в реальном времени через JS и REST API.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/demo-customize2.jpg" alt="">
+                                        <a href="../images/userfiles/demo-customize2.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Наладим централизованную точку отписки и подписки.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/demo-customize3.jpg" alt="">
+                                        <a href="../images/userfiles/demo-customize3.jpg"
+                                           class="gall-link js-gall"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plan-week-sl__slide">
+                                <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Перенесем SMS-, e-mail-, push-рассылки, которые делаются «вручную» в платформу.
+                                    </p>
+
+                                    <div class="demo-img demo-img--sm">
+                                        <img src="../images/userfiles/demo-customize4.jpg" alt="">
+                                        <a href="../images/userfiles/demo-customize4.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
@@ -163,7 +190,7 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             HOFF
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted">
+                                        <a href="//www.slideshare.net/slideshow/embed_code/key/4cIWBR2Y1JxJJC" class="link link--green link--dotted js-video-popup">
                                             Посмотреть кейс
                                         </a>
                                     </div>
@@ -186,36 +213,63 @@ include 'base/head.php';?>
                             Запустим автоматизированные рассылки
                         </p>
 
-                        <p class="plan-week__desc">
-                            Загрузим заказы и товарную номенклатуру.
-                        </p>
                     </div>
 
                     <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Загрузим заказы и товарную номенклатуру.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-auto1.jpg" alt="">
+                                        <a href="../images/userfiles/plan-auto1.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Интегрируемся через JS и REST API, импорт YML или другим способом.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-auto2.jpg" alt="">
+                                        <a href="../images/userfiles/plan-auto2.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Запустим цепочки триггеров, объединяющие e-mail, SMS, push'и ретаргетинг.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-auto3.jpg" alt="">
+                                        <a href="../images/userfiles/plan-auto3.jpg"
+                                           class="gall-link js-gall"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plan-week-sl__slide">
+                                <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Настроим А/Б тесты и контрольные группы.
+                                    </p>
+
+                                    <div class="demo-img demo-img--sm">
+                                        <img src="../images/userfiles/plan-auto4.jpg" alt="">
+                                        <a href="../images/userfiles/plan-auto4.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
@@ -249,7 +303,7 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Danone
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted">
+                                        <a href="#!" class="link link--green link--dotted js-video-popup">
                                             Посмотреть кейс
                                         </a>
                                     </div>
@@ -273,40 +327,39 @@ include 'base/head.php';?>
                             Персонализируем сайт и другие точки контакта
                         </p>
 
-                        <p class="plan-week__desc">
-                            Настроенные сегменты и другие данные покупателя доступны для персонализации сайта через JS и REST API в реальном времени.
-                        </p>
                     </div>
 
                     <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Настроенные сегменты и другие данные покупателя доступны для персонализации сайта через JS и REST API в реальном времени.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-person1.jpg" alt="">
+                                        <a href="../images/userfiles/plan-person1.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Возможность подключения касс, оффлайн и онлайн планшетов и мобильных приложений для вывода персональных предложений и сообщений покупателю.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-person2.jpg" alt="">
+                                        <a href="../images/userfiles/plan-person2.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="plan-week-sl__slide">
-                                <div class="plan-week-sl__slide-inner">
-                                    <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
-                                           class="gall-link js-gall"></a>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -336,7 +389,7 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Простоквашино
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted">
+                                        <a href="#!" class="link link--green link--dotted js-video-popup">
                                             Посмотреть кейс
                                         </a>
                                     </div>
@@ -360,37 +413,63 @@ include 'base/head.php';?>
                             Построим прибыльную программу лояльности
                         </p>
 
-                        <p class="plan-week__desc">
-                            Сквозное узнавание покупателя<br>
-                            во всех каналах (SSO).
-                        </p>
                     </div>
 
                     <div class="wrapper plan-week-sl js-anim-elem">
                         <div class="plan-week-sl__slider js-plan-week-sl">
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Сквозное узнавание покупателя во всех каналах (SSO).
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-loyal1.jpg" alt="">
+                                        <a href="../images/userfiles/plan-loyal1.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Авторизация на кассах картой или по мобильному телефону.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-loyal2.jpg" alt="">
+                                        <a href="../images/userfiles/plan-loyal2.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="plan-week-sl__slide">
                                 <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Кроссканальная бонусная или скидочная механика.
+                                    </p>
+
                                     <div class="demo-img demo-img--sm">
-                                        <img src="../images/userfiles/demo-customize.jpg" alt="">
-                                        <a href="../images/userfiles/demo-customize.jpg"
+                                        <img src="../images/userfiles/plan-loyal3.jpg" alt="">
+                                        <a href="../images/userfiles/plan-loyal3.jpg"
+                                           class="gall-link js-gall"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plan-week-sl__slide">
+                                <div class="plan-week-sl__slide-inner">
+
+                                    <p class="plan-week-sl__desc js-plan-week-sl_txt">
+                                        Измеримые персональные предложения и акции.
+                                    </p>
+
+                                    <div class="demo-img demo-img--sm">
+                                        <img src="../images/userfiles/plan-loyal4.jpg" alt="">
+                                        <a href="../images/userfiles/plan-loyal4.jpg"
                                            class="gall-link js-gall"></a>
                                     </div>
                                 </div>
@@ -425,7 +504,7 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Black Star
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted">
+                                        <a href="#!" class="link link--green link--dotted js-video-popup">
                                             Посмотреть кейс
                                         </a>
                                     </div>

@@ -24,17 +24,39 @@ $(function () {
         $.fn.casesSl = function (settings) {
             $(this).each(function () {
                 var $slider = $(this),
-                    $slides = $slider.find('.cases-slider__col'),
+                    $slides = $slider.find('.js-cases-sl__slide'),
                     widthsLg = [0.2, 0.4],
                     widthsMd = [0.25, 0.5],
-                    widthsSm = [0.5, 1],//[0.333, 0.666],
-                    widthsSs = [0.5, 1];
+                    widthsSm = [0.5, 1], //[0.333, 0.666],
+                    widthsSs = [0.5, 1],
+                    slideAnim = 500;
 
-                function setSlidesH() {
-                    var fHighest = 0,
+                function setSlidesH(pCurrentNumb, pMax) {
+                    var currentSlNumb = pCurrentNumb || 0,
+                        maxSlides = pMax || 5,
+                        $targetSlides = [],
+                        fHighest = 0,
                         lHighest = 0;
 
-                    $slides.each(function () {
+                    if (currentSlNumb == $slides.length - 1) {
+                        currentSlNumb = currentSlNumb - 1
+                    }
+
+                    if ($slider.hasClass('slick-initialized')) {
+                        for (var i = 0; i < maxSlides; currentSlNumb++, i++) {
+                            $targetSlides.push(
+                                $slides.filter('[data-slick-index="' + currentSlNumb + '"]')
+                            );
+                        }
+                    } else {
+                        for (var i = 0; i < maxSlides; currentSlNumb++, i++) {
+                            $targetSlides.push(
+                                $slides.eq(currentSlNumb)
+                            );
+                        }
+                    }
+
+                    $.each($targetSlides, function () {
                         var $this = $(this),
                             $cases = $this.find('.js-cases-sl__col'),
                             fCase = $cases.first(),
@@ -54,10 +76,9 @@ $(function () {
                             }
                         }
 
-
                     });
 
-                    $slides.each(function () {
+                    $.each($targetSlides, function () {
                         var $this = $(this),
                             $cases = $this.find('.js-cases-sl__col'),
                             fCase = $cases.first(),
@@ -71,6 +92,9 @@ $(function () {
                         }
 
                     });
+
+                    $slider.find('.slick-list').animate({'height': fHighest + lHighest}, slideAnim)
+
                 }
 
                 function setSlidesW() {
@@ -111,13 +135,15 @@ $(function () {
                     setSlidesH();
                 });
 
+
                 $slider.slick({
                     adaptiveHeight: true,
                     slidesToShow: 5,
-                    slidesToScroll: 2,
+                    slidesToScroll: 5,
                     arrows: true,
                     dots: true,
                     swipe: false,
+                    speed: slideAnim,
                     nextArrow: _GLOB.slickNextArrHtml,
                     prevArrow: _GLOB.slickPrevArrHtml,
                     responsive: [
@@ -125,27 +151,34 @@ $(function () {
                             breakpoint: _GLOB.breakpoints.ms,
                             settings: {
                                 slidesToShow: 4,
+                                slidesToScroll: 4
                             }
                         },
                         {
                             breakpoint: _GLOB.breakpoints.sm,
                             settings: {
                                 slidesToShow: 2,
+                                slidesToScroll: 2,
                                 swipe: true
                             }
                         }, {
                             breakpoint: _GLOB.breakpoints.ss,
                             settings: {
                                 slidesToShow: 2,
+                                slidesToScroll: 2,
                                 swipe: true
                             }
-                        },
+                        }
                     ]
-                })
+                });
+
+                $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    setSlidesH(nextSlide, slick.options.slidesToScroll);
+                    console.log(nextSlide, slick.options.slidesToScroll);
+                });
 
 
             })
-
         };
     })(jQuery);
 });
@@ -188,7 +221,15 @@ $(function () {
             $(this).each(function () {
                 var $slider = $(this);
 
+
+                $slider.on('init', function (slick) {
+                    var $thisSl = $slider.find('[data-slick-index="0"]'),
+                        descH = $thisSl.find('.js-plan-week-sl_txt').outerHeight();
+                    $slider.find('.slick-dots').css('top', descH || 0)
+                })
+
                 $slider.slick({
+                    adaptiveHeight: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
@@ -206,6 +247,12 @@ $(function () {
                         },
 
                     ]
+                });
+
+                $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    var $thisSl = $slider.find('[data-slick-index="' + nextSlide + '"]'),
+                        descH = $thisSl.find('.js-plan-week-sl_txt').outerHeight();
+                    $slider.find('.slick-dots').css('top', descH || 0)
                 })
 
             })
@@ -254,9 +301,9 @@ $(function () {
                     ]
                 });
 
-                $slider.on('beforeChange', function (event, slick, numb,nextSlide) {
-                    var stepPercent = 100 / $slides.length ,
-                        position = (stepPercent/4) * nextSlide + '% 50%';
+                $slider.on('beforeChange', function (event, slick, numb, nextSlide) {
+                    var stepPercent = 100 / $slides.length,
+                        position = (stepPercent / 4) * nextSlide + '% 50%';
                     $parent.css('background-position', position)
                 })
 

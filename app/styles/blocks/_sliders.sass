@@ -161,20 +161,28 @@ $slider-arr-size: 90px
 
 =slider-anim-end-mixin($delay: 1.5s)
     //&._animEnd,
+
     &._anim-fired
 
         .slider-arr, .slick-dots
             opacity: 1
-            transition-delay: $delay //1.5s
+            transition-delay: $delay //, all 0.45s //1.5s
 
         .slider-arr
             transform: translateX(0) //translateY(-50%)
+
+    &._animENd
+
+        .slider-arr, .slick-dots
+            opacity: 1
+            transition-delay: initial
 
 =slider-anim-mixin
     .slider-arr, .slick-dots
         animation-delay: 2s
         opacity: 0
         transition: 0.45s
+        //transition: opacity 0.45s 1.5s, top 0.45s
 
         .slider-arr--l
             transform: translateX(-40px)
@@ -206,12 +214,16 @@ $slider-arr-size: 90px
 .examples-slider
 
     max-height: 300px
+
+    .slick-slide
+        padding-top: 2px
+
     &.slick-initialized
         max-height: none
 
     .slider-arr
         //top: 10px
-        margin-top: 0
+        //margin-top: 0
         +screen($screenM + 1px, $screenLS)
             display: block !important
 
@@ -236,7 +248,7 @@ $slider-arr-size: 90px
         max-height: none
 
     &__col
-        //width: 20%
+        width: 20%
         display: flex !important
         flex-wrap: wrap
         align-items: flex-start
@@ -338,11 +350,11 @@ $plan-sl-width: 810px
     animation-fill-mode: forwards
     +slick-dots
 
-    &__slider
-        padding-top: 40px
+    //&__slider
+    padding-top: 30px
 
     &__slide
-        padding: 20px 30px 0
+        padding: 0px 30px 0
 
     &__slide-inner
         max-width: $plan-sl-width
@@ -350,11 +362,21 @@ $plan-sl-width: 810px
         margin-left: auto
 
 
+    &__desc
+        font-size: 15px
+        margin: 0px auto 10px
+        max-width: 500px
+        animation-delay: 0.4s
+
+    .demo-img
+        margin-top: 50px
+
     .slick-dots
         position: absolute
-        top: 10px
+        top: 40px //10px
         bottom: auto
         padding: 0
+        margin-top: 8px
 
     .slider-arr
         margin-top: -28px

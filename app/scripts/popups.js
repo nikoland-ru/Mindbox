@@ -15,14 +15,18 @@ $(function () {
 
     var $popups = $('.js-side-popup'),
         $closers = $('.js-side-popup_closer'),
-        $offsetElems = $('.page-inner,.js-header, .page-container, header.cover'),
-        $pageInner = $('.page-inner');
+        $offsetElems = $('.page-inner,.js-header'),
+        $pageInner = $('.page-inner'),
+        isBlog =  $B.hasClass('blog') || $B.hasClass('single');
 
     function closePopup(pPopup) {
         pPopup.removeClass('_open');
         $B.removeClass('_side-popup-open _side-popup-moved-page');
         $offsetElems.css('margin-right', '');
         $('.header__nav').css('margin-right', '');
+        if(isBlog){
+            $B.css('margin-right', '');
+        }
         $pageInner.css({
             'transform': ''
         });
@@ -36,7 +40,6 @@ $(function () {
             pplTxt = $('.js-priceCalc_top-node').text(),
             costTxt = $('.js-priceCalc_input-counter-price').val(),
             $options = $('.js-priceCalc_chkb:checked');
-
 
         if (pplTxt) {
             html += '<p class="side-popup__inject-option"><b>Кол-во покупателей: </b>' + pplTxt + '</p>';
@@ -85,6 +88,9 @@ $(function () {
         if (!dataPageMove) {
             $B.addClass('_side-popup-open');
             $offsetElems.css('margin-right', $.scrollbarWidth());
+            if(isBlog){
+                $B.css('margin-right', $.scrollbarWidth());
+            }
 
             if ($W.width() <= _GLOB.breakpoints.ms) {
                 $('.header__nav').css('margin-right', $.scrollbarWidth());

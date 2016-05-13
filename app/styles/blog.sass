@@ -46,6 +46,10 @@ BODY
             .header
                 opacity: 0
 
+.h1,.h2,.h2-l,.h3,.h3-l,.h4,.h5,.h6
+    color: inherit
+    letter-spacing: 0px
+
 .fake-anchor
     position: absolute
     top: -$header-h
@@ -71,9 +75,24 @@ BODY
 
     &__copyright-title
         margin-top: 0
+        line-height: 20px
 
 .pagination
-    margin: 35px 0 0 !important
+    margin: 31px 0 0 !important
+    text-align: center
+
+.pagination-standard ul.page-numbers, .pagination-noresults ul.page-numbers
+    position: static
+    transform: none
+    @extend .cf
+
+    li
+        margin: 4px
+        float: none
+        display: inline-block
+        vertical-align: middle
+
+
 
 
 .page-container
@@ -83,11 +102,7 @@ BODY
     .page-sidebar
         padding-left: 0
 
-//body.home.page-layout-standard, body.single.post-basic-layout
 
-
-.body.single .page-container, body.page .page-container
-    //padding-top: 130px !important
 
 
 // ----------------------------------------------------------------------
@@ -100,6 +115,9 @@ BODY
     .post-info
         padding: 3% 6.5% 2.5%
         margin-top: 0 !important
+        +max-screen($screenS)
+            padding-top: 30px
+            padding-bottom: 20px
 
     .post-meta
         margin-top: 30px
@@ -131,9 +149,6 @@ BODY
                 background-color: rgba(0,0,0,0.75)
 
 
-.page-contents.post-list-standard .format-standard.has-post-thumbnail .post-info
-    //margin-top: -4%
-
 .page-contents.post-list-standard .post.post-format-standard-full-image
     padding-top: 0%
 
@@ -163,14 +178,18 @@ BODY
     position: relative
     overflow: hidden
     margin-bottom: 15px
+    +max-screen($screenSS)
+        height: 280px
 
     IMG
         position: absolute
-
-        left: 0
-        width: 100%
+        margin-top: 0
+        left: 50%
         top: 50%
-        transform: translateY(-50%)
+        width: auto
+        max-width: 250%
+        min-width: 100%
+        transform: translateY(-50%) translateX(-50%)
 
 
 .post-contents, .postcontents
