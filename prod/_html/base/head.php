@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="../styles/app.css">
 
-
+    <link rel="stylesheet" href="../styles/blog.css">
 
 
     <script src="../scripts/vendor/modernizr.js"></script>

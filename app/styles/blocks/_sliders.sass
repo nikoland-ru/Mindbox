@@ -171,7 +171,7 @@ $slider-arr-size: 90px
         .slider-arr
             transform: translateX(0) //translateY(-50%)
 
-    &._animENd
+    &._animEnd
 
         .slider-arr, .slick-dots
             opacity: 1
@@ -277,10 +277,13 @@ $slider-arr-size: 90px
         display: flex !important
 
         .notebook-wr
+            text-align: center
             //flex-shrink: 0
-            width: 650px
+            width: 400px //650px
             //50%
             //min-width: 550px
+            > IMG
+                display: inline-block
 
     &__slide-txt
         width: 50%
@@ -320,6 +323,8 @@ $slider-arr-size: 90px
                 width: auto
                 max-width: 700px
                 margin: 0 auto 45px
+                > IMG
+                    max-height: 200px
 
 
         &__slide-txt
@@ -329,6 +334,8 @@ $slider-arr-size: 90px
     +max-screen($screenSS)
         .notebook-wr
             margin-bottom: 20px
+            > IMG
+                max-height: 140px
 
         &__slide-txt
 

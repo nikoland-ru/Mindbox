@@ -314,35 +314,42 @@ $(function () {
 $(function () {
 
     (function ($) {
-        $.fn.regularSlider = function (settings) {
+        $.fn.regularSlider = function (pSettings) {
             $(this).each(function () {
-                var $slider = $(this);
+                var $slider = $(this),
+                    settings = {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: false,
+                        swipe: false,
+                        nextArrow: _GLOB.slickNextArrHtml,
+                        prevArrow: _GLOB.slickPrevArrHtml,
+                        responsive: [
 
-                $slider.slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true,
-                    dots: false,
-                    swipe: false,
-                    nextArrow: _GLOB.slickNextArrHtml,
-                    prevArrow: _GLOB.slickPrevArrHtml,
-                    responsive: [
+                            {
+                                breakpoint: _GLOB.breakpoints.ls,
+                                settings: {
+                                    dots: true,
+                                }
+                            }, {
+                                breakpoint: _GLOB.breakpoints.sm,
+                                settings: {
+                                    dots: true,
+                                    swipe: true
+                                }
+                            },
 
-                        {
-                            breakpoint: _GLOB.breakpoints.ls,
-                            settings: {
-                                dots: true,
-                            }
-                        }, {
-                            breakpoint: _GLOB.breakpoints.sm,
-                            settings: {
-                                dots: true,
-                                swipe: true
-                            }
-                        },
+                        ]
+                    };
 
-                    ]
-                })
+                if (pSettings) {
+                    for (var pOption in pSettings) {
+                        settings[pOption] = pSettings[pOption];
+                    }
+                }
+
+                $slider.slick(settings)
 
             })
         }
@@ -368,7 +375,9 @@ $(function () {
     var $prodSl = $('.js-prod-slider');
     if (!$prodSl.length) return;
 
-    $prodSl.regularSlider();
+    $prodSl.regularSlider({
+        adaptiveHeight: true
+    });
 });
 
 $(function () {

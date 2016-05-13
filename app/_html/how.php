@@ -303,7 +303,8 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Danone
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted js-video-popup">
+                                        <a href="../images/userfiles/case2.jpg" data-width="801" data-height="472"
+                                           class="link link--green link--dotted js-gall">
                                             Посмотреть кейс
                                         </a>
                                     </div>
@@ -389,7 +390,8 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Простоквашино
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted js-video-popup">
+                                        <a href="../images/userfiles/case4.jpg" data-width="801" data-height="446"
+                                           class="link link--green link--dotted js-gall">
                                             Посмотреть кейс
                                         </a>
                                     </div>
@@ -504,7 +506,8 @@ include 'base/head.php';?>
                                         <p class="plan-result__comp-name">
                                             Black Star
                                         </p>
-                                        <a href="#!" class="link link--green link--dotted js-video-popup">
+                                        <a href="../images/userfiles/case3.jpg" data-width="" data-height=""
+                                           class="link link--green link--dotted js-gall">
                                             Посмотреть кейс
                                         </a>
                                     </div>

@@ -15,6 +15,8 @@ $(function () {
         var $this = $(this),
             dataRel = $this.data('gall-gr'),
             dataHref = $this.attr('href') || $this.data('href'),
+            dataWidth = $this.data('width'),
+            dataHeight = $this.data('height'),
             $img = $this.find('img'),
             imgWidth,
             imgHeight;
@@ -39,8 +41,8 @@ $(function () {
 
         groupArray[dataRel].push({
             src: dataHref,
-            w: imgWidth || 600,
-            h: imgHeight || 400
+            w: dataWidth || imgWidth  || 600,
+            h: dataHeight || imgHeight || 400
         });
 
     });
