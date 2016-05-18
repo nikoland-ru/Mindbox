@@ -221,11 +221,13 @@
 <script src="../../bower_components/slick-carousel/slick/slick.min.js"></script>
 <script src="../../bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
 <script src="../../bower_components/nouislider/distribute/nouislider.js"></script>
-<script src="../../bower_components/photoswipe/dist/photoswipe.js"></script>
-<script src="../../bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
 <script src="../../bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
 <script src="../../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="../../bower_components/jQuery.TosRUs/src/js/jquery.tosrus.min.all.js"></script>
+<script src="../../bower_components/hammerjs/hammer.js"></script>
 <!-- endbower -->
+
+<script src="../../bower_components/jquery-validation/dist/additional-methods.js"></script>
 
 <script src="../scripts/plugins/TweenMax.min.js"></script>
 

@@ -178,6 +178,16 @@
     .wrapper
         max-width: 1070px
 
+    .slick-slide
+        opacity: 0
+
+    .slick-active
+        opacity: 1
+
+    &._animEnd
+        .slick-slide
+            opacity: 1
+
     &__title
         opacity: 0
         animation-fill-mode: forwards
@@ -200,9 +210,6 @@
         font-weight: 500
         display: table
         margin: 16px auto 28px
-        opacity: 0
-        animation-fill-mode: forwards
-        animation-duration: 1s
 
         +corners($offset-h: 20px,$offset-v: -7px)
 
@@ -212,6 +219,10 @@
             &:after,&:before
                 display: none
 
+    [data-slick-index="0"] .examples-wr__inner-title
+        opacity: 0
+        animation-fill-mode: forwards
+        animation-duration: 1s
 
     .examples__li
         opacity: 0
@@ -231,7 +242,7 @@
     &._anim-fired
         +slider-anim-end-mixin
         .examples-wr__title,
-        .examples-wr__inner-title
+        [data-slick-index="0"] .examples-wr__inner-title
             animation-name: fadeInUp
 
         .examples__li
@@ -305,6 +316,7 @@
         margin-bottom: 11px
 
     &__li-txt
+
 
 
 
@@ -479,16 +491,16 @@
     padding: 67px 0 10px
     text-align: center
 
-    +max-screen($screenS)
-        padding: 22px 0 10px
-
     .cases-slider
-        animation-delay: 1s
+        //animation-delay: 1s
 
         .slick-slide
             opacity: 0
+
+        .slick-active
             animation-duration: 2s
             animation-fill-mode: forwards
+
 
         [data-slick-index="1"]
             animation-delay: 0.33s
@@ -506,6 +518,11 @@
             .slick-slide
                 animation-name: fadeInUp
 
+        &._animEnd
+            .slick-slide
+                transition-delay: 1s
+                opacity: 1
+
     +max-screen($screenMS)
         .cases-slider
 
@@ -521,6 +538,15 @@
             animation-delay: 0s !important
 
 
+    +max-screen($screenS)
+        padding: 22px 0 10px
+
+        .case
+            &__main-link
+                padding-bottom: 15px
+
+            &__txt-wr,&__bottom
+                display: none
 
 // ----------------------------------------------------------------------
 // Promo "how it works"
@@ -765,9 +791,10 @@
 // ----------------------------------------------------------------------
 
 .pr-cost
-    text-align: center
     position: relative
-    overflow: hidden
+    text-align: center
+    &._anim-fired
+        overflow: hidden
 
     .fake-anchor
         margin-top: 3px

@@ -1,6 +1,6 @@
 /* Не грузим видео, если девайс */
 $(function(){
-    $video = $('.js-about-video');
+    var $video = $('.js-about-video');
     if (!$video.length) return;
     
     var checkDevice = false;
@@ -13,7 +13,7 @@ $(function(){
             $("#bgvid").removeAttr("preload");
         }
         return checkDevice;
-    }
+    };
     mobileAndTabletcheck();
 
     $("#bgvid").bind("error", function() {

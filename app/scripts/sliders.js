@@ -29,14 +29,16 @@ $(function () {
                     widthsMd = [0.25, 0.5],
                     widthsSm = [0.5, 1], //[0.333, 0.666],
                     widthsSs = [0.5, 1],
-                    slideAnim = 500;
+                    slideAnim = 500,
+                    scrollTimeout;
 
                 function setSlidesH(pCurrentNumb, pMax) {
                     var currentSlNumb = pCurrentNumb || 0,
                         maxSlides = pMax || 5,
                         $targetSlides = [],
                         fHighest = 0,
-                        lHighest = 0;
+                        lHighest = 0,
+                        padd;
 
                     if (currentSlNumb == $slides.length - 1) {
                         currentSlNumb = currentSlNumb - 1
@@ -64,6 +66,8 @@ $(function () {
                             lCase,
                             lCaseHeight;
 
+                        padd = parseInt(fCase.css('padding-top'));
+
                         if (fCaseHeight > fHighest) {
                             fHighest = fCaseHeight;
                         }
@@ -81,19 +85,23 @@ $(function () {
                     $.each($targetSlides, function () {
                         var $this = $(this),
                             $cases = $this.find('.js-cases-sl__col'),
-                            fCase = $cases.first(),
-                            lCase;
+                            $fCase = $cases.first(),
+                            $fCaseInner = $fCase.find('.case'),
+                            $lCase,
+                            $lCaseInner;
 
-                        fCase.css('min-height', fHighest);
+
+                        $fCaseInner.css('min-height', fHighest - (padd * 2));
 
                         if ($cases.length > 1) {
-                            lCase = $cases.last();
-                            lCase.css('min-height', lHighest);
+                            $lCase = $cases.last();
+                            $lCaseInner = $lCase.find('.case');
+                            $lCaseInner.css('min-height', lHighest - (padd * 2));
                         }
 
                     });
 
-                    $slider.find('.slick-list').animate({'height': fHighest + lHighest}, slideAnim)
+                    $slider.find('.slick-list').animate({'height': fHighest + lHighest  }, slideAnim)
 
                 }
 
@@ -131,8 +139,12 @@ $(function () {
                 setSlidesH();
 
                 $W.resize(function () {
+                    if( $W.width() <= _GLOB.breakpoints.s) {
+                        $slider.find('.case').css('min-height','');
+                    }
                     setSlidesW();
-                    setSlidesH();
+                    setSlidesH($slider.slick('slickCurrentSlide'),$slider.slick('slickGetOption','slidesToScroll'));
+
                 });
 
 
@@ -174,8 +186,16 @@ $(function () {
 
                 $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                     setSlidesH(nextSlide, slick.options.slidesToScroll);
-                    console.log(nextSlide, slick.options.slidesToScroll);
                 });
+
+                $W.scroll(function(){
+                    $slider.slick('slickSetOption', 'swipe', false);
+
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(function(){
+                        $slider.slick('slickSetOption', 'swipe', true);
+                    },200);
+                })
 
 
             })
@@ -188,7 +208,8 @@ $(function () {
     (function ($) {
         $.fn.examplesSl = function (settings) {
             $(this).each(function () {
-                var $slider = $(this);
+                var $slider = $(this),
+                    scrollTimeout;
 
                 $slider.slick({
                     slidesToShow: 1,
@@ -207,6 +228,15 @@ $(function () {
                             }
                         },
                     ]
+                });
+
+                $W.scroll(function(){
+                    $slider.slick('slickSetOption', 'swipe', false);
+
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(function(){
+                        $slider.slick('slickSetOption', 'swipe', true);
+                    },200);
                 })
 
             })
@@ -219,14 +249,21 @@ $(function () {
     (function ($) {
         $.fn.planWeekSlider = function (settings) {
             $(this).each(function () {
-                var $slider = $(this);
+                var $slider = $(this),
+                    scrollTimeout;
 
+
+                function dotPosition(numb) {
+                    var $thisSl = $slider.find('[data-slick-index="' + (numb || 0) + '"]'),
+                        descH = $thisSl.find('.js-plan-week-sl_txt').outerHeight();
+                    $slider.find('.slick-dots li').css('top', descH || 0);
+                }
 
                 $slider.on('init', function (slick) {
-                    var $thisSl = $slider.find('[data-slick-index="0"]'),
-                        descH = $thisSl.find('.js-plan-week-sl_txt').outerHeight();
-                    $slider.find('.slick-dots').css('top', descH || 0)
-                })
+                    setTimeout(function(){
+                        dotPosition();
+                    },300);
+                });
 
                 $slider.slick({
                     adaptiveHeight: true,
@@ -241,20 +278,30 @@ $(function () {
                         {
                             breakpoint: _GLOB.breakpoints.sm,
                             settings: {
-                                dots: true,
+                                //dots: true,
                                 swipe: true
                             }
                         },
-
                     ]
                 });
 
+
                 $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-                    var $thisSl = $slider.find('[data-slick-index="' + nextSlide + '"]'),
-                        descH = $thisSl.find('.js-plan-week-sl_txt').outerHeight();
-                    $slider.find('.slick-dots').css('top', descH || 0)
+                    dotPosition(nextSlide);
+                });
+
+                $W.resize(function(){
+                    dotPosition($slider.slick('slickCurrentSlide'));
                 })
 
+                $W.scroll(function(){
+                    $slider.slick('slickSetOption', 'swipe', false);
+
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(function(){
+                        $slider.slick('slickSetOption', 'swipe', true);
+                    },200);
+                })
             })
         }
     })(jQuery);
@@ -266,7 +313,8 @@ $(function () {
             $(this).each(function () {
                 var $slider = $(this),
                     $slides = $slider.find('.js-history-sl_slide'),
-                    $parent = $slider.parents('.js-history-sl-wr');
+                    $parent = $slider.parents('.js-history-sl-wr'),
+                    scrollTimeout;
 
                 $slider.slick({
                     slidesToShow: 3,
@@ -305,6 +353,15 @@ $(function () {
                     var stepPercent = 100 / $slides.length,
                         position = (stepPercent / 4) * nextSlide + '% 50%';
                     $parent.css('background-position', position)
+                });
+
+                $W.scroll(function(){
+                    $slider.slick('slickSetOption', 'swipe', false);
+
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(function(){
+                        $slider.slick('slickSetOption', 'swipe', true);
+                    },200);
                 })
 
             })
@@ -341,7 +398,8 @@ $(function () {
                             },
 
                         ]
-                    };
+                    },
+                    scrollTimeout;
 
                 if (pSettings) {
                     for (var pOption in pSettings) {
@@ -349,7 +407,16 @@ $(function () {
                     }
                 }
 
-                $slider.slick(settings)
+                $slider.slick(settings);
+
+                $W.scroll(function(){
+                    $slider.slick('slickSetOption', 'swipe', false);
+
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(function(){
+                        $slider.slick('slickSetOption', 'swipe', true);
+                    },200);
+                })
 
             })
         }
@@ -400,50 +467,3 @@ $(function () {
 
     $historySl.historySlider();
 });
-
-/*
- $(function () {
- var animTime = 0.3;
- function changeState(jqObj,status){
-
- var $mainSvg = jqObj.find(".js-slider-arr__main"),
- $mainSvgPaths = $mainSvg.find('path'),
- $mainSvgCircle = $mainSvg.find('circle');
-
- // TODO
-
- var circleSize = $mainSvgCircle.width();
- $mainSvgCircle.css('stroke-dashoffset',circleSize)//.animate({'',},animTime);
-
- if(status == 'toHover'){
- var $finalSvg = jqObj.find(".js-slider-arr__final"),
- $finalSvgPaths = $finalSvg.find('path');
-
- for(var i = 0; i < $mainSvgPaths.length; i++){
- TweenMax.to($mainSvgPaths[i], animTime, {morphSVG:   $finalSvgPaths[i] });
- }
- }
- if(status == 'toNormal'){
- var $normalSvg = jqObj.find('.js-slider-arr__normal'),
- $normalSvgPaths = $normalSvg.find('path');
-
- for(var i = 0; i < $mainSvgPaths.length; i++){
- TweenMax.to($mainSvgPaths[i], animTime, {morphSVG:   $normalSvgPaths[i] });
- }
- }
-
- var tl = new TimelineLite();
-
-
- //tl.from($mainSvgCircle, 1, {drawSVG:"20% 50%"} );
- //tl.play()
- TweenMax.staggerFrom($mainSvgCircle,1,{drawSVG: 0})
-
- }
-
- $D.on('mouseenter','.js-slider-arr', function(){
- //changeState( $(this), 'toHover');
- }).on('mouseleave','.js-slider-arr', function(){
- //changeState( $(this), 'toNormal');
- })
- });*/

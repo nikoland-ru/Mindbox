@@ -16,7 +16,7 @@ BODY
         overflow: hidden
 
     &._side-popup-moved-page
-        +min-screen($screenMS)
+        +min-screen($header-breakpoint1)
             .contacts__map
                 transform: translateX(-20%) scale(.7)
 
@@ -27,7 +27,7 @@ BODY
         .page-inner__overlay
             display: none
 
-        +min-screen($screenMS)
+        +min-screen($header-breakpoint1)
             .header
                 opacity: 0
 
@@ -150,6 +150,12 @@ $col-gap_base: 30px
     position: absolute
     top: -$header-h
     left: 0
+    height: 2px
+    width: 2px
+    &:after
+        content: ' '
+        text-indent: -10000px
+
     //display: none
     +max-screen($screenMS)
         top: -$header-h_md

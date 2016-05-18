@@ -1,11 +1,13 @@
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
 
 <!-- build:js ../scripts/blog/lib.js -->
-<script src="../../bower_components/photoswipe/dist/photoswipe.js"></script>
-<script src="../../bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
 <script src="../../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="../../bower_components/jquery-validation/dist/additional-methods.js"></script>
 <script src="../scripts/plugins/TweenMax.min.js"></script>
 <script src="../scripts/plugins/MorphSVGPlugin.min.js"></script>
+
+<script src="../../bower_components/jQuery.TosRUs/src/js/jquery.tosrus.min.all.js"></script>
+<script src="../../bower_components/hammerjs/hammer.js"></script>
 <!-- endbuild -->
 
 <!-- build:js ../scripts/blog/app.js -->

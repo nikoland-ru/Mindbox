@@ -92,7 +92,7 @@ $(function () {
                 $B.css('margin-right', $.scrollbarWidth());
             }
 
-            if ($W.width() <= _GLOB.breakpoints.ms) {
+            if ($W.width() <= _GLOB.breakpoints.header1) {
                 $('.header__nav').css('margin-right', $.scrollbarWidth());
             }
         } else {

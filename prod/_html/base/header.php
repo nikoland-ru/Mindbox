@@ -44,6 +44,13 @@
                         </span>
                     </a>
                 </li>
+                <li class="header__nav-li">
+                    <a href="#!" class="header__nav-a">
+                        <span class="header__nav-a-txt">
+                            Блог
+                        </span>
+                    </a>
+                </li>
 
             </ul>
             <button type="button" class="header__demo-btn btn btn--default btn--default-green js-side-popup-btn" data-popup-name="demo">

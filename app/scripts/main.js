@@ -19,7 +19,8 @@ _GLOB.breakpoints = {
     'sm': 860,
     's': 767,
     'ss': 630,
-    'xs': 480
+    'xs': 480,
+    'header1': 1090
 };
 
 

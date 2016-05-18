@@ -1,8 +1,8 @@
+@import ../../bower_components/jQuery.TosRUs/src/css/jquery.tosrus.all.css
 @import lib/__lib
 @import fonts
 @import helpers/__helpers
 //@import __base
-
 
 @import components/__components
 
@@ -10,6 +10,16 @@
 @import layout/_header
 @import layout/_footer
 @import blocks/_popups
+
+::-webkit-scrollbar-track
+    background: transparent
+
+::-webkit-scrollbar
+    width: 10px
+
+::-webkit-scrollbar-thumb
+    background-color: $cPrimary
+    cursor: pointer
 
 *
     outline: none
@@ -20,18 +30,17 @@ BUTTON
 BODY
     padding-top: $header-h
 
-    +max-screen($screenMS)
+    +max-screen($header-breakpoint1)
         padding-top: $header-h_md
 
     +max-screen($screenS)
         padding-top: $header-h_sm
 
-
     &._side-popup-open
         overflow: hidden
 
     &._side-popup-moved-page
-        +min-screen($screenMS)
+        +min-screen($header-breakpoint1)
             .contacts__map
                 transform: translateX(-20%) scale(.7)
 
@@ -42,7 +51,7 @@ BODY
         .page-inner__overlay
             display: none
 
-        +min-screen($screenMS)
+        +min-screen($header-breakpoint1)
             .header
                 opacity: 0
 
@@ -55,7 +64,7 @@ BODY
     top: -$header-h
     left: 0
     //display: none
-    +max-screen($screenMS)
+    +max-screen($header-breakpoint1)
         top: -$header-h_md
     +max-screen($screenS)
         top: -$header-h_sm
@@ -68,6 +77,16 @@ BODY
 
 .header
     z-index: 999
+    .wrapper
+        padding: 0 $wrapperM-padd
+
+        +max-screen($screenSL)
+            padding-left: $wrapperS-padd
+            padding-right: $wrapperS-padd
+
+        +max-screen($screenSS)
+            padding-right: $wrapperSS-padd
+            padding-left: $wrapperSS-padd
 
 .footer
     li
@@ -80,6 +99,7 @@ BODY
 .pagination
     margin: 31px 0 0 !important
     text-align: center
+    min-height: 60px
 
 .pagination-standard ul.page-numbers, .pagination-noresults ul.page-numbers
     position: static
@@ -92,8 +112,21 @@ BODY
         display: inline-block
         vertical-align: middle
 
+.pagination-button
+    position: absolute
+    top: 0
+    padding-top:  20px !important
+    padding-bottom:  20px !important
+    &.pagination
+        &-older
+            right: 0
+        &-newer
+            left: 0
 
-
+    +max-screen(1100px)
+        padding-left: 35px !important
+        padding-right: 35px !important
+        font-size: 13px
 
 .page-container
     padding-top: 50px !important
@@ -197,6 +230,16 @@ BODY
         color: #333
         margin: 20px 0
 
+.page-contents.post-list-standard .post .post-contents,
+.page-contents.post-list-standard .post .postcontents
+    p,ul,ol
+        margin: 20px 0
+
+.page-contents.post-list-standard .post .post-contents
+    margin-top: 20px
+
+.page-layout-standard .page-contents.post-list-standard .post .post-title
+    margin-bottom: 20px
 
 .post-body
     padding: 40px 40px

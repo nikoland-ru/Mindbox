@@ -243,6 +243,7 @@
         padding: 20px 0
 
         &__title
+            margin: 15px auto
 
             &:after, &:before
                 display: none
@@ -254,7 +255,7 @@
 // ----------------------------------------------------------------------
 
 $cases-grid-gap: 20px
-$cases-grid-gap-md: 15px
+$cases-grid-gap-md: 16px
 $cases-grid-gap-sm: 8px
 
 .case
@@ -301,6 +302,7 @@ $cases-grid-gap-sm: 8px
         display: block
         margin-bottom: 11px
         min-height: 20px
+        text-align: center
 
     &__bottom
         background-color: #fff
@@ -383,6 +385,11 @@ $cases-grid-gap-sm: 8px
         padding: ($cases-grid-gap/2)
         width: 20%
         display: flex
+        flex-direction: column
+        align-content: stretch
+
+        .case
+            flex-grow: 1
 
         &--double
             width: 40%
@@ -403,6 +410,7 @@ $cases-grid-gap-sm: 8px
             padding: ($cases-grid-gap-sm/2)
             &--double
                 width: 100%
+
 
         //+max-screen($screenXS)
             width: 100%

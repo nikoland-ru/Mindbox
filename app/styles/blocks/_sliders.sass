@@ -368,22 +368,28 @@ $plan-sl-width: 810px
         margin-right: auto
         margin-left: auto
 
-
     &__desc
         font-size: 15px
         margin: 0px auto 10px
         max-width: 500px
         animation-delay: 0.4s
+        position: relative
+        z-index: 10
 
     .demo-img
         margin-top: 50px
 
     .slick-dots
         position: absolute
-        top: 40px //10px
+        top: 0 //40px //10px
         bottom: auto
         padding: 0
-        margin-top: 8px
+        height: 0
+        z-index: auto !important
+        LI
+            margin-top: 13px
+            z-index: 99
+            transition: $t300
 
     .slider-arr
         margin-top: -28px
@@ -392,6 +398,7 @@ $plan-sl-width: 810px
 
     &._anim-fired
         animation-name: slideInUp
+        +slider-anim-end-mixin
 
     +screen($screenMS + 1px, 1420px)
         padding-left: 150px

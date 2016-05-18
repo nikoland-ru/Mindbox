@@ -2,6 +2,8 @@ $header-h: 84px
 $header-h_md: 84px
 $header-h_sm: 68px
 
+$header-breakpoint1: 1090px
+
 .header
     background: #fff
     z-index: 100
@@ -39,7 +41,7 @@ $header-h_sm: 68px
 
     &__demo-btn
         white-space: nowrap
-        +min-screen($screenMS + 1px)
+        +min-screen($header-breakpoint1 + 1px)
             position: absolute
             top: 50%
             right: $wrapperM-padd
@@ -49,12 +51,13 @@ $header-h_sm: 68px
         text-align: center
         flex-grow: 1
         padding-right: 220px
+        font-weight: normal
         +max-screen($screenLS)
             padding-right: 180px
 
     &__nav-ul
         white-space: nowrap
-        +min-screen($screenMS + 1px)
+        +min-screen($header-breakpoint1 + 1px)
             display: flex
             justify-content: space-around
             max-width: 1000px
@@ -76,7 +79,7 @@ $header-h_sm: 68px
         text-decoration: none
         transition: $t300
 
-        +min-screen($screenMS + 1px)
+        +min-screen($header-breakpoint1 + 1px)
             line-height: $header-h - 2px
             border-bottom: 1px solid transparent
             &:hover, &._current
@@ -103,7 +106,7 @@ $header-h_sm: 68px
         background: #fff
         box-shadow: 0 0 8px rgba(#000,0.25)
 
-    +max-screen($screenMS)
+    +max-screen($header-breakpoint1)
         background: #fff
         .wrapper
             height: $header-h_md
@@ -180,7 +183,7 @@ $header-h_sm: 68px
 
 
 
-+max-screen($screenMS)
++max-screen($header-breakpoint1)
     BODY._mob-menu-open
         .header__nav
             transform: scale(1)

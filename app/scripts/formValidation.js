@@ -1,5 +1,5 @@
 // Validation plugin and more
-jQuery.extend( jQuery.validator.messages, {
+jQuery.extend(jQuery.validator.messages, {
     required: "Введите данные.",
     remote: "Пожалуйста, введите правильное значение.",
     email: "Пожалуйста, введите корректный адрес электронной почты.",
@@ -11,14 +11,46 @@ jQuery.extend( jQuery.validator.messages, {
     creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
     equalTo: "Пожалуйста, введите такое же значение ещё раз.",
     extension: "Пожалуйста, выберите файл с правильным расширением.",
-    maxlength: $.validator.format( "Пожалуйста, введите не больше {0} символов." ),
-    minlength: $.validator.format( "Пожалуйста, введите не меньше {0} символов." ),
-    rangelength: $.validator.format( "Пожалуйста, введите значение длиной от {0} до {1} символов." ),
-    range: $.validator.format( "Пожалуйста, введите число от {0} до {1}." ),
-    max: $.validator.format( "Пожалуйста, введите число, меньшее или равное {0}." ),
-    min: $.validator.format( "Пожалуйста, введите число, большее или равное {0}." )
-} );
+    maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
+    minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
+    rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
+    range: $.validator.format("Пожалуйста, введите число от {0} до {1}."),
+    max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
+    min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
+});
 
+(function ($) {
+
+    $.validator.addMethod("require_from_group", function (value, element, options) {
+        var numberRequired = options[0];
+        var selector = options[1];
+        var fields = $(selector, element.form);
+
+        var filled_fields = fields.filter(function () {
+            // it's more clear to compare with empty string
+            return $(this).val() != "";
+        });
+        var empty_fields = fields.not(filled_fields);
+
+        if(options[2]){
+            _GLOB.require_from_group_msg = options[2];
+        }
+
+        // we will mark only first empty field as invalid
+        if (filled_fields.length < numberRequired && empty_fields[0] == element) {
+
+            console.log('req gr = FALSE')
+            return false;
+        }
+        console.log('req gr = true')
+        return true;
+        // {0} below is the 0th item in the options field
+    }, function(){
+        return $.validator.format(_GLOB.require_from_group_msg);
+    });
+
+
+})(jQuery);
 
 // Email
 jQuery.validator.addMethod("email", function (value, element) {
@@ -42,10 +74,25 @@ jQuery.validator.addClassRules('js_field_digits', {
         $(this).each(function () {
             var $form = $(this),
                 $formAllMsg = $form.find('.js-form__all-msg'),
+                $groupInps = $form.find('[data-valid-group]'),
                 formAction = $form.attr('action'),
                 dataValidCase = $form.data('validation-case'),
-                options;
+                options,
+                rules = {};
 
+            console.log($groupInps.length);
+            $.each($groupInps, function () {
+                var $this = $(this),
+                    groupName = $this.data('valid-group'),
+                    name = $this.attr('name');
+
+                rules[name] = {
+                    require_from_group: [1, '[data-valid-group="' + groupName + '"]', 'Пожалуйста, укажите свой e-mail или телефон.']
+                };
+            });
+
+
+            console.log(rules)
             //todo progress
 
             options = {
@@ -55,7 +102,8 @@ jQuery.validator.addClassRules('js_field_digits', {
                 focusInvalid: false,
                 errorElement: 'span',
                 ignore: '.ignore',
-                submitHandler: function(){
+                rules: rules,
+                submitHandler: function () {
 
 
                     $.ajax({
@@ -67,15 +115,15 @@ jQuery.validator.addClassRules('js_field_digits', {
                                 dataError = parsedData.error,
                                 dataMsg = parsedData.message;
 
-                            if(dataMsg){
+                            if (dataMsg) {
                                 $formAllMsg.html(dataMsg);
-                            }else{
+                            } else {
                                 $formAllMsg.html('');
                             }
 
-                            if(dataError){
+                            if (dataError) {
                                 $formAllMsg.addClass('_error');
-                            }else{
+                            } else {
                                 $formAllMsg.removeClass('_error');
                                 $form[0].reset();
                             }

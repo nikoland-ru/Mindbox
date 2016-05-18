@@ -1,4 +1,4 @@
-<?php include "galleryPopup.php";?>
+<!--<?php include "galleryPopup.php";?>-->
 <?php include "casesPopups.php";?>
 
 <div class="side-popup js-side-popup" data-popup-name="demo">
@@ -23,7 +23,8 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="email" class="input" placeholder="E-mail"  name="name2" required>
+                            <input type="email" class="input" placeholder="E-mail"  name="name2"
+                                   data-valid-group="group1">
                         </div>
                     </div>
                 </div>
@@ -33,7 +34,8 @@
                 <div class="form-row__content-col ">
                     <div class="form-row__content">
                         <div class="input-cont">
-                            <input type="tel" class="input" placeholder="Телефон" name="name3" required>
+                            <input type="tel" class="input" placeholder="Телефон" name="name3"
+                                   data-valid-group="group1">
                         </div>
                     </div>
                 </div>
