@@ -31,6 +31,7 @@ $(function () {
 
 });
 
+
 $(function () {
     var $indexPromo = $('.js-index-promo');
     if (!$indexPromo.length) return;
@@ -52,7 +53,6 @@ $(function () {
 
     $W.bind('scroll resize',function(){
         var winWidth = $W.width();
-
         if( _GLOB.breakpoints.sm < winWidth){
             onScroll();
         }

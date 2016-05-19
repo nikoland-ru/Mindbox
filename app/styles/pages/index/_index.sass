@@ -85,39 +85,40 @@
         position: absolute
         z-index: 1
         opacity: 0
-        transition: 0.7s 0.2s
+        //transition: 0.7s 0.2s
+        animation-duration: 0.75s
+        animation-fill-mode: forwards
 
         &--center
             left: 50%
-            bottom: -35px
+            bottom: -60px
             margin-left: -150px
-            transform: translateY(10%)
+            //transform: translateY(10%)
 
         &--left
             right: 50%
             bottom: 10px
             margin-right: 258px
-            transform: translateX( -10%)
 
         &--right
             left: 50%
             bottom: 27px
             margin-left: 264px
-            transform: translateX(10%)
+            //transform: translateX(10%)
 
     &._animate
         .i-promo
             &__bg-img
-                opacity: 1
+                //opacity: 1
 
                 &--center
-                    transform: translateX(0%)
+                    animation-name: promoCenter
 
                 &--left
-                    transform: translateX(0%)
+                    animation-name: promoLeft
 
                 &--right
-                    transform: translateX(0%)
+                    animation-name: promoRight
 
 
     +min-screen($screenSM)
@@ -167,6 +168,8 @@
         &__title-gr-txt
             padding: 0
             margin-bottom: 50px
+
+
 
 // ----------------------------------------------------------------------
 // examples
@@ -839,6 +842,8 @@
     max-width: 960px
     margin-left: auto
     margin-right: auto
+
+
 
     &__inner
         max-width: 760px

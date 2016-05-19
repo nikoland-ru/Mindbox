@@ -3,7 +3,7 @@
 <?php
 $pageName = "Главная";
 include 'base/head.php';?>
-<body>
+<body class="_loading">
 
 <div class="page page-index">
     <div class="page-inner">

@@ -23,6 +23,9 @@ _GLOB.breakpoints = {
     'header1': 1090
 };
 
+$W.load(function() {
+    $B.removeClass('_loading')
+});
 
 /* -- Общие плагины и функции -- */
 
