@@ -49,14 +49,17 @@ $(function () {
         }
 
     }
-    onScroll();
 
     $W.bind('scroll resize',function(){
         var winWidth = $W.width();
         if( _GLOB.breakpoints.sm < winWidth){
             onScroll();
         }
-    })
+    });
+
+    if( _GLOB.breakpoints.sm <  $W.width()){
+        onScroll();
+    }
 
 
 });

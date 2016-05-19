@@ -31,6 +31,20 @@ $input_padd-rl: 17px
     +input
 
 
+
+form
+    transition: opacity $t150
+    &._disabled
+        //.btn[type="submit"],
+        opacity: 0.6
+
+        &,*
+            cursor: not-allowed
+
+        //.input
+            background-color: darken($input_bg, 15%)
+            color: rgba(#000,0.8)
+
 // ----------------------------------------------------------------------
 // Checkboxes and radio
 // ----------------------------------------------------------------------

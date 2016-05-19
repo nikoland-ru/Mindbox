@@ -182,6 +182,7 @@ $.scrollbarWidth = function () {
             botCondition1 = vpTopLimit <= limitElem,
             botCondition2 = vpBotLimit >= limitElem;
 
+
         if ((topCondition1 && topCondition2) || ( botCondition1 && botCondition2)) { // Элемент частично накрыл вьюпорт
             forReturn = true;
         }

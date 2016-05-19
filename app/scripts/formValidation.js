@@ -73,14 +73,16 @@ jQuery.validator.addClassRules('js_field_digits', {
     $.fn.validationManager = function () {
         $(this).each(function () {
             var $form = $(this),
+                $inputs = $form.find('input'),
                 $formAllMsg = $form.find('.js-form__all-msg'),
                 $groupInps = $form.find('[data-valid-group]'),
                 formAction = $form.attr('action'),
                 dataValidCase = $form.data('validation-case'),
                 options,
-                rules = {};
+                rules = {},
+                submitAble = true;
 
-            console.log($groupInps.length);
+            // One of group
             $.each($groupInps, function () {
                 var $this = $(this),
                     groupName = $this.data('valid-group'),
@@ -92,19 +94,25 @@ jQuery.validator.addClassRules('js_field_digits', {
             });
 
 
-            console.log(rules)
-            //todo progress
-
             options = {
                 errorClass: "input-error",
                 validClass: "input-success",
                 focusCleanup: false,
                 focusInvalid: false,
                 errorElement: 'span',
-                ignore: '.ignore',
+                ignore: '.ignore, :hidden, ._disabled', // _disabled - класс для временного дизейбла, не использовать в изначальной разметке
                 rules: rules,
                 submitHandler: function () {
+                    console.log('submit handle');
+                    if(!submitAble){
+                        $formAllMsg.html("Подождите, идёт обработка.");
+                        return false;
+                    }
 
+                    // выключаем форму
+                    submitAble = false;
+                    $form.addClass('_disabled');
+                    $inputs.addClass('_disabled');
 
                     $.ajax({
                         type: 'POST',
@@ -128,8 +136,11 @@ jQuery.validator.addClassRules('js_field_digits', {
                                 $form[0].reset();
                             }
                         }
+                    }).done( function () {
+                        submitAble = true;
+                        $form.removeClass('_disabled');
+                        $inputs.removeClass('_disabled');
                     })
-
                 }
             };
 

@@ -1265,23 +1265,37 @@ textarea.input {
   padding-bottom: 10px;
 }
 
+/* line 35, ../styles/components/_formElements.sass */
+form {
+  -webkit-transition: opacity 150ms;
+          transition: opacity 150ms;
+}
+/* line 37, ../styles/components/_formElements.sass */
+form._disabled {
+  opacity: 0.6;
+}
 /* line 41, ../styles/components/_formElements.sass */
+form._disabled, form._disabled * {
+  cursor: not-allowed;
+}
+
+/* line 55, ../styles/components/_formElements.sass */
 .checkbox-label {
   display: table;
   white-space: nowrap;
   margin: 4px 0;
   line-height: 20px;
 }
-/* line 47, ../styles/components/_formElements.sass */
+/* line 61, ../styles/components/_formElements.sass */
 .checkbox-label .checkbox, .checkbox-label__txt {
   display: inline-block;
   vertical-align: top;
 }
-/* line 51, ../styles/components/_formElements.sass */
+/* line 65, ../styles/components/_formElements.sass */
 .checkbox-label .checkbox {
   margin-right: -18px;
 }
-/* line 54, ../styles/components/_formElements.sass */
+/* line 68, ../styles/components/_formElements.sass */
 .checkbox-label__txt {
   font-size: 14px;
   line-height: 20px;
@@ -1290,23 +1304,23 @@ textarea.input {
   color: #1b1b1b;
   padding-left: 30px;
 }
-/* line 63, ../styles/components/_formElements.sass */
+/* line 77, ../styles/components/_formElements.sass */
 .checkbox-label._disabled .checkbox-label__txt {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* line 67, ../styles/components/_formElements.sass */
+/* line 81, ../styles/components/_formElements.sass */
 .checkbox {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 71, ../styles/components/_formElements.sass */
+/* line 85, ../styles/components/_formElements.sass */
 .checkbox INPUT {
   display: none;
 }
-/* line 74, ../styles/components/_formElements.sass */
+/* line 88, ../styles/components/_formElements.sass */
 .checkbox__view {
   display: block;
   width: 18px;
@@ -1318,7 +1332,7 @@ textarea.input {
           transition: 150ms;
   position: relative;
 }
-/* line 86, ../styles/components/_formElements.sass */
+/* line 100, ../styles/components/_formElements.sass */
 .checkbox__view:after {
   color: #fff;
   font-size: 11px;
@@ -1334,24 +1348,24 @@ textarea.input {
   -webkit-transition: 150ms;
           transition: 150ms;
 }
-/* line 102, ../styles/components/_formElements.sass */
+/* line 116, ../styles/components/_formElements.sass */
 .checkbox__view._active, input:checked + .checkbox__view {
   border-color: #62be1f;
   background-color: #62be1f;
 }
-/* line 109, ../styles/components/_formElements.sass */
+/* line 123, ../styles/components/_formElements.sass */
 .checkbox__view._active:after, input:checked + .checkbox__view:after {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
-/* line 113, ../styles/components/_formElements.sass */
+/* line 127, ../styles/components/_formElements.sass */
 input:disabled + .checkbox__view {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* line 123, ../styles/components/_formElements.sass */
+/* line 137, ../styles/components/_formElements.sass */
 .noUi-handle {
   width: 38px !important;
   height: 38px !important;
@@ -1362,17 +1376,17 @@ input:disabled + .checkbox__view {
   left: -19px !important;
   border: 0 !important;
 }
-/* line 133, ../styles/components/_formElements.sass */
+/* line 147, ../styles/components/_formElements.sass */
 .noUi-handle:after, .noUi-handle:before {
   display: none;
 }
 
-/* line 136, ../styles/components/_formElements.sass */
+/* line 150, ../styles/components/_formElements.sass */
 .noUi-origin, .noUi-base, .noUi-target {
   height: 3px;
 }
 
-/* line 139, ../styles/components/_formElements.sass */
+/* line 153, ../styles/components/_formElements.sass */
 .noUi-target {
   border: 0;
   box-shadow: none;
@@ -1380,12 +1394,12 @@ input:disabled + .checkbox__view {
   margin: 19px 0;
 }
 
-/* line 145, ../styles/components/_formElements.sass */
+/* line 159, ../styles/components/_formElements.sass */
 .noUi-origin {
   background: #ccc;
 }
 
-/* line 153, ../styles/components/_formElements.sass */
+/* line 167, ../styles/components/_formElements.sass */
 .selector {
   position: relative;
   font-size: 12px;
@@ -1393,11 +1407,11 @@ input:disabled + .checkbox__view {
   min-width: 150px;
   text-align: left;
 }
-/* line 159, ../styles/components/_formElements.sass */
+/* line 173, ../styles/components/_formElements.sass */
 .selector._open {
   z-index: 10;
 }
-/* line 162, ../styles/components/_formElements.sass */
+/* line 176, ../styles/components/_formElements.sass */
 .selector__option, .selector__option-current {
   padding: 6px 30px 6px 15px;
   display: block;
@@ -1406,7 +1420,7 @@ input:disabled + .checkbox__view {
           transition: 150ms;
   color: #000;
 }
-/* line 168, ../styles/components/_formElements.sass */
+/* line 182, ../styles/components/_formElements.sass */
 .selector__option a, .selector__option-current a {
   color: inherit;
   text-decoration: none;
@@ -1414,20 +1428,20 @@ input:disabled + .checkbox__view {
   margin: -6px -30px -6px -15px;
   padding: 6px 30px 6px 15px;
 }
-/* line 177, ../styles/components/_formElements.sass */
+/* line 191, ../styles/components/_formElements.sass */
 .selector__option:first-child {
   border-radius: 4px 4px 0 0;
 }
-/* line 180, ../styles/components/_formElements.sass */
+/* line 194, ../styles/components/_formElements.sass */
 .selector__option:last-child {
   border-radius: 0 0 4px 4px;
 }
-/* line 183, ../styles/components/_formElements.sass */
+/* line 197, ../styles/components/_formElements.sass */
 .selector__option:hover {
   background-color: #62be1f;
   color: #fff;
 }
-/* line 187, ../styles/components/_formElements.sass */
+/* line 201, ../styles/components/_formElements.sass */
 .selector__option-current {
   position: relative;
   border-radius: 4px;
@@ -1437,7 +1451,7 @@ input:disabled + .checkbox__view {
   font-size: 16px;
   color: #333333;
 }
-/* line 195, ../styles/components/_formElements.sass */
+/* line 209, ../styles/components/_formElements.sass */
 .selector__option-current:after {
   content: "";
   position: absolute;
@@ -1449,12 +1463,12 @@ input:disabled + .checkbox__view {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-/* line 205, ../styles/components/_formElements.sass */
+/* line 219, ../styles/components/_formElements.sass */
 .selector._open .selector__option-current:after {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
 }
-/* line 208, ../styles/components/_formElements.sass */
+/* line 222, ../styles/components/_formElements.sass */
 .selector__options-list {
   display: none;
   border-radius: 4px;
@@ -1469,36 +1483,36 @@ input:disabled + .checkbox__view {
   border: 1px solid #ddd;
   box-shadow: 3px 3px 5px 0px rgba(55, 54, 55, 0.3);
 }
-/* line 222, ../styles/components/_formElements.sass */
+/* line 236, ../styles/components/_formElements.sass */
 .selector--inline {
   display: inline-block;
   vertical-align: middle;
   margin: 0 5px;
 }
-/* line 227, ../styles/components/_formElements.sass */
+/* line 241, ../styles/components/_formElements.sass */
 .selector--filter {
   margin: 4px;
   font-size: 13px;
 }
-/* line 231, ../styles/components/_formElements.sass */
+/* line 245, ../styles/components/_formElements.sass */
 .selector--filter .selector__option-current {
   border-radius: 4px;
 }
-/* line 234, ../styles/components/_formElements.sass */
+/* line 248, ../styles/components/_formElements.sass */
 .selector--filter .selector__options-list {
   border-radius: 0 0 4px 4px;
 }
-/* line 239, ../styles/components/_formElements.sass */
+/* line 253, ../styles/components/_formElements.sass */
 .selector--filter._open .selector__option-current {
   border-radius: 4px 4px 0 0;
 }
 
-/* line 27, ../styles/components/_formLayout.sass */
+/* line 28, ../styles/components/_formLayout.sass */
 .form-row {
   display: block;
   margin: 15px 0 15px;
 }
-/* line 31, ../styles/components/_formLayout.sass */
+/* line 32, ../styles/components/_formLayout.sass */
 .form-row__name {
   display: block;
   position: relative;
@@ -1507,7 +1521,7 @@ input:disabled + .checkbox__view {
   font-size: 15px;
   line-height: 20px;
 }
-/* line 39, ../styles/components/_formLayout.sass */
+/* line 40, ../styles/components/_formLayout.sass */
 .form-row__name-col {
   margin-bottom: 10px;
   padding-right: 30px;
@@ -1516,48 +1530,48 @@ input:disabled + .checkbox__view {
       -ms-flex-item-align: start;
           align-self: flex-start;
 }
-/* line 49, ../styles/components/_formLayout.sass */
+/* line 50, ../styles/components/_formLayout.sass */
 .form-row__content-col {
   width: 100%;
 }
-/* line 52, ../styles/components/_formLayout.sass */
+/* line 53, ../styles/components/_formLayout.sass */
 .form-row__content-col .checkbox-label {
   margin-left: 2px;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
 }
-/* line 56, ../styles/components/_formLayout.sass */
+/* line 57, ../styles/components/_formLayout.sass */
 .form-row__content-col--w80 {
   padding-right: 20%;
 }
 @media screen and (max-width: 960px) {
-  /* line 60, ../styles/components/_formLayout.sass */
+  /* line 61, ../styles/components/_formLayout.sass */
   .form-cols .form-row__content-col {
     padding-right: 0;
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 49, ../styles/components/_formLayout.sass */
+  /* line 50, ../styles/components/_formLayout.sass */
   .form-row__content-col {
     padding-right: 0;
   }
 }
-/* line 74, ../styles/components/_formLayout.sass */
+/* line 75, ../styles/components/_formLayout.sass */
 .form-row--inline {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-/* line 80, ../styles/components/_formLayout.sass */
+/* line 81, ../styles/components/_formLayout.sass */
 .form-row--inline .form-row__name, .form-row--inline .form-row__content {
   width: 100%;
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-/* line 87, ../styles/components/_formLayout.sass */
+/* line 88, ../styles/components/_formLayout.sass */
 .form-row--inline .form-row__name-col {
   margin-bottom: 0;
   -webkit-flex-shrink: 0;
@@ -1570,7 +1584,7 @@ input:disabled + .checkbox__view {
   width: 165px;
   line-height: 40px;
 }
-/* line 94, ../styles/components/_formLayout.sass */
+/* line 95, ../styles/components/_formLayout.sass */
 .form-row--inline .form-row__content-col {
   line-height: 40px;
   -webkit-box-flex: 1;
@@ -1578,17 +1592,17 @@ input:disabled + .checkbox__view {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-/* line 101, ../styles/components/_formLayout.sass */
+/* line 102, ../styles/components/_formLayout.sass */
 .form-row--inline.form-row--multi .form-row__name-col {
   margin-top: 23px;
 }
 @media screen and (max-width: 860px) {
-  /* line 100, ../styles/components/_formLayout.sass */
+  /* line 101, ../styles/components/_formLayout.sass */
   .form-row--inline.form-row--multi {
     display: block;
     margin-top: 0;
   }
-  /* line 105, ../styles/components/_formLayout.sass */
+  /* line 106, ../styles/components/_formLayout.sass */
   .form-row--inline.form-row--multi .form-row__name-col {
     margin-top: 0px;
   }
@@ -1610,7 +1624,7 @@ input:disabled + .checkbox__view {
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 74, ../styles/components/_formLayout.sass */
+  /* line 75, ../styles/components/_formLayout.sass */
   .form-row--inline {
     display: block;
     margin-top: 0;
@@ -1632,40 +1646,40 @@ input:disabled + .checkbox__view {
     line-height: 20px;
   }
 }
-/* line 115, ../styles/components/_formLayout.sass */
+/* line 116, ../styles/components/_formLayout.sass */
 .form-row--submit {
   margin-top: 30px;
 }
-/* line 117, ../styles/components/_formLayout.sass */
+/* line 118, ../styles/components/_formLayout.sass */
 .form-row--submit .btn--md {
   padding-left: 20px;
   padding-right: 20px;
 }
 @media screen and (max-width: 630px) {
-  /* line 115, ../styles/components/_formLayout.sass */
+  /* line 116, ../styles/components/_formLayout.sass */
   .form-row--submit {
     margin-top: 30px;
   }
-  /* line 123, ../styles/components/_formLayout.sass */
+  /* line 124, ../styles/components/_formLayout.sass */
   .form-row--submit .form-row__name-col {
     display: none;
   }
 }
 
-/* line 127, ../styles/components/_formLayout.sass */
+/* line 128, ../styles/components/_formLayout.sass */
 .input-cont {
   position: relative;
 }
-/* line 129, ../styles/components/_formLayout.sass */
+/* line 130, ../styles/components/_formLayout.sass */
 .input-cont .input {
   width: 100%;
 }
-/* line 132, ../styles/components/_formLayout.sass */
+/* line 133, ../styles/components/_formLayout.sass */
 .input-cont + .checkbox-label {
   margin-top: 6px;
 }
 
-/* line 137, ../styles/components/_formLayout.sass */
+/* line 138, ../styles/components/_formLayout.sass */
 .input-wr__name {
   font-size: 13px;
   line-height: 20px;
@@ -1674,59 +1688,59 @@ input:disabled + .checkbox__view {
   display: block;
 }
 @media screen and (max-width: 630px) {
-  /* line 147, ../styles/components/_formLayout.sass */
+  /* line 148, ../styles/components/_formLayout.sass */
   .input-wr + .input-wr {
     margin-top: 15px;
   }
 }
 
-/* line 151, ../styles/components/_formLayout.sass */
+/* line 152, ../styles/components/_formLayout.sass */
 .input-error {
   color: #d81313;
   margin: 5px 0 5px;
   display: block;
 }
 
-/* line 156, ../styles/components/_formLayout.sass */
+/* line 157, ../styles/components/_formLayout.sass */
 .form-all-msg {
   font-size: 18px;
   margin: 8px 0;
   display: block;
   color: #62be1f;
 }
-/* line 162, ../styles/components/_formLayout.sass */
+/* line 163, ../styles/components/_formLayout.sass */
 .form-all-msg._error {
   color: #d81313;
   font-size: 14px;
 }
 
-/* line 169, ../styles/components/_formLayout.sass */
+/* line 170, ../styles/components/_formLayout.sass */
 .form-gr {
   margin-bottom: 40px;
 }
-/* line 172, ../styles/components/_formLayout.sass */
+/* line 173, ../styles/components/_formLayout.sass */
 .form-gr .h3 {
   line-height: 24px;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 630px) {
-  /* line 169, ../styles/components/_formLayout.sass */
+  /* line 170, ../styles/components/_formLayout.sass */
   .form-gr {
     margin-bottom: 25px;
   }
-  /* line 179, ../styles/components/_formLayout.sass */
+  /* line 180, ../styles/components/_formLayout.sass */
   .form-gr .h3 {
     margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 630px) {
-  /* line 186, ../styles/components/_formLayout.sass */
+  /* line 187, ../styles/components/_formLayout.sass */
   .form-pair {
     margin-left: -10px;
     margin-right: -10px;
   }
-  /* line 190, ../styles/components/_formLayout.sass */
+  /* line 191, ../styles/components/_formLayout.sass */
   .form-pair .form-row {
     display: inline-block;
     vertical-align: top;
@@ -1735,7 +1749,7 @@ input:disabled + .checkbox__view {
   }
 }
 
-/* line 197, ../styles/components/_formLayout.sass */
+/* line 198, ../styles/components/_formLayout.sass */
 .form-cols {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1751,7 +1765,7 @@ input:disabled + .checkbox__view {
           align-items: flex-start;
   margin: 0px -30px 14px;
 }
-/* line 203, ../styles/components/_formLayout.sass */
+/* line 204, ../styles/components/_formLayout.sass */
 .form-cols__col {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -1763,32 +1777,32 @@ input:disabled + .checkbox__view {
   padding-left: 30px;
   padding-right: 30px;
 }
-/* line 209, ../styles/components/_formLayout.sass */
+/* line 210, ../styles/components/_formLayout.sass */
 .form-cols__col--65 {
   width: 65%;
 }
-/* line 211, ../styles/components/_formLayout.sass */
+/* line 212, ../styles/components/_formLayout.sass */
 .form-cols__col--35 {
   width: 35%;
 }
 @media screen and (max-width: 860px) {
-  /* line 197, ../styles/components/_formLayout.sass */
+  /* line 198, ../styles/components/_formLayout.sass */
   .form-cols {
     margin-left: -15px;
     margin-right: -15px;
   }
-  /* line 217, ../styles/components/_formLayout.sass */
+  /* line 218, ../styles/components/_formLayout.sass */
   .form-cols__col {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 197, ../styles/components/_formLayout.sass */
+  /* line 198, ../styles/components/_formLayout.sass */
   .form-cols {
     display: block;
   }
-  /* line 223, ../styles/components/_formLayout.sass */
+  /* line 224, ../styles/components/_formLayout.sass */
   .form-cols__col {
     width: auto;
   }

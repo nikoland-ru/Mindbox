@@ -46,14 +46,14 @@ include 'base/head.php';?>
                      class="i-promo__bg-img i-promo__bg-img--right">
             </section>
 
-            <section id="examples" class="examples-wr js-anim-elem">
+            <section id="examples" class="examples-wr js-anim-elem" data-vp-percent="0.35">
                 <div class="wrapper">
 
                     <h3 class="examples-wr__title h1-l">
                         Например,
                     </h3>
 
-                    <div class="examples-slider reg-slider reg-slider--anim examples js-examples-sl">
+                    <div class="examples-slider reg-slider reg-slider--anim examples js-examples-sl" >
                         <div>
 
                             <p class="examples-wr__inner-title">

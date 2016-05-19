@@ -117,15 +117,17 @@ $.fn.scrollAnimApply = function (pSettings) {
                 }
             };
 
-            if ($this.elemInView(vpPercent)) {
+            /*if ($this.elemInView(vpPercent)) {
                 onScroll();
+
                 return;
-            }
+            }*/
 
-            $W.bind('scroll', onScroll)
+            $W.bind('scroll', onScroll);
 
-        })
+        });
 
+        $W.scroll();
     })
 };
 
@@ -164,5 +166,7 @@ $(function () {
         // insteadEvent
         // onEnd
     });
+
+
 
 });
