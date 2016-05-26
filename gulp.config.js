@@ -16,7 +16,6 @@ module.exports = function() {
             './app/_html/base/scripts.php'
         ],
         injectBlogInput: [
-            //'./app/_html/base/head.php',
             './app/_html/base/scriptsBlog.php'
         ],
         injectOutput: app + '_html/base',

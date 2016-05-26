@@ -39,10 +39,10 @@ jQuery.extend(jQuery.validator.messages, {
         // we will mark only first empty field as invalid
         if (filled_fields.length < numberRequired && empty_fields[0] == element) {
 
-            console.log('req gr = FALSE')
+            //console.log('req gr = FALSE')
             return false;
         }
-        console.log('req gr = true')
+
         return true;
         // {0} below is the 0th item in the options field
     }, function(){
@@ -60,7 +60,8 @@ jQuery.validator.addMethod("email", function (value, element) {
 
 // Telephone
 jQuery.validator.addMethod("tel", function (value, element) {
-        return this.optional(element) || /^((8|\+7|\+8)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
+        //return this.optional(element) || /^((8|\+7|\+8)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
+        return this.optional(element) || /^([\+])?[\d\- ]{7,20}$/.test(value);
     },
     "Неверный формат.");
 

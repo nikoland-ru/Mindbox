@@ -291,7 +291,6 @@ gulp.task('build', ['injectBlog', 'optimize', 'images', 'fonts', 'extras', 'repl
         config.dist + 'scripts/**/*',
         config.dist + 'styles/**/*',
         ])
-        .pipe($.if('*.js', replace('functi','!!!!!') ))
         .pipe($.size({title: 'build', gzip: true}))
 }).help = 'to build your webapp for production';
 

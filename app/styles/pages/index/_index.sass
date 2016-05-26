@@ -180,6 +180,7 @@
     padding: 80px 0 1px
     .wrapper
         max-width: 1070px
+        visibility: visible !important
 
     .slick-slide
         opacity: 0
@@ -189,14 +190,14 @@
     .slick-active
         opacity: 1
 
-    &._animEnd
+    .wrapper._animEnd
         .slick-slide
             opacity: 1
 
     &__title
-        opacity: 0
-        animation-fill-mode: forwards
-        animation-duration: 1s
+        //opacity: 0
+        //animation-fill-mode: forwards
+        //animation-duration: 1s
         color: $cPrimary
         margin-bottom: 0 //16px
 
@@ -246,7 +247,7 @@
     .slider-arr, .slick-dots
         transition-delay: 2s
 
-    &._anim-fired
+    .wrapper._anim-fired
         +slider-anim-end-mixin
         .examples-wr__title,
         [data-slick-index="0"] .examples-wr__inner-title
@@ -304,14 +305,19 @@
 
         &--pull
             margin-left: 20px
+            +max-screen($screenSS)
+                margin-left: 26px
 
         &--pull2
-            margin-left: 32px
-
-        &--pull3
             margin-left: 26px
 
-        &--pull4
+        //&--pull2
+            margin-left: 32px
+
+        //&--pull3
+            margin-left: 26px
+
+        //&--pull4
             margin-left: 12px
 
     &__li-txt-wr
@@ -353,6 +359,7 @@
 
         &__li
             max-width: 50%
+            width: 50%
             margin: 25px 0
             br
                 display: none
@@ -389,6 +396,8 @@
     color: #fff
     text-align: center
     padding: 72px 0 90px
+    position: relative
+    overflow: hidden
 
     &__title-gr
         margin-bottom: 28px
@@ -573,6 +582,8 @@
         padding: 60px 0 15px
         .ind-title-gr
             margin-bottom: 53px
+            animation-name: none !important
+            opacity: 1 !important
             .h1-l
                 margin-bottom: 25px
 
@@ -586,19 +597,26 @@
 
 
 .promo-how
-    animation-delay: 1s
 
     +min-screen($screenM + 1px)
         background: url("../images/how-works-bg.png") no-repeat top center
         height: 372px
         position: relative
+        animation-delay: 0.9s
 
+    +max-screen($screenM)
+        &, &__group
+            animation-name: none !important
+            opacity: 1 !important
     &__group
         line-height: normal
-        animation-delay: 1s
+
+
+
         +min-screen($screenM + 1px)
             position: absolute
             top: 25px
+            animation-delay: 0.8s
 
             &--left
                 //left: -110px

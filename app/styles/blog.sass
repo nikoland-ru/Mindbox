@@ -80,11 +80,16 @@ BODY
     .wrapper
         padding: 0 $wrapperM-padd
 
-        +max-screen($screenSL)
+        +max-screen(1600px)
+            padding: 0
+            //width: auto
+
+
+        //+max-screen($screenSL)
             padding-left: $wrapperS-padd
             padding-right: $wrapperS-padd
 
-        +max-screen($screenSS)
+        //+max-screen($screenSS)
             padding-right: $wrapperSS-padd
             padding-left: $wrapperSS-padd
 
@@ -100,6 +105,8 @@ BODY
     margin: 31px 0 0 !important
     text-align: center
     min-height: 60px
+
+
 
 .pagination-standard ul.page-numbers, .pagination-noresults ul.page-numbers
     position: static
@@ -117,16 +124,33 @@ BODY
     top: 0
     padding-top:  20px !important
     padding-bottom:  20px !important
+
+    .pagination-noresults &
+        position: relative
+        top: auto !important
+        left: auto !important
+        right: auto !important
+        bottom: auto !important
+
     &.pagination
         &-older
             right: 0
         &-newer
             left: 0
 
-    +max-screen(1100px)
+    //+max-screen(1100px)
+    +max-screen(1415px)
         padding-left: 35px !important
         padding-right: 35px !important
-        font-size: 13px
+        font-size: 13px !important
+
+    +max-screen(1300px)
+        padding-left: 30px !important
+        padding-right: 30px !important
+
+    //+screen(1270px,1480px)
+        display: none
+
 
 .page-container
     padding-top: 50px !important

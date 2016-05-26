@@ -41,6 +41,9 @@
 
     &__group
         display: none
+        max-width: 1024px
+        margin-left: auto
+        margin-right: auto
 
         &._active
             display: block
@@ -61,10 +64,11 @@
     &__visual
 
     .ba-scheme-wr
-        &--after
+        margin: 15px auto 50px
+        //&--after
             margin: 15px auto 50px
 
-        &--before
+        //&--before
             margin: 10px auto 35px
 
     &__switcher
@@ -95,6 +99,9 @@
         .gall-link
             display: block
 
+        &__group--after
+            padding-bottom: 5.2%
+
     +max-screen($screenXS)
         margin-left: -$wrapperSS-padd + 5px
         margin-right: -$wrapperSS-padd + 5px
@@ -110,13 +117,15 @@
 
     &--after
         max-width: 1024px
-
+        //padding-bottom: 5.2%
         .ba-scheme-wr__inner-wr
-            padding-bottom: 41%
+            padding-bottom: 46.2% //41%
             position: relative
+            .after-scheme
+                bottom: 4.2%
 
     &--before
-        max-width: 957px
+        max-width: 1024px //957px
 
         .ba-scheme-wr__inner-wr
             padding-bottom: 46.2%

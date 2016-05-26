@@ -3,7 +3,7 @@
 
         <div class="header__logo-wr">
             <a href="#!" class="header__logo">
-                <img src="../images/logo.png" alt="" draggable="false">
+                <img src="../images/logo.svg" alt="" draggable="false">
             </a>
         </div>
 

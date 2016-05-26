@@ -46,8 +46,8 @@ include 'base/head.php';?>
                      class="i-promo__bg-img i-promo__bg-img--right">
             </section>
 
-            <section id="examples" class="examples-wr js-anim-elem" data-vp-percent="0.35">
-                <div class="wrapper">
+            <section id="examples" class="examples-wr">
+                <div class="wrapper js-anim-elem" data-vp-percent="0.5">
 
                     <h3 class="examples-wr__title h1-l">
                         Например,
@@ -102,7 +102,7 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull2">
+                                    <div class="examples__li-ico-wr ">
                                         <div class="ico-w-circle ico-w-circle--yel ico-w-circle--b ">
                                             <span class="iconic iconic--ppl-cards"></span>
                                         </div>
@@ -151,7 +151,7 @@ include 'base/head.php';?>
                             <div class="examples__group">
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull2">
+                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull">
                                         <div class="ico-w-circle ico-w-circle--orng2 ico-w-circle--like ">
                                             <span class="iconic iconic--like-ico"></span>
                                         </div>
@@ -189,7 +189,7 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull3">
+                                    <div class="examples__li-ico-wr">
                                         <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--r">
                                             <span class="iconic iconic--geolocation"></span>
                                         </div>
@@ -219,7 +219,7 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull">
+                                    <div class="examples__li-ico-wr">
                                         <div class="ico-w-circle ico-w-circle--green ico-w-circle--b2">
                                             <span class="iconic iconic--funnel"></span>
                                         </div>
@@ -238,7 +238,7 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr examples__li-ico-wr--pull3">
+                                    <div class="examples__li-ico-wr  examples__li-ico-wr--pull2">
                                         <div class="ico-w-circle ico-w-circle--yel2 ico-w-circle--abc">
                                             <span class="iconic iconic--abc"></span>
                                         </div>
@@ -257,7 +257,7 @@ include 'base/head.php';?>
 
                                 <div class="examples__li">
 
-                                    <div class="examples__li-ico-wr  examples__li-ico-wr--pull4">
+                                    <div class="examples__li-ico-wr ">
                                         <div class="ico-w-circle ico-w-circle--yel ico-w-circle--scripts">
                                             <span class="iconic iconic--scripts"></span>
                                         </div>

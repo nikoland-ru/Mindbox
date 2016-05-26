@@ -50,7 +50,7 @@
             <div class="footer__main">
                 <div class="footer__logo-col">
                     <a href="#!" class="footer__logo">
-                        <img src="../images/logo-wh.png" alt="">
+                        <img src="../images/logo-wh.svg" alt="">
                     </a>
                 </div>
                 <div class="footer__nav-cols">
